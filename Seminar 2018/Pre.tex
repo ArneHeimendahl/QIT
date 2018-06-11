@@ -1,0 +1,241 @@
+\documentclass[11pt]{amsart}
+
+\usepackage{amssymb}
+\usepackage{dutchcal}        %nice Hilbertspace symbols
+\usepackage{braket}          %for braket notation
+\usepackage[utf8]{inputenc}
+\usepackage{bm}              %bold writing
+\usepackage{tikz}            %for drawing some nice graphics
+\usepackage{tikzsymbols}
+\usepackage[version=3]{mhchem}%chemical formulas nicely written
+\usepackage{graphicx}        %some graphics stuff, like subfigures
+\usepackage{subcaption}
+\usepackage{wrapfig}         %figures in text float
+\usepackage{cite}            %to cite
+\usepackage{dsfont}           %for unity matrix
+\usepackage{nicefrac}
+\usepackage{xcolor}
+\usepackage{xspace}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3.5cm, right=3.5cm]{geometry}
+\usepackage{lmodern}		% nice schriftart
+\usepackage{etoolbox}        %reformat sections etc.
+\usepackage{float}									% forcieren von H bei Grafiken
+\usepackage[unicode=true,							% Hyperlinks
+bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
+{hyperref}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+\makeatletter
+\let\@afterindenttrue\@afterindentfalse
+\makeatother
+\pagestyle{plain}   %no title at every page
+\graphicspath{ {images/} }
+
+
+
+
+
+%--------------------------only for tikz---------------------------------------------------------
+\newcommand{\xdownarrow}[1]{%
+	{\left\downarrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+}
+\newcommand{\xuparrow}[1]{%
+	{\left\uparrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+}
+
+\newcommand{\xswarrow}[1]{%
+	{\left\swarrow\vbox to #1{}\right.\kern-\nulldelimiterspace}
+}
+
+\usetikzlibrary{shapes.callouts,calc,arrows,decorations.pathmorphing,intersections,
+	decorations.pathreplacing
+}
+\tikzset{
+	fatlevel/.style   = { ultra thick, black },
+	level/.style   = {thick, black },
+	vertex/.style = {very thick, black,opacity=1, shorten <= 0.15cm, shorten >= 0.15cm},
+	virtual/.style={thick,densely dashed},
+	connect/.style = { dashed, black },
+	redtransition/.style = {thick,->,>=stealth',shorten >=1pt, red},
+	transition/.style = {thick, black,->,>=stealth',shorten >=1pt},
+	trans/.style={thick,<->,>=stealth},
+	notice/.style  = { draw, rectangle callout, callout relative pointer={#1} },
+	label/.style   = { text width=3cm },
+	llabel/.style   = { text width=9.5cm },
+	interface/.style={
+		% The border decoration is a path replacing decorator. 
+		% For the interface style we want to draw the original path.
+		% The postaction option is therefore used to ensure that the
+		% border decoration is drawn *after* the original path.
+		postaction={draw,decorate,decoration={border,angle=135,
+				amplitude=0.3cm,segment length=2mm}}},
+}
+%-----------------------------------------------------------
+
+\definecolor{colororange}{HTML}{E65100} % orange
+\definecolor{colordgray}{HTML}{795548} % dark gray for note
+\definecolor{colorhgray}{HTML}{212121} % heavy dark gray for normal text
+\definecolor{colorgreen}{HTML}{009688} % green
+\definecolor{colorlgray}{HTML}{FAFAFA} % background light gray
+\definecolor{colorblue}{HTML}{0277BB} % blue
+
+%-----------------------------------------------------------
+
+
+
+
+
+
+
+
+%------------------------- Theorem enviroments -----------------------------------------
+\newtheoremstyle{mytheorem}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{theo}{Theorem}
+
+\newtheoremstyle{mylemma}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{lemma}{Lemma}
+
+\newtheoremstyle{kor}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{kor}{Corollary}
+
+\newtheoremstyle{prop}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{prop}{Proposition}
+
+\newtheoremstyle{conj}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{conj}{Conjecture}
+
+\newtheoremstyle{mydef}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{16pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mydef}
+\newtheorem{dfn}{Definition}
+
+
+\newtheoremstyle{myremark}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{16pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{myremark}
+\newtheorem{rmk}{Remark}
+\newtheorem*{rmk*}{Remark}
+\newtheorem*{qst*}{Question}
+
+
+\newtheoremstyle{myex}% ⟨name⟩
+{0pt}% ⟨Space above⟩
+{16pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{myex}
+\newtheorem{ex}{Example}
+\newtheorem*{ex*}{Example}
+
+
+
+
+
+%-------------------------- reformat sections and subsections
+\patchcmd{\subsection}{\bfseries}{\itshape\bfseries\centering}{}{}
+\patchcmd{\subsection}{-.5em}{.5em}{}{}
+\patchcmd{\section}{\normalfont}{\normalfont\bfseries\Large}{}{}
+\patchcmd{\section}{-.5em}{.5em}{}{}
+\patchcmd{\subsubsection}{\normalfont}{\itshape\bfseries\centering}{}{}
+\patchcmd{\subsubsection}{-.5em}{.5em}{}{}
+
+
+%---------------- space between page numbering
+	\addtolength{\textheight}{-\baselineskip}
+	\addtolength{\footskip}{\baselineskip}
+
+
+%---------------- section spacing and table of contents formatting
+	\setcounter{tocdepth}{3}% to get subsubsections in toc
+	\let\oldtocsection=\tocsection
+	\let\oldtocsubsection=\tocsubsection
+	\let\oldtocsubsubsection=\tocsubsubsection
+	\renewcommand{\tocsection}[2]{\hspace{0em}\oldtocsection{#1}{#2}}
+	\renewcommand{\tocsubsection}[2]{\hspace{2em}\oldtocsubsection{#1}{#2}}
+	\renewcommand{\tocsubsubsection}[2]{\hspace{4em}\oldtocsubsubsection{#1}{#2}}
+
+
+
+
+
+%---------------------------- definitions
+\newcommand{\el}{ {\scriptstyle{\in}}\; }
+\newcommand{\sumel}{ {\scriptscriptstyle{\in}} }
+\newcommand{\Hilb}{ {\mathcal{H}} }
+\newcommand{\dualHilb}{ {\mathcal{H}^*} }
+\newcommand{\Haml}{ {\hat{H}} }
+\newcommand{\modul}[1]{{\left|{#1}\right|}}
+
+\DeclareMathOperator*{\esssup}{ess\,sup} % essentiellen Supremums
+\DeclareMathOperator{\spn}{span} % Span
+\DeclareMathOperator{\supp}{supp} % Träger
+\DeclareMathOperator{\proj}{proj} % Träger
+\DeclareMathOperator{\tr}{Tr} 

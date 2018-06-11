@@ -1,0 +1,59 @@
+\input{Pre.tex} %----- put in Preamble
+
+
+\title{Seminar paper \\ Ungleichungen und ähnlich verwirrende Konzepte}
+\author{Maxi Brandstetter, Arne Heimendahl, Felix Kirschner}
+
+\begin{document}
+\pagenumbering{roman}	
+
+
+
+\begin{abstract}
+Dieses Paper ist eine Ausarbeitung unseres Vortrags im Seminar "Introduction to Quantum Information and Quantum Computing", das zwischen dem 19.9. und 21.9.2018 in Köln stattgefunden hat. Es wird eine kleine Einführung in die mathematischen Methoden gegeben, mit denen die Welt der Quantenfunktion beschrieben werden kann, woraufhin wir "Nonlocal Games" einführen, die Brücke zur (semidefiniten) Optimierung schlagen und hoffentlich noch genug Zeit für die Grothendieck Ungleichungen haben. Die Grothendieck Ungleichungen finden erstaunlicherweise in einer Vielzahl an mathematischen Teilgebieten Verwendung.
+\end{abstract}
+
+
+\maketitle	
+\tableofcontents
+	
+	
+\newpage	
+\pagenumbering{arabic}
+
+
+
+\section{Einleitung}
+	\vspace{8pt}
+	\input{chapters/Einleitung.tex}
+
+
+%---------------------------------------------------------------------------
+\let \oldsection \section
+\renewcommand{\section}{\vspace{15pt plus 8pt}\oldsection}
+\let \oldsubsection \subsection
+\renewcommand{\subsection}{\vspace{10pt plus 3pt}\oldsubsection}
+%---------------------------------------------------------------------------
+
+
+
+\newpage
+\section{Quantum Grundlagen} %\label{sec_coloringgame}
+	\vspace{8pt}
+	\input{chapters/FelixTeil.tex}
+
+
+\section{Nonlocal Games} %\label{sec_mathreform}
+	\input{chapters/ArnesTeil.tex}
+	
+\section{Grothendieck Inequality} %\label{sec_conicapproach}
+	\input{chapters/MaxisTeil.tex}
+
+\section*{Appendix}
+	\input{chapters/Appendix.tex}	
+
+
+\bibliography{literature}						  % Literature
+\bibliographystyle{plain}
+	
+\end{document}
