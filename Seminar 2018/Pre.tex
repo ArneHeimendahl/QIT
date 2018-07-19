@@ -116,7 +116,7 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
 {.5em}% ⟨Space after theorem head⟩
 {}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
 \theoremstyle{mytheorem}
-\newtheorem{lemma}{Lemma}
+\newtheorem{lemma}[subsubsection]{Lemma}
 
 \newtheoremstyle{kor}% ⟨name⟩
 {12pt}% ⟨Space above⟩
@@ -233,6 +233,8 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
 \newcommand{\dualHilb}{ {\mathcal{H}^*} }
 \newcommand{\Haml}{ {\hat{H}} }
 \newcommand{\modul}[1]{{\left|{#1}\right|}}
+\newcommand{\norm}[1]{\ensuremath{ \Vert {#1} \Vert}}
+\newcommand{\trace}[1]{\ensuremath{\text{Tr} \, {#1} }}
 
 \DeclareMathOperator*{\esssup}{ess\,sup} % essentiellen Supremums
 \DeclareMathOperator{\spn}{span} % Span
