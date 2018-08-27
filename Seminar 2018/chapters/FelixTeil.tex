@@ -1,1 +1,44 @@
-Felix Teil hier wird auch noch etwas stehen
+In order to make sure everyone is on the same page we will have the following introduction where the necessary groundwork is done. The aim is to call a few basic definitions back to our memory so one can fluently read through this paper. \\
+A complex matrix $A \in \mathbb{C}^{n \times n}$ is called Hermitian if $A^*=A$, where $A^*$ denotes the conjugate transpose of $A$. A complex Hermitian matrix $A$ is called positve semidefinite (abbreviated psd.) if one of the following holds: 
+\begin{enumerate}
+\item[i,] The matrix has only real non-negative eigenvalues 
+\item[ii,] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z_{i_k}}z_{j_k}$
+\item[iii,] For every $z \in \mathbb{C}^n$ we have $z^*Az\ge 0$
+\item[iv,] There exists a complex matrix $B$ s.t. $A=B^*B$
+\end{enumerate}
+It can be shown that $i, - iv,$ are in fact equivalent. The set of positive semidefinite matrices is a cone, meaning for two psd. $n \times n$ matrices $A,B$ and $\alpha, \beta \in \mathbb{R}_+$ we have that $\alpha A + \beta B $ is also positive semidefinite. The set of real $n \times n$ matrices is denoted by $\mathcal{S}_n^+$.\\
+In case someone is not familiar with the \textit{tensor product} a short introduction with an example or two is given here: 
+Let $\mathcal{X} = \mathbb{C}^{n_1 \times m_1}$ and $\mathcal{Y}= \mathbb{C}^{n_2 \times m_2}$. Then the tensor product of the vector spaces $\mathcal{X}$ and $\mathcal{Y}$ is defined as $\mathcal{X} \otimes \mathcal{Y} = \mathbb{C}^{n_1n_2 \times m_1m_2}$. The tensor product of complex matrices can be obtained as follows: Index the rows and columns of a matrix by $\mathcal{R}$ and $\mathcal{C}$ and think of the matrix as a map from $\mathcal{R} \times \mathcal{C} \rightarrow \mathbb{C}$. For two complex matrices $A: \mathcal{R_1} \times \mathcal{C_1} \rightarrow \mathbb{C}$ and $B: \mathcal{R_2} \times \mathcal{C_2} \rightarrow \mathbb{C}$ their tensor product is the matrix $A \otimes B : (\mathcal{R_1} \times \mathcal{R_2}) \times (\mathcal{C_1} \times \mathcal{C_2})\rightarrow \mathbb{C}$ defined by $(A \otimes B)( (r_1,r_2),(c_1,c_2))= A(r_1,c_1)B(r_2,c_2)$. Considering a lexicographic order understand tensor products in the following way: $A \otimes B = \begin{pmatrix}
+a_{11}B & \dots & a_{1n}B \\
+\vdots && \vdots \\
+a_{n1}B & \dots & a_{nn}B
+\end{pmatrix}$, which is the \textit{Kronecker product} and coherent with the definition. For two complex vectors $v_1,v_2$ when we talk about their tensor products we will mean $v_1 \otimes v_2 = ( v_{1_1}v_2, v_{1_2}v_2, \dots , v_{1_n}v_2)^\top$ from which we can deduce that $\langle x_1 \otimes x_2 , y_1 \otimes y_2 \rangle = \langle x_1, x_2 \rangle \langle y_1 , y_2 \rangle$. Also for any matrices $A,B,C,D$ (assuming fitting dimensions) we have the following identities: 
+\begin{enumerate}
+\item[i,] $(A \otimes B ) \otimes C = A \otimes (B \otimes C) $
+\item[ii,] $A \otimes (B + C) = A \otimes B + A \otimes C $
+\item[iii,] $(A \otimes B)(C \otimes D) = (AC) \otimes (BD)$
+\end{enumerate}
+Also throughout this paper we will stick to the \textit{Dirac notation}, which is the standard notation for describing quantum states. In Dirac notation $\vert \psi \rangle$ refers to a vector in $\mathbb{C}^n$. The conjugate transpose of this vector is written $ \langle \psi \vert$. The non-negative integers, by convention, represent the canonical basis vectors, i.e. 
+\begin{equation}
+\vert 0 \rangle = \begin{pmatrix}
+1 \\
+0 \\
+0 \\
+\vdots \\
+0
+\end{pmatrix}, \vert 1 \rangle = \begin{pmatrix}
+0 \\
+1 \\
+0 \\
+\vdots \\
+0 
+\end{pmatrix} , \dots , \vert n-1 \rangle = \begin{pmatrix}
+0 \\
+0 \\
+\vdots \\
+0 \\
+1 
+\end{pmatrix}
+\end{equation}
+Usually the tensor product symbol is omitted when taking the tensor product of two vectors in Dirac notation. This means we write $ \vert \psi \rangle \vert \phi \rangle$ instead of $ \vert \psi \rangle \otimes \vert \phi \rangle$. We also would like to quickly remind ourselves what a Hilbert space is. Let $\mathcal{H}$ be an inner product space. Endow $\mathcal{H}$ with a norm $\vert \vert x \vert \vert = \sqrt{\langle x,x \rangle}$ and a metric $d(x,y) = \vert \vert x-y \vert \vert$. If every Cauchy sequence in $\mathcal{H}$ converges to an element in $\mathcal{H}$, i.e. $\mathcal{H}$ is complete, then $\mathcal{H}$ is a Hilbert space. Now we can define a \emph{state}.\\
+A state is a complex positive semidefinite matrix $\rho$ that satisfies Tr$(\rho)=1$. The trace of a psd. matrix is equal to the sum of its eigenvalues. The spectral theorem tells us that any $n \times n $ matrix can be decomposed as $\rho = \sum_{i=1}^n \lambda_i \vert \psi_i \rangle \langle \psi_i \vert$ with $\lambda_i$ being its eigenvalues and $\vert \psi_i \rangle$ the corresponding eigenvectors. We call a states \emph{pure} if it has rank $1$, i.e.$ \rho = \vert \psi \rangle \langle \psi \vert$ for some complex unit vector $\vert \psi \rangle$. This means every state is a convex combination of pure states. Note that complex unit vectors are often referred to as states even though states are defined as matrices. What is actually meant is the pure state $\vert \psi \rangle \langle \psi \vert$. The name state for these mathematical objects is chosen because with them the possible configurations of a quantum system can be modeled. A quantum system $X$ is said to be \textit{in} state $\rho$ and is associated with a positive integer $n$, referred to as its dimension and a copy of $\mathbb{C}^n$. The states in $\mathbb{C}^{n \times n}$ give the possible configurations of $X$. A quantum system $X$ may consist subsystems $X_1, \dots , X_N$, where each subsystem $X_i$ is a quantum system for itself. And $X$ is then associated with $\mathbb{C}^{n_1}\otimes \dots \otimes \mathbb{C}^{n_N}$ with $n_i$ being the dimensions of the subsystems. A state $\rho$ in which $X$ is then is a matrix of size $n_1\dots n_N$. 
