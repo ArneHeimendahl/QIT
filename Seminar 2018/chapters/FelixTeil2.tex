@@ -1,1 +1,152 @@
-Nonlocal games. 
+In this section we will introduce nonlocal games, which are a systematic approach of studying quantum mechanics and its properties and comparing it to classical mechanics. They are called nonlocal because the players are assumed to be very far, like light-years, away from each other. But first things first. In the basic case there are three participants, two players Alice and Bob and a referee. The referee sends a piece of information to Alice and Bob. They may or may not receive the same information. Afterwards both Alice and Bob must, without communicating, send an answer to the referee, who then decides whether they both win or both lose and the game ends. Mathematically speaking this means there are four finite sets $\mathcal{A}, \mathcal{B}, \mathcal{S}, \mathcal{T}$, a joint probability distribution $\pi$ over $\mathcal{S} \times \mathcal{T}$, i.e. $\pi : \mathcal{S} \times \mathcal{T} \rightarrow [0,1]$. The referee sends with probability $\pi(s,t)$ $s \in \mathcal{S}$ to Alice and $t \in \mathcal{T}$ to Bob and they both answer with an element $a \in \mathcal{A}$ and $b \in \mathcal{B}$ respectively. Whether they win or lose is determined by a map $V : \mathcal{A} \times \mathcal{B} \times \mathcal{S} \times \mathcal{T} \rightarrow \{ 0 , 1 \}$. They win if $V(a,b,s,t)=1$ and lose otherwise. All players know $\pi$ and $V$ but they they do not know what element the other player received from the referee. They may agree on a strategy beforehand but they must not communicate once the game has started. Obviously, Alice and Bob want to win the game and so they try to maximize their winning probability by choosing a promising strategy.
+\subsection{Classical and entangled strategies}
+When Alice and Bob use classic deterministic strategies, they both have a deterministic map $a : \mathcal{S} \rightarrow \mathcal{A}$ and $b : \mathcal{T} \rightarrow \mathcal{B}$ respectively. This means beforehand they both agree on what to answer upon what questions received. The winning probability is easily calculated: 
+\begin{equation}
+\mathbb{E}_{s,t \sim \pi} \left[ V(a(s),b(t),s,t) \right] 
+\end{equation}
+But, of course, we are dealing with quantum mechanics here so we are interested in entangled strategies and want to study how the availability of these influence the outcome. For an entangled strategy both Alice and Bob have a subsystem $X_A, X_B$ of a quantum system $X$ which is in state $\rho$, i.e. Alice and Bob share state $\rho$. If the state is entangled we know that measurements can give correlated outcomes, which means for the players that they may gain information about the other players outcome by performing a measurement. More technically, there is a positive integer $n$ and a quantum system $X$ consisting of two $n$-dimensional subsystems $X_A, X_B$ in some entangled state $\rho$. Alice and Bob have measurements $\{ F_s^a \}_{a\in \mathcal{A}} , \{ G_t^b\}_{b \in \mathcal{B}} \subseteq \mathbb{C}^{n \times n}$. When the game starts they both get a question $s$ and $t$ and perform their measurement on it. They both send the outcome of their measurement as their answer to the referee. As has be established before, the probability of Alice answering with $a$ and Bob with $b$ is Tr$(\rho F_s^a \otimes G_t^b)$. The winning probability then equals:
+\begin{equation}
+\mathbb{E}_{s,t \sim \pi} \left[ \sum_{a \in \mathcal{A}} \sum_{b \in \mathcal{B}} \text{Tr}(\rho F_s^a \otimes G_t^b) V(a,b,s,t) \right]
+\end{equation}  
+The players want to maximize their winning probability. Since the trace function is linear and states are convex combinations of pure states, we only need to consider pure entangled states. 
+\subsection{Two player XOR games}
+An XOR game is a game where the set of answers $\mathcal{A}$ and $\mathcal{B}$ only consist of $\{ 0,1 \}$ and the predicate $V$ only depends on the exclusive-OR of the answers and the value function $f : \mathcal{S} \times \mathcal{T} \rightarrow \{ 0,1 \}$. In the following let the spare brackets denote the $0/1$ truth value of the statement in between them. Then we have $V(a,b,s,t) = \left[ a \oplus b = f(s,t) \right]$. 
+The exclusive OR returns $1$ if and only if one of the inputs is $1$. In a truth table: \\
+\begin{center}
+\begin{tabular}{l | c r }
+$\oplus$ & 0 & 1 \\
+\cline{1-3} 
+
+0 & 0 & 1 \\
+1 & 1 & 0 
+\end{tabular}\\
+\end{center}
+
+For a probability distribution $\pi$ and a boolean function $f$, $\mathcal{G}= (\pi, f)$ defines an XOR game.\\
+\textbf{Bias and violation ratio.} Alice and Bob can always win an XOR with probability $\frac{1}{2}$ by flipping an unbiased coin. Interesting would be how much this can actually be increased. We define the classical bias of an XOR game to be the difference of the probability of winning and losing for an optimal classical strategy an denote it by $\beta(G)$. The bias of entangled strategies is calculated in the same way and thus is twice the amount by which the maximal winning probability is greater then $\frac{1}{2}$, since $\frac{1}{2}+\gamma - (1 - \frac{1}{2} + \gamma) = 2 \gamma$, $\gamma$ being the amount exceeding $\frac{1}{2}$. We denote the bias of entangled strategies by $\beta^*(G)$. The violation ratio is given by $\frac{\beta^*(G)}{\beta(G)}$.
+\textbf{Signs and observables.} To make things a little easier regarding calculations we will use the $\{ -1 , 1 \} $-basis rather than the $\{ 0,1 \}$-basis for boolean valued objects. If we have an XOR game $(\pi, f )$ and any two classical strategies $a : \mathcal{S} \rightarrow \{0,1\}$ and $b: \mathcal{B} |righta
+ \{ 0,1 \}$ the bias is given by the probability under $\pi$ that $a(s) \oplus b(t) = f(s,t)$ minus the probability under $\pi$ that $a(s) \oplus b(t) \ne f(s,t)$. 
+ \begin{flalign*}
+ \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{[a(s) \oplus b(t) = f(s,t)]} \right] & = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s) \oplus b(t) + f(s,t)} \right] \\
+ &= \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s)}(-1)^{b(t)}(-1)^{f(s,t)} \right]
+  \end{flalign*}
+We define the sign matrix $\Sigma_{st} = (-1)^{f(s,t)}$ and functions $\chi(s) = (-1)^{a(s)}$ and $\psi(t) = (-1)^{b(t)}$. Thus the bias is: 
+\begin{equation}
+\mathbb{E}_{ ( s , t ) \sim \pi} \left[ \chi (s) \psi (t) \Sigma_{st} \right]
+\end{equation}
+Since in an XOR game the outcomes are $\{ 0, 1 \} $-valued the measurements Alice and Bob have are $\{ F_s^0, F_s^1 \}$ and $\{ G_t^0, G_t^1 \}$. If we consider an entangled strategy with a pure state $\vert \psi \rangle$ and have projective measurements the probability of Alice and Bob answering with $a,b$ upon receiving $s,t$ respectively is $\langle \psi \vert F_s^a \otimes G_t^b \vert \psi \rangle$. We can calculate the expected value: 
+\begin{flalign*}
+(1)\cdot \mathbb{P}\left[ a = b \right] + (-1) \cdot \mathbb{P} \left[ a \ne b \right] & = \langle \psi \vert F_s^0 \otimes G_t^0 \vert \psi \rangle + \langle \psi \vert F_s^1 \otimes G_t^1 \vert \psi \rangle - \langle \psi \vert F_s^1 \otimes G_t^0 \vert \psi \rangle - \langle \psi \vert F_s^0 \otimes G_t^1 \vert \psi \rangle \\
+&= \langle \psi \vert (F_s^0 - F_s^1) \otimes (G_t^0 - G_t^1) \vert \psi \rangle
+\end{flalign*}
+
+As in (3) we define the $\{ -1, 1 \}$- observables $F_s = F_s^0 - F_s^1$ and $G_t^0-G_t^1$ with the property that its difference squared is the identity matrix. Using this strategy the bias becomes 
+\begin{equation}
+\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right]
+\end{equation}
+So for any XOR game the bias is defined as the difference of the probabilities of winning and loosing which is, if considering the $\{ -1, 1 \}$ basis, the expected value and we are looking to maximize this quantity. Hence, the bias of an XOR games in classical strategies is: 
+\begin{equation}
+\max \left\lbrace \mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{st} \chi (s) \psi (t) \right] : \chi : \mathcal{S} \rightarrow \{ -1, 1 \}, \psi : \mathcal{T} \rightarrow \{-1, 1 \} \right\rbrace
+\end{equation} 
+For entangled strategies we need to use the $\sup_{n \in \mathbb{N}}$ since the winning probability might increase indefinitely with the dimension of the quantum system. 
+The Bias of entangled strategies is 
+\begin{equation}
+\sup_{n \in \mathbb{N}} \left\lbrace \mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{st} \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] : \vert \psi \rangle \in \mathbb{C}^{n} \otimes \mathbb{C}^{n} , F_s, G_t \in O(\mathbb{C}^n) \right\rbrace
+\end{equation}
+where $O(\mathbb{C}^n)$ denotes the set of $\{ -1, 1 \}$-observables in $\mathbb{C}^{n \times n}$. As shown in [KNP17] we can in fact restrict ourselves to projective measurements. More general measurements like POVMs (positive operator valued (probability) measure) are not advantageous. 
+
+\subsection{The CHSH game}
+Let us consider a special instance of XOR games which leads to the result that entangled strategies actually can give a remarkable advantage over classical strategies. The game is named after four scientists Clauser, Horne, Shimony and Holt. The question set is $\{0,1\} \times \{0,1\}$ as well as the answer set. The probability distribution over the question set is the uniform distribution and the predicate $V = \left[ a \oplus b = s \land t\right] $. Note that $s \land t$ only evaluates to $1$ if both $s=1$ and $t=1$, which in the case of the uniform distribution happens in $\frac{1}{4}$ of the cases. The best classical strategy then would be either to always answer $a=0, b=1$ or $a=1, b=0$. Since in both cases $a \oplus b = 0$ Alice and Bob win in with probability $\frac{3}{4}$. We will now study the entangled case and check how much the winning probability may be increased. 
+Define 
+\begin{equation}
+X = \begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix} , Y = \begin{bmatrix}
+0 & -i \\ 
+i & 0 
+\end{bmatrix}
+\end{equation}
+and note that they anti-commute, i.e. $XY + YX = 0$ and square to the identity matrix $X^2 = Y^2 = I$. For Alice define the observable for question $0$ by $F_0 = X$ and for question $1$ by $F_1 = Y$. Bobs observables are going to be $G_0 = (X-Y)/ \sqrt{2}$ for question $0$ and $G_1 = (X+Y)/\sqrt{2}$ for question $1$.  Define the $\vert \text{EPR} \rangle = \frac{\vert 0 \rangle \vert 0 \rangle + \vert 1 \rangle \vert 1 \rangle}{\sqrt{2}} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 0 \\ 0 \\ 1 \end{pmatrix}$.
+The following auxiliary calculations will be helpful later: 
+\begin{flalign*}
+\langle \text{EPR} \vert X \otimes X \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
+1 & 0 & 0 &1
+\end{pmatrix} \begin{pmatrix}
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0& 1 & 0 & 0 \\
+1 & 0 & 0 & 0
+\end{pmatrix} \begin{pmatrix}
+1 \\ 0 \\ 0 \\ 1
+\end{pmatrix}\\
+& = \frac{1}{2} \begin{pmatrix}
+1 &0&0&1
+\end{pmatrix} \begin{pmatrix}
+1 \\ 0 \\ 0 \\1
+\end{pmatrix} = \frac{2}{2} = 1\\
+\langle \text{EPR} \vert Y \otimes Y \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
+1 & 0 & 0 &1
+\end{pmatrix} \begin{pmatrix}
+0 & 0 & 0 & -1 \\
+0 & 0 & 1 & 0 \\
+0& 1 & 0 & 0 \\
+-1 & 0 & 0 & 0
+\end{pmatrix} \begin{pmatrix}
+1 \\ 0 \\ 0 \\ 1
+\end{pmatrix}\\
+& = \frac{1}{2} \begin{pmatrix}
+-1 &0&0&-1
+\end{pmatrix} \begin{pmatrix}
+1 \\ 0 \\ 0 \\1
+\end{pmatrix} = -1\\
+\langle \text{EPR} \vert X \otimes Y \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
+1 & 0 & 0 &1
+\end{pmatrix} \begin{pmatrix}
+0 & 0 & 0 & -i \\
+0 & 0 & i & 0 \\
+0& -i & 0 & 0 \\
+i & 0 & 0 & 0
+\end{pmatrix} \begin{pmatrix}
+1 \\ 0 \\ 0 \\ 1
+\end{pmatrix}\\
+& = \frac{1}{2} \begin{pmatrix}
+i &0&0&-i
+\end{pmatrix} \begin{pmatrix}
+1 \\ 0 \\ 0 \\1
+\end{pmatrix} = 0\\
+\langle \text{EPR} \vert Y \otimes X \vert \text{EPR} \rangle & = 0
+\end{flalign*}
+
+Lets calculate the expected values of the sign $a \oplus b$: 
+\begin{flalign*}
+ \bullet \text{   } \langle \text{EPR} \vert F_0 \otimes G_0 \vert \text{EPR} \rangle &= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}(X-Y) \vert \text{EPR} \rangle  \\
+&= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle - \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+& = \frac{1}{\sqrt{2}} - 0 = \frac{1}{\sqrt{2}}\\
+ \bullet \text{   } \langle \text{EPR} \vert F_1 \otimes G_1 \vert \text{EPR} \rangle &= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}(X+Y) \vert \text{EPR} \rangle  \\
+&= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle + \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+& = 0 - \frac{1}{\sqrt{2}} = - \frac{1}{\sqrt{2}}\\
+ \bullet \text{   } \langle \text{EPR} \vert F_0 \otimes G_1 \vert \text{EPR} \rangle &= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}(X+Y) \vert \text{EPR} \rangle  \\
+&= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle + \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+& = \frac{1}{\sqrt{2}} + 0 = \frac{1}{\sqrt{2}}\\
+ \bullet \text{   } \langle \text{EPR} \vert F_1 \otimes G_0 \vert \text{EPR} \rangle &= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}(X-Y) \vert \text{EPR} \rangle  \\
+&= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle - \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+& = 0 - (-\frac{1}{\sqrt{2}}) =  \frac{1}{\sqrt{2}}
+\end{flalign*}
+Thus, we have
+\begin{equation}
+\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \begin{cases} \frac{1}{\sqrt{2}} , (0,0), (1,0), (0,1) \\ -\frac{1}{\sqrt{2}} , (1.1) \end{cases}
+\end{equation}
+which is equivalent to 
+\begin{equation}
+\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \frac{(-1)^{s \land t}}{\sqrt{2}} , s,t \in \{ 0,1 \}
+\end{equation}
+The bias of the entangled strategy equals 
+\begin{flalign*}
+\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] & = \frac{1}{4} \sum_{s,t = 0}^1 (-1)^{s \land t} \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle \\
+&= \frac{1}{4} \cdot \frac{4}{\sqrt{2}} = \frac{1}{\sqrt{2}}
+\end{flalign*}
+The bias is $\frac{1}{\sqrt{2}}$ from which follows that the winning probability is by definition: 
+\begin{equation}
+\frac{1}{2}+ \frac{1}{2}\cdot \frac{1}{\sqrt{2}} = \cos(\pi/8 ) \approx 0.85\dots 
+\end{equation}
