@@ -1,25 +1,62 @@
 \subsection{Local and Quantum correlation matrices}
 \begin{dfn}
 	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be families of random variables on a common probability space such that $ \vert X_i \vert, \vert Y_j \vert \le 1 $ almost surely \textbf{define the norm}. Then $ A=(a_{ij}) $ is the corresponding {\itshape classical (or local) correlation matrix} if 
-	\begin{align}
+	\begin{align*}
 		a_{ij} = \mathbb{E}[X_iY_j]
-	\end{align}
+	\end{align*}
 	for all $ 1 \le i \le m, 1 \le j \le n $.
 \end{dfn}
-As we will see in the sequel, the set of $ m \times n $ correlation matrices is a polytope, denoted by $ \text{LC}_{m,n} $.
+As we will see in the sequel, the set of $ m \times n $ correlation matrices is a polytope, denoted by $ \LC_{m,n} $.
 
 \begin{dfn}
-	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}, \norm{Y_j} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
-	\begin{align}
+	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \modul{X_i}, \modul{Y_j} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
+	\begin{align*}
 		a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
-	\end{align}
+	\end{align*}
 \end{dfn}
-We will write $ \text{QC}_{m,n} $ for the set of all $ m \times n $ quantum cor relation matrices.
-With regard to quantum information theory it is interesting to analyze the geometry of $ \text{LC}_{m,n} $ and $ \text{QC}_{m,n} $. As we will see, both sets have rather simple descriptions. 
+We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum cor relation matrices.
+With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. As we will see in the following two lemmata, both sets have rather simple descriptions. 
 
-\begin{lemma}
-	Alternative descriptions of $ \text{LC}_{m,n} $ and $ \text{QC}_{m,n} $ are given by 
-	\begin{align}
-		\text{LC}_{m,n} =
+\begin{lemma}\label{LemLC}
+	An alternative description of $ \LC_{m,n} $ is given by 
+	\begin{align}\label{EqLC}
+		\LC_{m,n} = \ensuremath{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}.
 	\end{align}
+\end{lemma}
+\begin{proof}
+	Let us denote the right hand side of \ref{EqLC} by $ M $ and let $ \psi\eta^T \in M $ with $ \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n $. Clearly $ \xi_i, \eta_j \in \{-1,1\} $ define constant $ \mathbb{R} $-valued random variables satisfying $ \vert X_i \vert, \, \vert Y_j \vert \le 1 $. Hence, it suffices to show that $ \LC_{m,n} $ is convex since it contains the vertices of $ M $. Therefore, consider to classical correlation matrices $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $ which are defined on a common probability space and whose absolute value is smaller than one almost surely. We have to show that there exists random variables $ (X_i),(Y_j) $ with $ \norm{X_i},\norm{Y_j} \le 1 $ almost surely such that
+	\begin{align}
+		\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
+	\end{align}
+	for all $ \beta \in [0,1] $.
+	Let $ \alpha $ be a Bernoulli random variable, i.e. $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $.
+	Then 
+	\begin{align*}
+		\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(1)}]\mathds{1}_{\{\alpha = 1\}}] \\
+		&= \beta \mathbb{E}[X_i^{(0)}Y_j^{(0)} ] + (1-\beta) \mathbb{E}[X_i^{(1)}Y_j^{(1)}],
+	\end{align*} 
+	which proofs that $ \LC_{m,n} $ is convex.
+	
+	
+	
+	For the other inclusion, let $ (a_ij) \in \LC_{m,n} $, i.e. $ a_{ij} = \mathbb{E}[X_iY_j] $ for random variables $ (X_i),(Y_j) $, $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
+	We will use the characterization of the $ d-$dimensional cube by its vertices, that is $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ (proof by induction). So, for 
+	
+	We can deduce that 
+	\begin{align*}
+		a_{ij} = \mathbb{E}[X_iY_j] = \mathbb{E}[X_iY_j \mathds{1}_{\{ \modul{X_i},\modul{Y_j}\le 1 \}}] \le \mathbb{E}[1] = 1.
+	\end{align*}
+
+	
+	
+\end{proof}
+
+
+
+
+
+\begin{lemma}\label{LemQC}
+	\begin{align*}
+		QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \}
+	\end{align*}
 \end{lemma}
