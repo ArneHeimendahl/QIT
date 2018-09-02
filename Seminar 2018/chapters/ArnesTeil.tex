@@ -20,7 +20,7 @@ With regard to quantum information theory it is interesting to analyze the geome
 \begin{lemma}\label{LemLC}
 	An alternative description of $ \LC_{m,n} $ is given by 
 	\begin{align}\label{EqLC}
-		\LC_{m,n} = \ensuremath{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}.
+		\LC_{m,n} = \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}.
 	\end{align}
 \end{lemma}
 \begin{proof}
@@ -42,25 +42,29 @@ With regard to quantum information theory it is interesting to analyze the geome
 	For the other inclusion, let $ (a_{ij}) \in \LC_{m,n} $, i.e. $ a_{ij} = \mathbb{E}[X_iY_j] $ for $ \mathbb{R} $-valued random variables $ (X_i),(Y_j) $, defined on a common probability space $ \Omega $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
 	We will use the characterization of the $ d-$dimensional cube by its vertices, that is $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ (proof by induction). So, for 
 	If we define the random variables $ X= (X_1,...,X_m) $ and $ Y= (Y_1,...,Y_m) $ they are essentially functionals 
-	$ X: \Omega^m \mapsto [-1,1]^m $ (up to a null set). Using the characterization of the hypercube we can define measurable functions $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ for $ \Omega \in \{-1,1\}^m $ such that 
+	$ X: \Omega^m \mapsto [-1,1]^m $ (up to a null set). Using the characterization of the hypercube we can define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ for $ \Omega \in \{-1,1\}^m $ such that 
 	\begin{align*}
 		X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
 	\end{align*} 
 	and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $. 
 	If we proceed analogously for $ Y $ we obtain
 	\begin{align*}
-		a_{ij} = \mathbb{E}[X_iY_j] = \mathbb{E} \big [  (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i ) (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(Y)}\xi_j ) \big ]
+		a_{ij} = \mathbb{E}[X_iY_j] &= \mathbb{E} \big [  (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i ) (\sum_{\eta \in \{-1,1\}^n}\lambda_{\eta}^{(Y)}\eta_j ) \big ]   \\
+		&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  \\
+		&=\Big ( \mathbb{E}\big [\sum_{\eta \in \{-1,1\}^m}\lambda_{\xi}^{(X)} \big ] \mathbb{E}\big [\sum_{\eta \in \{-1,1\}^n}\lambda_{\eta}^{(Y)} \big ] \Big ) \xi_i \eta_j  \\
+		&= \xi_i\eta_j,
 	\end{align*}
-	
-	
+	where we used that $ \lambda_{\xi}^{(X)} $ and $ \lambda_{\eta}^{(Y)} $ are independent and sum up to one. 
+	Thus, $ \{ a_{ij}\} \in M $ which finishes the proof. 
 \end{proof}
+Now we can easily count the vertices of $ \LC_{m,n} $. Observing that $ \xi \eta^T = \tilde{\xi} \tilde{\eta}^T $ if and only if $ \xi = \tilde{\xi} $ and $ \eta = \tilde{\eta} $ or $ \xi = -\tilde{\xi} $ and $ \eta = -\tilde{\eta} $ it follows that we have $ 2^{n+m}/2 = 2^{n+m-1} $ different matrices $ \xi \eta $, hence $ \LC_{m,n} $ has $ 2^{n+m-1} $ vertices. To analyze the facial structure of $ \LC_{m,n} $ is rather complicated. 
+However, we will do it later on for $ n=m=2 $ and compare it to $ \QC_{m,n} $.
 
-
-
-
-
+In the following, we will proof a similar description for $ \QC_{m,n} $ that is: 
 \begin{lemma}\label{LemQC}
 	\begin{align*}
-		QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \}
+		QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \}.
 	\end{align*}
 \end{lemma}
+In order to proof this we have to review some definitions and introduce a special class of matrices, namely the {\itshape Pauli matrices}.
+For the first inclusion we review the definition of an inner product, ...
