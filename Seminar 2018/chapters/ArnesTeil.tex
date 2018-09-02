@@ -24,7 +24,7 @@ With regard to quantum information theory it is interesting to analyze the geome
 	\end{align}
 \end{lemma}
 \begin{proof}
-	Let us denote the right hand side of \ref{EqLC} by $ M $ and let $ \psi\eta^T \in M $ with $ \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n $. Clearly $ \xi_i, \eta_j \in \{-1,1\} $ define constant $ \mathbb{R} $-valued random variables satisfying $ \vert X_i \vert, \, \vert Y_j \vert \le 1 $. Hence, it suffices to show that $ \LC_{m,n} $ is convex since it contains the vertices of $ M $. Therefore, consider to classical correlation matrices $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $ which are defined on a common probability space and whose absolute value is smaller than one almost surely. We have to show that there exists random variables $ (X_i),(Y_j) $ with $ \norm{X_i},\norm{Y_j} \le 1 $ almost surely such that
+	Let us denote the right hand side of \ref{EqLC} by $ M $ and let $ \xi\eta^T \in M $ with $ \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n $. Clearly $ \xi_i, \eta_j \in \{-1,1\} $ define constant $ \mathbb{R} $-valued random variables satisfying $ \vert X_i \vert, \, \vert Y_j \vert \le 1 $. Hence, it suffices to show that $ \LC_{m,n} $ is convex since it contains the vertices of $ M $. Therefore, consider to classical correlation matrices $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $ which are defined on a common probability space and whose absolute value is smaller than one almost surely. We have to show that there exists random variables $ (X_i),(Y_j) $ with $ \norm{X_i},\norm{Y_j} \le 1 $ almost surely such that
 	\begin{align}
 		\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
 	\end{align}
@@ -39,14 +39,18 @@ With regard to quantum information theory it is interesting to analyze the geome
 	
 	
 	
-	For the other inclusion, let $ (a_ij) \in \LC_{m,n} $, i.e. $ a_{ij} = \mathbb{E}[X_iY_j] $ for random variables $ (X_i),(Y_j) $, $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
+	For the other inclusion, let $ (a_{ij}) \in \LC_{m,n} $, i.e. $ a_{ij} = \mathbb{E}[X_iY_j] $ for $ \mathbb{R} $-valued random variables $ (X_i),(Y_j) $, defined on a common probability space $ \Omega $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
 	We will use the characterization of the $ d-$dimensional cube by its vertices, that is $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ (proof by induction). So, for 
-	
-	We can deduce that 
+	If we define the random variables $ X= (X_1,...,X_m) $ and $ Y= (Y_1,...,Y_m) $ they are essentially functionals 
+	$ X: \Omega^m \mapsto [-1,1]^m $ (up to a null set). Using the characterization of the hypercube we can define measurable functions $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ for $ \Omega \in \{-1,1\}^m $ such that 
 	\begin{align*}
-		a_{ij} = \mathbb{E}[X_iY_j] = \mathbb{E}[X_iY_j \mathds{1}_{\{ \modul{X_i},\modul{Y_j}\le 1 \}}] \le \mathbb{E}[1] = 1.
+		X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
+	\end{align*} 
+	and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $. 
+	If we proceed analogously for $ Y $ we obtain
+	\begin{align*}
+		a_{ij} = \mathbb{E}[X_iY_j] = \mathbb{E} \big [  (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i ) (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(Y)}\xi_j ) \big ]
 	\end{align*}
-
 	
 	
 \end{proof}
