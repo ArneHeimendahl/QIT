@@ -63,8 +63,9 @@ However, we will do it later on for $ n=m=2 $ and compare it to $ \QC_{m,n} $.
 In the following, we will proof a similar description for $ \QC_{m,n} $ that is: 
 \begin{lemma}\label{LemQC}
 	\begin{align*}\label{EqQC}
-		QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \}.
+		QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
 	\end{align*}
+	where $ \langle \cdot , \cdot \rangle $ denotes the standard scalar product. 
 \end{lemma}
 In order to proof this we have to review some definitions and introduce a special class of matrices, namely the {\itshape Pauli matrices}.
 
@@ -82,7 +83,7 @@ $ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive s
 If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product} and usually denoted by $ \langle \cdot \, , \, \cdot \rangle $.
 Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
-	Let $ (a_ij) in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
+	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
 	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
 	We define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
 	$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
@@ -94,12 +95,41 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	\end{align*}
 	Symmetry follows form 
 	\begin{align*}
-		\beta(S,T)= \textup{Re}\trace{\rho ST} &=\textup{Re}\trace{(\rho ST)^*}  \\
-		&= \textup{Re \trace{T^*S^* \rho^*}} = \textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
+		\beta(S,T)&= \textup{Re}\trace{\rho ST} =\textup{Re}\trace{(\rho ST)^*}  = \textup{Re \trace{T^*S^* \rho^*}}  \\
+		 &=\textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
 	\end{align*}
-	where the one but last equation holds since $ \rho,S,T $ are Hermitian.
+	\textbf{Perhaps explanation}
 	
 	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ we obtain $ \beta(S,S) = \textup{Re}\trace{\rho SS} = \textup{Re} \trace{\rho S^*S} \ge 0 $ and $ \beta $ is positive semidefinite. 
 	
-	In order to transform $ \beta $ to an inner product we have to factorize its kernel. 
+	Following the steps in appendix \textbf{XXX} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space of self-adjoint operators modulo the kernel of $ \beta $. 
+	Equipped with an inner product, we can regard $ \textup{B}^{sa}(\mathcal{H}) $ \textbf{Introduce notation} as a real Euclidean space. 
+	We immediately get that $ a_{ij} =\trace{\rho X_i Y_j}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that the norms of our vectors are bounded by one we have to show
+	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,...,Y_m \} $, $ Y \in \{Y_1,...,Y_n \} $. 
+	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,...,x_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,...,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $ This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
+	\begin{align*}
+		\beta(X \otimes I, X \otimes I) &= \textup{Re} \trace{\rho X^2 \otimes I}=  \sum_{i=1}^d \lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i} \otimes \ket{\eta_i}\bra{\eta_i})(X^2 \otimes I) } \\
+		&= \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})} =  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
+	\end{align*}
+	In order to get the desired result we have to show that $ \trace{(\ket{\xi_i} \bra{\xi_i}X^2)} = \trace{(X^2\ket{\xi_i} \bra{\xi_i})} \le 1 $. 
+	Note that $1 \ge \norm{X}_{\infty} := \sup_{\modul{y}\le 1} \modul{Xy} $ implies that $ \modul{X^2\ket{\xi_i}} \le 1 $. So the problem can be reduced to $ \vert \trace{uv^*}\vert^2 \le 1 $ for complex vectors $ u,v $ with $ \modul{u},\, \modul{v} \le 1 $. But this holds since due to the Cauchy-Schwarz inequality 
+	$ \vert\trace{uv^*}\vert^2 = \vert\sum u_i \bar{v_i}\vert^2 \le \modul{u}^2\modul{v}^2 \le 1 $.
+	
+	If we now identify the operators $ X_i \otimes I $ and $  I \otimes Y_j$ with vectors
+	$ (x_i) $ and $ (y_j) $ we have found vectors that almost satisfy the desired properties but they do not have the right dimension and we do not consider the standard scalar product yet. Without loss of generality let $ m \le n $. To obtain the required dimension we will project $ (y_j) $ orthogonally onto $ \textup{span}\{ x_1,...,x_m \} $.
+	Let $ \{a_1,...,a_r\} $ be an orthonormal basis of $ \textup{span} \{ x_1,...,x_m \} $ with respect to $ \beta $. 
+	The orthogonal projection of $ y_j $ is $ \pi(y):= \sum_{i=1}^{r}\beta(a_i,y_j)a_i $ and fulfills
+	$ \beta(x_i,y_j) = \beta(x_i,\pi(y_j)) $. \textbf{perhaps explanation but standard calculation}
+	Let $ x_i $ and $ \pi(y_j) $ admit the descriptions 
+	$ x_i = \sum_{k=1}^{r}\alpha_k^{(i)}a_k$ and $  \pi(y_j) = \sum_{k=1}^r \gamma_k^{(j)} a_k$ for $ \alpha^{(i)}, \gamma^{(j)} \in \mathbb{R}^r $. Then
+	\begin{align*}
+		a_{ij}= \beta(x,y)= \beta(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \beta(a_k,a_l) = \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}a, \gamma^{(j)} \rangle.
+	\end{align*}
+	Moreover, since $ \modul{x_i}, \, \modul{y_j}= \modul{\pi(y_j)} \le 1 $ we get $ \langle \alpha^{(i)}, \alpha^{(i)} \rangle, \, \langle \gamma^{(j)}, \gamma^{(j)} \rangle \le 1$ and thus the vectors $ (\alpha^{(i)}) $ and$ (\gamma^{(j)}) $ all required properties. 
+	 
+	 
+	
+\end{proof}
+\begin{proof}[Proof of $ \LC_{m,n} \supset M $]
+	Inhalt...
 \end{proof}

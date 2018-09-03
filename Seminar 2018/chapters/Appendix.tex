@@ -7,4 +7,20 @@ Dinge, die definiert werden sollten.
 \end{enumerate}
 
 
-Appendix alles was vorher keinen Platz findet. 
+\subsection{How to derive an inner product from a symmetric positive semidefinite bilinear form}
+Suppose we have a $ k- $vector space $ V $ equipped with symmetric positive semidefinite bilinear form $ \beta: \, V \times V \to k $. We want to derive a vector space $ U $ that is equipped with an inner product which is induced by $ \beta $. The idea is to to consider the quotient space $ U:=V/\ker\beta $ where $ \ker \beta = \{ v \in V \, | \, \beta(v,w)= 0 \text{ for all } w \in V \} $. Note that the Cauchy-Schwartz inequality $ \beta(v,w)^2 \le \beta(v,v)\beta(w,w) $ implies that 
+$ \ker \beta = \{ v \in V \, | \, \beta(v,v)= 0 \} $.
+We define $ \tilde{\beta}:  \, U \times U \to k $ by $ \tilde{\beta}([v],[w]) = \beta(v,w) $ where $ [v] = v + \ker\beta, \,$$[w]=w+\ker\beta$.
+
+We have to show that $ \tilde{\beta} $ is well-defined. Therefore, let $ [v]=[v^{'}] $, so $v^{‘}-v \in \ker \beta $. 
+For an arbitrary $ [w] \in U $ yields 
+\begin{align*}
+	\beta([v],[w]) = \beta(v,w) = \beta(v,w)+\beta(v^{'}-v,w)= \beta(v^{'},w) = \tilde{\beta}([v^{'}],[w]).
+\end{align*}
+The symmetry of $ \beta $ combined with the observation above ensures $ \tilde{\beta}([v],[w]) = \tilde{\beta}([v],[w^{'}]) $ for $ [w]= [w^{'}] $.
+
+Finally, we get the following equivalence relations: 
+\begin{align*}
+	\tilde{\beta}([v],[v]) = 0 \Leftrightarrow \beta(v,v) = 0 \Leftrightarrow v \in \ker \beta \Leftrightarrow [v]= \ker \beta,
+\end{align*}
+which implies that $ \beta $ defines an inner product on $ U $. 
