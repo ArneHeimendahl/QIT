@@ -89,11 +89,17 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	We have to check that it indeed satisfies the mentioned properties. 
 	Obviously, $ \beta $ is homogeneous in both variables due to the fact that the trace and the real part of a complex number are linear functions and thus homogeneous. We will show additivity for the first variable, the result follows analogously for the second one. It holds
 	\begin{align*}
-		\beta(S_1+S_2,T) = \textup{Re}(\trace{\rho(S_1+S_2)T}) = \textup{Re}(\trace{\rho S_1T}) + \textup{Re}(\trace{\rho S_2T}) = \beta(S_1,T)+ \beta(S_2+T).
+		\beta(S_1+S_2,T) = \textup{Re}(\trace{\rho(S_1+S_2)T}) &= \textup{Re}(\trace{\rho S_1T}) + \textup{Re}(\trace{\rho S_2T}) \\
+		&= \beta(S_1,T)+ \beta(S_2+T).
 	\end{align*}
 	Symmetry follows form 
 	\begin{align*}
-		\beta(S,T)= \textup{Re}\trace{\rho ST} =\textup{Re}\trace{(\rho ST)^*}= \textup{Re \trace{T^*S^* \rho^*}} = \textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
+		\beta(S,T)= \textup{Re}\trace{\rho ST} &=\textup{Re}\trace{(\rho ST)^*}  \\
+		&= \textup{Re \trace{T^*S^* \rho^*}} = \textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
 	\end{align*}
 	where the one but last equation holds since $ \rho,S,T $ are Hermitian.
+	
+	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ we obtain $ \beta(S,S) = \textup{Re}\trace{\rho SS} = \textup{Re} \trace{\rho S^*S} \ge 0 $ and $ \beta $ is positive semidefinite. 
+	
+	In order to transform $ \beta $ to an inner product we have to factorize its kernel. 
 \end{proof}
