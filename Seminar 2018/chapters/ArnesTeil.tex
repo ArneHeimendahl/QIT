@@ -126,10 +126,29 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 		a_{ij}= \beta(x,y)= \beta(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \beta(a_k,a_l) = \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}a, \gamma^{(j)} \rangle.
 	\end{align*}
 	Moreover, since $ \modul{x_i}, \, \modul{y_j}= \modul{\pi(y_j)} \le 1 $ we get $ \langle \alpha^{(i)}, \alpha^{(i)} \rangle, \, \langle \gamma^{(j)}, \gamma^{(j)} \rangle \le 1$ and thus the vectors $ (\alpha^{(i)}) $ and$ (\gamma^{(j)}) $ all required properties. 
+	Additionally, we also proved that we can take an even lower dimension for our vectors, precisely 
+	$ \min \{ \dim( \textup{span} \{ (x_i) \}),$ $ \dim(\textup{span} \{ (y_j) \} )\} $.
 	 
 	 
 	
 \end{proof}
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
-	Inhalt...
+	\textbf{Following}
 \end{proof}
+Now we can easily see that $ \QC_{m,n} $ is convex.   \textbf{Following}
+
+Using these both descriptions we can derive some relations between the two sets. 
+Let $ \xi\eta^T $ be a vertex of $ \LC_{m,n} $. If we just choose $ x_i = \xi_i \ket{0}$ and $ y_j = \eta_j\ket{0} $ we immediately see that $ \xi_i\eta_j = \langle x_i, y_j \rangle $. Hence, $ \xi\eta^T \in \QC_{m,n} $ and combined with the convexity of $ \QC_{m,n} $ we get $ \LC_{m,n} \subset \QC_{m,n} $.
+
+However, the inclusion is strict in general. Therefore consider $ n=m=2 $. 
+We claim that 
+\begin{align*}
+	\QC_{m,n} = \{ A \, | \, 1/2 \trace{AM} \le 1 \textup{for all } M \in \mathcal{K} \},
+\end{align*}
+where $ \mathcal{K}  = \{ \sigma(\begin{pmatrix}
+1 & 1 \\
+1 & -1
+\end{pmatrix}), \sigma(\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}), \sigma \in \Sigma_4  \} $
