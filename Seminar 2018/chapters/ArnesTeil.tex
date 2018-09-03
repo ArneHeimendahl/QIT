@@ -10,9 +10,9 @@ As we will see in the sequel, the set of $ m \times n $ correlation matrices is 
 
 \begin{dfn}
 	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
-	\begin{align*}
+	\begin{align}\label{QCaij}
 		a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
-	\end{align*}
+	\end{align}
 \end{dfn}
 We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum cor relation matrices.
 With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. As we will see in the following two lemmata, both sets have rather simple descriptions. 
@@ -68,7 +68,7 @@ In the following, we will proof a similar description for $ \QC_{m,n} $ that is:
 \end{lemma}
 In order to proof this we have to review some definitions and introduce a special class of matrices, namely the {\itshape Pauli matrices}.
 
-For the first inclusion we review the definition of an inner product. 
+For the first inclusion we review the definition of an inner product. The basic idea is to define an inner product via the  definition of the $ a_{ij} $ in \ref{QCaij}.
 Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ that is linear in both variables, that is 
 \begin{enumerate}
 	\item $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
@@ -82,5 +82,18 @@ $ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive s
 If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product} and usually denoted by $ \langle \cdot \, , \, \cdot \rangle $.
 Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
-	Let $ (a_ij) in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and self adjoint operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $.
+	Let $ (a_ij) in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
+	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
+	We define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
+	$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
+	We have to check that it indeed satisfies the mentioned properties. 
+	Obviously, $ \beta $ is homogeneous in both variables due to the fact that the trace and the real part of a complex number are linear functions and thus homogeneous. We will show additivity for the first variable, the result follows analogously for the second one. It holds
+	\begin{align*}
+		\beta(S_1+S_2,T) = \textup{Re}(\trace{\rho(S_1+S_2)T}) = \textup{Re}(\trace{\rho S_1T}) + \textup{Re}(\trace{\rho S_2T}) = \beta(S_1,T)+ \beta(S_2+T).
+	\end{align*}
+	Symmetry follows form 
+	\begin{align*}
+		\beta(S,T)= \textup{Re}\trace{\rho ST} =\textup{Re}\trace{(\rho ST)^*}= \textup{Re \trace{T^*S^* \rho^*}} = \textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
+	\end{align*}
+	where the one but last equation holds since $ \rho,S,T $ are Hermitian.
 \end{proof}

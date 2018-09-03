@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  3 SEP 2018 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  3 SEP 2018 12:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2058,11 +2058,21 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 
 LaTeX Warning: Reference `EqQC' on page 6 undefined on input line 83.
 
-) [6] (./chapters/MaxisTeil.tex) (./chapters/Appendix.tex) (./Coffee.bbl)
-[7]
+[6]
+Overfull \hbox (22.62695pt too wide) in paragraph at lines 93--93
+[] 
+ []
+
+
+Overfull \hbox (25.37297pt too wide) in paragraph at lines 97--97
+[] 
+ []
+
+) (./chapters/MaxisTeil.tex) (./chapters/Appendix.tex) (./Coffee.bbl) [7]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
- (./Coffee.aux)
+
+(./Coffee.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 59.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 59.
 Package rerunfilecheck Info: File `Coffee.out' has not changed.
@@ -2076,13 +2086,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 34666 strings out of 492995
- 656089 string characters out of 6132703
- 744712 words of memory out of 5000000
- 37482 multiletter control sequences out of 15000+600000
- 588451 words of font info for 82 fonts, out of 8000000 for 9000
+ 34670 strings out of 492995
+ 656137 string characters out of 6132703
+ 744738 words of memory out of 5000000
+ 37485 multiletter control sequences out of 15000+600000
+ 588828 words of font info for 84 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,12n,94p,10510b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,94p,10510b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-d
@@ -2108,10 +2118,10 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on Coffee.pdf (8 pages, 331581 bytes).
+Output written on Coffee.pdf (8 pages, 333455 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
