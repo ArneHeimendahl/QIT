@@ -9,7 +9,7 @@
 As we will see in the sequel, the set of $ m \times n $ correlation matrices is a polytope, denoted by $ \LC_{m,n} $.
 
 \begin{dfn}
-	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \modul{X_i}, \modul{Y_j} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
+	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
 	\begin{align*}
 		a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
 	\end{align*}
@@ -42,7 +42,7 @@ With regard to quantum information theory it is interesting to analyze the geome
 	For the other inclusion, let $ (a_{ij}) \in \LC_{m,n} $, i.e. $ a_{ij} = \mathbb{E}[X_iY_j] $ for $ \mathbb{R} $-valued random variables $ (X_i),(Y_j) $, defined on a common probability space $ \Omega $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
 	We will use the characterization of the $ d-$dimensional cube by its vertices, that is $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ (proof by induction). So, for 
 	If we define the random variables $ X= (X_1,...,X_m) $ and $ Y= (Y_1,...,Y_m) $ they are essentially functionals 
-	$ X: \Omega^m \mapsto [-1,1]^m $ (up to a null set). Using the characterization of the hypercube we can define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ for $ \Omega \in \{-1,1\}^m $ such that 
+	$ X: \Omega^m \mapsto [-1,1]^m $ (up to a null set) {\textbf{refomulate }}. Using the characterization of the hypercube we can define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ for $ \Omega \in \{-1,1\}^m $ such that 
 	\begin{align*}
 		X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
 	\end{align*} 
@@ -62,9 +62,25 @@ However, we will do it later on for $ n=m=2 $ and compare it to $ \QC_{m,n} $.
 
 In the following, we will proof a similar description for $ \QC_{m,n} $ that is: 
 \begin{lemma}\label{LemQC}
-	\begin{align*}
+	\begin{align*}\label{EqQC}
 		QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \}.
 	\end{align*}
 \end{lemma}
 In order to proof this we have to review some definitions and introduce a special class of matrices, namely the {\itshape Pauli matrices}.
-For the first inclusion we review the definition of an inner product, ...
+
+For the first inclusion we review the definition of an inner product. 
+Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ that is linear in both variables, that is 
+\begin{enumerate}
+	\item $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
+	\item  $\beta(\lambda v,w)= \lambda \beta(v,w) $
+	\item $ \beta(v,w_1+w_2) = \beta(v,w_1)+ \beta(v,w_2) $
+	\item $ \beta(v,\lambda w) = \lambda\beta(v,w) $
+\end{enumerate}
+for all $ v,v_1,v_2 \in V, \, w,w_1,w_2 \in W, \, \lambda \in k $. 
+If $ V = W $, we call $ \beta $ {\itshape symmetric} if $ \beta(v,w) = \beta(w,v) $, {\itshape positive semidefinite} if 
+$ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive semidefinite and $ \beta(v,v)= 0 $ implies that $ v = 0 $. 
+If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product} and usually denoted by $ \langle \cdot \, , \, \cdot \rangle $.
+Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
+\begin{proof}[Proof of $ \QC_{m,n} \subset M $]
+	Let $ (a_ij) in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and self adjoint operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $.
+\end{proof}
