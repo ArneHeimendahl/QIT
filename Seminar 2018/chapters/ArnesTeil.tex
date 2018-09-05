@@ -203,9 +203,23 @@ Eventually, we have all information to show that $ \LC_{2,2} $ is a proper subse
 Assume we want to maximize in the direction of the facet induced by $ 1/2M = \begin{pmatrix}
 1 & 1 \\ 1 & -1 
 \end{pmatrix} $. Since $ \max \{  1/2 \trace{AM}\, | \, A \in \LC_{2,2} \} = 1 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, again by Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
-
 \begin{align*}
 	\trace{AM}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
 	&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
-	&\le \modul{x_1+x_2} + \modul{x_1-x_2}
+	&\le \modul{x_1+x_2} + \modul{x_1-x_2}.
 \end{align*} 
+Observing that for $ \modul{x_1},\modul{x_2}\le  1 $
+\begin{align*}
+	&(\modul{x_1+x_2} + \modul{x_1-x_2})^2 \\
+	&= \langle x_1+x_2,x_1+x_2\rangle  +\sqrt{\langle x_1+x_2,x_1+x_2\rangle  \langle x_1-x_2,x_1-x_2\rangle} +  \langle x_1-x_2,x_1-x_2\rangle  \\
+	&\le 2\modul{x_1}^2+2\modul{x_2}^2 + \sqrt{\modul{x_1}^4+2\modul{x_1}^2\modul{x_2}^2-4\langle x_1,x_2\rangle^2+\modul{x_2}^4}  \\
+	&\le  2\modul{x_1}^2+2\modul{x_2}^2 + \sqrt{4(\modul{x_1}^2+\modul{x_2}^2)^2}  \\
+	&= 4(\modul{x_1}^2+\modul{x_2}^2)
+\end{align*}
+we can give a precise upper bound for $ \trace{AM} $ by 
+\begin{align*}
+	\modul{x_1+x_2} + \modul{x_1-x_2} \le 2\sqrt{\modul{x_1}^2+\modul{x_2}^2} \le 2 \sqrt{2}.
+\end{align*}
+Thus, we just have to find a matrix that satisfies this bound. A possible choice is induced by the vectors $ x_1 = x_2 = \frac{1}{\sqrt{2}}(1,1) $ and $ y_1 = y_2 =(1,0) $, that is $ A = \frac{1}{\sqrt{2}}\begin{pmatrix}
+1 & 1 \\ 1 & 1 
+\end{pmatrix} $ yielding the value $ \trace{AM} = 2 \sqrt{2} $.
