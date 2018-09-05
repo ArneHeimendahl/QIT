@@ -1,10 +1,12 @@
 \begin{lemma}[Grothendieck's identity]
-	Let $u,v\in\mathbb{R}^d$ be unit vector. Let $r\in\mathbb{R}^d$ be a random unit vector chosen from $O(d)$-invariant probability distribution on the unit sphere. Then
+	Let $u,v\in\mathbb{R}^d$ be unit vectors. Let $r\in\mathbb{R}^d$ be a random unit vector chosen from $O(d)$-invariant probability distribution on the unit sphere. Then
 	\begin{enumerate}
-		\item[i,] $\mathbb{P}[\sgn(u^\top r)\neq\sgn(v^\top r)]=\frac{\arccos(u^\top v}{\pi}$
-		\item[ii,] $\mathbb{E}[\sgn(u^\top r)\sgn(v^\top r)]=\frac{2}{\pi}\arcsin(u^\top v)$
+		\item[i,] $\mathbb{P}[\sgn(u^\top r)\neq\sgn(v^\top r)]=\frac{\arccos(u^\top v)}{\pi}$
+		\item[ii,] $\mathbb{E}[\sgn(u^\top r)\sgn(v^\top r)]=\frac{2}{\pi}\arcsin(u^\top v).$
 	\end{enumerate}
 \end{lemma}
 \begin{proof}
-
+	Assume that $u$ and $v$ are linearly dependent. Since both, $u$ and $v$, are unit vectors, that is, either $u=v$, then $\arccos(u^\top v) = \arccos(1)=0$ or $u=-v$, then $\arccos(u^\top v) = \arccos(-1) = \pi$.
+	%Bild von arccos
+	Conversely assume that $u$ and $v$ are linearly independent, i.\,e.$ \operatorname{dim}(\spn\{u,v\})=2$. Now project $r$ orthogonally on the plane spanned by $u$ and $v$. This gives us a vector $s\in \spn\{u,v\}$ such that $u^\top r = u^\top s$, $v^\top r = v^\top s$. The unit vector $s/\norm{s}$ is uniformly distributed on the unit circle by the $O(d)$-invariance of the probability distribution. 
 \end{proof}
