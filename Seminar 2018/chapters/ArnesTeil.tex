@@ -141,23 +141,78 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	$ \min \{ \dim( \textup{span} \{ (x_i) \}),$ $ \dim(\textup{span} \{ (y_j) \} )\} $.
 \end{proof}
 
-In order to prove the other inclusion we will use the Pauli matrices which have already arose in the CHSH game. They are defined as 
-\begin{align*}
-	X = \begin{pmatrix}
-	0 & 1 \\ 1 & 0
-	\end{pmatrix}, \, Y = \begin{pmatrix}
-	0 & -i \\ i & 0
-	\end{pmatrix}, \, Z = \begin{pmatrix}
-	1 & 0 \\ 0 & -1
-	\end{pmatrix}.
-\end{align*}
-They are all trace $ 0 $ unitary matrices and anti-commute pairwise. 
-Moreover we define for $ A \in \{ X,Y,Z \}$
-\begin{align*}
-	\sigma_A^i
-\end{align*}
+In order to prove the other inclusion we will use the following proposition. 
+\begin{prop} \label{PauliProp}
+	For all $ n \ge 1 $ there is a subspace of the $ 2^n \times 2^n $ Hermitian matrices where every vector is the multiple of a unitary matrix. 
+\end{prop}
+	\begin{proof}
+		The proof is based on $ n- $fold tensor products of the Pauli matrices which are the three matrices 
+		\begin{align*}
+		X = \begin{pmatrix}
+		0 & 1 \\ 1 & 0
+		\end{pmatrix}, \, Y = \begin{pmatrix}
+		0 & -i \\ i & 0
+		\end{pmatrix}, \, Z = \begin{pmatrix}
+		1 & 0 \\ 0 & -1
+		\end{pmatrix}
+		\end{align*}
+		together with the $ 2 \times 2 $ identity matrix .
+		They are all trace $ 0 $ unitary Hermitian matrices and anti-commute pairwise. 
+		Moreover we define the $ 2^n \times 2^n $ Hermitian matrix 
+		\begin{align*}
+		\sigma_A^i = I^{\otimes (i-1)} \otimes A \otimes I^{\otimes (n-i)}
+		\end{align*}
+		for $ A \in \{ X,Y,Z \}$ and where $ I $ is the $ 2 \times 2 $ identity matrix. The Hermitian property follows directly from the observation $ (M \otimes N)^* = M^* \otimes N^* $.
+		Note that $ \sigma_A^i $ and $ \sigma_{A^{'}}^j $ anti-commute if $ i = j $ and $ A = A^{'} $ and commute otherwise. We use these operators in order to define 
+		\begin{align*}
+		U_i = \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k,  \\
+		U_{i+n} = \sigma_Z^i \prod_{k = i+1}^n \sigma_Y^k
+		\end{align*}
+		for $ i = 1,...,n $. Note that these operators are also traceless Hermitian matrices and anti-commute for $ i \neq j $:    
+		for $ 1 \le i < j  \le n$ we have 
+		\begin{align*}
+		U_iU_j = (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) &= \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
+		&= - \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^{j-1} ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n  \\
+		&= - ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
+		&= -U_jU_i
+		\end{align*}
+		and 
+		\begin{align*}
+		U_iU_{n+j} =  (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) &=
+		\sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
+		&= - \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^{j-1} ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n  \\
+		&= - ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
+		&= -U_jU_i.
+		\end{align*}
+		Since $ U_iU_i^* = U_iU_i =  I$ they are also unitary. 
+		Moreover, taking the product of two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
+		\begin{align*}
+		XY = \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le \le 2n}\xi_i\eta_j U_i U_j &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le \le 2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le \le 2n}U_iU_j \\
+		&=\sum_{i = 1}^{2n} \xi_i \eta_i I \\
+		&= \langle \xi, \eta \rangle I.
+		\end{align*}
+		So, if we set $ Y = X $ we get the desired result by taking the subspace $ \textup{span} \{ U_i \, | \, i = 1,...,2n \} $
+		
+	\end{proof}
+
+We are now ready to prove the other inclusion of lemma \ref{LemQC}.
+
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
+	Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
+	$ \modul{x_i},$$ \modul{y_j} \le 1 $. 
+	Using the notation of the previous proposition's proof we set $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_i $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_i $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
+	Then $ \trace{(XY^T)} = d\cdot \langle x, y \rangle  $ and $ \norm{X}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y^T $ which also implies $ \norm{Y}_{\infty}  \le 1 $. \textbf{Elaborate}
+	Let $ \ket{\phi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\phi}\bra{\rho} $. Note that we can write $ \rho $ as
+	\begin{align*}
+		\rho = \ket{\phi}\bra{\phi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
+	\end{align*}
+	where $  (\ket{k}\bra{l})_{kl} = 1 $ and $ (\ket{k}\bra{l})_{ij} = 0 $ for all $ (i,j)\neq (k,l) $.
 	
+	Then we get 
+	\begin{align}
+		\trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )} = \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
+		&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x,y \rangle.
+	\end{align}
 \end{proof}
 We can easily see that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
 For $ \lambda \in [0,1] $ we define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) $ and due to  $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $ they are unit vectors. Moreover, $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$. If we proceed in the same fashion as in the proof of lemma \ref{LemQC} we obtain vectors 

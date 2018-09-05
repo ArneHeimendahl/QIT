@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  5 SEP 2018 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  5 SEP 2018 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2088,20 +2088,30 @@ mr/m/n/10.95 ]\U/msb/m/n/10.95 E\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 ^^U[]\O
 T1/lmr/m/n/10.95 ] =
  []
 
-
-LaTeX Warning: Reference `EqQC' on page 11 undefined on input line 95.
-
 [11]
 Overfull \hbox (4.4314pt too wide) in paragraph at lines 124--128
 \OT1/lmr/m/n/10.95 In or-der to get the de-sired re-sult we have to show that $
 [] [] = [] [] \OMS/lmsy/m/n/10.95 ^^T
  []
 
-[12] [13]) (./chapters/MaxisTeil.tex [14]) (./chapters/Appendix.tex
+[12] [13]
+Overfull \hbox (23.04022pt too wide) in paragraph at lines 201--206
+[]\OT1/lmr/m/n/10.95 Let $(\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/10.95 )[]\OML/lm
+m/m/it/10.95 ;  \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y[]\OT1/lmr/m/n/10.95 )
+[]$ be vec-tors in $\U/msb/m/n/10.95 R[]$ \OT1/lmr/m/n/10.95 that sat-isfy $[]\
+OML/lmm/m/it/10.95 ;$$[] \OMS/lmsy/m/n/10.95 ^^T
+ []
+
+
+Overfull \hbox (7.66248pt too wide) in paragraph at lines 215--215
+[] 
+ []
+
+[14] [15]) (./chapters/MaxisTeil.tex) (./chapters/Appendix.tex [16]
 
 LaTeX Warning: Command \textquoteleft invalid in math mode on input line 15.
 
-) (./Coffee.bbl) [15]
+) (./Coffee.bbl) [17]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (./Coffee.aux)
@@ -2113,18 +2123,15 @@ Package rerunfilecheck Info: File `Coffee.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 34705 strings out of 492995
- 656538 string characters out of 6132703
- 749818 words of memory out of 5000000
- 37494 multiletter control sequences out of 15000+600000
+ 34711 strings out of 492995
+ 656595 string characters out of 6132703
+ 751896 words of memory out of 5000000
+ 37495 multiletter control sequences out of 15000+600000
  588828 words of font info for 84 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,14n,94p,10510b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,94p,10510b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-d
@@ -2150,10 +2157,10 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on Coffee.pdf (16 pages, 390546 bytes).
+Output written on Coffee.pdf (18 pages, 399286 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 315 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
  133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
