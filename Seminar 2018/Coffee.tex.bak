@@ -42,7 +42,6 @@ Dieses Paper ist eine Ausarbeitung unseres Vortrags im Seminar "Introduction to 
 	\vspace{8pt}
 	\input{chapters/FelixTeil.tex}
 
-\section{}	\include{chapters/FelixTeil2.tex}
 
 \section{Local and Quantum correlation matrices} %\label{sec_mathreform}
 	\vspace{8pt}

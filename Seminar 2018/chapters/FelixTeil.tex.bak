@@ -3,7 +3,7 @@ In order to make sure everyone is on the same page we will have the following in
 A complex matrix $A \in \mathbb{C}^{n \times n}$ is called Hermitian if $A^*=A$, where $A^*$ denotes the conjugate transpose of $A$. A complex Hermitian matrix $A$ is called positve semidefinite (abbreviated psd.) if one of the following holds: 
 \begin{enumerate}
 \item[i,] The matrix has only real non-negative eigenvalues 
-\item[ii,] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z}_{i_k}z_{j_k}$
+\item[ii,] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z_{i_k}}z_{j_k}$
 \item[iii,] For every $z \in \mathbb{C}^n$ we have $z^*Az\ge 0$
 \item[iv,] There exists a complex matrix $B$ s.t. $A=B^*B$
 \item[v,] $\trace{(A\cdot B)} \ge 0 $ for all positive semidefinite operators $ B $ defined in the same space. 
