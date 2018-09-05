@@ -1,4 +1,5 @@
-So far, we have been dealing with quite specific strategies. The idea is to generalize the concept of strategies into mathematical objects. Suppose the referee sends an element $ s \in \mathcal{S} $ to Alice, respectively $ t \in\mathcal{T} $ to Bob. Suppose Alice and Bob answer according to a deterministic strategy. We will interpret their answers as vectors $ a \in [-1,1]^{\mathcal{S}}, b \in [-1,1]^{\mathcal{T}} $.  Their common answer is the product $ a_sb_t $. So, their strategy can be uniquely described by a  matrix $ ab^\top $.  Instead of playing a deterministic strategy they could answer in a probabilistic way, meaning that given the input $ s \in \mathcal{S} $, respectively $ t \in \mathcal{T} $ their answers are determined by random variables $ X_s $ and $ Y_t $. Then, their expected common answer is $ \mathbb{E}[X_sY_t] $ 
+\subsection{Local Correlation matrices}
+So far, we have been dealing with quite specific strategies. The idea is to generalize the concept of strategies into mathematical objects. Suppose the referee sends an element $ s \in \mathcal{S} $ to Alice, respectively $ t \in\mathcal{T} $ to Bob. Suppose Alice and Bob answer according to a deterministic strategy. We will interpret their answers as vectors $ a \in [-1,1]^{\mathcal{S}}, b \in [-1,1]^{\mathcal{T}} $.  Their common answer is the product $ a_sb_t $. So, their strategy can be uniquely described by a  matrix $ ab^\top $.  Instead of playing a deterministic strategy they could answer in a probabilistic way, meaning that given the input $ s \in \mathcal{S} $, respectively $ t \in \mathcal{T} $ their answers are determined by random variables $ X_s $ and $ Y_t $. Then, their expected common answer is $ \mathbb{E}[X_sY_t] $. In the following definition we define the set of all such matrices encoding the common strategy of Alice and Bob.
 
 \begin{dfn}
 	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be families of random variables on a common probability space such that $ \vert X_i \vert, \vert Y_j \vert \le 1 $ almost surely. Then $ A=(a_{ij}) $ is the corresponding {\itshape classical (or local) correlation matrix} if 
@@ -9,15 +10,7 @@ So far, we have been dealing with quite specific strategies. The idea is to gene
 \end{dfn}
 As we will see in the sequel, the set of $ m \times n $ correlation matrices is a polytope, denoted by $ \LC_{m,n} $.
 
-\begin{dfn}
-	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
-	\begin{align}\label{QCaij}
-		a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
-	\end{align}
-\end{dfn}
-We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
-
-With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. As we will see in the following two lemmata, both sets can be described in a more useful way. 
+As we will see in the following two lemmata, both sets can be described in a more useful way. 
 
 \begin{lemma}\label{LemLC}
 	An alternative description of $ \LC_{m,n} $ is given by 
@@ -63,6 +56,19 @@ With regard to quantum information theory it is interesting to analyze the geome
 \end{proof}
 Now we are able to count the vertices of $ \LC_{m,n} $. Observing that $ \xi \eta^T = \tilde{\xi} \tilde{\eta}^T $ if and only if $ \xi = \tilde{\xi} $ and $ \eta = \tilde{\eta} $ or $ \xi = -\tilde{\xi} $ and $ \eta = -\tilde{\eta} $ it follows that we have $ 2^{n+m}/2 = 2^{n+m-1} $ different matrices $ \xi \eta $, hence $ \LC_{m,n} $ has $ 2^{n+m-1} $ vertices. To analyze the facial structure of $ \LC_{m,n} $ is rather complicated. 
 However, we will do it later on for $ n=m=2 $ and compare it to $ \QC_{m,n} $.
+
+\subsection{Quantum correlation matrices}
+
+\begin{dfn}
+	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
+	\begin{align}\label{QCaij}
+	a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
+	\end{align}
+\end{dfn}
+We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
+
+With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. 
+
 
 In the following, we will proof a similar result for $ \QC_{m,n} $ that is: 
 \begin{lemma}\label{LemQC}
@@ -203,7 +209,7 @@ satisfy all other constraints.
 Eventually, we have all information to show that $ \LC_{2,2} $ is a proper subset of $ \QC_{2,2} $. 
 Assume we want to maximize in the direction of the facet induced by $ 1/2M = \begin{pmatrix}
 1 & 1 \\ 1 & -1 
-\end{pmatrix} $. Since $ \max \{  1/2 \trace{AM}\, | \, A \in \LC_{2,2} \} = 1 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, again by Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
+\end{pmatrix} $. Since $ \max \{  1/2 \trace{AM}\, | \, A \in \LC_{2,2} \} = 1 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
 \begin{align*}
 	\trace{AM}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
 	&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
