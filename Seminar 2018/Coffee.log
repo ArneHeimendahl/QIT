@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  5 SEP 2018 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  5 SEP 2018 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2072,12 +2072,15 @@ Overfull \hbox (63.63425pt too wide) in paragraph at lines 120--120
  []
 
 [6] [7] [8]) (./chapters/ArnesTeil.tex [9]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 32.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 33.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
-Overfull \hbox (32.39528pt too wide) in paragraph at lines 51--56
+Underfull \vbox (badness 4569) has occurred while \output is active []
+
+ [10]
+Overfull \hbox (32.39528pt too wide) in paragraph at lines 52--57
 \OT1/lmr/m/n/10.95 where we used that $\OML/lmm/m/it/10.95 ^^U[]$ \OT1/lmr/m/n/
 10.95 and $\OML/lmm/m/it/10.95 ^^U[]$ \OT1/lmr/m/n/10.95 are in-de-pen-dent. Si
 nce $[][] \U/msb/m/n/10.95 E\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 ^^U[]\OT1/l
@@ -2085,17 +2088,16 @@ mr/m/n/10.95 ]\U/msb/m/n/10.95 E\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 ^^U[]\O
 T1/lmr/m/n/10.95 ] =
  []
 
-[10]
 
-LaTeX Warning: Reference `EqQC' on page 11 undefined on input line 94.
+LaTeX Warning: Reference `EqQC' on page 11 undefined on input line 95.
 
 [11]
-Overfull \hbox (4.4314pt too wide) in paragraph at lines 123--127
+Overfull \hbox (4.4314pt too wide) in paragraph at lines 124--128
 \OT1/lmr/m/n/10.95 In or-der to get the de-sired re-sult we have to show that $
 [] [] = [] [] \OMS/lmsy/m/n/10.95 ^^T
  []
 
-[12] [13]) (./chapters/MaxisTeil.tex) (./chapters/Appendix.tex [14]
+[12] [13]) (./chapters/MaxisTeil.tex [14]) (./chapters/Appendix.tex
 
 LaTeX Warning: Command \textquoteleft invalid in math mode on input line 15.
 
@@ -2118,11 +2120,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  34705 strings out of 492995
  656538 string characters out of 6132703
- 750818 words of memory out of 5000000
+ 749818 words of memory out of 5000000
  37494 multiletter control sequences out of 15000+600000
  588828 words of font info for 84 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,14n,94p,10510b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,94p,10510b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-d
@@ -2148,7 +2150,7 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on Coffee.pdf (16 pages, 389491 bytes).
+Output written on Coffee.pdf (16 pages, 390546 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  258 compressed objects within 3 object streams
