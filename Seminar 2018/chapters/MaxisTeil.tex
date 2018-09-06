@@ -9,6 +9,17 @@
 	Assume that $u$ and $v$ are linearly dependent. Since both, $u$ and $v$, are unit vectors, that is, either $u=v$, then $\arccos(u^\top v) = \arccos(1)=0$ or $u=-v$, then $\arccos(u^\top v) = \arccos(-1) = \pi$.
 	%Bild von arccos
 	Conversely assume that $u$ and $v$ are linearly independent, i.\,e. $\operatorname{dim}(\spn\{u,v\})=2$. Now project $r$ orthogonally on the plane spanned by $u$ and $v$. This gives us a vector $s\in \spn\{u,v\}$ such that $u^\top r = u^\top s$, $v^\top r = v^\top s$. The unit vector $s/\norm{s}$ is uniformly distributed on the unit circle by the $O(d)$-invariance of the probability distribution. 
+	
+	\textcolor{red}{Bildchen und Begründung vom letzten Schritt}
+	
+	\begin{align*}
+		\mathbb{E}[\sgn(u^\top r) \sgn(v^\top r)]
+		&= 1\cdot\mathbb{P}[\sgn(u^\top r) = \sgn (v^top r )] - 1\cdot \mathbb{P}[\sgn(u^\top r) \neq \sgn(v^\top r)] \\
+		&= 1 - 2\mathbb{P}[\sgn(u^\top r) \neq \sgn(v^\top r)] \\
+		&= 1 - 2 \frac{\arccos(u^\top v)}{\pi} \\
+		&= \frac{2}{\pi} \arcsin(u^\top v),
+	\end{align*}
+	because $\arcsin (t) = \arccos(t) = \pi/2$.
 \end{proof}
 
 \begin{lemma}[Krivine's trick]\label{lem:krivines_trick}
@@ -23,9 +34,9 @@ For the proof of \ref{lem:krivines_trick} we need to use the tensor product. \te
 Then the \emph{k-th tensor product of $\mathbb{R}^n$} is denoted by $(\mathbb{R}^n)^{\tensor k}$ and it is a Euclidean  vector space of dimension $n^k$ with orthonormal basis $e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k}$, $i_j\in\{1,\dots,n\}$. In particular
 \begin{align}
 	(e_{i_1}\tensor \cdots \tensor e_{i_k})^\top (e_{j_1}\tensor \cdots \tensor e_{j_k}) 
-	&= \prod_{r=1}^k e_{i_r}^\top e_{j_r}\nonumber\\
+	&= \prod_{l=1}^k e_{i_l}^\top e_{j_l}\nonumber\\
 	&=\begin{cases}
-		1 & , \text{ if } i_r=j_r \text{ for all } r=1,\dots,n,\\
+		1 & , \text{ if } i_l=j_l \text{ for all } l=1,\dots,n,\\
 		0 & , \text{ otherwise},
 	\end{cases} \label{eq:orthonormtensor}
 \end{align}
@@ -91,5 +102,40 @@ Thus, for $v,w\in\mathbb{R}^n$
 	\]
 	since $\arcsinh (t) = \ln(t+\sqrt{t^2+1})$.
 	\textcolor{red}{Gram matrix}
+\end{proof}
+\begin{dfn}
+	For $A\in\mathbb{R}^{m\times n}$ define the quadratic program
+	\begin{equation}
+		\norm{A}_{\infty\to 1} = \max \left\{ \sum_{i=1}^m \sum_{j=1}^n A_{ij} x_i y_j : x_i^2=1, i=1,\dots,m, y_j^2=1, j =1,\dots,n \right\}.
+	\end{equation}
+\end{dfn}
+\textcolor{red}{computing NP-hard}
+\begin{dfn}
+	SDP relaxation of $\norm{A}_{\infty\to1}$:
+	\begin{align*}
+		\operatorname{sdp}_{\infty\to 1} (A) = \max 
+		&\sum_{i=1}^m\sum_{j=1}^n A_{ij} u_i^\top v_j\\
+		&u_i,v_j\in\mathbb{R}^{m+n}\\
+		&\norm{u_i}=1, i=1,\dots,m\\
+		&\norm{v_j}=1, j=1,\dots,n.
+	\end{align*}
+\end{dfn}
+\begin{theo}[Grothendieck's inequality] \label{eq:G_ineq}
+	There exists a constant $K$ such that for all $A\in\mathbb{R}^{m\times n}$:
+	\begin{equation}
+		\norm{A}_{\infty\to 1} \leq \operatorname{sdp}_{\infty\to 1} (A) \leq K \norm{A}_{\infty\to 1}.
+	\end{equation}
+\end{theo}
+\begin{proof}
+	Again: approximation algorithm with randomized rounding
+	\textcolor{red}{program}
+	Expected quality of the outcome:
+	\begin{align*}
+		\norm{A}_{\infty\to 1} &\geq \mathbb{E}\left[\sum_{i=1}^m\sum_{j=1}^n A_{ij}x_ix_j\right]\\
+		&= \sum_{i=1}^m\sum_{j=1}^n A_{ij} \mathbb{E}[\sgn((u_i^\prime)^\top r) \sgn((v_j^\prime)^\top r)] \\
+		&=\sum_{i=1}^m\sum_{j=1}^n A_{ij}\beta u_i^\top v_j \\
+		&=\beta \operatorname{sdp}_{\infty\to 1}(A),
+	\end{align*}
+	where $\beta = \frac{2\ln(1+\sqrt(2)}{\pi}$, thus $K_G\leq \beta^{-1}$.
 \end{proof}
 \newpage
