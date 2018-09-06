@@ -59,9 +59,11 @@ Now we are able to count the vertices of $ \LC_{m,n} $. Observing that $ \xi \et
 However, we will do it later on for $ n=m=2 $ and compare it to $ \QC_{m,n} $.
 
 \subsection{Quantum correlation matrices}
-
+Before we introduce the quantum correlation matrices ww will shortly go back to the framework of nonlocal games. As before, Alice and Bob share a state $ \rho $ and get inputs $ s \in \mathcal{S}, t \in \mathcal{T} $ and perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $.
+As we have seen before the probability that they response is $ (\xi,\eta) $ for inputs $ (s,t) $ is given by 
+$ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode these information in a matrix $ A=(a_{st}) $. This motivates the following (slightly more general) definition. 
 \begin{dfn}
-	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C} \otimes \mathbb{C})$ such that 
+	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
 	\begin{align}\label{QCaij}
 	a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
 	\end{align}
@@ -279,9 +281,9 @@ the matrices $ \begin{pmatrix}
 \end{pmatrix} $ 
 satisfy all other constraints. 
 Eventually, we have all information to show that $ \LC_{2,2} $ is a proper subset of $ \QC_{2,2} $. 
-Assume we want to maximize in the direction of the facet induced by $ 1/2M = \begin{pmatrix}
+Assume we want to maximize in the direction of the facet induced by $ \frac{1}{2}M = \frac{1}{2}\begin{pmatrix}
 1 & 1 \\ 1 & -1 
-\end{pmatrix} $. Since $ \max \{  1/2 \trace{AM}\, | \, A \in \LC_{2,2} \} = 1 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
+\end{pmatrix} $. Note that $ M $ coincides with the matrix $ \Sigma_{s,t} = (-1)^{f(s,t)} $ for the CSSH game in section \ref{??} \textbf{Label in CSHS section}. Since $ \max \{  1/2 \trace{AM}\, | \, A \in \LC_{2,2} \} = 1 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
 \begin{align*}
 	\trace{AM}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
 	&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
@@ -303,3 +305,4 @@ Thus, we just have to find a matrix that satisfies this bound. A possible choice
 1 & 1 \\ 1 & 1 
 \end{pmatrix} $ yielding the value $ \trace{AM} = 2 \sqrt{2} $.
 So as we have seen, the inclusion $ \LC_{m,n} \subset \QC_{m,n} $ is strict in general. Elements in $ \QC_{m,n} \setminus \LC_{m,n} $ are called {\itshape non-local}.
+Generally, linear functionals $ f: \to \mathbb{R} $ \textbf{Notation} that satisfy $ f(A) \le 1 $ for all $ A \in \LC_{m,n} $ are called {\itshape Bell correlation inequalities}. In the case $ f(A) > 1 $ for some $ A \in \QC_{m,n} $ we talk about {\itshape quantum violations}. 
