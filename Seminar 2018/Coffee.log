@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  5 SEP 2018 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  6 SEP 2018 09:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2111,6 +2111,13 @@ Overfull \hbox (7.66248pt too wide) in paragraph at lines 215--215
 
 LaTeX Warning: Command \textquoteleft invalid in math mode on input line 15.
 
+
+Overfull \hbox (4.13339pt too wide) in paragraph at lines 28--30
+[]\OT1/lmr/m/n/10.95 We are also able to an-a-lyze the struc-ture of $\OML/lmm/
+m/it/10.95 U$ \OT1/lmr/m/n/10.95 with-out big ef-fort. Let $\OMS/lmsy/m/n/10.95
+ f\OML/lmm/m/it/10.95 v[]; [] ; v[]; [] v[]\OMS/lmsy/m/n/10.95 g$
+ []
+
 ) (./Coffee.bbl) [17]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
@@ -2118,17 +2125,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `Coffee.out' has not changed.
-(rerunfilecheck)             Checksum: 8353D331146F685F89DE91B403207031;3180.
+(rerunfilecheck)             Checksum: BF32A82DB8FCE16C3716096A49A240C3;3650.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 34711 strings out of 492995
- 656595 string characters out of 6132703
- 750896 words of memory out of 5000000
- 37495 multiletter control sequences out of 15000+600000
+ 34713 strings out of 492995
+ 656625 string characters out of 6132703
+ 749940 words of memory out of 5000000
+ 37496 multiletter control sequences out of 15000+600000
  588828 words of font info for 84 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  61i,14n,94p,10510b,410s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2157,10 +2164,10 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on Coffee.pdf (18 pages, 399292 bytes).
+Output written on Coffee.pdf (18 pages, 400842 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 270 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 321 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

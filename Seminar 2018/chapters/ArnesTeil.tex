@@ -117,7 +117,7 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	Equipped with an inner product, we can regard $ \textup{B}^{sa}(\mathcal{H}) $ \textbf{Introduce notation} as a real Euclidean space. 
 	We immediately get that $ a_{ij} =\trace{\rho X_i Y_j}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that the norms of our vectors are bounded by one we have to show
 	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,...,Y_m \} $, $ Y \in \{Y_1,...,Y_n \} $. 
-	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,...,x_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,...,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $ This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
+	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,...,x_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,...,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
 	\begin{align*}
 		\beta(X \otimes I, X \otimes I) &= \textup{Re} \trace{\rho X^2 \otimes I}=  \sum_{i=1}^d \lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i} \otimes \ket{\eta_i}\bra{\eta_i})(X^2 \otimes I) } \\
 		&= \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})} =  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
@@ -201,7 +201,7 @@ We are now ready to prove the other inclusion of lemma \ref{LemQC}.
 	Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
 	$ \modul{x_i},$$ \modul{y_j} \le 1 $. 
 	Using the notation of the previous proposition's proof we set $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_i $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_i $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
-	Then $ \trace{(XY^T)} = d\cdot \langle x, y \rangle  $ and $ \norm{X}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y^T $ which also implies $ \norm{Y}_{\infty}  \le 1 $. \textbf{Elaborate}
+	Then $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y $ since $ Y_j^TY_j^T =   \modul{y_j}^2I = \modul{y_j}I^T = (Y_j^TY_j^T)^T = Y_jY_j  $.
 	Let $ \ket{\phi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\phi}\bra{\rho} $. Note that we can write $ \rho $ as
 	\begin{align*}
 		\rho = \ket{\phi}\bra{\phi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
@@ -217,6 +217,9 @@ We are now ready to prove the other inclusion of lemma \ref{LemQC}.
 We can easily see that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
 For $ \lambda \in [0,1] $ we define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) $ and due to  $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $ they are unit vectors. Moreover, $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$. If we proceed in the same fashion as in the proof of lemma \ref{LemQC} we obtain vectors 
 $ \alpha^{(i)},\gamma^{(j)} $ that satisfy $= \langle \alpha^{i},\gamma^{j} \rangle = \langle \tilde{x} _i, \tilde{y}_j$ and have dimension smaller or equal to $ \min \{m,n\} $.
+
+
+\subsection{The relations between quantum correlation and local correlation matrices}
 
 Using these both descriptions we can derive some relations between the two sets. 
 Let $ \xi\eta^T $ be a vertex of $ \LC_{m,n} $. If we just choose $ x_i = \xi_i \ket{0}$ and $ y_j = \eta_j\ket{0} $ we immediately see that $ \xi_i\eta_j = \langle x_i, y_j \rangle $. Hence, $ \xi\eta^T \in \QC_{m,n} $ and combined with the convexity of $ \QC_{m,n} $ we get $ \LC_{m,n} \subset \QC_{m,n} $.
@@ -243,7 +246,7 @@ We can easily see that $ \sigma(\begin{pmatrix}
 \end{pmatrix}) \notin \LC_{2,2} $ for $ \sigma \in \Sigma_4 $ where for $ A = (a_{ij}) $ we define $ \sigma (A)  $ by $ (\sigma( A))_{ij}:= a_{\sigma(1)\sigma(j)} $.
 We claim that
 \begin{equation}\label{facetsLC}
-	\QC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{AM} \le 1 \textup{ for all } M \in \mathcal{K} \},
+	\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{AM} \le 1 \textup{ for all } M \in \mathcal{K} \},
 \end{equation}
 where $ \mathcal{K}  = \{ \frac{1}{2}\sigma(\begin{pmatrix}
 -1 & 1 \\
@@ -262,8 +265,8 @@ $ \LC_{2,2} \cong 2\textup{CP}_4 := \textup{conv} \{  \pm e_i \, | \, i = 1,...,
 		1 & 1 & 1 & 1 
 	\end{pmatrix}.
 \end{align*}
-An easy analysis shows that $ (\textup{CP}_4)^{o}  = [-1,1]^4$ \textbf{maybe introduce polar dual}, hence the face lattice of $ \textup{CP}_4 $ is isomorphic to the inverse \textbf{look up the correct name} lattice of the hypercube which implies that the number of facets of $ \textup{CP}_4 $ coincides with the number of vertices of $ [-1,1]^4 $ which is $ 2^4 $. Due to $  \LC_{2,2} \cong 2\textup{CP}_4$ their face lattices of $ \LC_{2,2} $ and $ \textup{CP}_4 $ are isomorphic, so $ \LC_{2,2} $ has $ 2^4 $ facets as well. 
-Since all constraints in \ref{facetsLC} clearly define non-empty faces of $ \LC_{2,2} $, it suffices to show that the characterization is a non-redundant hyperplane description of $ \LC_{2,2} $, implying that all constraints define facets of $ \LC_{2,2} $. But this is indeed true since if we omit for example the constraint 
+Since the polar dual of the cross polytope is the hypercube, i.e. $ (CP_n)^o = [-1,1]^n $,  the face lattice of $ \textup{CP}_4 $ is isomorphic to the opposite lattice of the hypercube's face lattice which implies that the number of facets of $ \textup{CP}_4 $ coincides with the number of vertices of $ [-1,1]^4 $ which is $ 2^4 $. Due to $  \LC_{2,2} \cong 2\textup{CP}_4$ their face lattices of $ \LC_{2,2} $ and $ \textup{CP}_4 $ are isomorphic, so $ \LC_{2,2} $ has $ 2^4 $ facets as well. 
+Since all constraints of the right hand side of \ref{facetsLC} clearly define non-empty proper faces of $ \LC_{2,2} $, it suffices to show that the characterization is a non-redundant hyperplane description of $ \LC_{2,2} $, implying that all constraints define facets of $ \LC_{2,2} $. But this is indeed true since if we omit for example the constraint 
 $ 1/2 \trace{AM} \le 1 $ for $ M = \{ \begin{pmatrix}
 1 & 0 \\ 0 & 0
 \end{pmatrix} \} $, respectively $ M = \begin{pmatrix}
@@ -299,3 +302,4 @@ we can give a precise upper bound for $ \trace{AM} $ by
 Thus, we just have to find a matrix that satisfies this bound. A possible choice is induced by the vectors $ x_1 = x_2 = \frac{1}{\sqrt{2}}(1,1) $ and $ y_1 = y_2 =(1,0) $, that is $ A = \frac{1}{\sqrt{2}}\begin{pmatrix}
 1 & 1 \\ 1 & 1 
 \end{pmatrix} $ yielding the value $ \trace{AM} = 2 \sqrt{2} $.
+So as we have seen, the inclusion $ \LC_{m,n} \subset \QC_{m,n} $ is strict in general. Elements in $ \QC_{m,n} \setminus \LC_{m,n} $ are called {\itshape non-local}.
