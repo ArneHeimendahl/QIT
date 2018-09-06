@@ -1,0 +1,53 @@
+\section{Local and quantum correlation matrices}
+\subsection{Local correlation matrices }
+\begin{frame}{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+\begin{frame}
+	\begin{definition}
+		Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be families of random variables on a common probability space such that $ \vert X_i \vert, \vert Y_j \vert \le 1 $ almost surely. Then $ A=(a_{ij}) $ is the corresponding {\itshape classical (or local) correlation matrix} if 
+		\begin{align*}
+		a_{ij} = \mathbb{E}[X_iY_j]
+		\end{align*}
+		for all $ 1 \le i \le m, 1 \le j \le n $.
+	\end{definition}
+	\pause
+	\begin{itemize}
+		\item Set of all local correlation matrices: $ \LC_{m,n} $
+	\end{itemize}
+	\pause
+	\begin{lemma}
+		\begin{align*}
+			\LC_{m,n} = \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}
+		\end{align*}
+		
+	\end{lemma}
+	\begin{itemize}
+		\item No matter which probabilistic strategy there is a deterministic one which as at least as good as the one one chooses 
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{lemma}
+		\begin{align*}
+		\LC_{m,n} = \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}
+		\end{align*}
+		
+	\end{lemma}
+	\begin{proof}[$   \LC_{m,n}  \supset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $]
+		\pause
+		\begin{itemize}
+			\item $ \xi \eta^T \in LC_{m,n}  $ for all $\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n   $ (Choose $ X_i \equiv \xi_i, \, Y_j \equiv \eta_j $)
+			\pause
+			\item Suffices to show that $ \LC_{m,n} $ is convex. 
+			\item $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $
+			\item Find $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
+			\begin{align*}
+			\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
+			\end{align*}
+			for $ \beta \in [0,1] $
+			\pause
+			\item Define a Bernoulli random variable $ \alpha $ such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $
+		\end{itemize}
+	\end{proof}
+\end{frame}
+
