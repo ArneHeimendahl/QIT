@@ -3,7 +3,7 @@ In order to make sure everyone is on the same page we will have the following in
 A complex matrix $A \in \mathbb{C}^{n \times n}$ is called Hermitian if $A^*=A$, where $A^*$ denotes the conjugate transpose of $A$. A complex Hermitian matrix $A$ is called positve semidefinite (abbreviated psd.) if one of the following holds: 
 \begin{enumerate}
 \item[i,] The matrix has only real non-negative eigenvalues 
-\item[ii,] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z_{i_k}}z_{j_k}$
+\item[ii,] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z}_{i_k}z_{j_k}$
 \item[iii,] For every $z \in \mathbb{C}^n$ we have $z^*Az\ge 0$
 \item[iv,] There exists a complex matrix $B$ s.t. $A=B^*B$
 \item[v,] $\trace{(A\cdot B)} \ge 0 $ for all positive semidefinite operators $ B $ defined in the same space. 
@@ -66,7 +66,7 @@ In the following example we would like to show that if two players, call them Al
 So, let $\vert \psi \rangle = \vert \psi_A \rangle \vert \psi_B \rangle$ and let Alice perform a measurement $\{F^a \}_{a \in \mathcal{A}}$ on her $\vert \psi_A \rangle$ and let Bob perform a measurement $\{ G^b \}_{b \in \mathcal{B}}$ on his $\vert \psi_B \rangle$. 
 The probability of Alice getting measurement outcome $\chi_A = a$ and Bob getting $\chi_B = b$ is equal to: 
 \begin{flalign*}
-Tr(\vert \psi \rangle \langle \psi \vert F^a \otimes G^b ) & = \langle \psi \vert F^a \otimes G^b \vert \psi \rangle \\
+\trace(\vert \psi \rangle \langle \psi \vert F^a \otimes G^b ) & = \langle \psi \vert F^a \otimes G^b \vert \psi \rangle \\
 & = (\langle \psi_A \vert \otimes \langle \psi_B \vert) (F^a \otimes G^b )(\vert \psi_A \rangle  \otimes \vert \psi_B \rangle )\\
 & = ((\langle \psi_A \vert F^a)\otimes (\langle \psi_B \vert  G^b))( \vert \psi_A \rangle \otimes \vert \psi_B \rangle) \\
 & = \langle \psi_A \vert F^a \vert \psi_A \rangle \otimes  \langle \psi_B \vert G^b \vert \psi_B \rangle \\
