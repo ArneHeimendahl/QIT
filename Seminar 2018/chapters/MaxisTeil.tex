@@ -1,4 +1,4 @@
-\begin{lemma}[Grothendieck's identity]
+\begin{lemma}[Grothendieck's identity]\label{lem:G_id}
 	Let $u,v\in\mathbb{R}^d$ be unit vectors. Let $r\in\mathbb{R}^d$ be a random unit vector chosen from $O(d)$-invariant probability distribution on the unit sphere. Then
 	\begin{enumerate}
 		\item[i,] $\mathbb{P}[\sgn(u^\top r)\neq\sgn(v^\top r)]=\frac{\arccos(u^\top v)}{\pi}$
@@ -19,14 +19,14 @@
 	with $\beta = \frac{2}{\pi} \ln (1+\sqrt{2}).$
 \end{lemma}
 
-For the proof of \ref{lem:krivines_trick} we need to use the tensor product. \textit{We have already seen the tensor product for complex vector spaces. Now we give an alternative definition for the $\mathbb{R}^n$.} The $\mathbb{R}^n$ is an $n$-dimensional Euclidean space with inner product \sclr{\cdot}{\cdot} and orthonormal basis $e_1,\dots,e_n$.
+For the proof of \ref{lem:krivines_trick} we need to use the tensor product. \textcolor{red}{We have already seen the tensor product for complex vector spaces. Now we give an alternative definition for the $\mathbb{R}^n$.} The $\mathbb{R}^n$ is an $n$-dimensional Euclidean space with inner product \sclr{\cdot}{\cdot} and orthonormal basis $e_1,\dots,e_n$.
 Then the \emph{k-th tensor product of $\mathbb{R}^n$} is denoted by $(\mathbb{R}^n)^{\tensor k}$ and it is a Euclidean  vector space of dimension $n^k$ with orthonormal basis $e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k}$, $i_j\in\{1,\dots,n\}$. In particular
 \begin{align}
-	(e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k})^\top (e_{j_1}\tensor e_{j_2} \tensor \cdots \tensor e_{j_k}) 
-	&= \prod_{r=1}^k e_{i_r}^\top e_{j_r}
+	(e_{i_1}\tensor \cdots \tensor e_{i_k})^\top (e_{j_1}\tensor \cdots \tensor e_{j_k}) 
+	&= \prod_{r=1}^k e_{i_r}^\top e_{j_r}\nonumber\\
 	&=\begin{cases}
 		1 & , \text{ if } i_r=j_r \text{ for all } r=1,\dots,n,\\
-		0 & , \text{ otherwise}.
+		0 & , \text{ otherwise},
 	\end{cases} \label{eq:orthonormtensor}
 \end{align}
 and for $v\in\mathbb{R}^n$ with $v=v_1e_1+\cdots +v_ne_n$ we define $v^{\tensor k} \in (\mathbb{R}^n)^{\tensor k}$ by 
@@ -37,11 +37,59 @@ where the last equation follows by the distributive law (identity ii, of the ten
 Thus, for $v,w\in\mathbb{R}^n$ 
 \begin{align}
 	(v^{\tensor k})^\top w^{\tensor k}
-	&= \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}\left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k}(e_{j_1}\tensor\cdots\tensor e_{j_k}) \\
-	&= \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k} \left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top (e_{j_1}\tensor\cdots\tensor e_{j_k}) \\
-	&\overset{\eqref{eq:orthonormtensor}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}w_{j_1}\cdots w_{j_k} \\
-	&=(\sum_{i=1}^n v_iw_i)^k = (v^\top w)^k
+	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}\left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k}(e_{j_1}\tensor\cdots\tensor e_{j_k}) \nonumber\\
+	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k} \left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top (e_{j_1}\tensor\cdots\tensor e_{j_k}) \nonumber\\
+	&\overset{\eqref{eq:orthonormtensor}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}w_{i_1}\cdots w_{i_k} \nonumber\\
+	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=}(\sum_{i=1}^n v_iw_i)^k = (v^\top w)^k \label{eq:kth_tensor}
 \end{align}
 \begin{proof}
-	Hier kommt ein krasser Beweis.
+	Define the function $E: [-1,+1] \to [-1,+1]$ by $E(t)=\frac{2}{\pi}\arcsin(t)$. Due to Grothendieck's identity (Lemma \ref{lem:G_id}):
+	\begin{align*}
+		E((u_i^\prime)^\top v_j^\prime ) &= \mathbb{E}[\sgn((u_i^\prime)^\top r)\sgn((v_j^\prime)^\top r)]\\
+		&\overset{!}{=}\beta u_i^\top v_j,
+	\end{align*}
+	where $r\in\mathbb{R}^d$ is a random unit vector chosen form the $O(d)$-invariant probability distribution on the unit sphere.\\
+	
+	Idea: To find $\beta,u_i^\prime,v_j^\prime$ we invert $E$:
+	\[
+		(u_i^\prime)^\top v_j^\prime = E^{-1} (\beta u_i^\top v_j)	
+	\]
+	with 
+	\begin{align*}
+		E^{-1}(t) &= \sin(\pi/2 \cdot t) \\
+		&= \sum_{k=0}^\infty \underbrace{\frac{(-1)^{2k+1}}{(2k+1)!}\left(\frac{\pi}{2}\right)^{2k+1}}_{g_{2k+1}}  t^{2k+1}
+	\end{align*}
+	which is valid for all $t\in[-1,+1]$.
+	
+	Define the infinite-dimensional Hilbert space
+	\begin{equation}
+		H= \bigoplus_{r=0}^\infty (\mathbb{R}^{m+n})^{\tensor 2k+1}.
+	\end{equation}
+	\textcolor{red}{Begruenden, dass H gross genug ist?}
+	
+	Define $u_i^\prime, v_j^\prime\in H$ componentwise:
+	\begin{align*}
+		(u_i^\prime)_k &= \sgn(g_{2k+1}) \sqrt{\modul{g_{2k+1}}\beta^{2k+1}}\, u^{\tensor 2k+1} \\
+		(v_j^\prime)_k &= \sqrt{\modul{g_{2k+1}}\beta^{2k+1}} \,v^{\tensor 2k+1}
+	\end{align*}
+	\textcolor{red}{woher sind u und v?}
+	Then 
+	\begin{align*}
+		(u_i^\prime)^\top v_j^\prime &\overset{\textcolor{white}{\eqref*{eq:kth_tensor}}}{=} \sum_{k=0}^\infty g_{2k+1} \beta^{2k+1}(u^{\tensor 2k+1})^\top v^{\tensor 2k+1} \\
+		&\overset{\eqref{eq:kth_tensor}}{=} \sum_{k=0}^\infty g_{2k+1} \beta^{2k+1} (u^\top v)^{2k+1} \\
+		&\overset{\textcolor{white}{\eqref*{eq:kth_tensor}}}{=} E^{-1}(\beta u_i^\top v_j).
+	\end{align*}
+	Hence, $\beta$ is defined by the condition
+	\[
+		1 = (u_i^\prime)^\top u_i = (v_j^\prime)^\top v_j 
+		%= \sum_{k=0}^\infty \modul{g_{2k+1}} \beta^{2k+1} 
+		= \sum_{k=0}^\infty \frac{1}{(2k+1)!}\left(\frac{\pi}{2}\right)^{2k+1}\beta^{2k+1}=\sinh(\frac{\pi}{2}\beta)
+	\]
+	and
+	\[
+		\beta = \frac{2}{\pi} \arcsinh(1) = \frac{2}{\pi}\ln(1+\sqrt(2)),	
+	\]
+	since $\arcsinh (t) = \ln(t+\sqrt{t^2+1})$.
+	\textcolor{red}{Gram matrix}
 \end{proof}
+\newpage
