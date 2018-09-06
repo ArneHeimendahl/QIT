@@ -23,4 +23,11 @@ Finally, we get the following equivalence relations:
 \begin{align*}
 	\tilde{\beta}([v],[v]) = 0 \Leftrightarrow \beta(v,v) = 0 \Leftrightarrow v \in \ker \beta \Leftrightarrow [v]= \ker \beta,
 \end{align*}
-which implies that $ \beta $ defines an inner product on $ U $. 
+which implies that $ \tilde{\beta} $ defines an inner product on $ U $. 
+
+We are also able to analyze the structure of $ U $ without big effort. Let $ \{ v_1,\hdots,v_k, \hdots v_n \} $ be a basis for $ V $ such that $ \ker \beta = \textup{span} \{ v_1,\hdots v_k \}$. So, if we take two elements 
+$ v = \sum_{i=1}^{k}a_iv_i + \sum_{i=k+1}^{n}a_iv_i$ and $ w = \sum_{i=1}^{k}b_iv_i + \sum_{i=k+1}^{n}b_iv_i $ then 
+\begin{align*}
+	[v] = [w] \Leftrightarrow v-w \in \textup{span} \{  v_1,...,v_k \} \Leftrightarrow (a_{k+1},\hdots a_n) = (b_{k+1},\hdots b_n).
+\end{align*} 
+Hence, we can deduce that $ U \cong \textup{span} \{ v_{k+1},...,v_n \} $.
