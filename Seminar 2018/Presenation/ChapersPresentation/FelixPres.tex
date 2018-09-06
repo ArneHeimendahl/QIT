@@ -1,0 +1,95 @@
+\begin{frame}{Let's get on the same page}
+ \begin{fullpageitemize}
+  \item $\bullet$ \largetext{We should know what a \emph{state} is}
+  \item $\bullet$ \largetext{We should know what the \emph{tensor product} does}
+  \item $\bullet$ \largetext{We should be familiar with the \emph{Dirac notation}}
+ \end{fullpageitemize}
+\end{frame}
+
+\begin{frame}{Quantum systems}
+\begin{itemize}
+\item A quantum system is a portion of the whole universe. For example a set electrons. 
+\item A quantum system $X$ is associated with a copy of $\mathbb{C}^k$ 
+\item It may consist of subsystems $X_1, \dots , X_N$ each of which is associated with a copy of $\mathbb{C}^{n_i}$. In this case $k = n_1 \dots n_N$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Measurements}
+\begin{itemize}
+    \item A measurement can be performed on a system $X$ that is in state $\rho$
+    \item Let $\mathcal{A}$ be a finite set of outcomes of the measurement
+    \item The measurement itself is defined by a set of psd matrices $\{ F^a \}_{a\in \mathcal{A}} \subseteq \mathbb{C}^{n \times n}$ that sum up to the identity matrix, i.e. $\sum_{a \in \mathcal{A}} F^a = I$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Measurements}
+\begin{itemize}
+    \item A projective measurement is defined by psd matrices that satisfy $F^aF^b = \delta_{ab}F^a \text{ } \forall a,b \in \mathcal{A}$
+    \item The outcome of a measurement is a random variable $\chi$ with probability distribution: $\mathbb{P}[ \chi = a ] = \text{Tr}(\rho F^a)$
+    \item To define an expected value we define outcomes in $\mathcal{A}$ as real numbers
+\end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{Measurements}
+\begin{itemize}
+    \item $\mathbb{E} [\chi ] = \sum_{a \in \mathcal{A}} a \text{Tr} ( \rho F^a ) =  \text{Tr} ( \rho ( \sum_{a \in \mathcal{A}} a F^a))$
+    \item $\sum_{a \in \mathcal{A}} aF^a$ is called observable
+    \item A simple case we will use later are $\{ -1, 1 \}$-valued observables
+    \item if we consider projective measurements we have
+\end{itemize}
+    \begin{equation*}
+(F^+-F^-)^2 = \underbrace{F^{+^2}}_{= F^+}- \underbrace{F^+F^-}_{\delta_{+-}=0} + \underbrace{F^{-^2}}_{F^-} = F^+ + F^- = I
+\end{equation*}
+\begin{itemize}
+    \item i.e. a $\{ -1, 1 \}$-valued observable is both unitary an Hermitian 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Doling out subsystems}
+\begin{itemize}
+    \item Consider a system $X$ consisting of subsystems $X_1, \dots X_N$ which we distribute among $N$ parties, which may be located anywhere in the universe
+    \item The parties \emph{share} the state $X$ is in
+    \item Every party may perform a measurement on their subsystem $X_i$, i.e. there are $N$ sets of psd matrices $\{F^{a_1} \}_{a_1 \in \mathcal{A}_1} \in \mathbb{C}^{n_1 \times n_1}, \dots , \{F^{a_N} \}_{a_N \in \mathcal{A}_N} \in \mathbb{C}^{n_N \times n_N} $
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{}
+    The joint probability distribution of the $N$ measurement outcomes $\chi_1 , \dots , \chi_N$ is 
+\begin{equation*}
+\mathbb{P}\left[ \chi_1 = a_1, \chi_2 = a_2, \dots , \chi_N = a_N \right] = \text{Tr}(\rho F_1^{a_1} \otimes \dots \otimes F_N^{a_N}) 
+\end{equation*}
+\end{frame}
+
+\begin{frame}{Entanglement}
+\begin{itemize}
+    \item We will only consider pure states meaning states that they have rank $1$ and therefore can be written as $\rho = \vert \psi \rangle \langle \psi \vert$
+    \item A state is called product state if it can be written as $\vert \psi \rangle = \vert \psi_1 \rangle \vert \psi_2 \rangle \dots \vert \psi_N \rangle$
+    \item When a vector $\vert \psi \rangle$ is referred to as a state we mean the matrix $\vert \psi \rangle \langle \psi \vert$
+    \item A state that is not a product state is called entangled
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Example}
+    \begin{itemize}
+        \item Let $\vert \psi \rangle = \vert \psi_A \rangle \vert \psi_B \rangle$ be a system and give $\vert \psi_A \rangle$ to Alice and $\vert \psi_B \rangle$ to Bob
+        \item Let them perform measurements $\{ G^b \}_{b \in \mathcal{B}}$ and $\{F^a \}_{a \in \mathcal{A}}$ on their respective quantum systems
+        \item What is the  probability of Alice getting measurement outcome $\chi_A = a$ and Bob getting $\chi_B = b$?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Example}
+\begin{flalign*}
+\text{Tr}(\vert \psi \rangle \langle \psi \vert F^a \otimes G^b ) & = \langle \psi \vert F^a \otimes G^b \vert \psi \rangle \\
+& = (\langle \psi_A \vert \otimes \langle \psi_B \vert) (F^a \otimes G^b )(\vert \psi_A \rangle  \otimes \vert \psi_B \rangle )\\
+& = ((\langle \psi_A \vert F^a)\otimes (\langle \psi_B \vert  G^b))( \vert \psi_A \rangle \otimes \vert \psi_B \rangle) \\
+& = \langle \psi_A \vert F^a \vert \psi_A \rangle \otimes  \langle \psi_B \vert G^b \vert \psi_B \rangle \\
+&= \langle \psi_A \vert F^a \vert \psi_A \rangle  \langle \psi_B \vert G^b \vert \psi_B \rangle
+\end{flalign*}
+This is equal to the product of the probabilities of Alice measuring $a$ and Bob measuring $b$, i.e. the outcome do not correlate.
+    
+\end{frame}
