@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  6 SEP 2018 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  6 SEP 2018 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2072,7 +2072,7 @@ Overfull \hbox (63.63425pt too wide) in paragraph at lines 120--120
  []
 
 [6] [7] [8]) (./chapters/ArnesTeil.tex [9]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 33.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 34.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
@@ -2080,7 +2080,7 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 Underfull \vbox (badness 4569) has occurred while \output is active []
 
  [10]
-Overfull \hbox (32.39528pt too wide) in paragraph at lines 52--57
+Overfull \hbox (32.39528pt too wide) in paragraph at lines 53--58
 \OT1/lmr/m/n/10.95 where we used that $\OML/lmm/m/it/10.95 ^^U[]$ \OT1/lmr/m/n/
 10.95 and $\OML/lmm/m/it/10.95 ^^U[]$ \OT1/lmr/m/n/10.95 are in-de-pen-dent. Si
 nce $[][] \U/msb/m/n/10.95 E\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 ^^U[]\OT1/l
@@ -2095,7 +2095,7 @@ Overfull \hbox (4.4314pt too wide) in paragraph at lines 126--130
  []
 
 [12]
-Underfull \vbox (badness 1675) has occurred while \output is active []
+Underfull \vbox (badness 1552) has occurred while \output is active []
 
  [13]
 Overfull \hbox (23.04022pt too wide) in paragraph at lines 203--208
@@ -2179,10 +2179,10 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on Coffee.pdf (20 pages, 411089 bytes).
+Output written on Coffee.pdf (20 pages, 411271 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
+ 357 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
  78 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

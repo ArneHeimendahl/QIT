@@ -4,6 +4,10 @@
 \tableofcontents[currentsection]
 \end{frame}
 \begin{frame}
+	Nice slide to draw the connection between the games an LC 
+\end{frame}
+
+\begin{frame}
 	\begin{definition}
 		Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be families of random variables on a common probability space such that $ \vert X_i \vert, \vert Y_j \vert \le 1 $ almost surely. Then $ A=(a_{ij}) $ is the corresponding {\itshape classical (or local) correlation matrix} if 
 		\begin{align*}
@@ -26,28 +30,137 @@
 		\item No matter which probabilistic strategy there is a deterministic one which as at least as good as the one one chooses 
 	\end{itemize}
 \end{frame}
+
 \begin{frame}
+	\begin{exampleblock}[$   \LC_{m,n}  \supset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $]
+		\begin{itemize}
+			 {\item $ \xi \eta^T \in LC_{m,n}  $ for all $\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n   $   \\
+			 	(Choose $ X_i \equiv \xi_i, \, Y_j \equiv \eta_j $)}
+			{\item Suffices to show that $ \LC_{m,n} $ is convex. }
+			{\item Let $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $}
+			{\item Find $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
+		\begin{align*}
+				\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
+		\end{align*}
+			for $ \beta \in [0,1] $}
+		{\item Define a Bernoulli random variable $ \alpha $ such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $}
+		{\item Then 
+			\begin{align*}
+			\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(1)}]\mathds{1}_{\{\alpha = 1\}}] \\
+			&= \beta \mathbb{E}[X_i^{(0)}Y_j^{(0)} ] + (1-\beta) \mathbb{E}[X_i^{(1)}Y_j^{(1)}]
+			\end{align*}}
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+
+\begin{frame}
+\begin{proof}[$   \LC_{m,n}  \subset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $]
+	\begin{itemize}
+		{\item Let $ a_{ij} = \mathbb{E}[X_iY_j] $ for $ \mathbb{R} $-valued random variables $ (X_i),(Y_j) $ defined on a common probability space $ \Omega $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. }
+		pause
+		{\item Set $ X= (X_1,...,X_m) $ and $ Y= (Y_1,...,Y_n) $, then $ X \in [-1,1]^m, \, Y \in [-1,1]^n $ almost surely.}
+		{\item Hypercube description by its vertices: $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ }
+		{\item Define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ such that 
+			\begin{align*}
+			X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
+			\end{align*} 
+			almost surely 
+			and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $}
+		{\item Using the same decomposition for $ Y $ we obtain 
+			\begin{align*}
+			a_{ij} = \mathbb{E}[X_iY_j] &= \mathbb{E} \big [  (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i ) (\sum_{\eta \in \{-1,1\}^n}\lambda_{\eta}^{(Y)}\eta_j ) \big ]   \\
+			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  \\
+			&= \big (\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}]\big )\xi_i\eta_j
+			\end{align*}}
+		{\item $
+			\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}] = 1 $
+			the matrix $ (a_{ij}) $ is a convex combination of $ \xi \eta^T $, $ \xi \in \{-1,1\}^m, \eta \in \{-1,1 \}^n $}
+	\end{itemize}
+\end{proof}
+\end{frame}
+
+
+
+\subsection{Quantum correlation matrices}
+
+\begin{frame}
+	Some nice frame to connect QCs to the games 
+\end{frame}
+
+\begin{frame}
+	\begin{definition}
+		Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
+		\begin{align*}\label{QCaij}
+		a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
+		\end{align*}
+	\end{definition}
+	\pause
+	\begin{itemize}
+		\item Set of all quantum correlation matrices denoted by $ \QC_{m,n} $
+	\end{itemize}
 	\begin{lemma}
 		\begin{align*}
-		\LC_{m,n} = \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}
+		\QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
 		\end{align*}
-		
 	\end{lemma}
-	\begin{proof}[$   \LC_{m,n}  \supset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $]
-		\pause
-		\begin{itemize}
-			\item $ \xi \eta^T \in LC_{m,n}  $ for all $\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n   $ (Choose $ X_i \equiv \xi_i, \, Y_j \equiv \eta_j $)
-			\pause
-			\item Suffices to show that $ \LC_{m,n} $ is convex. 
-			\item $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $
-			\item Find $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
-			\begin{align*}
-			\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
-			\end{align*}
-			for $ \beta \in [0,1] $
-			\pause
-			\item Define a Bernoulli random variable $ \alpha $ such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $
-		\end{itemize}
-	\end{proof}
 \end{frame}
+
+\begin{frame}
+\begin{exampleblock}{$ \QC_{m,n} \subset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
+	\pause
+	\begin{itemize}
+		\item $ a_{ij} = \trace{\rho X_i \otimes Y_j} $, sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $
+		\item Define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
+		$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
+		\item perhaps verification of at least some of these properties 
+		\item Obtain an inner product space $ U := B^{sa}(\mathcal{H}) / \ker \beta$ equipped with the inner product 
+		\begin{align*}
+			\tilde{\beta}([S],[T]) = \beta(S,T).
+		\end{align*}
+		\item Identify $ X_i \otimes I,I \otimes Y_j $ with vectors $ x_i,y_j $ in $ U $, then 
+		\begin{align*}
+			\tilde{\beta}(x_i,y_j) = \beta(X_i,Y_j) = Re \trace{(\rho X_i \otimes Y_j)} = a_{ij}
+		\end{align*}
+	\end{itemize}
+\end{exampleblock}
+\end{frame}
+\begin{frame}
+	\begin{exampleblock}{$ \QC_{m,n} \subset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
+		\begin{itemize}
+			\item Identify $ X_i \otimes I,I \otimes Y_j $ with vectors $ x_i,y_j $ in $ U $, then 
+			\begin{align*}
+			\tilde{\beta}(x_i,y_j) = \beta(X_i,Y_j) = Re \trace{(\rho X_i \otimes Y_j)} = a_{ij}
+			\end{align*}
+			\item $ \beta (X \otimes I, X \otimes I), \beta (I \otimes Y, I \otimes Y) \le 1$ \\
+			(this can be shown by using a {\itshape Schmidt-decomposition} of $ \rho $ and using $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $)
+			\item Project the $ y_j $'s orthogonally onto $ \textup{span} \{ x_1,...,x_m \} $  (wlog $ m \le n $)
+			\item $ \pi(y_j) $ the projection of $ y_j $ then $ \tilde{\beta}(x_i,\pi(y_j)) = \tilde{\beta}(x_i,y_j) $
+			\item Let $ \{a_1,...,a_r\} $ be an orthonormal basis of $ \textup{span} \{ x_1,...,x_m \} $ with respect to $ \beta $ and 
+			$ x_i = \sum_{k=1}^{r}\alpha_k^{(i)}a_k$ and $  \pi(y_j) = \sum_{k=1}^r \gamma_k^{(j)} a_k$ for $ \alpha^{(i)}, \gamma^{(j)} \in \mathbb{R}^r $
+		\end{itemize}
+		
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\begin{exampleblock}{$ \QC_{m,n} \subset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
+		\begin{itemize}
+			\item Let $ \{a_1,...,a_r\} $ be an orthonormal basis of $ \textup{span} \{ x_1,...,x_m \} $ with respect to $ \beta $ and 
+			$ x_i = \sum_{k=1}^{r}\alpha_k^{(i)}a_k$ and $  \pi(y_j) = \sum_{k=1}^r \gamma_k^{(j)} a_k$ for $ \alpha^{(i)}, \gamma^{(j)} \in \mathbb{R}^r $
+			\item \begin{align*}
+			a_{ij}= \tilde{\beta}(x_i,y_j)= \tilde{\beta}(x,\pi(y)) &= \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \tilde{\beta}(a_k,a_l) \\
+			&= \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}, \gamma^{(j)} \rangle.
+			\end{align*}
+			\item $ \modul{\alpha^{(i)}}, \modul{\gamma^{(j)}} \le 1  $ due to $ \tilde{\beta}(x_i), \tilde{\beta}(y_j) \le 1 $
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\begin{exampleblock}{$ \QC_{m,n} \supset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
+	\end{exampleblock}
+\end{frame}
+
+
 

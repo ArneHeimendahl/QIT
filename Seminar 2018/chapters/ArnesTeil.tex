@@ -26,6 +26,7 @@ What does the lemma tell us in addition to a simples description? It states that
 	\end{align}
 	for all $ \beta \in [0,1] $.
 	Let $ \alpha $ be a Bernoulli random variable, i.e. $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $.
+	Clearly, it holds $ \modul{X_i}, \modul{Y_j} \le 1 $ almost surely. 
 	Then 
 	\begin{align*}
 		\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(1)}]\mathds{1}_{\{\alpha = 1\}}] \\
@@ -42,7 +43,7 @@ What does the lemma tell us in addition to a simples description? It states that
 		X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
 	\end{align*} 
 	almost surely 
-	and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $. We can deduce that 
+	and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $ for all $ \omega \in \Omega $. We can deduce that 
 	$X_i =  \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i $ almost surely.
 	If we proceed analogously for $ Y $ we obtain
 	\begin{align*}
@@ -99,7 +100,7 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
 	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
 	We define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
-	$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
+	$ \beta: \textup{B}^{sa}(\mathcal{H}) \times \textup{B}^{sa}(\mathcal{H}) \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
 	We have to check that it indeed satisfies the mentioned properties. 
 	Obviously, $ \beta $ is homogeneous in both variables due to the fact that the trace and the real part of a complex number are linear functions and thus homogeneous. We will show additivity for the first variable, the result follows analogously for the second one. It holds
 	\begin{align*}
@@ -112,14 +113,13 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 		 &=\textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
 	\end{align*}
 	\textbf{Perhaps explanation}
-	
 	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ we obtain $ \beta(S,S) = \textup{Re}\trace{\rho SS} = \textup{Re} \trace{\rho S^*S} \ge 0 $ and $ \beta $ is positive semidefinite. 
 	
 	Following the steps in appendix \textbf{XXX} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space of self-adjoint operators modulo the kernel of $ \beta $. 
 	Equipped with an inner product, we can regard $ \textup{B}^{sa}(\mathcal{H}) $ \textbf{Introduce notation} as a real Euclidean space. 
 	We immediately get that $ a_{ij} =\trace{\rho X_i Y_j}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that the norms of our vectors are bounded by one we have to show
 	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,...,Y_m \} $, $ Y \in \{Y_1,...,Y_n \} $. 
-	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,...,x_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,...,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
+	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,...,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,...,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
 	\begin{align*}
 		\beta(X \otimes I, X \otimes I) &= \textup{Re} \trace{\rho X^2 \otimes I}=  \sum_{i=1}^d \lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i} \otimes \ket{\eta_i}\bra{\eta_i})(X^2 \otimes I) } \\
 		&= \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})} =  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
@@ -136,9 +136,9 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	Let $ x_i $ and $ \pi(y_j) $ admit the descriptions 
 	$ x_i = \sum_{k=1}^{r}\alpha_k^{(i)}a_k$ and $  \pi(y_j) = \sum_{k=1}^r \gamma_k^{(j)} a_k$ for $ \alpha^{(i)}, \gamma^{(j)} \in \mathbb{R}^r $. Then
 	\begin{align*}
-		a_{ij}= \beta(x,y)= \beta(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \beta(a_k,a_l) = \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}a, \gamma^{(j)} \rangle.
+		a_{ij}= \beta(x,y)= \beta(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \beta(a_k,a_l) = \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}, \gamma^{(j)} \rangle.
 	\end{align*}
-	Moreover, since $ \modul{x_i}, \, \modul{y_j}= \modul{\pi(y_j)} \le 1 $ we get $ \langle \alpha^{(i)}, \alpha^{(i)} \rangle, \, \langle \gamma^{(j)}, \gamma^{(j)} \rangle \le 1$ and thus the vectors $ (\alpha^{(i)}) $ and$ (\gamma^{(j)}) $ all required properties. 
+	Moreover, since $ \modul{\alpha^{(i)}} = \modul{x_i} \le 1$ and $\modul{ \gamma^{(j)}} \modul{y_j}= \modul{\pi(y_j)} \le 1 $ the vectors $ (\alpha^{(i)}) $ and$ (\gamma^{(j)}) $ have all the properties of the right hand side of \ref{EqQC}.
 	Additionally, we also proved that we can take an even lower dimension for our vectors, precisely 
 	$ \min \{ \dim( \textup{span} \{ (x_i) \}),$ $ \dim(\textup{span} \{ (y_j) \} )\} $.
 \end{proof}
