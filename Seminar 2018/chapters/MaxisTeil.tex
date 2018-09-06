@@ -20,15 +20,28 @@
 \end{lemma}
 
 For the proof of \ref{lem:krivines_trick} we need to use the tensor product. \textit{We have already seen the tensor product for complex vector spaces. Now we give an alternative definition for the $\mathbb{R}^n$.} The $\mathbb{R}^n$ is an $n$-dimensional Euclidean space with inner product \sclr{\cdot}{\cdot} and orthonormal basis $e_1,\dots,e_n$.
-Then the \emph{k-th tensor product of $\mathbb{R}^n$} is denoted by $(\mathbb{R}^n)^{\tensor k}$ and it is a Euclidean  vector space of dimension $n^k$ with orthonormal basis $e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k}$, $i_j\in\{1,\dots,n\}$. In particular:
-\begin{equation}
-	(e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k})^\top (e_{j_1}\tensor e_{j_2} \tensor \cdots \tensor e_{j_k}) = \prod_{r=1}^k e_{i_r}^\top e_{j_r}
-\end{equation}
+Then the \emph{k-th tensor product of $\mathbb{R}^n$} is denoted by $(\mathbb{R}^n)^{\tensor k}$ and it is a Euclidean  vector space of dimension $n^k$ with orthonormal basis $e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k}$, $i_j\in\{1,\dots,n\}$. In particular
+\begin{align}
+	(e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k})^\top (e_{j_1}\tensor e_{j_2} \tensor \cdots \tensor e_{j_k}) 
+	&= \prod_{r=1}^k e_{i_r}^\top e_{j_r}
+	&=\begin{cases}
+		1 & , \text{ if } i_r=j_r \text{ for all } r=1,\dots,n,\\
+		0 & , \text{ otherwise}.
+	\end{cases} \label{eq:orthonormtensor}
+\end{align}
 and for $v\in\mathbb{R}^n$ with $v=v_1e_1+\cdots +v_ne_n$ we define $v^{\tensor k} \in (\mathbb{R}^n)^{\tensor k}$ by 
 \begin{equation}
-	v^{\tensor k} = (v_1e_1 + \cdots + v_ne_n) \tensor \cdots \tensor (v_1e_1 + \cdots + v_ne_n) = \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} e_{i_1}\tensor\cdots\tensor e_{i_k}.
+	v^{\tensor k} = (v_1e_1 + \cdots + v_ne_n) \tensor \cdots \tensor (v_1e_1 + \cdots + v_ne_n) = \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} e_{i_1}\tensor\cdots\tensor e_{i_k},
 \end{equation}
-
+where the last equation follows by the distributive law (identity ii, of the tensor product). 
+Thus, for $v,w\in\mathbb{R}^n$ 
+\begin{align}
+	(v^{\tensor k})^\top w^{\tensor k}
+	&= \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}\left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k}(e_{j_1}\tensor\cdots\tensor e_{j_k}) \\
+	&= \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k} \left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top (e_{j_1}\tensor\cdots\tensor e_{j_k}) \\
+	&\overset{\eqref{eq:orthonormtensor}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}w_{j_1}\cdots w_{j_k} \\
+	&=(\sum_{i=1}^n v_iw_i)^k = (v^\top w)^k
+\end{align}
 \begin{proof}
 	Hier kommt ein krasser Beweis.
 \end{proof}
