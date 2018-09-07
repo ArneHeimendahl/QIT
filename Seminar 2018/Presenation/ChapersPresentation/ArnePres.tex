@@ -27,30 +27,31 @@
 		
 	\end{lemma}
 	\begin{itemize}
+		\pause
 		\item No matter which probabilistic strategy there is a deterministic one which as at least as good as the one one chooses 
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
-	\begin{block}{$   \LC_{m,n}  \supset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $}
+	\begin{proof}[$   \LC_{m,n}  \supset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $]
 		\begin{itemize}
-			 {\item $ \xi \eta^T \in LC_{m,n}  $ for all $\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n   $   \\
-			 	(Choose $ X_i \equiv \xi_i, \, Y_j \equiv \eta_j $)}
-			{\item Suffices to show that $ \LC_{m,n} $ is convex. }
-			{\item Let $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $}
-			{\item Find $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
+			 \item<1-> $ \xi \eta^T \in LC_{m,n}  $ for all $\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n   $   
+			 	(Choose $ X_i \equiv \xi_i, \, Y_j \equiv \eta_j $)
+			\item<2-> Suffices to show that $ \LC_{m,n} $ is convex. 
+			\item <3->Let $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $
+			\item<4-> Find $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
 		\begin{align*}
 				\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
 		\end{align*}
-			for $ \beta \in [0,1] $}
-		{\item Define a Bernoulli random variable $ \alpha $ such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $}
-		{\item Then 
+			for $ \beta \in [0,1] $
+		\item<5-> Define a Bernoulli random variable $ \alpha $ such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $
+		\item<6-> Then 
 			\begin{align*}
 			\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(1)}]\mathds{1}_{\{\alpha = 1\}}] \\
 			&= \beta \mathbb{E}[X_i^{(0)}Y_j^{(0)} ] + (1-\beta) \mathbb{E}[X_i^{(1)}Y_j^{(1)}]
-			\end{align*}}
+			\end{align*}
 		\end{itemize}
-	\end{block}
+	\end{proof}
 \end{frame}
 
 
@@ -58,7 +59,6 @@
 \begin{block}{$   \LC_{m,n}  \subset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $}
 	\begin{itemize}
 		\item<1-> Let $ a_{ij} = \mathbb{E}[X_iY_j] $ for $ \mathbb{R} $-valued random variables $ (X_i),(Y_j) $ defined on a common probability space $ \Omega $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
-		pause
 		\item <2->Set $ X= (X_1,...,X_m) $ and $ Y= (Y_1,...,Y_n) $, then $ X \in [-1,1]^m, \, Y \in [-1,1]^n $ almost surely.
 		\item<3-> Hypercube description by its vertices: $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ 
 		\item<4-> Define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ such that 
@@ -121,15 +121,15 @@
 \begin{frame}
 \begin{block}{$ \QC_{m,n} \subset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
 	\begin{itemize}
-		\item $ a_{ij} = \trace{\rho X_i \otimes Y_j} $, sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $
-		\item Define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
+		\item<1-> $ a_{ij} = \trace{\rho X_i \otimes Y_j} $, sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $
+		\item<2-> Define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
 		$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
-		\item perhaps verification of at least some of these properties 
-		\item Obtain an inner product space $ U := B^{sa}(\mathcal{H}) / \ker \beta$ equipped with the inner product 
+		\item<3-> perhaps verification of at least some of these properties 
+		\item<4-> Obtain an inner product space $ U := B^{sa}(\mathcal{H}) / \ker \beta$ equipped with the inner product 
 		\begin{align*}
 			\tilde{\beta}([S],[T]) = \beta(S,T).
 		\end{align*}
-		\item Identify $ X_i \otimes I,I \otimes Y_j $ with vectors $ x_i,y_j $ in $ U $, then 
+		\item<5-> Identify $ X_i \otimes I,I \otimes Y_j $ with vectors $ x_i,y_j $ in $ U $, then 
 		\begin{align*}
 			\tilde{\beta}(x_i,y_j) = \beta(X_i,Y_j) = Re \trace{(\rho X_i \otimes Y_j)} = a_{ij}
 		\end{align*}
@@ -165,10 +165,11 @@
 		\begin{align*} \QC_{m,n} \supset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in 				\mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} 
 		\end{align*}  we will use the following 
 	\end{itemize}
-	
+	\pause
 	\begin{block}{Proposition}
 		For all $ n \ge 1 $ there is a subspace of the $ 2^n \times 2^n $ Hermitian matrices where every vector is the multiple of a unitary matrix. 
 	\end{block}
+	\pause
 	\begin{itemize}
 		\item The proof is based on $ n- $fold tensor products of the Pauli matrices which are the three matrices 
 		\begin{align*}
@@ -320,7 +321,7 @@
 		\item<3-> $ (CP_n)^o = [-1,1]^n $
 		\item<4-> Both points implies that the face lattice of $ \LC_{2,2} $ is isomorphic to the opposite lattice of $ [-1,1]^4 $
 		\item<5-> $ \LC_{2,2} $ has as many facets as $ [-1,1]^4 $ vertices, hence $ 2^4 $
-		\item<6-> Equation \ref{facetsLC} is a non-redundant hyperplane description of $ \LC_{2,2} $, all linear constraints define facets.
+		\item<6-> Equation \ref{facetsLC} is a non-redundant hyperplane description of $ \LC_{2,2} $, hence all linear constraints define facets.
 	\end{itemize}
 \end{frame}
 \begin{frame}
