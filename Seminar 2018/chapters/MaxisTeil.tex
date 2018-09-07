@@ -1,40 +1,68 @@
 \begin{lemma}[Grothendieck's identity]\label{lem:G_id}
-	Let $u,v\in\mathbb{R}^d$ be unit vectors. Let $r\in\mathbb{R}^d$ be a random unit vector chosen from $O(d)$-invariant probability distribution on the unit sphere. Then
+	Let $x,y\in\mathbb{R}^d$ be unit vectors. Let $r\in\mathbb{R}^d$ be a random unit vector chosen from $O(d)$-invariant probability distribution on the unit sphere. Then
 	\begin{enumerate}
-		\item[i,] $\mathbb{P}[\sgn(u^\top r)\neq\sgn(v^\top r)]=\frac{\arccos(u^\top v)}{\pi}$
-		\item[ii,] $\mathbb{E}[\sgn(u^\top r)\sgn(v^\top r)]=\frac{2}{\pi}\arcsin(u^\top v).$
+		\item[i,] $\mathbb{P}[\sgn(\sclr{x}{r})\neq\sgn(\sclr{y}{r})]=\frac{\arccos(\sclr{x}{y})}{\pi}$
+		\item[ii,] $\mathbb{E}[\sgn(\sclr{x}{r})\sgn(\sclr{y}{r})]=\frac{2}{\pi}\arcsin(\sclr{x}{y}).$
 	\end{enumerate}
 \end{lemma}
 \begin{proof}
-	Assume that $u$ and $v$ are linearly dependent. Since both, $u$ and $v$, are unit vectors, that is, either $u=v$, then $\arccos(u^\top v) = \arccos(1)=0$ or $u=-v$, then $\arccos(u^\top v) = \arccos(-1) = \pi$.
+	For the proof of $i,$ assume that $x$ and $y$ are linearly dependent. Since both, $x$ and $y$, are unit vectors, that is, either $u=v$, then $\arccos(\sclr{x}{y}) = \arccos(1)=0$ or $x=-y$, then $\arccos(\sclr{x}{y}) = \arccos(-1) = \pi$.
 	%Bild von arccos
-	Conversely assume that $u$ and $v$ are linearly independent, i.\,e. $\operatorname{dim}(\spn\{u,v\})=2$. Now project $r$ orthogonally on the plane spanned by $u$ and $v$. This gives us a vector $s\in \spn\{u,v\}$ such that $u^\top r = u^\top s$, $v^\top r = v^\top s$. The unit vector $s/\norm{s}$ is uniformly distributed on the unit circle by the $O(d)$-invariance of the probability distribution. 
+	Conversely assume that $x$ and $y$ are linearly independent, i.\,e. $\operatorname{dim}(\spn\{x,y\})=2$. Now project $r$ orthogonally on the plane spanned by $x$ and $y$. This gives us a vector $s\in \spn\{x,y\}$ with $\sclr{x}{r} = \sclr{x}{s}$ and $\sclr{y}{r} = \sclr{y}{s}$. The unit vector $s/\norm{s}$ is uniformly distributed on the unit circle \textcolor{red}{contained in $\spn\{x,y\}$} by the $O(d)$-invariance of the probability distribution. \\
 	
-	\textcolor{red}{Bildchen und Begründung vom letzten Schritt}
+	\textcolor{red}{Noch naeher auf diese Gleichverteilung eingehen?}
 	
 	\begin{align*}
-		\mathbb{E}[\sgn(u^\top r) \sgn(v^\top r)]
-		&= 1\cdot\mathbb{P}[\sgn(u^\top r) = \sgn (v^top r )] - 1\cdot \mathbb{P}[\sgn(u^\top r) \neq \sgn(v^\top r)] \\
-		&= 1 - 2\mathbb{P}[\sgn(u^\top r) \neq \sgn(v^\top r)] \\
-		&= 1 - 2 \frac{\arccos(u^\top v)}{\pi} \\
-		&= \frac{2}{\pi} \arcsin(u^\top v),
+		\mathbb{P}[\sgn(\sclr{x}{r})\neq\sgn(\sclr{y}{r})]= \mathbb{P}[\sgn(\sclr{x}{s})\neq\sgn(\sclr{y}{s})] 
+	\end{align*} 
+	
+	\noindent\begin{minipage}{\textwidth}
+	If $s$ \textcolor{red}{lies on the green part of the unit circle}, the angle between $x$ and $s$ as well as between $y$ and $s$ is smaller than $\pi/2$, hence $\sclr{x}{s}$ and $\sclr{y}{s}$ are positive. Otherwise, if $s$ \textcolor{red}{lies on the}
+		\begin{wrapfigure}{r}{0.4\textwidth}
+			\vspace{-20pt}
+			\begin{center}
+				\includegraphics[width=0.38\textwidth]{chapters/fig_unit_circle.pdf}
+			\end{center}
+			\vspace{-20pt}
+		\end{wrapfigure}
+		 \textcolor{red}{blue part of the unit circle}, the angle between both $x$ and $s$ as well as $y$ and $s$ is greater than $3\pi/2$, hence $\sclr{x}{s}$ and $\sclr{y}{s}$ are negative.
+		
+		\hspace{12pt} Now, if we want to calculate the probability that the signs of the two scalar products disagree, we are interested in the undyed segments of the unit circle. Thus, it is sufficient to calculate the periphery of the undyed segments of the circle. In particular on the unit circle, the angle between two vectors equals the periphery of the segment of the circle between those two vectors. 
+			
+		\hspace{12pt} Because $\gamma$ and $\delta$ are vertical angles they are both equal. Furthermore, $\alpha$ and $\beta$ have to be equal too, since $\gamma$ and $\delta$ are equal and $\alpha+\delta = \beta+\gamma = \pi/2$. With $\alpha = \arccos(\sclr{x}{y}) - \pi/2$ the first part of Lemma \ref{lem:G_id} follows:
+	\end{minipage}
+	
+	\begin{align*}
+		\mathbb{P}[\sgn(\sclr{x}{s})\neq\sgn(\sclr{y}{s})]=2\frac{\frac{\pi}{2}+\alpha}{2\pi} = \frac{\arccos(\sclr{x}{y})}{\pi}.
+	\end{align*}
+	
+	\noindent We conclude with the proof of the second part of Lemma \ref{lem:G_id}: 
+	\begin{align*}
+		&\mathbb{E}[\sgn(\sclr{x}{r}) \sgn(\sclr{y}{r})] \\
+		&\qquad= 1\cdot\mathbb{P}[\sgn(\sclr{x}{r}) = \sgn (\sclr{y}{r} )] - 1\cdot \mathbb{P}[\sgn(\sclr{x}{r}) \neq \sgn(\sclr{y}{r})] \\
+		&\qquad= 1 - 2\mathbb{P}[\sgn(\sclr{x}{r}) \neq \sgn(\sclr{y}{r})] \\
+		&\qquad= 1 - 2 \frac{\arccos(\sclr{x}{y})}{\pi} \\
+		&\qquad= \frac{2}{\pi} \arcsin(\sclr{x}{y}),
 	\end{align*}
 	because $\arcsin (t) = \arccos(t) = \pi/2$.
 \end{proof}
 
 \begin{lemma}[Krivine's trick]\label{lem:krivines_trick}
-	Let $u_1,\dots,u_m$,$v_1,\dots,v_n\in S^{m+n-1}$ be given. Then there are $u_1^\prime,\dots,u_m^\prime$,$v_1^\prime,\dots,v_n^\prime\in S^{m+n-1}$ so that
+	Let $x_1,\dots,x_m,y_1,\dots,y_n\in S^{m+n-1}$ be given. Furthermore, let $r\in\mathbb{R}^d$ be a random unit vector chosen form the $O(d)$-invariant probability distribution on the unit sphere. Then there are $x_1^\prime,\dots,x_m^\prime, y_1^\prime,\dots,y_n^\prime\in S^{m+n-1}$ so that
 	\begin{equation}
-		\mathbb{E}[\sgn((u_i^\prime)^\top r)\sgn((v_j^\prime)^\top r)] = \beta u_i^\top v_j,
+		\mathbb{E}[\sgn(\sclr{x_i^\prime}{r})\sgn(\sclr{y_j^\prime}{r})] = \beta \sclr{x_i}{y_j},
+		\label{eq:krivines_trick}
 	\end{equation}		
 	with $\beta = \frac{2}{\pi} \ln (1+\sqrt{2}).$
 \end{lemma}
 
-For the proof of \ref{lem:krivines_trick} we need to use the tensor product. \textcolor{red}{We have already seen the tensor product for complex vector spaces. Now we give an alternative definition for the $\mathbb{R}^n$.} The $\mathbb{R}^n$ is an $n$-dimensional Euclidean space with inner product \sclr{\cdot}{\cdot} and orthonormal basis $e_1,\dots,e_n$.
+\noindent For the proof of \ref{lem:krivines_trick} we need to use the tensor product. \textcolor{red}{We have already ... the tensor product for complex vector spaces. Now we give an alternative definition for the $\mathbb{R}^n$.} 
+
+The $\mathbb{R}^n$ is an $n$-dimensional Euclidean space with inner product \sclr{\cdot}{\cdot} and orthonormal basis $e_1,\dots,e_n$.
 Then the \emph{k-th tensor product of $\mathbb{R}^n$} is denoted by $(\mathbb{R}^n)^{\tensor k}$ and it is a Euclidean  vector space of dimension $n^k$ with orthonormal basis $e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k}$, $i_j\in\{1,\dots,n\}$. In particular
 \begin{align}
-	(e_{i_1}\tensor \cdots \tensor e_{i_k})^\top (e_{j_1}\tensor \cdots \tensor e_{j_k}) 
-	&= \prod_{l=1}^k e_{i_l}^\top e_{j_l}\nonumber\\
+	\sclr{e_{i_1}\tensor \cdots \tensor e_{i_k}}{e_{j_1}\tensor \cdots \tensor e_{j_k}}
+	&= \prod_{l=1}^k \sclr{e_{i_l}}{e_{j_l}}\nonumber\\
 	&=\begin{cases}
 		1 & , \text{ if } i_l=j_l \text{ for all } l=1,\dots,n,\\
 		0 & , \text{ otherwise},
@@ -44,26 +72,25 @@ and for $v\in\mathbb{R}^n$ with $v=v_1e_1+\cdots +v_ne_n$ we define $v^{\tensor 
 \begin{equation}
 	v^{\tensor k} = (v_1e_1 + \cdots + v_ne_n) \tensor \cdots \tensor (v_1e_1 + \cdots + v_ne_n) = \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} e_{i_1}\tensor\cdots\tensor e_{i_k},
 \end{equation}
-where the last equation follows by the distributive law (identity ii, of the tensor product). 
+where the last equation follows by the distributive law (identity $ii,$ of the tensor product). 
 Thus, for $v,w\in\mathbb{R}^n$ 
 \begin{align}
-	(v^{\tensor k})^\top w^{\tensor k}
-	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}\left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k}(e_{j_1}\tensor\cdots\tensor e_{j_k}) \nonumber\\
-	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k} \left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top (e_{j_1}\tensor\cdots\tensor e_{j_k}) \nonumber\\
+	\sclr{v^{\tensor k}}{w^{\tensor k}}
+%	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}\left(e_{i_1}\tensor\cdots\tensor e_{i_k}\right)^\top \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k}(e_{j_1}\tensor\cdots\tensor e_{j_k}) \nonumber\\
+	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k} \sum_{j_1,\dots,j_k} w_{j_1}\cdots w_{j_k} \sclr{e_{i_1}\tensor\cdots\tensor e_{i_k}}{e_{j_1}\tensor\cdots\tensor e_{j_k}} \nonumber\\
 	&\overset{\eqref{eq:orthonormtensor}}{=} \sum_{i_1,\dots,i_k} v_{i_1}\cdots v_{i_k}w_{i_1}\cdots w_{i_k} \nonumber\\
-	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=}(\sum_{i=1}^n v_iw_i)^k = (v^\top w)^k \label{eq:kth_tensor}
+	&\overset{\textcolor{white}{\eqref*{eq:orthonormtensor}}}{=}(\sum_{i=1}^n v_iw_i)^k = \sclr{v}{w}^k \label{eq:kth_tensor}
 \end{align}
 \begin{proof}
 	Define the function $E: [-1,+1] \to [-1,+1]$ by $E(t)=\frac{2}{\pi}\arcsin(t)$. Due to Grothendieck's identity (Lemma \ref{lem:G_id}):
 	\begin{align*}
-		E((u_i^\prime)^\top v_j^\prime ) &= \mathbb{E}[\sgn((u_i^\prime)^\top r)\sgn((v_j^\prime)^\top r)]\\
-		&\overset{!}{=}\beta u_i^\top v_j,
+		E(\sclr{x_i^\prime}{y_j^\prime} ) &= \mathbb{E}[\sgn(\sclr{x_i^\prime}{r})\sgn(\sclr{y_j^\prime}{r})]\\
+		&\overset{!}{=}\beta \sclr{x_i}{y_j}.
 	\end{align*}
-	where $r\in\mathbb{R}^d$ is a random unit vector chosen form the $O(d)$-invariant probability distribution on the unit sphere.\\
 	
-	Idea: To find $\beta,u_i^\prime,v_j^\prime$ we invert $E$:
+	Idea: To find $\beta,x_i^\prime,y_j^\prime$ we invert $E$:
 	\[
-		(u_i^\prime)^\top v_j^\prime = E^{-1} (\beta u_i^\top v_j)	
+		\sclr{x_i^\prime}{y_j^\prime} = E^{-1} (\beta \sclr{x_i}{y_j})	
 	\]
 	with 
 	\begin{align*}
@@ -78,21 +105,20 @@ Thus, for $v,w\in\mathbb{R}^n$
 	\end{equation}
 	\textcolor{red}{Begruenden, dass H gross genug ist?}
 	
-	Define $u_i^\prime, v_j^\prime\in H$ componentwise:
+	Define $\tilde{x}_i, \tilde{y}_j\in H$, $i=1,\dots,m,j=1,\dots,n$ componentwise:
 	\begin{align*}
-		(u_i^\prime)_k &= \sgn(g_{2k+1}) \sqrt{\modul{g_{2k+1}}\beta^{2k+1}}\, u^{\tensor 2k+1} \\
-		(v_j^\prime)_k &= \sqrt{\modul{g_{2k+1}}\beta^{2k+1}} \,v^{\tensor 2k+1}
+		(\tilde{x}_i)_k &= \sgn(g_{2k+1}) \sqrt{\modul{g_{2k+1}}\beta^{2k+1}}\, x_i^{\tensor 2k+1} \\
+		(\tilde{y}_j)_k &= \sqrt{\modul{g_{2k+1}}\beta^{2k+1}} \,y_j^{\tensor 2k+1}
 	\end{align*}
-	\textcolor{red}{woher sind u und v?}
 	Then 
 	\begin{align*}
-		(u_i^\prime)^\top v_j^\prime &\overset{\textcolor{white}{\eqref*{eq:kth_tensor}}}{=} \sum_{k=0}^\infty g_{2k+1} \beta^{2k+1}(u^{\tensor 2k+1})^\top v^{\tensor 2k+1} \\
-		&\overset{\eqref{eq:kth_tensor}}{=} \sum_{k=0}^\infty g_{2k+1} \beta^{2k+1} (u^\top v)^{2k+1} \\
-		&\overset{\textcolor{white}{\eqref*{eq:kth_tensor}}}{=} E^{-1}(\beta u_i^\top v_j).
+		\sclr{\tilde{x}_i}{\tilde{y}_j} &\overset{\textcolor{white}{\eqref*{eq:kth_tensor}}}{=} \sum_{k=0}^\infty g_{2k+1} \beta^{2k+1}\sclr{x_i^{\tensor 2k+1}}{y_j^{\tensor 2k+1}} \\
+		&\overset{\eqref{eq:kth_tensor}}{=} \sum_{k=0}^\infty g_{2k+1} \beta^{2k+1} \sclr{x_i}{y_j}^{2k+1} \\
+		&\overset{\textcolor{white}{\eqref*{eq:kth_tensor}}}{=} E^{-1}(\beta \sclr{x_i}{y_j}).
 	\end{align*}
 	Hence, $\beta$ is defined by the condition
 	\[
-		1 = (u_i^\prime)^\top u_i = (v_j^\prime)^\top v_j 
+		1 = \sclr{\tilde{x}_i}{x_i} = \sclr{\tilde{y}_j}{y_j}
 		%= \sum_{k=0}^\infty \modul{g_{2k+1}} \beta^{2k+1} 
 		= \sum_{k=0}^\infty \frac{1}{(2k+1)!}\left(\frac{\pi}{2}\right)^{2k+1}\beta^{2k+1}=\sinh(\frac{\pi}{2}\beta)
 	\]
@@ -101,41 +127,108 @@ Thus, for $v,w\in\mathbb{R}^n$
 		\beta = \frac{2}{\pi} \arcsinh(1) = \frac{2}{\pi}\ln(1+\sqrt(2)),	
 	\]
 	since $\arcsinh (t) = \ln(t+\sqrt{t^2+1})$.
-	\textcolor{red}{Gram matrix}
+
+	The only thing that is left to prove, is that the solution of the maximization problem yields vectors $x_1^\prime,\dots,x_m^\prime, y_1^\prime,\dots,y_n^\prime\in S^{m+n-1}$, since our vectors $\tilde{x}_1,\dots,\tilde{x}_m,\tilde{y}_1,\dots,\tilde{y}_n$ are infinite-dimensional. The matrix $G$ given by
+%	\begin{equation}
+%		G=\begin{pmatrix}
+%			\sclr{x_1}{y_1} & \sclr{x_1}{y_2} & \cdots & \sclr{x_1}{y_n} \\
+%			\sclr{x_2}{y_1} & \sclr{x_2}{y_2} & \cdots & \sclr{x_2}{y_n} \\
+%			 \vdots		& \vdots	& \ddots & \vdots\\
+%			\sclr{x_m}{y_1} & \sclr{x_m}{y_2} & \cdots & \sclr{x_m}{y_n}		
+%		\end{pmatrix}
+%	\end{equation}
+	\begin{equation}
+		G=\begin{pmatrix}
+			\sclr{x_1}{x_1} & \cdots & \sclr{x_1}{x_m}& \sclr{x_1}{y_1} & \cdots & \sclr{x_1}{y_n} \\
+			 \vdots		& \ddots	& \vdots & \vdots & \ddots & \vdots\\
+			 \sclr{x_m}{x_1} & \cdots & \sclr{x_m}{x_m}& \sclr{x_m}{y_1} & \cdots & \sclr{x_m}{y_n} \\
+			\sclr{y_1}{x_1} & \cdots & \sclr{y_1}{x_m}& \sclr{y_1}{y_1} & \cdots & \sclr{y_1}{y_n} \\
+			 \vdots		& \ddots	& \vdots& \vdots & \ddots & \vdots\\
+			 \sclr{y_n}{x_1} & \cdots & \sclr{y_n}{x_m}& \sclr{y_n}{y_1} & \cdots & \sclr{y_n}{y_n} 
+		\end{pmatrix}
+	\end{equation}
+	is a $(m+n)\times (m+n)$ real matrix called \emph{Gram matrix}. Since the $G$ is positive semidefinite symmetric matrix, $G$ can be diagonalized by an orthogonal matrix. This means that there is a decomposition $G=Q\Lambda Q^\top$ with $Q$ a real orthogonal matrix with columns that are the eigenvectors of $G$ and $\Lambda$ a real and diagonal matrix having the eigenvalues of $G$ on the diagonal. Since the eigenvalues of a positive semidefinite matrix are non-negative, $\Lambda=\Lambda^{1/2}\Lambda^{1/2}$. Thus,
+	\[
+		G=(Q\Lambda^{1/2})(Q\Lambda^{1/2})^\top		
+	\]
+	and due to the symmetry of $G$ likewise
+	\[
+		G=(Q\Lambda^{1/2})^\top(Q\Lambda^{1/2}).	
+	\]
+	$A\coloneqq Q\Lambda^{1/2}$ is a real $(m+n)\times (m+n)$ matrix and its columns are the vectors we were looking for.
 \end{proof}
 \begin{dfn}
-	For $A\in\mathbb{R}^{m\times n}$ define the quadratic program
-	\begin{equation}
-		\norm{A}_{\infty\to 1} = \max \left\{ \sum_{i=1}^m \sum_{j=1}^n A_{ij} x_i y_j : x_i^2=1, i=1,\dots,m, y_j^2=1, j =1,\dots,n \right\}.
-	\end{equation}
+	For $M\in\mathbb{R}^{m\times n}$ define the quadratic program \textcolor{red}{wieso quadratisch?}
+	\begin{align}
+		\norm{M}_{\infty\to 1} &= \max \left\{ \sum_{i=1}^m \sum_{j=1}^n M_{ij} \xi_i \eta_j : \xi_i^2=1, i=1,\dots,m, \eta_j^2=1, j =1,\dots,n \right\} \\
+		&=\max\left\{\trace{\xi^\top M \eta}: \xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n\right\}.
+	\end{align}
 \end{dfn}
 \textcolor{red}{computing NP-hard}
 \begin{dfn}
-	SDP relaxation of $\norm{A}_{\infty\to1}$:
+	\textcolor{red}{sdp relaxation einfuehren}
+	
+	SDP relaxation of $\norm{M}_{\infty\to1}$:
 	\begin{align*}
-		\operatorname{sdp}_{\infty\to 1} (A) = \max 
-		&\sum_{i=1}^m\sum_{j=1}^n A_{ij} u_i^\top v_j\\
-		&u_i,v_j\in\mathbb{R}^{m+n}\\
-		&\norm{u_i}=1, i=1,\dots,m\\
-		&\norm{v_j}=1, j=1,\dots,n.
+		\operatorname{sdp}_{\infty\to 1} (M) = \max 
+		&\sum_{i=1}^m\sum_{j=1}^n M_{ij} \sclr{x_i}{y_j}\\
+		&x_i,y_j\in\mathbb{R}^{m+n}\\
+		&\norm{x_i}=1, i=1,\dots,m\\
+		&\norm{y_j}=1, j=1,\dots,n.
 	\end{align*}
 \end{dfn}
-\begin{theo}[Grothendieck's inequality] \label{eq:G_ineq}
-	There exists a constant $K$ such that for all $A\in\mathbb{R}^{m\times n}$:
+\begin{theo}[Grothendieck's inequality] \label{theo:G_ineq}
+	There exists a constant $K$ such that for all $M\in\mathbb{R}^{m\times n}$:
 	\begin{equation}
-		\norm{A}_{\infty\to 1} \leq \operatorname{sdp}_{\infty\to 1} (A) \leq K \norm{A}_{\infty\to 1}.
+		\norm{M}_{\infty\to 1} \leq \operatorname{sdp}_{\infty\to 1} (M) \leq K \norm{M}_{\infty\to 1}.
 	\end{equation}
 \end{theo}
 \begin{proof}
+	\textcolor{red}{wieso again? wo wurde das vorher schon einmal gemacht?}
 	Again: approximation algorithm with randomized rounding
-	\textcolor{red}{program}
-	Expected quality of the outcome:
+	
+	\begin{algorithm}[H]
+		\SetAlgoLined
+		\caption{Approximation algorithm with randomized rounding for $\norm{M}_{\infty\to 1}$}
+	\end{algorithm}
+	\begin{itemize}
+		\item[1.] Solve $\operatorname{sdp}_{\infty\to 1} (M)$. Let $x_1,\dots,x_m,y_1,\dots,y_n\in S^{m+n-1}$ be the optimal unit vectors
+		\item[2.] Apply Krivine's trick (Lemma \ref{lem:krivines_trick}) and use vectors $x_i,y_j$ to create new unit vectors $x_1^\prime,\dots,x_m^\prime, y_1^\prime,\dots,y_n^\prime\in S^{m+n-1}$.
+		\item[3.] Choose $r\in S^{m+n-1}$ randomly
+		\item[4.] Round: $u_i = \sgn(\sclr{x_i^\prime}{r})$\\
+					\textcolor{white}{Round: }$v_j = \sgn(\sclr{y_j^\prime}{r})$
+	\end{itemize}
+	
+	\noindent Expected quality of the outcome:
 	\begin{align*}
-		\norm{A}_{\infty\to 1} &\geq \mathbb{E}\left[\sum_{i=1}^m\sum_{j=1}^n A_{ij}x_ix_j\right]\\
-		&= \sum_{i=1}^m\sum_{j=1}^n A_{ij} \mathbb{E}[\sgn((u_i^\prime)^\top r) \sgn((v_j^\prime)^\top r)] \\
-		&=\sum_{i=1}^m\sum_{j=1}^n A_{ij}\beta u_i^\top v_j \\
-		&=\beta \operatorname{sdp}_{\infty\to 1}(A),
+		\norm{M}_{\infty\to 1} &\geq \mathbb{E}\left[\sum_{i=1}^m\sum_{j=1}^n M_{ij}u_iv_j\right]\\
+		&\overset{\textcolor{white}{\eqref*{eq:krivines_trick}}}{=} \sum_{i=1}^m\sum_{j=1}^n M_{ij} \mathbb{E}[\sgn(\sclr{x_i^\prime}{r}) \sgn(\sclr{y_j^\prime}{r})] \\
+		&\overset{\textcolor{white}{\eqref*{eq:krivines_trick}}}{=}\sum_{i=1}^m\sum_{j=1}^n M_{ij}\beta \sclr{x_i}{y_j} \\
+		&\overset{\eqref{eq:krivines_trick}}{=}\beta \operatorname{sdp}_{\infty\to 1}(M),
 	\end{align*}
 	where $\beta = \frac{2\ln(1+\sqrt(2)}{\pi}$, thus $K_G\leq \beta^{-1}$.
 \end{proof}
+
+%\begin{theo}[Grothendieck-Tsirelson]
+%	There exists an absolute constant $K\geq 1$ such that, for any positive integers $m,n$, the following three equivalent conditions hold:
+%	\begin{itemize}
+%		\item[(1)] We have the inclusion 
+%			\begin{equation}
+%				\QC_{m,n} \subset K\LC_{m,n}.
+%			\end{equation}
+%		\item[(2)] For any $M\in\mathbb{R}^{m\times n}$ and for any $\rho,X_i,Y_j$ verifying the conditions of Definition \textcolor{red}{4.2.1} we have
+%			\begin{equation}
+%				\sum_{i,j} M_{ij} \trace{\rho(X_i\tensor Y_j)}\leq K \max_{\xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n} \trace{\xi^\top M \eta}.
+%			\end{equation}
+%			\item[(3)] For any $M\in\mathbb{R}^{m\times n}$ and for any (real) Hilbert space vectors $x_i,y_j$ with $\modul{x_i}\leq 1$, $\modul{y_j}\leq 1$ we have
+%				\begin{equation}
+%					\sum_{i,j} M_{i,j}\sclr{x_i}{y_j} \leq K \max_{\xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n} \trace{\xi^\top M \eta}. \label{eq:G_ineq}
+%				\end{equation}
+%	\end{itemize}
+%\end{theo}
+%\begin{proof}
+%	Since \eqref{eq:G_ineq} is a direct consequence of Grothendieck's inequality the only thing left to prove is the equivalence between (1)-(3). The equivalence of (3) and (2) (the Tsirelson's bound) is a consequence of \textcolor{red}{the proof of Lemma \textcolor{red}{4.2.2}, where we proved that $\trace{\rho(X_i\tensor Y_j)} = \sclr{x_i}{y_j}$.}
+%	\textcolor{red}{Dann brauchen wir hier noch Argumente aus Exercise 11.3.}
+%	Finally, the equivalence between (2) and (1) ...
+%\end{proof}
 \newpage

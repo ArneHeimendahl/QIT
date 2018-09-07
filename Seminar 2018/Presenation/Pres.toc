@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 \beamer@endinputifotherversion {3.36pt}
+=======
+\select@language {english}
+>>>>>>> 274134db74ce43cab7431b90dae366e424dbc8dc
 \beamer@sectionintoc {1}{Local and quantum correlation matrices}{2}{0}{1}
 \beamer@subsectionintoc {1}{1}{Local correlation matrices }{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Quantum correlation matrices}{21}{0}{1}
+\beamer@subsectionintoc {1}{3}{The relations between quantum correlation and local correlation matrices}{51}{0}{1}
