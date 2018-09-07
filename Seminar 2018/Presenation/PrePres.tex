@@ -1,9 +1,14 @@
-\documentclass[11pt]{beamer}
+\documentclass[10pt]{beamer}
 
+%Language package english
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 
-%Theme of the presentation 
-\usetheme{Boadilla}
-\usecolortheme{sidebartab}
+\usepackage{dutchcal}        %nice Hilbertspace symbols
+\usepackage{braket}          %for braket notation
+
+%\setbeamercovered{transparent}  %in order to see shape of the following bullet points 
 
 %for striking out text
 \usepackage[normalem]{ulem}
@@ -11,26 +16,13 @@
 
 
 
-\usepackage{amssymb}
-\usepackage{dutchcal}        %nice Hilbertspace symbols
-\usepackage{braket}          %for braket notation
-\usepackage[utf8]{inputenc}
-\usepackage{bm}              %bold writing
-\usepackage{tikz}            %for drawing some nice graphics
-\usepackage{tikzsymbols}
-\usepackage[version=3]{mhchem}%chemical formulas nicely written
-\usepackage{graphicx}        %some graphics stuff, like subfigures
-\usepackage{subcaption}
-\usepackage{wrapfig}         %figures in text float
-\usepackage{cite}            %to cite
-\usepackage{dsfont}           %for unity matrix
-\usepackage{nicefrac}
-\usepackage{xcolor}
-\usepackage{xspace}
-\usepackage{setspace}
-\usepackage{tikz}
-\usepackage{mathtools}
-\usepackage{enumitem}
+%fuer Identitaet 
+\usepackage{dsfont}
+
+
+%Aussehen der Präsentation
+\usetheme{Boadilla}
+\usecolortheme{sidebartab}
 
 %\usepackage{lmodern}		% nice schriftart
 %\usepackage{etoolbox}        %reformat sections etc.
