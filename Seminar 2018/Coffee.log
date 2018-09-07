@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  7 SEP 2018 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  7 SEP 2018 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2095,7 +2095,7 @@ Overfull \hbox (4.4314pt too wide) in paragraph at lines 126--130
  []
 
 [12]
-Underfull \vbox (badness 1389) has occurred while \output is active []
+Underfull \vbox (badness 1895) has occurred while \output is active []
 
  [13]
 Overfull \hbox (23.04022pt too wide) in paragraph at lines 203--208
@@ -2128,10 +2128,10 @@ Underfull \vbox (badness 6995) has occurred while \output is active []
  [19]
 [20]) (./chapters/Appendix.tex
 
-LaTeX Warning: Command \textquoteleft invalid in math mode on input line 15.
+LaTeX Warning: Command \textquoteleft invalid in math mode on input line 14.
 
 
-Overfull \hbox (4.13339pt too wide) in paragraph at lines 28--30
+Overfull \hbox (4.13339pt too wide) in paragraph at lines 27--29
 []\OT1/lmr/m/n/10.95 We are also able to an-a-lyze the struc-ture of $\OML/lmm/
 m/it/10.95 U$ \OT1/lmr/m/n/10.95 with-out big ef-fort. Let $\OMS/lmsy/m/n/10.95
  f\OML/lmm/m/it/10.95 v[]; [] ; v[]; [] v[]\OMS/lmsy/m/n/10.95 g$
@@ -2154,9 +2154,9 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 34740 strings out of 492995
- 656925 string characters out of 6132703
- 752263 words of memory out of 5000000
+ 34739 strings out of 492995
+ 656919 string characters out of 6132703
+ 753263 words of memory out of 5000000
  37508 multiletter control sequences out of 15000+600000
  588828 words of font info for 84 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -2186,10 +2186,10 @@ pe1/public/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam
 10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb>
-Output written on Coffee.pdf (22 pages, 416720 bytes).
+Output written on Coffee.pdf (22 pages, 416761 bytes).
 PDF statistics:
- 373 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 500000)
+ 371 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
