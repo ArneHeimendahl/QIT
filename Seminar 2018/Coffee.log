@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  6 SEP 2018 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  7 SEP 2018 12:42
 entering extended mode
 **./Coffee.tex
 (Coffee.tex
@@ -1608,7 +1608,65 @@ Package caption Info: AMS or SMF document class.
 \WF@everypar=\toks41
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count288
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip70
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count289
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+
+
+Package relsize Warning: Failed to get list of font sizes.
+(relsize)                Falling back to old definition. on input line 81.
+
+LaTeX Info: Redefining \larger on input line 218.
+LaTeX Info: Redefining \smaller on input line 219.
+)
+\skiptotal=\skip71
+\skiplinenumber=\skip72
+\skiprule=\skip73
+\skiphlne=\skip74
+\skiptext=\skip75
+\skiplength=\skip76
+\algomargin=\skip77
+\skipalgocfslide=\skip78
+\algowidth=\dimen274
+\inoutsize=\dimen275
+\inoutindent=\dimen276
+\interspacetitleruled=\dimen277
+\interspacealgoruled=\dimen278
+\interspacetitleboxruled=\dimen279
+\algocf@ruledwidth=\skip79
+\algocf@inoutbox=\box57
+\algocf@inputbox=\box58
+\AlCapSkip=\skip80
+\AlCapHSkip=\skip81
+\algoskipindent=\skip82
+\algocf@nlbox=\box59
+\algocf@hangingbox=\box60
+\algocf@untilbox=\box61
+\algocf@skipuntil=\skip83
+\algocf@capbox=\box62
+\algocf@lcaptionbox=\skip84
+\algoheightruledefault=\skip85
+\algoheightrule=\skip86
+\algotitleheightruledefault=\skip87
+\algotitleheightrule=\skip88
+\c@algocfline=\count290
+\c@algocfproc=\count291
+\c@algocf=\count292
+\algocf@algoframe=\box63
+\algocf@algobox=\box64
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
@@ -1618,13 +1676,10 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\units\nicefrac.sty"
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip70
-\L@UnitsRaiseTextstyle=\skip71
-\L@UnitsRaiseScriptstyle=\skip72
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-))
+\L@UnitsRaiseDisplaystyle=\skip89
+\L@UnitsRaiseTextstyle=\skip90
+\L@UnitsRaiseScriptstyle=\skip91
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
@@ -1638,24 +1693,24 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count288
-\l_MT_multwidth_dim=\dimen274
-\origjot=\skip73
-\l_MT_shortvdotswithinadjustabove_dim=\dimen275
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen276
-\l_MT_above_intertext_sep=\dimen277
-\l_MT_below_intertext_sep=\dimen278
-\l_MT_above_shortintertext_sep=\dimen279
-\l_MT_below_shortintertext_sep=\dimen280
+\g_MT_multlinerow_int=\count293
+\l_MT_multwidth_dim=\dimen280
+\origjot=\skip92
+\l_MT_shortvdotswithinadjustabove_dim=\dimen281
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen282
+\l_MT_above_intertext_sep=\dimen283
+\l_MT_below_intertext_sep=\dimen284
+\l_MT_above_shortintertext_sep=\dimen285
+\l_MT_below_shortintertext_sep=\dimen286
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitkv@toks@=\toks42
-\labelindent=\skip74
-\enit@outerparindent=\dimen281
+\labelindent=\skip93
+\enit@outerparindent=\dimen287
 \enit@toks=\toks43
-\enit@inbox=\box57
-\enitdp@description=\count289
+\enit@inbox=\box65
+\enitdp@description=\count294
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -1670,17 +1725,17 @@ Package ifvtex Info: VTeX not detected.
 ("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count290
-\Gm@cntv=\count291
-\c@Gm@tempcnt=\count292
-\Gm@bindingoffset=\dimen282
-\Gm@wd@mp=\dimen283
-\Gm@odd@mp=\dimen284
-\Gm@even@mp=\dimen285
-\Gm@layoutwidth=\dimen286
-\Gm@layoutheight=\dimen287
-\Gm@layouthoffset=\dimen288
-\Gm@layoutvoffset=\dimen289
+\Gm@cnth=\count295
+\Gm@cntv=\count296
+\c@Gm@tempcnt=\count297
+\Gm@bindingoffset=\dimen288
+\Gm@wd@mp=\dimen289
+\Gm@odd@mp=\dimen290
+\Gm@even@mp=\dimen291
+\Gm@layoutwidth=\dimen292
+\Gm@layoutheight=\dimen293
+\Gm@layouthoffset=\dimen294
+\Gm@layoutvoffset=\dimen295
 \Gm@dimlist=\toks44
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
@@ -1721,15 +1776,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count293
+\etb@tempcnta=\count298
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count294
+\c@float@type=\count299
 \float@exts=\toks45
-\float@box=\box58
+\float@box=\box66
 \@float@everytoks=\toks46
-\@floatcapt=\box59
+\@floatcapt=\box67
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
@@ -1782,16 +1837,16 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen290
-\Hy@linkcounter=\count295
-\Hy@pagecounter=\count296
+\@linkdim=\dimen296
+\Hy@linkcounter=\count300
+\Hy@pagecounter=\count301
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count297
+\Hy@SavedSpaceFactor=\count302
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1816,17 +1871,17 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count298
+\c@Hy@tempcnt=\count303
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
-\XeTeXLinkMargin=\dimen291
-\Fld@menulength=\count299
-\Field@Width=\dimen292
-\Fld@charsize=\dimen293
+\XeTeXLinkMargin=\dimen297
+\Fld@menulength=\count304
+\Field@Width=\dimen298
+\Fld@charsize=\dimen299
 Package hyperref Info: Hyper figures OFF on input line 6358.
 Package hyperref Info: Link nesting OFF on input line 6363.
 Package hyperref Info: Hyper index ON on input line 6366.
@@ -1836,24 +1891,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count300
-\c@Item=\count301
-\c@Hfootnote=\count302
+\Hy@abspage=\count305
+\c@Item=\count306
+\c@Hfootnote=\count307
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count303
-\c@bookmark@seq@number=\count304
+\Fld@listcount=\count308
+\c@bookmark@seq@number=\count309
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip75
+\Hy@SectionHShift=\skip94
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryshapes.callouts.code.tex"
@@ -1873,18 +1928,18 @@ libraryintersections.code.tex"
 .code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.code.tex"
 )
-\pgf@intersect@solutions=\count305
+\pgf@intersect@solutions=\count310
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarydecorations.pathreplacing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
-\c@theo=\count306
-\c@kor=\count307
-\c@prop=\count308
-\c@conj=\count309
-\c@rmk=\count310
-\c@ex=\count311
+\c@theo=\count311
+\c@kor=\count312
+\c@prop=\count313
+\c@conj=\count314
+\c@rmk=\count315
+\c@ex=\count316
 ) (Coffee.aux)
 \openout1 = `Coffee.aux'.
 
@@ -1943,16 +1998,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count312
-\scratchdimen=\dimen294
-\scratchbox=\box60
-\nofMPsegments=\count313
-\nofMParguments=\count314
+\scratchcounter=\count317
+\scratchdimen=\dimen300
+\scratchbox=\box68
+\nofMPsegments=\count318
+\nofMParguments=\count319
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count315
-\MPscratchDim=\dimen295
-\MPnumerator=\count316
-\makeMPintoPDFobject=\count317
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen301
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
 \everyMPtoPDFconversion=\toks48
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2012,7 +2067,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box61
+\AtBeginShipoutBox=\box69
 Package hyperref Info: Link coloring OFF on input line 7.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2020,7 +2075,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count318
+\c@section@level=\count323
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -2125,19 +2180,19 @@ Overfull \hbox (7.66248pt too wide) in paragraph at lines 217--217
 
 LaTeX Warning: Reference `??' on page 15 undefined on input line 286.
 
-[15]) (chapters/MaxisTeil.tex [16]
-Underfull \vbox (badness 6412) has occurred while \output is active []
-
- [17]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+[15]) (chapters/MaxisTeil.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
 
-[18]
-Underfull \vbox (badness 6995) has occurred while \output is active []
+[16] <chapters/fig_unit_circle.pdf, id=219, 149.20341pt x 161.75331pt>
+File: chapters/fig_unit_circle.pdf Graphic file (type pdf)
 
- [19]
-[20]) (chapters/Appendix.tex
+<use chapters/fig_unit_circle.pdf>
+Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 24.
+(pdftex.def)             Requested size: 157.74979pt x 171.03561pt.
+ [17 <./chapters/fig_unit_circle.pdf>]
+[18] [19] [20]) (chapters/Appendix.tex
 
 LaTeX Warning: Command \textquoteleft invalid in math mode on input line 15.
 
@@ -2155,7 +2210,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `Coffee.out' has not changed.
-(rerunfilecheck)             Checksum: E79302A0FBE388E0AC432B393A0C409E;3666.
+(rerunfilecheck)             Checksum: 25F4BD062BBEB726E48CBD98251FB298;3666.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2165,38 +2220,41 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 35239 strings out of 493323
- 665780 string characters out of 3139068
- 770715 words of memory out of 3000000
- 38006 multiletter control sequences out of 15000+200000
+ 36161 strings out of 493323
+ 680839 string characters out of 3139068
+ 795211 words of memory out of 3000000
+ 38911 multiletter control sequences out of 15000+200000
  588828 words of font info for 84 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,16n,94p,10512b,429s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,16n,94p,10512b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
 thex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/dutchcal/DutchCalReg.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-mmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Coffee.pdf (22 pages, 461027 bytes).
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/d
+oublestroke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
+lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on Coffee.pdf (22 pages, 492184 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
