@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  6 SEP 2018 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  7 SEP 2018 12:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1984,7 +1984,11 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box79
 \enitdp@description=\count332
 ))
-(./Pres.aux)
+(./Pres.aux
+
+LaTeX Warning: Label `facetsLC' multiply defined.
+
+)
 \openout1 = `Pres.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
@@ -2339,6 +2343,78 @@ Overfull \hbox (20.15924pt too wide) has occurred while \output is active
 
 [16
 
+]
+Overfull \hbox (58.35138pt too wide) in paragraph at lines 214--214
+[]  
+ []
+
+
+Overfull \vbox (92.31635pt too high) detected at line 214
+ []
+
+
+Overfull \hbox (20.15924pt too wide) has occurred while \output is active
+ [][]  
+ []
+
+[17
+
+]
+Overfull \hbox (79.41286pt too wide) in paragraph at lines 235--235
+[]  
+ []
+
+
+Overfull \vbox (73.95567pt too high) detected at line 235
+ []
+
+
+Overfull \hbox (20.15924pt too wide) has occurred while \output is active
+ [][]  
+ []
+
+[18
+
+]
+Overfull \hbox (20.15924pt too wide) has occurred while \output is active
+ [][]  
+ []
+
+[19
+
+]
+Overfull \hbox (20.15924pt too wide) has occurred while \output is active
+ [][]  
+ []
+
+[20
+
+]
+Overfull \hbox (20.15924pt too wide) has occurred while \output is active
+ [][]  
+ []
+
+[21
+
+]pdfTeX warning (ext4): destination with the same identifier (name{facetsLC}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.310 \end{frame}
+                 
+Overfull \hbox (20.15924pt too wide) has occurred while \output is active
+ [][]  
+ []
+
+[22
+
+]
+Overfull \hbox (20.15924pt too wide) has occurred while \output is active
+ [][]  
+ []
+
+[23
+
 ])
 \tf@nav=\write6
 \openout6 = `Pres.nav'.
@@ -2355,21 +2431,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 15.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 15.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 15.
 Package rerunfilecheck Info: File `Pres.out' has not changed.
-(rerunfilecheck)             Checksum: 1E00026D48A69FA20091B59ABE5CC116;226.
+(rerunfilecheck)             Checksum: 4E1C5A919DF817360D414371D2D3C888;348.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 33109 strings out of 492995
- 668936 string characters out of 6132703
- 772141 words of memory out of 5000000
- 35976 multiletter control sequences out of 15000+600000
+ 33144 strings out of 492995
+ 669254 string characters out of 6132703
+ 778328 words of memory out of 5000000
+ 35995 multiletter control sequences out of 15000+600000
  548698 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,16n,100p,10512b,715s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,17n,100p,10512b,715s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/dutchcal/DutchCalReg.p
 fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -2386,10 +2465,10 @@ local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loc
 al/texlive/2017/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Pres.pdf (16 pages, 182736 bytes).
+Output written on Pres.pdf (23 pages, 209658 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 37 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 743 PDF objects out of 1000 (max. 8388607)
+ 681 compressed objects within 7 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
