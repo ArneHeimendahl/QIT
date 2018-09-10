@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  10 SEP 2018 13:52
+=======
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.23)  10 SEP 2018 13:38
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  10 SEP 2018 13:36
 >>>>>>> 47a68cca01ba4a3c2871604474a3b17fba9f7e8d
+>>>>>>> 1b2932a54ff9de1203fed80e2e11c3f1db531e7d
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2150,6 +2154,9 @@ Overfull \hbox (4.4314pt too wide) in paragraph at lines 126--130
 =======
 [11]
 
+LaTeX Warning: Reference `EqQC' on page 12 undefined on input line 98.
+
+
 LaTeX Warning: Reference `appendix' on page 12 undefined on input line 117.
 
 
@@ -2159,8 +2166,17 @@ Overfull \hbox (4.4314pt too wide) in paragraph at lines 125--129
 [] [] = [] [] \OMS/lmsy/m/n/10.95 ^^T
  []
 
+<<<<<<< HEAD
+[12]
+
+LaTeX Warning: Reference `EqQC' on page 13 undefined on input line 140.
+
+
+Underfull \vbox (badness 2080) has occurred while \output is active []
+=======
 [11]
 Underfull \vbox (badness 1895) has occurred while \output is active []
+>>>>>>> 1b2932a54ff9de1203fed80e2e11c3f1db531e7d
 
 <<<<<<< HEAD
  [12]
@@ -2180,6 +2196,9 @@ Overfull \hbox (7.66248pt too wide) in paragraph at lines 216--216
 [] 
  []
 
+<<<<<<< HEAD
+[14] [15]) (./chapters/MaxisTeil.tex
+=======
 [13]
 
 <<<<<<< HEAD
@@ -2189,11 +2208,16 @@ LaTeX Warning: Reference `CHSH' on page 15 undefined on input line 285.
 >>>>>>> 47a68cca01ba4a3c2871604474a3b17fba9f7e8d
 
 [14]) (./chapters/MaxisTeil.tex
+>>>>>>> 1b2932a54ff9de1203fed80e2e11c3f1db531e7d
 Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
 
+<<<<<<< HEAD
+[16] <chapters/fig_unit_circle.pdf, id=215, 149.20341pt x 161.75331pt>
+=======
 [15] <chapters/fig_unit_circle.pdf, id=226, 149.20341pt x 161.75331pt>
+>>>>>>> 1b2932a54ff9de1203fed80e2e11c3f1db531e7d
 File: chapters/fig_unit_circle.pdf Graphic file (type pdf)
 
 <use chapters/fig_unit_circle.pdf>
@@ -2323,9 +2347,9 @@ Output written on Coffee.pdf (21 pages, 443450 bytes).
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 35641 strings out of 492995
- 671518 string characters out of 6132703
- 787029 words of memory out of 5000000
+ 35635 strings out of 492995
+ 671468 string characters out of 6132703
+ 787016 words of memory out of 5000000
  38397 multiletter control sequences out of 15000+600000
  588828 words of font info for 84 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -2358,11 +2382,19 @@ ype1/public/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 /lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
+<<<<<<< HEAD
+Output written on Coffee.pdf (22 pages, 444307 bytes).
+PDF statistics:
+ 404 PDF objects out of 1000 (max. 8388607)
+ 329 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
+=======
 Output written on Coffee.pdf (22 pages, 444517 bytes).
 >>>>>>> 47a68cca01ba4a3c2871604474a3b17fba9f7e8d
 PDF statistics:
  423 PDF objects out of 1000 (max. 8388607)
  349 compressed objects within 4 object streams
  101 named destinations out of 1000 (max. 500000)
+>>>>>>> 1b2932a54ff9de1203fed80e2e11c3f1db531e7d
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
