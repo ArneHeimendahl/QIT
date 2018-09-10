@@ -12,5 +12,5 @@
 \contentsline {subsection}{\tocsubsection {}{4.2}{Quantum correlation matrices}}{11}{subsection.4.2}
 \contentsline {subsection}{\tocsubsection {}{4.3}{The relations between quantum correlation and local correlation matrices}}{15}{subsection.4.3}
 \contentsline {section}{\tocsection {}{5}{Grothendieck Inequality}}{16}{section.5}
-\contentsline {section}{\tocsection {}{}{Appendix}}{21}{section*.2}
+\contentsline {section}{\tocsection {}{}{Appendix}}{21}{section*.3}
 \contentsline {subsection}{\tocsubsection {}{5.1}{How to derive an inner product from a symmetric positive semidefinite bilinear form}}{21}{subsection.5.1}

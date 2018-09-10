@@ -101,9 +101,9 @@ $\oplus$ & 0 & 1 \\
 \end{center}
 
 For a probability distribution $\pi$ and a boolean function $f$, $\mathcal{G}= (\pi, f)$ defines an XOR game.\\ \\
-\textbf{Bias and violation ratio.} Alice and Bob can always win an XOR with probability $\frac{1}{2}$ by flipping an unbiased coin. Interesting would be how much this can actually be increased. We define the classical bias of an XOR game to be the difference of the probability of winning and losing for an optimal classical strategy an denote it by $\beta(G)$. The bias of entangled strategies is calculated in the same way and thus is twice the amount by which the maximal winning probability is greater then $\frac{1}{2}$, since $\frac{1}{2}+\gamma - (1 - \frac{1}{2} + \gamma) = 2 \gamma$, $\gamma$ being the amount exceeding $\frac{1}{2}$. We denote the bias of entangled strategies by $\beta^*(G)$. The violation ratio is given by $\frac{\beta^*(G)}{\beta(G)}$.\\ \\
+\textbf{Bias and violation ratio.} Alice and Bob can always win an XOR with probability $\frac{1}{2}$ by flipping an unbiased coin. Interesting would be how much this can actually be increased. We define the classical bias of an XOR game to be the difference of the probability of winning and losing for an optimal classical strategy and denote it by $\beta(G)$. The bias of entangled strategies is calculated in the same way and thus is twice the amount by which the maximal winning probability is greater then $\frac{1}{2}$, since $\frac{1}{2}+\gamma - (1 - \frac{1}{2} + \gamma) = 2 \gamma$, $\gamma$ being the amount exceeding $\frac{1}{2}$. We denote the bias of entangled strategies by $\beta^*(G)$. The violation ratio is given by $\frac{\beta^*(G)}{\beta(G)}$.\\ \\
 
-\textbf{Signs and observables.} To make things a little easier regarding calculations we will use the $\{ -1 , 1 \} $-basis rather than the $\{ 0,1 \}$-basis for boolean valued objects. If we have an XOR game $(\pi, f )$ and any two classical strategies $a : \mathcal{S} \rightarrow \{0,1\}$ and $b: \mathcal{B} |righta
+\textbf{Signs and observables.} To make things a little easier regarding calculations we will use the $\{ -1 , 1 \} $-basis rather than the $\{ 0,1 \}$-basis for boolean valued objects. If we have an XOR game $(\pi, f )$ and any two classical strategies $a : \mathcal{S} \rightarrow \{0,1\}$ and $b: \mathcal{B} \rightarrow
  \{ 0,1 \}$ the bias is given by the probability under $\pi$ that $a(s) \oplus b(t) = f(s,t)$ minus the probability under $\pi$ that $a(s) \oplus b(t) \ne f(s,t)$. 
  \begin{flalign*}
  \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{[a(s) \oplus b(t) = f(s,t)]} \right] & = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s) \oplus b(t) + f(s,t)} \right] \\
@@ -121,7 +121,7 @@ Since in an XOR game the outcomes are $\{ 0, 1 \} $-valued the measurements Alic
 
 As in (3) we define the $\{ -1, 1 \}$- observables $F_s = F_s^0 - F_s^1$ and $G_t^0-G_t^1$ with the property that its difference squared is the identity matrix. Using this strategy the bias becomes 
 \begin{equation}
-\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right]
+\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \Sigma_{s,t} \right]
 \end{equation}
 So for any XOR game the bias is defined as the difference of the probabilities of winning and loosing which is, if considering the $\{ -1, 1 \}$ basis, the expected value and we are looking to maximize this quantity. Hence, the bias of an XOR games in classical strategies is: 
 \begin{equation}
@@ -237,7 +237,7 @@ which is equivalent to
 \end{equation}
 The bias of the entangled strategy equals 
 \begin{flalign*}
-\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] & = \frac{1}{4} \sum_{s,t = 0}^1 (-1)^{s \land t} \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle \\
+\mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{s,t} \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] & = \frac{1}{4} \sum_{s,t = 0}^1 (-1)^{s \land t} \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle \\
 &= \frac{1}{4} \cdot \frac{4}{\sqrt{2}} = \frac{1}{\sqrt{2}}
 \end{flalign*}
 The bias is $\frac{1}{\sqrt{2}}$ from which follows that the winning probability is by definition: 
