@@ -1,14 +1,14 @@
 \subsection{Basic definitions}
 In order to make sure everyone is on the same page we will have the following introduction where the necessary groundwork is done. The aim is to call a few basic definitions back to our memory so one can fluently read through this paper. \\
-A complex matrix $A \in \mathbb{C}^{n \times n}$ is called Hermitian if $A^*=A$, where $A^*$ denotes the conjugate transpose of $A$. A complex Hermitian matrix $A$ is called positve semidefinite (abbreviated psd.) if one of the following holds: 
+A complex matrix $A \in \mathbb{C}^{n \times n}$ is called Hermitian if $A^*=A$, where $A^*$ denotes the conjugate transpose of $A$. We will denote the set of all Hermitian matrices operating on a Hilbert space $\mathcal{H}$ by $B^{H}(\mathcal{H})$. A complex Hermitian matrix $A$ is called positve semidefinite (abbreviated psd.) if one of the following holds: 
 \begin{enumerate}
-\item[i,] The matrix has only real non-negative eigenvalues 
-\item[ii,] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z}_{i_k}z_{j_k}$
-\item[iii,] For every $z \in \mathbb{C}^n$ we have $z^*Az\ge 0$
-\item[iv,] There exists a complex matrix $B$ s.t. $A=B^*B$
-\item[v,] $\trace{(A\cdot B)} \ge 0 $ for all positive semidefinite operators $ B $ defined in the same space. 
+\item[(i)] The matrix has only real non-negative eigenvalues 
+\item[(ii)] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z}_{i_k}z_{j_k}$
+\item[(iii)] For every $z \in \mathbb{C}^n$ we have $z^*Az\ge 0$
+\item[(iv)] There exists a complex matrix $B$ s.t. $A=B^*B$
+\item[(v)] $\trace{(A\cdot B)} \ge 0 $ for all positive semidefinite operators $ B $ defined in the same space. 
 \end{enumerate}
-It can be shown that $i,$ - $iv,$ are in fact equivalent. The set of positive semidefinite matrices is a cone, meaning for two psd. $n \times n$ matrices $A,B$ and $\alpha, \beta \in \mathbb{R}_+$ we have that $\alpha A + \beta B $ is also positive semidefinite. The set of real $n \times n$ matrices is denoted by $\mathcal{S}_n^+$.\\
+It can be shown that $(i)$ - $(v)$ are in fact equivalent. The set of positive semidefinite matrices is a cone, meaning for two psd. $n \times n$ matrices $A,B$ and $\alpha, \beta \in \mathbb{R}_+$ we have that $\alpha A + \beta B $ is also positive semidefinite. The set of real $n \times n$ positive semidefinite matrices is denoted by $\mathcal{S}_n^+$. The set of positive semidefinite operators operating on a Hilbert space $\mathcal{H}$ is denoted by $B^{psd}(\mathcal{H})$.\\
 \subsection{Tensor products and Dirac notation}
 In case someone is not familiar with the \textit{tensor product} a short introduction with an example or two is given here: 
 Let $\mathcal{X} = \mathbb{C}^{n_1 \times m_1}$ and $\mathcal{Y}= \mathbb{C}^{n_2 \times m_2}$. Then the tensor product of the vector spaces $\mathcal{X}$ and $\mathcal{Y}$ is defined as $\mathcal{X} \otimes \mathcal{Y} = \mathbb{C}^{n_1n_2 \times m_1m_2}$. The tensor product of complex matrices can be obtained as follows: Index the rows and columns of a matrix by $\mathcal{R}$ and $\mathcal{C}$ and think of the matrix as a map from $\mathcal{R} \times \mathcal{C} \rightarrow \mathbb{C}$. For two complex matrices $A: \mathcal{R_1} \times \mathcal{C_1} \rightarrow \mathbb{C}$ and $B: \mathcal{R_2} \times \mathcal{C_2} \rightarrow \mathbb{C}$ their tensor product is the matrix $A \otimes B : (\mathcal{R_1} \times \mathcal{R_2}) \times (\mathcal{C_1} \times \mathcal{C_2})\rightarrow \mathbb{C}$ defined by $(A \otimes B)( (r_1,r_2),(c_1,c_2))= A(r_1,c_1)B(r_2,c_2)$. Considering a lexicographic order understand tensor products in the following way: $A \otimes B = \begin{pmatrix}
