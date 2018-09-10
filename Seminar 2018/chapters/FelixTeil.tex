@@ -1,14 +1,14 @@
 \subsection{Basic definitions}
 In order to make sure everyone is on the same page we will have the following introduction where the necessary groundwork is done. The aim is to call a few basic definitions back to our memory so one can fluently read through this paper. \\
-A complex matrix $A \in \mathbb{C}^{n \times n}$ is called Hermitian if $A^*=A$, where $A^*$ denotes the conjugate transpose of $A$. A complex Hermitian matrix $A$ is called positve semidefinite (abbreviated psd.) if one of the following holds: 
+A complex matrix $A \in \mathbb{C}^{n \times n}$ is called Hermitian if $A^*=A$, where $A^*$ denotes the conjugate transpose of $A$. We will denote the set of all Hermitian matrices operating on a Hilbert space $\mathcal{H}$ by $B^{H}(\mathcal{H})$. A complex Hermitian matrix $A$ is called positve semidefinite (abbreviated psd.) if one of the following holds: 
 \begin{enumerate}
-\item[i,] The matrix has only real non-negative eigenvalues 
-\item[ii,] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z}_{i_k}z_{j_k}$
-\item[iii,] For every $z \in \mathbb{C}^n$ we have $z^*Az\ge 0$
-\item[iv,] There exists a complex matrix $B$ s.t. $A=B^*B$
-\item[v,] $\trace{(A\cdot B)} \ge 0 $ for all positive semidefinite operators $ B $ defined in the same space. 
+\item[(i)] The matrix has only real non-negative eigenvalues 
+\item[(ii)] There exist complex $n-$dimensional vectors $z_1, \dots, z_n$ s.t. $A_{i,j} = \langle z_i, z_j \rangle = \sum_{k=1}^n \overline{z}_{i_k}z_{j_k}$
+\item[(iii)] For every $z \in \mathbb{C}^n$ we have $z^*Az\ge 0$
+\item[(iv)] There exists a complex matrix $B$ s.t. $A=B^*B$
+\item[(v)] $\trace{(A\cdot B)} \ge 0 $ for all positive semidefinite operators $ B $ defined in the same space. 
 \end{enumerate}
-It can be shown that $i,$ - $iv,$ are in fact equivalent. The set of positive semidefinite matrices is a cone, meaning for two psd. $n \times n$ matrices $A,B$ and $\alpha, \beta \in \mathbb{R}_+$ we have that $\alpha A + \beta B $ is also positive semidefinite. The set of real $n \times n$ matrices is denoted by $\mathcal{S}_n^+$.\\
+It can be shown that $(i)$ - $(v)$ are in fact equivalent. The set of positive semidefinite matrices is a cone, meaning for two psd. $n \times n$ matrices $A,B$ and $\alpha, \beta \in \mathbb{R}_+$ we have that $\alpha A + \beta B $ is also positive semidefinite. The set of real $n \times n$ positive semidefinite matrices is denoted by $\mathcal{S}_n^+$. The set of positive semidefinite operators operating on a Hilbert space $\mathcal{H}$ is denoted by $B^{psd}(\mathcal{H})$.\\
 \subsection{Tensor products and Dirac notation}
 In case someone is not familiar with the \textit{tensor product} a short introduction with an example or two is given here: 
 Let $\mathcal{X} = \mathbb{C}^{n_1 \times m_1}$ and $\mathcal{Y}= \mathbb{C}^{n_2 \times m_2}$. Then the tensor product of the vector spaces $\mathcal{X}$ and $\mathcal{Y}$ is defined as $\mathcal{X} \otimes \mathcal{Y} = \mathbb{C}^{n_1n_2 \times m_1m_2}$. The tensor product of complex matrices can be obtained as follows: Index the rows and columns of a matrix by $\mathcal{R}$ and $\mathcal{C}$ and think of the matrix as a map from $\mathcal{R} \times \mathcal{C} \rightarrow \mathbb{C}$. For two complex matrices $A: \mathcal{R_1} \times \mathcal{C_1} \rightarrow \mathbb{C}$ and $B: \mathcal{R_2} \times \mathcal{C_2} \rightarrow \mathbb{C}$ their tensor product is the matrix $A \otimes B : (\mathcal{R_1} \times \mathcal{R_2}) \times (\mathcal{C_1} \times \mathcal{C_2})\rightarrow \mathbb{C}$ defined by $(A \otimes B)( (r_1,r_2),(c_1,c_2))= A(r_1,c_1)B(r_2,c_2)$. Considering a lexicographic order understand tensor products in the following way: $A \otimes B = \begin{pmatrix}
@@ -101,9 +101,9 @@ $\oplus$ & 0 & 1 \\
 \end{center}
 
 For a probability distribution $\pi$ and a boolean function $f$, $\mathcal{G}= (\pi, f)$ defines an XOR game.\\ \\
-\textbf{Bias and violation ratio.} Alice and Bob can always win an XOR with probability $\frac{1}{2}$ by flipping an unbiased coin. Interesting would be how much this can actually be increased. We define the classical bias of an XOR game to be the difference of the probability of winning and losing for an optimal classical strategy an denote it by $\beta(G)$. The bias of entangled strategies is calculated in the same way and thus is twice the amount by which the maximal winning probability is greater then $\frac{1}{2}$, since $\frac{1}{2}+\gamma - (1 - \frac{1}{2} + \gamma) = 2 \gamma$, $\gamma$ being the amount exceeding $\frac{1}{2}$. We denote the bias of entangled strategies by $\beta^*(G)$. The violation ratio is given by $\frac{\beta^*(G)}{\beta(G)}$.\\ \\
+\textbf{Bias and violation ratio.} Alice and Bob can always win an XOR with probability $\frac{1}{2}$ by flipping an unbiased coin. Interesting would be how much this can actually be increased. We define the classical bias of an XOR game to be the difference of the probability of winning and losing for an optimal classical strategy and denote it by $\beta(G)$. The bias of entangled strategies is calculated in the same way and thus is twice the amount by which the maximal winning probability is greater then $\frac{1}{2}$, since $\frac{1}{2}+\gamma - (1 - \frac{1}{2} + \gamma) = 2 \gamma$, $\gamma$ being the amount exceeding $\frac{1}{2}$. We denote the bias of entangled strategies by $\beta^*(G)$. The violation ratio is given by $\frac{\beta^*(G)}{\beta(G)}$.\\ \\
 
-\textbf{Signs and observables.} To make things a little easier regarding calculations we will use the $\{ -1 , 1 \} $-basis rather than the $\{ 0,1 \}$-basis for boolean valued objects. If we have an XOR game $(\pi, f )$ and any two classical strategies $a : \mathcal{S} \rightarrow \{0,1\}$ and $b: \mathcal{B} |righta
+\textbf{Signs and observables.} To make things a little easier regarding calculations we will use the $\{ -1 , 1 \} $-basis rather than the $\{ 0,1 \}$-basis for boolean valued objects. If we have an XOR game $(\pi, f )$ and any two classical strategies $a : \mathcal{S} \rightarrow \{0,1\}$ and $b: \mathcal{B} \rightarrow
  \{ 0,1 \}$ the bias is given by the probability under $\pi$ that $a(s) \oplus b(t) = f(s,t)$ minus the probability under $\pi$ that $a(s) \oplus b(t) \ne f(s,t)$. 
  \begin{flalign*}
  \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{[a(s) \oplus b(t) = f(s,t)]} \right] & = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s) \oplus b(t) + f(s,t)} \right] \\
@@ -121,7 +121,7 @@ Since in an XOR game the outcomes are $\{ 0, 1 \} $-valued the measurements Alic
 
 As in (3) we define the $\{ -1, 1 \}$- observables $F_s = F_s^0 - F_s^1$ and $G_t^0-G_t^1$ with the property that its difference squared is the identity matrix. Using this strategy the bias becomes 
 \begin{equation}
-\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right]
+\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \Sigma_{s,t} \right]
 \end{equation}
 So for any XOR game the bias is defined as the difference of the probabilities of winning and loosing which is, if considering the $\{ -1, 1 \}$ basis, the expected value and we are looking to maximize this quantity. Hence, the bias of an XOR games in classical strategies is: 
 \begin{equation}
@@ -134,7 +134,7 @@ The Bias of entangled strategies is
 \end{equation}
 where $O(\mathbb{C}^n)$ denotes the set of $\{ -1, 1 \}$-observables in $\mathbb{C}^{n \times n}$. As shown in [KNP17] we can in fact restrict ourselves to projective measurements. More general measurements like POVMs (positive operator valued (probability) measure) are not advantageous. 
 
-\subsection{The CHSH game}
+\subsection{The CHSH game}\label{CHSH}
 Let us consider a special instance of XOR games which leads to the result that entangled strategies actually can give a remarkable advantage over classical strategies. The game is named after four scientists Clauser, Horne, Shimony and Holt. The question set is $\{0,1\} \times \{0,1\}$ as well as the answer set. The probability distribution over the question set is the uniform distribution and the predicate $V = \left[ a \oplus b = s \land t\right] $. Note that $s \land t$ only evaluates to $1$ if both $s=1$ and $t=1$, which in the case of the uniform distribution happens in $\frac{1}{4}$ of the cases. The best classical strategy then would be either to always answer $a=0, b=1$ or $a=1, b=0$. Since in both cases $a \oplus b = 0$ Alice and Bob win in with probability $\frac{3}{4}$. We will now study the entangled case and check how much the winning probability may be increased. 
 Define 
 \begin{equation}
@@ -237,7 +237,7 @@ which is equivalent to
 \end{equation}
 The bias of the entangled strategy equals 
 \begin{flalign*}
-\mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] & = \frac{1}{4} \sum_{s,t = 0}^1 (-1)^{s \land t} \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle \\
+\mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{s,t} \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] & = \frac{1}{4} \sum_{s,t = 0}^1 (-1)^{s \land t} \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle \\
 &= \frac{1}{4} \cdot \frac{4}{\sqrt{2}} = \frac{1}{\sqrt{2}}
 \end{flalign*}
 The bias is $\frac{1}{\sqrt{2}}$ from which follows that the winning probability is by definition: 

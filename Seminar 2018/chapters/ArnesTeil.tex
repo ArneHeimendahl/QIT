@@ -60,16 +60,16 @@ Now we are able to count the vertices of $ \LC_{m,n} $. Observing that $ \xi \et
 However, we will do it later on for $ n=m=2 $ and compare it to $ \QC_{m,n} $.
 
 \subsection{Quantum correlation matrices}
-Before we introduce the quantum correlation matrices ww will shortly go back to the framework of nonlocal games. As before, Alice and Bob share a state $ \rho $ and get inputs $ s \in \mathcal{S}, t \in \mathcal{T} $ and perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $.
-As we have seen before the probability that they response is $ (\xi,\eta) $ for inputs $ (s,t) $ is given by 
+Before we introduce the quantum correlation matrices we will shortly go back to the framework of nonlocal games. As before, Alice and Bob share a state $ \rho $ and get inputs $ s \in \mathcal{S}, t \in \mathcal{T} $ and perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $.
+As we have seen before the probability that their response is $ (\xi,\eta) $ for inputs $ (s,t) $ is given by 
 $ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode these information in a matrix $ A=(a_{st}) $. This motivates the following (slightly more general) definition. 
 \begin{dfn}
-	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
+	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state $ \rho \in B^{psd}(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
 	\begin{align}\label{QCaij}
 	a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
 	\end{align}
 \end{dfn}
-We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
+\noindent We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
 
 With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. 
 
@@ -86,10 +86,10 @@ In order to proof this we have to review some definitions and introduce a specia
 For the first inclusion we review the definition of an inner product. The basic idea is to define an inner product via the  definition of the $ a_{ij} $ in \ref{QCaij}.
 Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ that is linear in both variables, that is 
 \begin{enumerate}
-	\item $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
-	\item  $\beta(\lambda v,w)= \lambda \beta(v,w) $
-	\item $ \beta(v,w_1+w_2) = \beta(v,w_1)+ \beta(v,w_2) $
-	\item $ \beta(v,\lambda w) = \lambda\beta(v,w) $
+	\item [i)] $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
+	\item  [ii)]$\beta(\lambda v,w)= \lambda \beta(v,w) $
+	\item [iii)]$ \beta(v,w_1+w_2) = \beta(v,w_1)+ \beta(v,w_2) $
+	\item [iv)]$ \beta(v,\lambda w) = \lambda\beta(v,w) $
 \end{enumerate}
 for all $ v,v_1,v_2 \in V, \, w,w_1,w_2 \in W, \, \lambda \in k $. 
 If $ V = W $, we call $ \beta $ {\itshape symmetric} if $ \beta(v,w) = \beta(w,v) $, {\itshape positive semidefinite} if 
@@ -97,7 +97,7 @@ $ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive s
 If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product} and usually denoted by $ \langle \cdot \, , \, \cdot \rangle $.
 Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
-	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
+	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m} \in B^H(\mathcal{C}), \, (Y_j)_{1 \ge n} \in B^H(\mathcal{H}) $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
 	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
 	We define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
 	$ \beta: \textup{B}^{sa}(\mathcal{H}) \times \textup{B}^{sa}(\mathcal{H}) \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
@@ -109,14 +109,13 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	\end{align*}
 	Symmetry follows form 
 	\begin{align*}
-		\beta(S,T)&= \textup{Re}\trace{\rho ST} =\textup{Re}\trace{(\rho ST)^*}  = \textup{Re \trace{T^*S^* \rho^*}}  \\
-		 &=\textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
+		\beta(S,T)&= \textup{Re}\trace{(\rho ST)} =\textup{Re}\trace{(\rho ST)^*}  = \textup{Re \trace{(T^*S^* \rho^*})}  \\
+		 &=\textup{Re} \trace{(\rho^* T^*S^*)} = \textup{Re} \trace{((\rho T S))} = \beta(T,S).
 	\end{align*}
-	\textbf{Perhaps explanation}
 	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ we obtain $ \beta(S,S) = \textup{Re}\trace{\rho SS} = \textup{Re} \trace{\rho S^*S} \ge 0 $ and $ \beta $ is positive semidefinite. 
 	
-	Following the steps in appendix \textbf{XXX} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space of self-adjoint operators modulo the kernel of $ \beta $. 
-	Equipped with an inner product, we can regard $ \textup{B}^{sa}(\mathcal{H}) $ \textbf{Introduce notation} as a real Euclidean space. 
+	Following the steps in appendix \ref{appendix} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space of self-adjoint operators modulo the kernel of $ \beta $. 
+	Equipped with an inner product, we can regard $ \textup{B}^{H}(\mathcal{H}) $ as an inner product space. 
 	We immediately get that $ a_{ij} =\trace{\rho X_i Y_j}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that the norms of our vectors are bounded by one we have to show
 	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,\hdots,Y_m \} $, $ Y \in \{Y_1,\hdots,Y_n \} $. 
 	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
@@ -165,7 +164,7 @@ In order to prove the other inclusion we will use the following proposition.
 		\sigma_A^i = I^{\otimes (i-1)} \otimes A \otimes I^{\otimes (n-i)}
 		\end{align*}
 		for $ A \in \{ X,Y,Z \}$ and where $ I $ is the $ 2 \times 2 $ identity matrix. The Hermitian property follows directly from the observation $ (M \otimes N)^* = M^* \otimes N^* $.
-		Note that $ \sigma_A^i $ and $ \sigma_{A^{'}}^j $ anti-commute if $ i = j $ and $ A = A^{'} $ and commute otherwise. We use these operators in order to define 
+		Note that $ \sigma_A^i $ and $ \sigma_{A^{\prime}}^j $ anti-commute if $ i = j $ and $ A = A^{\prime} $ and commute otherwise. We use these operators in order to define 
 		\begin{align*}
 		U_i = \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k,  \\
 		U_{i+n} = \sigma_Z^i \prod_{k = i+1}^n \sigma_Y^k
@@ -184,7 +183,7 @@ In order to prove the other inclusion we will use the following proposition.
 		\sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
 		&= - \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^{j-1} ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n  \\
 		&= - ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
-		&= -U_jU_i.
+		&= -U_{n+j}U_i.
 		\end{align*}
 		Since $ U_iU_i^* = U_iU_i =  I$ they are also unitary. 
 		Moreover, taking the product of two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
@@ -211,10 +210,10 @@ We are now ready to prove the other inclusion of lemma \ref{LemQC}.
 	where $  (\ket{k}\bra{l})_{kl} = 1 $ and $ (\ket{k}\bra{l})_{ij} = 0 $ for all $ (i,j)\neq (k,l) $.
 	
 	Then we get 
-	\begin{align}
+	\begin{align*}
 		\trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )} = \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
 		&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x_i,y_j \rangle.
-	\end{align}
+	\end{align*}
 \end{proof}
 We can easily see that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
 For $ \lambda \in [0,1] $ we define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) $ and due to  $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $ they are unit vectors. Moreover, $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$. If we proceed in the same fashion as in the proof of lemma \ref{LemQC} we obtain vectors 
@@ -283,7 +282,7 @@ satisfy all other constraints.
 Eventually, we have all information to show that $ \LC_{2,2} $ is a proper subset of $ \QC_{2,2} $. 
 Assume we want to maximize in the direction of the facet induced by $M = \begin{pmatrix}
 1 & 1 \\ 1 & -1 
-\end{pmatrix} $. Note that $ M $ coincides with the matrix $ \Sigma_{s,t} = (-1)^{f(s,t)} $ for the CSHS game in section \ref{??} \textbf{Label in CSHS section}. Since $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
+\end{pmatrix} $. Note that $ M $ coincides with the matrix $ \Sigma_{s,t} = (-1)^{f(s,t)} $ for the CSHS game in section \ref{CHSH}. Since $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
 \begin{align*}
 	\trace{(AM)}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
 	&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
