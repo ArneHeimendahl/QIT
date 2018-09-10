@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  10 SEP 2018 13:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  10 SEP 2018 14:13
 entering extended mode
 **./Coffee.tex
 (Coffee.tex
@@ -2099,18 +2099,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 3.
-LaTeX Font Info:    Try loading font information for U+dutchcal on input line 1
-1.
+LaTeX Font Info:    Try loading font information for U+dutchcal on input line 3
+.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\dutchcal\udutchcal.fd"
 File: udutchcal.fd 2011/06/16 Fontinst v1.933 font definitions for U/dutchcal.
 )
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 10.95pt on input line 11.
+(Font)              scaled to size 10.95pt on input line 3.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 3.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 6.0pt on input line 11.
+(Font)              scaled to size 6.0pt on input line 3.
  [2] [3]
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
@@ -2155,16 +2155,27 @@ $[][] \U/msb/m/n/10.95 E\OT1/lmr/m/n/10.95 [\OML/lmm/m/it/10.95 []\OT1/lmr/m/n
  []
 
 [11]
-Overfull \hbox (4.4314pt too wide) in paragraph at lines 126--130
+
+LaTeX Warning: Reference `EqQC' on page 12 undefined on input line 98.
+
+
+LaTeX Warning: Reference `appendix' on page 12 undefined on input line 117.
+
+
+Overfull \hbox (4.4314pt too wide) in paragraph at lines 125--129
 \OT1/lmr/m/n/10.95 In or-der to get the de-sired re-sult we have to show that $
 [] [] = [] [] \OMS/lmsy/m/n/10.95 
  []
 
 [12]
-Underfull \vbox (badness 1895) has occurred while \output is active []
+
+LaTeX Warning: Reference `EqQC' on page 13 undefined on input line 140.
+
+
+Underfull \vbox (badness 2080) has occurred while \output is active []
 
  [13]
-Overfull \hbox (23.04022pt too wide) in paragraph at lines 203--208
+Overfull \hbox (23.04022pt too wide) in paragraph at lines 202--207
 []\OT1/lmr/m/n/10.95 Let $(\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/10.95 )[]\OML/lm
 m/m/it/10.95 ;  \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y[]\OT1/lmr/m/n/10.95 )
 []$ be vec-tors in $\U/msb/m/n/10.95 R[]$ \OT1/lmr/m/n/10.95 that sat-isfy $[]\
@@ -2172,24 +2183,20 @@ OML/lmm/m/it/10.95 ;$$[] \OMS/lmsy/m/n/10.95 
  []
 
 
-Overfull \hbox (7.66248pt too wide) in paragraph at lines 217--217
+Overfull \hbox (7.66248pt too wide) in paragraph at lines 216--216
 [] 
  []
 
-[14]
-
-LaTeX Warning: Reference `??' on page 15 undefined on input line 286.
-
-[15]) (chapters/MaxisTeil.tex [16]
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
+[14] [15]) (chapters/MaxisTeil.tex [16]
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<chapters/fig_unit_circle.pdf, id=220, 149.20341pt x 161.75331pt>
+<chapters/fig_unit_circle.pdf, id=213, 149.20341pt x 161.75331pt>
 File: chapters/fig_unit_circle.pdf Graphic file (type pdf)
 
 <use chapters/fig_unit_circle.pdf>
-Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 26.
+Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 27.
 (pdftex.def)             Requested size: 157.74979pt x 171.03561pt.
  [17 <./chapters/fig_unit_circle.pdf>]
 [18] [19]
@@ -2224,13 +2231,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36167 strings out of 493323
- 680904 string characters out of 3139068
- 795262 words of memory out of 3000000
- 38913 multiletter control sequences out of 15000+200000
+ 36162 strings out of 493323
+ 680866 string characters out of 3139068
+ 795249 words of memory out of 3000000
+ 38914 multiletter control sequences out of 15000+200000
  588828 words of font info for 84 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,16n,94p,10512b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,16n,94p,10512b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -2256,9 +2263,9 @@ am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9
 KTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on Coffee.pdf (23 pages, 498116 bytes).
+Output written on Coffee.pdf (23 pages, 496627 bytes).
 PDF statistics:
- 417 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
