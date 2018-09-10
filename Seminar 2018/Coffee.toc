@@ -1,4 +1,4 @@
-\contentsline {section}{\tocsection {}{1}{Introduction}}{1}{section.1}
+\contentsline {section}{\tocsection {}{1}{Quantum Grundlagen}}{1}{section.1}
 \contentsline {subsection}{\tocsubsection {}{1.1}{Basic definitions}}{1}{subsection.1.1}
 \contentsline {subsection}{\tocsubsection {}{1.2}{Tensor products and Dirac notation}}{1}{subsection.1.2}
 \contentsline {subsection}{\tocsubsection {}{1.3}{States and measurements}}{2}{subsection.1.3}
