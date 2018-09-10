@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.23)  9 SEP 2018 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.23)  10 SEP 2018 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1518,18 +1518,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 3.
-LaTeX Font Info:    Try loading font information for U+dutchcal on input line 1
-1.
+LaTeX Font Info:    Try loading font information for U+dutchcal on input line 3
+.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/dutchcal/udutchcal.fd
 File: udutchcal.fd 2011/06/16 Fontinst v1.933 font definitions for U/dutchcal.
 )
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 10.95pt on input line 11.
+(Font)              scaled to size 10.95pt on input line 3.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 8.0pt on input line 11.
+(Font)              scaled to size 8.0pt on input line 3.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 6.0pt on input line 11.
+(Font)              scaled to size 6.0pt on input line 3.
  [2]
 [3] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
@@ -1674,7 +1674,7 @@ onts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.
 pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb>
-Output written on Coffee.pdf (22 pages, 444975 bytes).
+Output written on Coffee.pdf (22 pages, 445780 bytes).
 PDF statistics:
  412 PDF objects out of 1000 (max. 8388607)
  337 compressed objects within 4 object streams
