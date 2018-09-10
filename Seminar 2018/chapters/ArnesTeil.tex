@@ -1,5 +1,5 @@
 \subsection{Local Correlation matrices}
-So far, we have been dealing with quite specific strategies. The idea is to generalize the concept of strategies into mathematical objects. Suppose the referee sends an element $ s \in \mathcal{S} $ to Alice, respectively $ t \in\mathcal{T} $ to Bob. Suppose Alice and Bob answer according to a deterministic strategy. We will interpret their answers as vectors $ a \in [-1,1]^{\mathcal{S}}, b \in [-1,1]^{\mathcal{T}} $.  Their common answer is the product $ a_sb_t $. So, their strategy can be uniquely described by a  matrix $ ab^\top $.  Instead of playing a deterministic strategy they could answer in a probabilistic way, meaning that given the input $ s \in \mathcal{S} $, respectively $ t \in \mathcal{T} $ their answers are determined by random variables $ X_s $ and $ Y_t $. Then, their expected common answer is $ \mathbb{E}[X_sY_t] $. In the following definition we define the set of all such matrices encoding the common strategy of Alice and Bob.
+So far, we have been dealing with quite specific strategies. The idea is to generalize the concept of strategies into mathematical objects. Suppose the referee sends an element $ s \in \mathcal{S} $ to Alice, respectively $ t \in\mathcal{T} $ to Bob. Suppose Alice and Bob answer according to a deterministic strategy. We will interpret their answers as vectors $ \xi \in \{-1,1\}]^{\mathcal{S}}, \eta \in \{-1,1\}^{\mathcal{T}} $.  Their common answer is the product $ \xi_s\eta_t $. So, their strategy can be uniquely described by a  matrix $ \xi\eta^\top $.  Instead of playing a deterministic strategy they could answer in a probabilistic way, meaning that given the input $ s \in \mathcal{S} $, respectively $ t \in \mathcal{T} $ their answers are determined by random variables $ X_s $ and $ Y_t $. Then, their expected common answer is $ \mathbb{E}[X_sY_t] $. In the following definition we define the set of all such matrices encoding the common strategy of Alice and Bob.
 
 \begin{dfn}
 	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be families of random variables on a common probability space such that $ \vert X_i \vert, \vert Y_j \vert \le 1 $ almost surely. Then $ A=(a_{ij}) $ is the corresponding {\itshape classical (or local) correlation matrix} if 
@@ -9,9 +9,6 @@ So far, we have been dealing with quite specific strategies. The idea is to gene
 	for all $ 1 \le i \le m, 1 \le j \le n $.
 \end{dfn}
 As we will see in the sequel, the set of $ m \times n $ correlation matrices is a polytope, denoted by $ \LC_{m,n} $.
-
-As we will see in the following two lemmata, both sets can be described in a more useful way. 
-
 \begin{lemma}\label{LemLC}
 	An alternative description of $ \LC_{m,n} $ is given by 
 	\begin{align}\label{EqLC}
@@ -20,16 +17,16 @@ As we will see in the following two lemmata, both sets can be described in a mor
 \end{lemma}
 What does the lemma tell us in addition to a simples description? It states that the matrices encoding all possible strategies are the convex hull of the matrices defined by deterministic ones. We can interpret this as follows: no matter which probabilistic strategy Alice and Bob play there will be a deterministic strategy that is at least as good as theirs. 
 \begin{proof}
-	Let us denote the right hand side of \ref{EqLC} by $ M $ and let $ \xi\eta^T \in M $ with $ \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n $. Clearly $ \xi_i, \eta_j \in \{-1,1\} $ define constant $ \mathbb{R} $-valued random variables satisfying $ \vert \xi_i \vert, \, \vert \eta_j \vert \le 1 $. Hence, it suffices to show that $ \LC_{m,n} $ is convex since it contains the vertices of $ M $. Therefore, consider two classical correlation matrices $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $ which are defined on a common probability space such that $ \modul{X_i}^{(k)},\modul{Y}_j^{(k)} \le 1 $ We have to show that there exists random variables $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
-	\begin{align}
+	Let us denote the right hand side of \ref{EqLC} by $ M $ and let $ \xi\eta^T \in M $ with $ \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n $. Clearly $ \xi_i, \eta_j \in \{-1,1\} $ define constant $ \mathbb{R} $-valued random variables satisfying $ \vert \xi_i \vert, \, \vert \eta_j \vert \le 1 $. Hence, it suffices to show that $ \LC_{m,n} $ is convex since it contains the vertices of $ M $. Therefore, consider two classical correlation matrices $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $ which are defined on a common probability space such that $ \modul{X_i^{(k)}},\modul{Y_j^{(k)}} \le 1 $ We have to show that there exists random variables $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
+	\begin{align*}
 		\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
-	\end{align}
+	\end{align*}
 	for all $ \beta \in [0,1] $.
 	Let $ \alpha $ be a Bernoulli random variable, i.e. $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $.
 	Clearly, it holds $ \modul{X_i}, \modul{Y_j} \le 1 $ almost surely. 
 	Then 
 	\begin{align*}
-		\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(1)}]\mathds{1}_{\{\alpha = 1\}}] \\
+		\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}]\mathds{1}_{\{\alpha = 1\}}] \\
 		&= \beta \mathbb{E}[X_i^{(0)}Y_j^{(0)} ] + (1-\beta) \mathbb{E}[X_i^{(1)}Y_j^{(1)}],
 	\end{align*} 
 	which proofs that $ \LC_{m,n} $ is convex.
@@ -51,13 +48,13 @@ What does the lemma tell us in addition to a simples description? It states that
 		&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  \\
 		&= \big (\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}]\big )\xi_i\eta_j
 	\end{align*}
-	where we used that $ \lambda_{\xi}^{(X)} $ and $ \lambda_{\eta}^{(Y)} $ are independent.
-	Since $
+	where we used that $ \lambda_{\xi}^{(X)} $ and $ \lambda_{\eta}^{(Y)} $ are independent random variables.
+	If we now observe that $
 		\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}] = 1 $ it follows that $ (a_{ij}) \in  \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}$
  which finishes the proof.
 \end{proof}
-Now we are able to count the vertices of $ \LC_{m,n} $. Observing that $ \xi \eta^T = \tilde{\xi} \tilde{\eta}^T $ if and only if $ \xi = \tilde{\xi} $ and $ \eta = \tilde{\eta} $ or $ \xi = -\tilde{\xi} $ and $ \eta = -\tilde{\eta} $ it follows that we have $ 2^{n+m}/2 = 2^{n+m-1} $ different matrices $ \xi \eta $, hence $ \LC_{m,n} $ has $ 2^{n+m-1} $ vertices. To analyze the facial structure of $ \LC_{m,n} $ is rather complicated. 
-However, we will do it later on for $ n=m=2 $ and compare it to $ \QC_{m,n} $.
+\noindent Now we are able to count the vertices of $ \LC_{m,n} $. Observing that $ \xi \eta^T = \tilde{\xi} \tilde{\eta}^T $ if and only if $ \xi = \tilde{\xi} $ and $ \eta = \tilde{\eta} $ or $ \xi = -\tilde{\xi} $ and $ \eta = -\tilde{\eta} $ it follows that we have $ 2^{n+m}/2 = 2^{n+m-1} $ different matrices $ \xi \eta $, hence $ \LC_{m,n} $ has $ 2^{n+m-1} $ vertices. To analyze the facial structure of $ \LC_{m,n} $ is rather complicated. 
+However, we will do it later on for $ n=m=2 $ and compare it to the set of quantum correlation matrices. 
 
 \subsection{Quantum correlation matrices}
 Before we introduce the quantum correlation matrices we will shortly go back to the framework of nonlocal games. As before, Alice and Bob share a state $ \rho $ and get inputs $ s \in \mathcal{S}, t \in \mathcal{T} $ and perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $.
@@ -70,20 +67,14 @@ $ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode thes
 	\end{align}
 \end{dfn}
 \noindent We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
-
-With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. 
-
-
-In the following, we will proof a similar result for $ \QC_{m,n} $ that is: 
+With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. In the following, we will proof a similar result for $ \QC_{m,n} $ that is: 
 \begin{lemma}\label{LemQC}
-	\begin{align*}\label{EqQC}
-		QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
-	\end{align*}
+	\begin{align}\label{EqQC}
+		\QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
+	\end{align}
 	where $ \langle \cdot , \cdot \rangle $ denotes the standard scalar product. 
 \end{lemma}
-In order to proof this we have to review some definitions and introduce a special class of matrices, namely the {\itshape Pauli matrices}.
-
-For the first inclusion we review the definition of an inner product. The basic idea is to define an inner product via the  definition of the $ a_{ij} $ in \ref{QCaij}.
+\noindent For the first inclusion we review the definition of an inner product. The basic idea is to define an inner product via the  right hand sight of \ref{QCaij}.
 Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ that is linear in both variables, that is 
 \begin{enumerate}
 	\item [i)] $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
@@ -94,13 +85,13 @@ Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinea
 for all $ v,v_1,v_2 \in V, \, w,w_1,w_2 \in W, \, \lambda \in k $. 
 If $ V = W $, we call $ \beta $ {\itshape symmetric} if $ \beta(v,w) = \beta(w,v) $, {\itshape positive semidefinite} if 
 $ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive semidefinite and $ \beta(v,v)= 0 $ implies that $ v = 0 $. 
-If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product} and usually denoted by $ \langle \cdot \, , \, \cdot \rangle $.
-Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
+If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product}.
+As before, we will denote the right hand side of equation \ref{EqQC} by $ M $.
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
-	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m} \in B^H(\mathcal{C}), \, (Y_j)_{1 \ge n} \in B^H(\mathcal{H}) $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
+	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ \{X_1,\hdots X_m\}\subset  B^H(\mathcal{C}), \, \{Y_1,\hdots Y_n\}\subset B^H(\mathcal{H}) $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
 	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
 	We define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
-	$ \beta: \textup{B}^{sa}(\mathcal{H}) \times \textup{B}^{sa}(\mathcal{H}) \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
+	$ \beta: \textup{B}^{H}(\mathcal{H}) \times \textup{B}^{H}(\mathcal{H}) \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
 	We have to check that it indeed satisfies the mentioned properties. 
 	Obviously, $ \beta $ is homogeneous in both variables due to the fact that the trace and the real part of a complex number are linear functions and thus homogeneous. We will show additivity for the first variable, the result follows analogously for the second one. It holds
 	\begin{align*}
@@ -110,144 +101,142 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	Symmetry follows form 
 	\begin{align*}
 		\beta(S,T)&= \textup{Re}\trace{(\rho ST)} =\textup{Re}\trace{(\rho ST)^*}  = \textup{Re \trace{(T^*S^* \rho^*})}  \\
-		 &=\textup{Re} \trace{(\rho^* T^*S^*)} = \textup{Re} \trace{((\rho T S))} = \beta(T,S).
+		 &=\textup{Re} \trace{(\rho^* T^*S^*)} = \textup{Re} \trace{(\rho T S)} = \beta(T,S).
 	\end{align*}
-	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ we obtain $ \beta(S,S) = \textup{Re}\trace{\rho SS} = \textup{Re} \trace{\rho S^*S} \ge 0 $ and $ \beta $ is positive semidefinite. 
+	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ and $  \rho $ is positive semidefinite we obtain $ \beta(S,S) = \textup{Re}\trace{(\rho SS)} = \textup{Re} \trace{(\rho S^*S)} \ge 0 $, so $ \beta $ is positive semidefinite. 
+	Following the steps in appendix \ref{Appendix} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space $ B^H(\mathcal{H})/ \ker{\beta} $. 
 	
-	Following the steps in appendix \ref{appendix} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space of self-adjoint operators modulo the kernel of $ \beta $. 
-	Equipped with an inner product, we can regard $ \textup{B}^{H}(\mathcal{H}) $ as an inner product space. 
-	We immediately get that $ a_{ij} =\trace{\rho X_i Y_j}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that the norms of our vectors are bounded by one we have to show
-	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,\hdots,Y_m \} $, $ Y \in \{Y_1,\hdots,Y_n \} $. 
-	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
+	\noindent Now, the crucial point is to notice that $ a_{ij} =\trace{(\rho X_i Y_j)}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that these operators coincide with unit vectors with respect to $  \beta  $ we have to show
+	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,\hdots,X_m \} $, $ Y \in \{Y_1,\hdots,Y_n \} $. 
+	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \psi \rangle \langle \psi \vert $ for $ \vert \psi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
 	\begin{align*}
-		\beta(X \otimes I, X \otimes I) &= \textup{Re} \trace{\rho X^2 \otimes I}=  \sum_{i=1}^d \lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i} \otimes \ket{\eta_i}\bra{\eta_i})(X^2 \otimes I) } \\
-		&= \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})} =  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
+	\beta(X \otimes I, X \otimes I) &= \textup{Re} \trace{(\rho X^2 \otimes I)}=  \sum_{i=1}^d \lambda_i^2 \trace{\big ((\ket{\xi_i} \bra{\xi_i} \otimes \ket{\eta_i}\bra{\eta_i})(X^2 \otimes I)\big ) } \\
+	&= \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})} =  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
 	\end{align*}
 	In order to get the desired result we have to show that $ \trace{(\ket{\xi_i} \bra{\xi_i}X^2)} = \trace{(X^2\ket{\xi_i} \bra{\xi_i})} \le 1 $. 
 	Note that $1 \ge \norm{X}_{\infty} := \sup_{\modul{y}\le 1} \modul{Xy} $ implies that $ \modul{X^2\ket{\xi_i}} \le 1 $. So the problem can be reduced to $ \vert \trace{uv^*}\vert^2 \le 1 $ for complex vectors $ u,v $ with $ \modul{u},\, \modul{v} \le 1 $. But this holds since due to the Cauchy-Schwarz inequality 
 	$ \vert\trace{uv^*}\vert^2 = \vert\sum u_i \bar{v_i}\vert^2 \le \modul{u}^2\modul{v}^2 \le 1 $.
-	
-	If we now identify the operators $ X_i \otimes I $ and $  I \otimes Y_j$ with vectors
+	\noindent If we now identify the operators $ X_i \otimes I $ and $  I \otimes Y_j$ with vectors
 	$ (x_i) $ and $ (y_j) $ we have found vectors that almost satisfy the desired properties but they do not have the right dimension and we do not consider the standard scalar product yet. Without loss of generality let $ m \le n $. To obtain the required dimension we will project $ (y_j) $ orthogonally onto $ \textup{span}\{ x_1,\hdots,x_m \} $.
 	Let $ \{a_1,\hdots,a_r\} $ be an orthonormal basis of $ \textup{span} \{ x_1,\hdots,x_m \} $ with respect to $ \beta $. 
-	The orthogonal projection of $ y_j $ is $ \pi(y):= \sum_{i=1}^{r}\beta(a_i,y_j)a_i $ and fulfills
+	The orthogonal projection of $ y_j $ is $ \pi(y_j):= \sum_{i=1}^{r}\beta(a_i,y_j)a_i $ and fulfills
 	$ \beta(x_i,y_j) = \beta(x_i,\pi(y_j)) $. 
 	Let $ x_i $ and $ \pi(y_j) $ admit the descriptions 
 	$ x_i = \sum_{k=1}^{r}\alpha_k^{(i)}a_k$ and $  \pi(y_j) = \sum_{k=1}^r \gamma_k^{(j)} a_k$ for $ \alpha^{(i)}, \gamma^{(j)} \in \mathbb{R}^r $. Then
 	\begin{align*}
-		a_{ij}= \beta(x,y)= \beta(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \beta(a_k,a_l) = \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}, \gamma^{(j)} \rangle.
+	a_{ij}= \beta(x,y)= \beta(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \beta(a_k,a_l) = \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}, \gamma^{(j)} \rangle.
 	\end{align*}
-	Moreover, since $ \modul{\alpha^{(i)}} = \modul{x_i} \le 1$ and $\modul{ \gamma^{(j)}} \modul{y_j}= \modul{\pi(y_j)} \le 1 $ the vectors $ (\alpha^{(i)}) $ and$ (\gamma^{(j)}) $ have all the properties of the right hand side of \ref{EqQC}.
-	Additionally, we also proved that we can take an even lower dimension for our vectors, precisely 
-	$ \min \{ \dim( \textup{span} \{ (x_i) \}),$ $ \dim(\textup{span} \{ (y_j) \} )\} $.
+	Moreover, since $ \vert\alpha^{(i)} \vert= \modul{x_i} \le 1$ and $\vert \gamma^{(j)}\vert=  \modul{y_j}= \modul{\pi(y_j)} \le 1 $ the vectors $ (\alpha^{(i)}) $ and$ (\gamma^{(j)}) $ have all the properties of the right hand side of \ref{EqQC}.
+	Additionally, we also proved that we can demand an even lower dimension for the vectors in \ref{EqQC}, that is  
+	$ \min \big \{ \dim( \textup{span} \{ (x_i)_{1 \le i \le m} \}),\, \dim(\textup{span} \{ (y_j)_{1 le j \le n} \} )\big \} $.
 \end{proof}
 
-In order to prove the other inclusion we will use the following proposition. 
+\noindent In order to prove the other inclusion we will use the following proposition. 
 \begin{prop} \label{PauliProp}
-	For all $ n \ge 1 $ there is a subspace of the $ 2^n \times 2^n $ Hermitian matrices where every vector is the multiple of a unitary matrix. 
+For all $ n \ge 1 $ there is a subspace of the $ 2^n \times 2^n $ Hermitian matrices where every vector is the multiple of a unitary matrix. 
 \end{prop}
-	\begin{proof}
-		The proof is based on $ n- $fold tensor products of the Pauli matrices which are the three matrices 
-		\begin{align*}
-		X = \begin{pmatrix}
-		0 & 1 \\ 1 & 0
-		\end{pmatrix}, \, Y = \begin{pmatrix}
-		0 & -i \\ i & 0
-		\end{pmatrix}, \, Z = \begin{pmatrix}
-		1 & 0 \\ 0 & -1
-		\end{pmatrix}
-		\end{align*}
-		together with the $ 2 \times 2 $ identity matrix .
-		They are all trace $ 0 $ unitary Hermitian matrices and anti-commute pairwise. 
-		Moreover we define the $ 2^n \times 2^n $ Hermitian matrix 
-		\begin{align*}
-		\sigma_A^i = I^{\otimes (i-1)} \otimes A \otimes I^{\otimes (n-i)}
-		\end{align*}
-		for $ A \in \{ X,Y,Z \}$ and where $ I $ is the $ 2 \times 2 $ identity matrix. The Hermitian property follows directly from the observation $ (M \otimes N)^* = M^* \otimes N^* $.
-		Note that $ \sigma_A^i $ and $ \sigma_{A^{\prime}}^j $ anti-commute if $ i = j $ and $ A = A^{\prime} $ and commute otherwise. We use these operators in order to define 
-		\begin{align*}
-		U_i = \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k,  \\
-		U_{i+n} = \sigma_Z^i \prod_{k = i+1}^n \sigma_Y^k
-		\end{align*}
-		for $ i = 1,\hdots,n $. Note that these operators are also traceless Hermitian matrices and anti-commute for $ i \neq j $:    
-		for $ 1 \le i < j  \le n$ we have 
-		\begin{align*}
-		U_iU_j = (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) &= \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
-		&= - \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^{j-1} ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n  \\
-		&= - ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
-		&= -U_jU_i
-		\end{align*}
-		and 
-		\begin{align*}
-		U_iU_{n+j} =  (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) &=
-		\sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
-		&= - \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^{j-1} ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n  \\
-		&= - ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
-		&= -U_{n+j}U_i.
-		\end{align*}
-		Since $ U_iU_i^* = U_iU_i =  I$ they are also unitary. 
-		Moreover, taking the product of two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
-		\begin{align*}
-		XY = \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le \le 2n}\xi_i\eta_j U_i U_j &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le \le 2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le \le 2n}U_iU_j \\
-		&=\sum_{i = 1}^{2n} \xi_i \eta_i I \\
-		&= \langle \xi, \eta \rangle I.
-		\end{align*}
-		So, if we set $ Y = X $ we get the desired result by taking the subspace $ \textup{span} \{ U_i \, | \, i = 1,\hdots,2n \} $
-		
-	\end{proof}
+\begin{proof}
+The proof is based on $ n- $fold tensor products of the Pauli matrices which are the three matrices 
+\begin{align*}
+X = \begin{pmatrix}
+0 & 1 \\ 1 & 0
+\end{pmatrix}, \, Y = \begin{pmatrix}
+0 & -i \\ i & 0
+\end{pmatrix}, \, Z = \begin{pmatrix}
+1 & 0 \\ 0 & -1
+\end{pmatrix}
+\end{align*}
+together with the $ 2 \times 2 $ identity matrix .
+They are all trace zero unitary Hermitian matrices and anti-commute pair wisely. 
+Moreover we define the $ 2^n \times 2^n $ Hermitian matrix 
+\begin{align*}
+\sigma_A^i = I^{\otimes (i-1)} \otimes A \otimes I^{\otimes (n-i)}
+\end{align*}
+for $ A \in \{ X,Y,Z \}$ and where $ I $ is the $ 2 \times 2 $ identity matrix. The Hermitian property follows directly from the observation $ (M \otimes N)^* = M^* \otimes N^* $.
+Note that $ \sigma_A^i $ and $ \sigma_{A^{\prime}}^j $ anti-commute if $ i = j $ and $ A = A^{\prime} $ and commute otherwise. We use these operators in order to define 
+\begin{align*}
+U_i = \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k, \\
+U_{i+n} = \sigma_Z^i \prod_{k = i+1}^n \sigma_Y^k
+\end{align*}
+for $ i = 1,\hdots,n $. Note that these operators are also traceless Hermitian matrices and anti-commute for $ i \neq j $:    
+for $ 1 \le i < j  \le n$ we have 
+\begin{align*}
+U_iU_j = (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) &= \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
+&= - \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^{j-1} ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n  \\
+&= - ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
+&= -U_jU_i
+\end{align*}
+and 
+\begin{align*}
+U_iU_{n+j} =  (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) &=
+\sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
+&= - \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^{j-1} ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n  \\
+&= - ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
+&= -U_{n+j}U_i.
+\end{align*}
+Since $ U_iU_i^* = U_iU_i =  I$ they are also unitary. 
+Moreover, taking the product of two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
+\begin{align*}
+XY = \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le \le 2n}\xi_i\eta_j U_i U_j &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le \le 2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le \le 2n}U_iU_j \\
+&=\sum_{i = 1}^{2n} \xi_i \eta_i I \\
+&= \langle \xi, \eta \rangle I.
+\end{align*}
+So, if we set $ Y = X $ we get the desired result by taking the subspace $ \textup{span} \{ U_i \, | \, i = 1,\hdots,2n \} $
 
-We are now ready to prove the other inclusion of lemma \ref{LemQC}.
+\end{proof}
+
+Let us proceed with the other inclusion of lemma \ref{LemQC}.
 
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
-	Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
-	$ \modul{x_i},$$ \modul{y_j} \le 1 $. 
-	Using the notation of the previous proposition's proof we set $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_i $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_i $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
-	Then $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y $ since $ Y_j^TY_j^T =   \modul{y_j}^2I = \modul{y_j}I^T = (Y_j^TY_j^T)^T = Y_jY_j  $.
-	Let $ \ket{\phi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\phi}\bra{\rho} $. Note that we can write $ \rho $ as
-	\begin{align*}
-		\rho = \ket{\phi}\bra{\phi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
-	\end{align*}
-	where $  (\ket{k}\bra{l})_{kl} = 1 $ and $ (\ket{k}\bra{l})_{ij} = 0 $ for all $ (i,j)\neq (k,l) $.
-	
-	Then we get 
-	\begin{align*}
-		\trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )} = \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
-		&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x_i,y_j \rangle.
-	\end{align*}
+Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
+$ \modul{x_i},$$ \modul{y_j} \le 1 $. 
+Using the notation of the previous proposition's proof we set $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_k $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_k $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
+Then, by the proof of the previous proposition $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y $ since $ Y_j^TY_j^T =   \modul{y_j}^2I = \modul{y_j}I^T = (Y_j^TY_j^T)^T = Y_jY_j  $.
+Let $ \ket{\psi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\psi}\bra{\psi} $. Note that we can write $ \rho $ as
+\begin{align*}
+\rho = \ket{\psi}\bra{\psi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
+\end{align*}
+where $  (\ket{k}\bra{l})_{kl} = 1 $ and $ (\ket{k}\bra{l})_{ij} = 0 $ for all $ (i,j)\neq (k,l) $.
+Calculating
+\begin{align*}
+\trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )} = \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
+&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x_i,y_j \rangle.
+\end{align*}
+shows the desired inclusion. 
 \end{proof}
-We can easily see that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
+\noindent We can easily see that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
 For $ \lambda \in [0,1] $ we define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) $ and due to  $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $ they are unit vectors. Moreover, $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$. If we proceed in the same fashion as in the proof of lemma \ref{LemQC} we obtain vectors 
-$ \alpha^{(i)},\gamma^{(j)} $ that satisfy $= \langle \alpha^{i},\gamma^{j} \rangle = \langle \tilde{x} _i, \tilde{y}_j$ and have dimension smaller or equal to $ \min \{m,n\} $.
+$ \alpha^{(i)},\gamma^{(j)} $ that satisfy $= \langle \alpha^{(i)},\gamma^{(j)} \rangle = \langle \tilde{x} _i, \tilde{y}_j\rangle $ and have dimension smaller or equal to $ \min \{m,n\} $.
 
 
 \subsection{The relations between quantum correlation and local correlation matrices}
 
-Using these both descriptions we can derive some relations between the two sets. 
-Let $ \xi\eta^T $ be a vertex of $ \LC_{m,n} $. If we just choose $ x_i = \xi_i \ket{0}$ and $ y_j = \eta_j\ket{0} $ we immediately see that $ \xi_i\eta_j = \langle x_i, y_j \rangle $. Hence, $ \xi\eta^T \in \QC_{m,n} $ and combined with the convexity of $ \QC_{m,n} $ we get $ \LC_{m,n} \subset \QC_{m,n} $.
+Using the descriptions of lemmata \ref{LemLC} and \ref{LemQC} we can derive some relations between the two sets. 
+Let $ \xi\eta^T $ be a vertex of $ \LC_{m,n} $. If we just choose $ x_i = \xi_i (1,0,\hdots,0) \in \mathbb{R}^{\min \{m,n\}}$ and $ y_j = \eta_j(1,0,\hdots 0) \in \mathbb{R}^{\min \{m,n \}}$ we immediately see that $ x_i $ and $ y_j $ are unit vectors and $ \xi_i\eta_j = \langle x_i, y_j \rangle $. Hence, $ \xi\eta^T \in \QC_{m,n} $ and combined with the convexity of $ \QC_{m,n} $ we get $ \LC_{m,n} \subset \QC_{m,n} $.
 
 However, the inclusion is strict in general. Let us consider $ n=m=2 $. 
 For $ \LC_{2,2} $ we obtain 
 \begin{align*}
-	\LC_{2,2}= \textup{conv} \{ \pm \begin{pmatrix}
-	1 & 1 \\
-	1 & 1
-	\end{pmatrix} , \, \pm \begin{pmatrix}
-	-1 & -1 \\
-	1 & 1
-	\end{pmatrix} , \, \pm \begin{pmatrix}
-	-1 & 1 \\
-	-1 & 1
-	\end{pmatrix}, \, \pm \begin{pmatrix}
-	-1 & 1 \\
-	1 & -1
-	\end{pmatrix}  \}.
+\LC_{2,2}= \textup{conv} \{ \pm \begin{pmatrix}
+1 & 1 \\
+1 & 1
+\end{pmatrix} , \, \pm \begin{pmatrix}
+-1 & -1 \\
+1 & 1
+\end{pmatrix} , \, \pm \begin{pmatrix}
+-1 & 1 \\
+-1 & 1
+\end{pmatrix}, \, \pm \begin{pmatrix}
+-1 & 1 \\
+1 & -1
+\end{pmatrix}  \}.
 \end{align*}
 We can easily see that $ \sigma(\begin{pmatrix}
 -1 & 1 \\ 1 & 1 
 \end{pmatrix}) \notin \LC_{2,2} $ for $ \sigma \in \Sigma_4 $ where for $ A = (a_{ij}) $ we define $ \sigma (A)  $ by $ (\sigma( A))_{ij}:= a_{\sigma(1)\sigma(j)} $.
 We claim that
 \begin{equation}\label{facetsLC}
-	\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{(AM)} \le 1 \textup{ for all } M \in \mathcal{K} \},
+\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{(AM)} \le 1 \textup{ for all } M \in \mathcal{K} \},
 \end{equation}
 where $ \mathcal{K}  = \{ \frac{1}{2}\sigma(\begin{pmatrix}
 -1 & 1 \\
@@ -255,19 +244,19 @@ where $ \mathcal{K}  = \{ \frac{1}{2}\sigma(\begin{pmatrix}
 \end{pmatrix}), \sigma(\begin{pmatrix}
 1 & 0 \\
 0 & 0
-\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id} (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.
+\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id}, (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.
 The crucial observation is to note that $ \LC_{2,2} $ is affinely isomorphic to the cross polytope scaled  by two, i.e. 
 $ \LC_{2,2} \cong 2\textup{CP}_4 := 2\textup{conv} \{  \pm e_i \, | \, i = 1,\hdots,4 \} $, where $ e_i $ are the vectors of the standard basis of $ \mathbb{R}^4 $. For example, this can be seen by interpreting the vertices of $ \LC_{2,2} $ as elements of $ \mathbb{R}^4 $ and then apply the linear transformation given by the matrix 
 \begin{align*}
-	\begin{pmatrix}
-		-1 & -1 & 1 & 1 \\
-		-1 & 1 & -1 & 1 \\
-		-1 & 1 & 1 & -1 \\
-		1 & 1 & 1 & 1 
-	\end{pmatrix}.
+\begin{pmatrix}
+-1 & -1 & 1 & 1 \\
+-1 & 1 & -1 & 1 \\
+-1 & 1 & 1 & -1 \\
+1 & 1 & 1 & 1 
+\end{pmatrix}.
 \end{align*}
 Since the polar dual of the cross polytope is the hypercube, i.e. $ (CP_n)^o = [-1,1]^n $,  the face lattice of $ \textup{CP}_4 $ is isomorphic to the opposite lattice of the hypercube's face lattice which implies that the number of facets of $ \textup{CP}_4 $ coincides with the number of vertices of $ [-1,1]^4 $ which is $ 2^4 $. Due to $  \LC_{2,2} \cong 2\textup{CP}_4$ their face lattices of $ \LC_{2,2} $ and $ \textup{CP}_4 $ are isomorphic, so $ \LC_{2,2} $ has $ 2^4 $ facets as well. 
-Since all constraints of the right hand side of \ref{facetsLC} clearly define non-empty proper faces of $ \LC_{2,2} $, it suffices to show that the characterization is a non-redundant hyperplane description of $ \LC_{2,2} $, implying that all constraints define facets of $ \LC_{2,2} $. But this is indeed true since if we omit for example the constraint 
+Since all constraints of the right hand side of equation \ref{facetsLC} clearly define non-empty proper faces of $ \LC_{2,2} $, it suffices to show that the characterization is a non-redundant hyperplane description of $ \LC_{2,2} $, implying that all constraints define facets of $ \LC_{2,2} $. But this is indeed true since if we omit for example the constraint 
 $ 1/2 \trace{(AM)} \le 1 $ for $ M = \{ \begin{pmatrix}
 1 & 0 \\ 0 & 0
 \end{pmatrix} \} $, respectively $ M = \begin{pmatrix}
@@ -282,26 +271,29 @@ satisfy all other constraints.
 Eventually, we have all information to show that $ \LC_{2,2} $ is a proper subset of $ \QC_{2,2} $. 
 Assume we want to maximize in the direction of the facet induced by $M = \begin{pmatrix}
 1 & 1 \\ 1 & -1 
-\end{pmatrix} $. Note that $ M $ coincides with the matrix $ \Sigma_{s,t} = (-1)^{f(s,t)} $ for the CSHS game in section \ref{CHSH}. Since $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
+\end{pmatrix} $. Note that $ M $ coincides with the matrix $ \Sigma_{s,t} = (-1)^{f(s,t)} $ for the CSHS game in section \ref{CHSH}. Since $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. 
+This is an alternative way to get the same result as in section \ref{CHSH}.
+
+For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
 \begin{align*}
-	\trace{(AM)}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
-	&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
-	&\le \modul{x_1+x_2} + \modul{x_1-x_2}.
+\trace{(AM)}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
+&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
+&\le \modul{x_1+x_2} + \modul{x_1-x_2}.
 \end{align*} 
 Observing that for $ \modul{x_1},\modul{x_2}\le  1 $
 \begin{align*}
-	&(\modul{x_1+x_2} + \modul{x_1-x_2})^2 \\
-	&= \langle x_1+x_2,x_1+x_2\rangle  +\sqrt{\langle x_1+x_2,x_1+x_2\rangle  \langle x_1-x_2,x_1-x_2\rangle} +  \langle x_1-x_2,x_1-x_2\rangle  \\
-	&\le 2\modul{x_1}^2+2\modul{x_2}^2 + \sqrt{\modul{x_1}^4+2\modul{x_1}^2\modul{x_2}^2-4\langle x_1,x_2\rangle^2+\modul{x_2}^4}  \\
-	&\le  2\modul{x_1}^2+2\modul{x_2}^2 + \sqrt{4(\modul{x_1}^2+\modul{x_2}^2)^2}  \\
-	&= 4(\modul{x_1}^2+\modul{x_2}^2)
+&(\modul{x_1+x_2} + \modul{x_1-x_2})^2 \\
+&= \langle x_1+x_2,x_1+x_2\rangle  +\sqrt{\langle x_1+x_2,x_1+x_2\rangle  \langle x_1-x_2,x_1-x_2\rangle} +  \langle x_1-x_2,x_1-x_2\rangle  \\
+&\le 2\modul{x_1}^2+2\modul{x_2}^2 + \sqrt{\modul{x_1}^4+2\modul{x_1}^2\modul{x_2}^2-4\langle x_1,x_2\rangle^2+\modul{x_2}^4}  \\
+&\le  2\modul{x_1}^2+2\modul{x_2}^2 + \sqrt{4(\modul{x_1}^2+\modul{x_2}^2)^2}  \\
+&= 4(\modul{x_1}^2+\modul{x_2}^2),
 \end{align*}
 we can give a precise upper bound for $ \trace{(AM)} $ by 
 \begin{align*}
-	\modul{x_1+x_2} + \modul{x_1-x_2} \le 2\sqrt{\modul{x_1}^2+\modul{x_2}^2} \le 2 \sqrt{2}.
+\modul{x_1+x_2} + \modul{x_1-x_2} \le 2\sqrt{\modul{x_1}^2+\modul{x_2}^2} \le 2 \sqrt{2}.
 \end{align*}
 Thus, we just have to find a matrix that satisfies this bound. A possible choice is induced by the vectors $ x_1 = x_2 = \frac{1}{\sqrt{2}}(1,1) $ and $ y_1 = y_2 =(1,0) $, that is $ A = \frac{1}{\sqrt{2}}\begin{pmatrix}
 1 & 1 \\ 1 & 1 
 \end{pmatrix} $ yielding the value $ \trace{(AM)} = 2 \sqrt{2} $.
 So as we have seen, the inclusion $ \LC_{m,n} \subset \QC_{m,n} $ is strict in general. Elements in $ \QC_{m,n} \setminus \LC_{m,n} $ are called {\itshape non-local}.
-Generally, linear functionals $ f: \to \mathbb{R} $ \textbf{Notation} that satisfy $ f(A) \le 1 $ for all $ A \in \LC_{m,n} $ are called {\itshape Bell correlation inequalities}. In the case $ f(A) > 1 $ for some $ A \in \QC_{m,n} $ we talk about {\itshape quantum violations}. 
+Generally, linear functionals $ f$ mapping an $ m \times n $ to a real number that satisfy $ f(A) \le 1 $ for all $ A \in \LC_{m,n} $ are called {\itshape Bell correlation inequalities}. In the case of $ f(A) > 1 $ for some $ A \in \QC_{m,n} $ we talk about {\itshape quantum violations}. 
