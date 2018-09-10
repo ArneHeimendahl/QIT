@@ -64,12 +64,12 @@ Before we introduce the quantum correlation matrices ww will shortly go back to 
 As we have seen before the probability that they response is $ (\xi,\eta) $ for inputs $ (s,t) $ is given by 
 $ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode these information in a matrix $ A=(a_{st}) $. This motivates the following (slightly more general) definition. 
 \begin{dfn}
-	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
+	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state $ \rho \in B^{psd}(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
 	\begin{align}\label{QCaij}
 	a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
 	\end{align}
 \end{dfn}
-We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
+\noindent We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
 
 With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. 
 
@@ -97,7 +97,7 @@ $ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive s
 If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product} and usually denoted by $ \langle \cdot \, , \, \cdot \rangle $.
 Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
-	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
+	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m} \in B^H(\mathcal{C}), \, (Y_j)_{1 \ge n} \in B^H(\mathcal{H}) $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
 	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
 	We define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
 	$ \beta: \textup{B}^{sa}(\mathcal{H}) \times \textup{B}^{sa}(\mathcal{H}) \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
@@ -109,14 +109,13 @@ Again, we will write $ M $ for the right hand side of equation \ref{EqQC}.
 	\end{align*}
 	Symmetry follows form 
 	\begin{align*}
-		\beta(S,T)&= \textup{Re}\trace{\rho ST} =\textup{Re}\trace{(\rho ST)^*}  = \textup{Re \trace{T^*S^* \rho^*}}  \\
-		 &=\textup{Re} \trace{\rho^* T^*S^*} = \textup{Re} \trace{\rho T S} = \beta(T,S),
+		\beta(S,T)&= \textup{Re}\trace{(\rho ST)} =\textup{Re}\trace{(\rho ST)^*}  = \textup{Re \trace{(T^*S^* \rho^*})}  \\
+		 &=\textup{Re} \trace{(\rho^* T^*S^*)} = \textup{Re} \trace{((\rho T S))} = \beta(T,S).
 	\end{align*}
-	\textbf{Perhaps explanation}
 	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ we obtain $ \beta(S,S) = \textup{Re}\trace{\rho SS} = \textup{Re} \trace{\rho S^*S} \ge 0 $ and $ \beta $ is positive semidefinite. 
 	
-	Following the steps in appendix \textbf{XXX} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space of self-adjoint operators modulo the kernel of $ \beta $. 
-	Equipped with an inner product, we can regard $ \textup{B}^{sa}(\mathcal{H}) $ \textbf{Introduce notation} as a real Euclidean space. 
+	Following the steps in appendix \ref{appendix} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space of self-adjoint operators modulo the kernel of $ \beta $. 
+	Equipped with an inner product, we can regard $ \textup{B}^{H}(\mathcal{H}) $ as an inner product space. 
 	We immediately get that $ a_{ij} =\trace{\rho X_i Y_j}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that the norms of our vectors are bounded by one we have to show
 	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,\hdots,Y_m \} $, $ Y \in \{Y_1,\hdots,Y_n \} $. 
 	Therefore, let $ d = d_1d_2 $ and $ \rho = \vert \phi \rangle \langle \phi \vert $ for $ \vert \phi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. Writing $ \rho $ in this form we get 
@@ -283,7 +282,7 @@ satisfy all other constraints.
 Eventually, we have all information to show that $ \LC_{2,2} $ is a proper subset of $ \QC_{2,2} $. 
 Assume we want to maximize in the direction of the facet induced by $M = \begin{pmatrix}
 1 & 1 \\ 1 & -1 
-\end{pmatrix} $. Note that $ M $ coincides with the matrix $ \Sigma_{s,t} = (-1)^{f(s,t)} $ for the CSHS game in section \ref{??} \textbf{Label in CSHS section}. Since $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
+\end{pmatrix} $. Note that $ M $ coincides with the matrix $ \Sigma_{s,t} = (-1)^{f(s,t)} $ for the CSHS game in section \ref{CHSH}. Since $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $ it suffices to show that there is $ A \in \QC_{m,n} $ achieving a better value. For $ A \in \QC_{2,2} $ we obtain, by lemma \ref{LemQC}, Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
 \begin{align*}
 	\trace{(AM)}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
 	&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
