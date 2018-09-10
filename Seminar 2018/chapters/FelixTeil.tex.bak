@@ -134,7 +134,7 @@ The Bias of entangled strategies is
 \end{equation}
 where $O(\mathbb{C}^n)$ denotes the set of $\{ -1, 1 \}$-observables in $\mathbb{C}^{n \times n}$. As shown in [KNP17] we can in fact restrict ourselves to projective measurements. More general measurements like POVMs (positive operator valued (probability) measure) are not advantageous. 
 
-\subsection{The CHSH game}
+\subsection{The CHSH game}\label{CHSH}
 Let us consider a special instance of XOR games which leads to the result that entangled strategies actually can give a remarkable advantage over classical strategies. The game is named after four scientists Clauser, Horne, Shimony and Holt. The question set is $\{0,1\} \times \{0,1\}$ as well as the answer set. The probability distribution over the question set is the uniform distribution and the predicate $V = \left[ a \oplus b = s \land t\right] $. Note that $s \land t$ only evaluates to $1$ if both $s=1$ and $t=1$, which in the case of the uniform distribution happens in $\frac{1}{4}$ of the cases. The best classical strategy then would be either to always answer $a=0, b=1$ or $a=1, b=0$. Since in both cases $a \oplus b = 0$ Alice and Bob win in with probability $\frac{3}{4}$. We will now study the entangled case and check how much the winning probability may be increased. 
 Define 
 \begin{equation}
