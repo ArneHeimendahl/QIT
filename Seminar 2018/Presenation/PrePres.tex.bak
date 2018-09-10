@@ -1,0 +1,50 @@
+\documentclass[10pt]{beamer}
+
+%Language package english
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{dutchcal}        %nice Hilbertspace symbols
+\usepackage{braket}          %for braket notation
+
+%\setbeamercovered{transparent}  %in order to see shape of the following bullet points 
+
+%for striking out text
+\usepackage[normalem]{ulem}
+
+
+
+
+%fuer Identitaet 
+\usepackage{dsfont}
+
+
+%Aussehen der Präsentation
+\usetheme{Boadilla}
+\usecolortheme{sidebartab}
+
+%\usepackage{lmodern}		% nice schriftart
+%\usepackage{etoolbox}        %reformat sections etc.
+%---------------------------- definitions
+%\newcommand{\el}{ {\scriptstyle{\in}}\; }
+
+
+\newcommand{\Hilb}{ {\mathcal{H}} }
+\newcommand{\dualHilb}{ {\mathcal{H}^*} }
+\newcommand{\Haml}{ {\hat{H}} }
+\newcommand{\modul}[1]{{\left|{#1}\right|}}
+\newcommand{\norm}[1]{\ensuremath{ \Vert {#1} \Vert}}
+\newcommand{\trace}[1]{\ensuremath{\text{Tr} \, {#1} }}
+\newcommand{\QC}{\ensuremath{\textup{QC}}}
+\newcommand{\LC}{\ensuremath{\textup{LC}}}
+\newcommand{\sclr}[2]{\ensuremath{\langle{#1},{#2}\rangle}}
+\newcommand{\tensor}{\ensuremath{\otimes}}
+
+
+\DeclareMathOperator*{\esssup}{ess\,sup} % essentiellen Supremums
+\DeclareMathOperator{\spn}{span} % Span
+\DeclareMathOperator{\supp}{supp} % Träger
+\DeclareMathOperator{\proj}{proj} % Träger
+\DeclareMathOperator{\tr}{Tr} 
+\DeclareMathOperator{\sgn}{sign}

@@ -1,0 +1,349 @@
+\section{Local and quantum correlation matrices}
+\subsection{Local correlation matrices }
+\begin{frame}{Outline}
+\tableofcontents[currentsection]
+\end{frame}
+\begin{frame}
+	Nice slide to draw the connection between the games an LC 
+\end{frame}
+
+\begin{frame}
+	\begin{definition}
+		Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be families of random variables on a common probability space such that $ \vert X_i \vert, \vert Y_j \vert \le 1 $ almost surely. Then $ A=(a_{ij}) $ is the corresponding {\itshape classical (or local) correlation matrix} if 
+		\begin{align*}
+		a_{ij} = \mathbb{E}[X_iY_j]
+		\end{align*}
+		for all $ 1 \le i \le m, 1 \le j \le n $.
+	\end{definition}
+	\pause
+	\begin{itemize}
+		\item Set of all local correlation matrices: $ \LC_{m,n} $
+	\end{itemize}
+	\pause
+	\begin{lemma}
+		\begin{align*}
+			\LC_{m,n} = \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \}
+		\end{align*}
+		
+	\end{lemma}
+	\begin{itemize}
+		\pause
+		\item No matter which probabilistic strategy there is a deterministic one which as at least as good as the one one chooses 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{proof}[$   \LC_{m,n}  \supset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $]
+		\begin{itemize}
+			 \item<1-> $ \xi \eta^T \in LC_{m,n}  $ for all $\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n   $   
+			 	(Choose $ X_i \equiv \xi_i, \, Y_j \equiv \eta_j $)
+			\item<2-> Suffices to show that $ \LC_{m,n} $ is convex. 
+			\item <3->Let $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $
+			\item<4-> Find $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
+		\begin{align*}
+				\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
+		\end{align*}
+			for $ \beta \in [0,1] $
+		\item<5-> Define a Bernoulli random variable $ \alpha $ such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $
+		\item<6-> Then 
+			\begin{align*}
+			\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(1)}]\mathds{1}_{\{\alpha = 1\}}] \\
+			&= \beta \mathbb{E}[X_i^{(0)}Y_j^{(0)} ] + (1-\beta) \mathbb{E}[X_i^{(1)}Y_j^{(1)}]
+			\end{align*}
+		\end{itemize}
+	\end{proof}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{$   \LC_{m,n}  \subset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $}
+	\begin{itemize}
+		\item<1-> Let $ a_{ij} = \mathbb{E}[X_iY_j] $ for $ \mathbb{R} $-valued random variables $ (X_i),(Y_j) $ defined on a common probability space $ \Omega $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
+		\item <2->Set $ X= (X_1,...,X_m) $ and $ Y= (Y_1,...,Y_n) $, then $ X \in [-1,1]^m, \, Y \in [-1,1]^n $ almost surely.
+		\item<3-> Hypercube description by its vertices: $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ 
+		\item<4-> Define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ such that 
+			\begin{align*}
+			X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
+			\end{align*} 
+			almost surely 
+			and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $
+	\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+	\begin{proof}[$   \LC_{m,n}  \subset \textup{conv} \{  \xi\eta^T \, | \, \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n     \} $]
+		\begin{itemize}
+			\item<1-> {\footnotesize Define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ such that 
+			\begin{align*}
+			X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
+			\end{align*} 
+			almost surely 
+			and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $}
+			\item<2-> Using the same decomposition for $ Y $ we obtain 
+			\begin{align*}
+			a_{ij} = \mathbb{E}[X_iY_j] &= \mathbb{E} \big [  (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i ) (\sum_{\eta \in \{-1,1\}^n}\lambda_{\eta}^{(Y)}\eta_j ) \big ]   \\
+			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  \\
+			&= \big (\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}]\big )\xi_i\eta_j
+			\end{align*}
+			\item<3-> $ \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}] = 1 $
+			the matrix $ (a_{ij}) $ is a convex combination of $ \xi \eta^T $, $ \xi \in \{-1,1\}^m, \eta \in \{-1,1 \}^n $
+		\end{itemize}
+	\end{proof}
+\end{frame}
+
+
+
+\subsection{Quantum correlation matrices}
+
+\begin{frame}
+	Some nice frame to connect QCs to the games 
+\end{frame}
+
+\begin{frame}
+	\begin{definition}
+		Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
+		\begin{align*}\label{QCaij}
+		a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
+		\end{align*}
+	\end{definition}
+	\pause
+	\begin{itemize}
+		\item Set of all quantum correlation matrices denoted by $ \QC_{m,n} $
+	\end{itemize}
+	\begin{lemma}
+		\begin{align*}
+		\QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
+		\end{align*}
+	\end{lemma}
+\end{frame}
+
+\begin{frame}
+\begin{block}{$ \QC_{m,n} \subset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
+	\begin{itemize}
+		\item<1-> $ a_{ij} = \trace{\rho X_i \otimes Y_j} $, sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $
+		\item<2-> Define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
+		$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
+		\item<3-> perhaps verification of at least some of these properties 
+		\item<4-> Obtain an inner product space $ U := B^{sa}(\mathcal{H}) / \ker \beta$ equipped with the inner product 
+		\begin{align*}
+			\tilde{\beta}([S],[T]) = \beta(S,T).
+		\end{align*}
+		\item<5-> Identify $ X_i \otimes I,I \otimes Y_j $ with vectors $ x_i,y_j $ in $ U $, then 
+		\begin{align*}
+			\tilde{\beta}(x_i,y_j) = \beta(X_i,Y_j) = Re \trace{(\rho X_i \otimes Y_j)} = a_{ij}
+		\end{align*}
+	\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}
+	\begin{proof}[$ \QC_{m,n} \subset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $]
+		\begin{itemize}
+			\item<1-> {\footnotesize Identify $ X_i \otimes I,I \otimes Y_j $ with vectors $ x_i,y_j $ in $ U $, then 
+			\begin{align*}
+			\tilde{\beta}(x_i,y_j) = \beta(X_i,Y_j) = Re \trace{(\rho X_i \otimes Y_j)} = a_{ij}
+			\end{align*}}
+			\item<2-> $ \beta (X \otimes I, X \otimes I), \beta (I \otimes Y, I \otimes Y) \le 1$ \\
+			(this can be shown by using a {\itshape Schmidt-decomposition} of $ \rho $ and using $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $)
+			\item<3-> Project the $ y_j $'s orthogonally onto $ \textup{span} \{ x_1,...,x_m \} $  (wlog $ m \le n $)
+			\item<4-> $ \pi(y_j) $ the projection of $ y_j $ then $ \tilde{\beta}(x_i,\pi(y_j)) = \tilde{\beta}(x_i,y_j) $
+			\item<5-> Let $ \{a_1,...,a_r\} $ be an orthonormal basis of $ \textup{span} \{ x_1,...,x_m \} $ with respect to $ \beta $ and 
+			$ x_i = \sum_{k=1}^{r}\alpha_k^{(i)}a_k$ and $  \pi(y_j) = \sum_{k=1}^r \gamma_k^{(j)} a_k$ for $ \alpha^{(i)}, \gamma^{(j)} \in \mathbb{R}^r $
+			\item<6-> Then $
+			a_{ij}= \tilde{\beta}(x_i,y_j)= \tilde{\beta}(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \tilde{\beta}(a_k,a_l) 
+			= \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}, \gamma^{(j)} \rangle. $
+			\item<7-> $ \modul{\alpha^{(i)}}, \modul{\gamma^{(j)}} \le 1  $ due to $ \tilde{\beta}(x_i), \tilde{\beta}(y_j) \le 1 $
+		\end{itemize}
+		
+	\end{proof}
+\end{frame}
+
+
+\begin{frame}
+	\begin{itemize}
+		\item  In order to show 
+		\begin{align*} \QC_{m,n} \supset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in 				\mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} 
+		\end{align*}  we will use the following 
+	\end{itemize}
+	\pause
+	\begin{block}{Proposition}
+		For all $ n \ge 1 $ there is a subspace of the $ 2^n \times 2^n $ Hermitian matrices where every vector is the multiple of a unitary matrix. 
+	\end{block}
+	\pause
+	\begin{itemize}
+		\item The proof is based on $ n- $fold tensor products of the Pauli matrices which are the three matrices 
+		\begin{align*}
+		X = \begin{pmatrix}
+		0 & 1 \\ 1 & 0
+		\end{pmatrix}, \, Y = \begin{pmatrix}
+		0 & -i \\ i & 0
+		\end{pmatrix}, \, Z = \begin{pmatrix}
+		1 & 0 \\ 0 & -1
+		\end{pmatrix}, I = \begin{pmatrix}
+		1 & 0 \\ 0 & 1
+		\end{pmatrix}
+		\end{align*}
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{itemize}
+		\item<1->{\footnotesize $
+		X = \begin{pmatrix}
+		0 & 1 \\ 1 & 0
+		\end{pmatrix}, \, Y = \begin{pmatrix}
+		0 & -i \\ i & 0
+		\end{pmatrix}, \, Z = \begin{pmatrix}
+		1 & 0 \\ 0 & -1
+		\end{pmatrix}, I = \begin{pmatrix}
+		1 & 0 \\ 0 & 1
+		\end{pmatrix} $}
+	\end{itemize}
+		\begin{proof}
+			\begin{itemize}
+				\item Define 
+				\begin{align*}
+					U_i &= I^{\otimes (i-1)} \otimes X \otimes Y^{\otimes (n-i)},   \\
+					U_{n+i} &= I^{\otimes (i-1)} \otimes Z \otimes Y^{\otimes (n-i)}, \, i=1,\hdots n 
+				\end{align*}
+				\item $ U_i $'s are anti-commuting traceless Hermitian unitaries, i.e.
+				$ U_iU_j = -U_jU_i $ for $ i \neq j $ and $ U_i^2 = I $ 
+				\item For $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
+				\begin{align*}
+				XY &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le \le 2n}\xi_i\eta_j U_i U_j   \\
+				&= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le \le 2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le \le 2n}U_iU_j =\sum_{i = 1}^{2n} \xi_i \eta_i I \\
+				&= \langle \xi, \eta \rangle I.
+				\end{align*}
+				\item The result follows by setting $ X = Y $.
+			\end{itemize}
+		\end{proof}
+\end{frame}
+
+\begin{frame}
+	\begin{block}{$ \QC_{m,n} \supset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
+		\begin{itemize}
+			\item<1->  Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} \subset \mathbb{R}^{\min \{ m,n \}}$ such that $ \modul{x_i},$$ \modul{y_j} \le 1 $. 
+			\item<2->  Let $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_i $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_i $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
+			\item<3-> $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $ (the same holds for $ Y_j $)
+			\item<4-> Let $ \ket{\phi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\phi}\bra{\rho} $. Note that we can write $ \rho $ as
+			\begin{align*}
+			\rho = \ket{\phi}\bra{\phi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
+			\end{align*}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\begin{proof}[$ \QC_{m,n} \supset \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $]
+		\begin{itemize}
+			\item<1->{\footnotesize Let $ \ket{\phi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\phi}\bra{\rho} $. Note that we can write $ \rho $ as
+			\begin{align*}
+			\rho = \ket{\phi}\bra{\phi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
+			\end{align*}}
+			\item<2-> Then 
+			\begin{align*}
+			\trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )} = \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
+			&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x_i,y_j \rangle.
+			\end{align*}
+		\end{itemize}
+	\end{proof}
+\end{frame}
+
+
+\begin{frame}
+	\begin{itemize}
+		\item<1-> $ \QC_{m,n} $ is convex
+		\item<2->Let $a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
+		\item<3-> define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) $ for $ \lambda \in [0,1] $
+		\item<4-> it holds $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $ and $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$.
+		\item<5-> Right dimension is obtained by projecting $ (\tilde{x}_i)_{1 \le i \le m}, \, (\tilde{y}_j)_{1 \le i \le n} $ on $\textup{span}\{x_1,\hdots,x_m\} $ or $\textup{span}\{y_1,...,y_n\} $, as in the proof before.
+	\end{itemize}
+\end{frame}
+\subsection{The relations between quantum correlation and local correlation matrices}
+
+\begin{frame}
+	\begin{itemize}
+		\item<1-> $ \LC_{m,n} \subset \QC_{m,n} $
+		\item<2-> Set $ x_i = \xi_i \ket{0}$ and $ y_j = \eta_j\ket{0} $ it immediately follows  $ \xi_i\eta_j = \langle x_i, y_j \rangle $. Hence, $ \xi\eta^T \in \QC_{m,n} $ (rest follows with the convexity of $ \QC_{m,n} $)
+		\item<3-> Inclusion is strict in general 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item<1-> Let us consider the case $ n=m=2 $.
+		\item <2-> It holds 
+		\begin{align*}
+		\LC_{2,2}= \textup{conv} \{ \pm \begin{pmatrix}
+		1 & 1 \\
+		1 & 1
+		\end{pmatrix} , \, \pm \begin{pmatrix}
+		-1 & -1 \\
+		1 & 1
+		\end{pmatrix} , \, \pm \begin{pmatrix}
+		-1 & 1 \\
+		-1 & 1
+		\end{pmatrix}, \, \pm \begin{pmatrix}
+		-1 & 1 \\
+		1 & -1
+		\end{pmatrix}  \}.
+		\end{align*}
+		\pause
+		\begin{block}{Claim}
+			\begin{equation}\label{facetsLC}
+			\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{AM} \le 1 \textup{ for all } M \in \mathcal{K} \},
+			\end{equation}
+			where $ \mathcal{K}  = \{ \frac{1}{2}\sigma(\begin{pmatrix}
+			-1 & 1 \\
+			1 & 1
+			\end{pmatrix}), \sigma(\begin{pmatrix}
+			1 & 0 \\
+			0 & 0
+			\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id} (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.
+		\end{block}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\begin{block}{Claim}
+			\begin{equation}\label{facetsLC}
+			\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{AM} \le 1 \textup{ for all } M \in \mathcal{K} \},
+			\end{equation}
+			where $ \mathcal{K}  = \{ \frac{1}{2}\sigma(\begin{pmatrix}
+			-1 & 1 \\
+			1 & 1
+			\end{pmatrix}), \sigma(\begin{pmatrix}
+			1 & 0 \\
+			0 & 0
+			\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id} (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.
+		\end{block}
+		\item<2-> $ \LC_{2,2} $ affinely isomorphic to the cross polytope scaled by $ 2 $, i.e. $ \LC_{2,2} \cong 2CP_4 := := \textup{conv} \{  \pm e_i \, | \, i = 1,\hdots,4 \}$
+		\item<3-> $ (CP_n)^o = [-1,1]^n $
+		\item<4-> Both points implies that the face lattice of $ \LC_{2,2} $ is isomorphic to the opposite lattice of $ [-1,1]^4 $
+		\item<5-> $ \LC_{2,2} $ has as many facets as $ [-1,1]^4 $ vertices, hence $ 2^4 $
+		\item<6-> Equation \ref{facetsLC} is a non-redundant hyperplane description of $ \LC_{2,2} $, hence all linear constraints define facets.
+	\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{itemize}
+		\item<1-> We will show that the inclusion is strict by showing that both sets yield different values if we maximize in a certain direction
+		\item<2-> Let $M = \begin{pmatrix}
+		1 & 1 \\ 1 & -1 
+		\end{pmatrix} $
+		\item<3-> $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $
+		\item <4->$ A \in \QC_{2,2} $ we obtain, by Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
+		\begin{align*}
+		\trace{(AM)}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
+		&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
+		&\le \modul{x_1+x_2} + \modul{x_1-x_2}.
+		\end{align*} 
+		\item<5-> $(\modul{x_1+x_2} + \modul{x_1-x_2})^2 \le  4(\modul{x_1}^2+\modul{x_2}^2) $
+		\item<6-> $\trace{(AM)} \le \modul{x_1+x_2} + \modul{x_1-x_2} \le 2\sqrt{\modul{x_1}^2+\modul{x_2}^2} \le 2 \sqrt{2}. $
+		\item<7-> Bound is achieved by  $ A = \frac{1}{\sqrt{2}}\begin{pmatrix}
+		1 & 1 \\ 1 & 1 
+		\end{pmatrix} $, induced by the vectors $ x_1 = x_2 = \frac{1}{\sqrt{2}}(1,1) $ and $ y_1 = y_2 =(1,0) $
+	\end{itemize}
+\end{frame}
+
+
+
