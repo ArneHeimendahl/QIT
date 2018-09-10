@@ -13,6 +13,8 @@
 %for striking out text
 \usepackage[normalem]{ulem}
 
+\usepackage{mathtools}
+
 
 
 
@@ -41,6 +43,14 @@
 \newcommand{\sclr}[2]{\ensuremath{\langle{#1},{#2}\rangle}}
 \newcommand{\tensor}{\ensuremath{\otimes}}
 
+
+\makeatletter
+\newenvironment<>{pbmr}[1][\proofname]{%
+    \par
+    \def\insertproofname{#1\@addpunct{.}}%
+    \usebeamertemplate{proof begin}#2}
+  {\usebeamertemplate{proof end}}
+\makeatother
 
 \DeclareMathOperator*{\esssup}{ess\,sup} % essentiellen Supremums
 \DeclareMathOperator{\spn}{span} % Span

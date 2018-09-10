@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.6.23)  10 SEP 2018 14:53
 entering extended mode
  restricted \write18 enabled.
@@ -10,6 +11,9 @@ Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (./Pre.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsart.cls
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  10 SEP 2018 14:13
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  10 SEP 2018 14:52
+>>>>>>> dd0617b90bf7aab0ae94587f95b0dcf811b05889
 entering extended mode
 **./Coffee.tex
 (Coffee.tex
@@ -3089,7 +3093,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [20]) (./chapters/Appendix.tex
 =======
 [14] [15]) (chapters/MaxisTeil.tex [16]
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
@@ -3097,7 +3101,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 File: chapters/fig_unit_circle.pdf Graphic file (type pdf)
 
 <use chapters/fig_unit_circle.pdf>
-Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 27.
+Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 26.
 (pdftex.def)             Requested size: 157.74979pt x 171.03561pt.
  [17 <./chapters/fig_unit_circle.pdf>]
 [18] [19]
@@ -3134,11 +3138,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (Coffee.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
-Package rerunfilecheck Info: File `Coffee.out' has not changed.
-(rerunfilecheck)             Checksum: 25F4BD062BBEB726E48CBD98251FB298;3666.
 
 
+<<<<<<< HEAD
 >>>>>>> 2d187009e2c9f322dde9d23ec4ce270d3daf719f
+=======
+Package rerunfilecheck Warning: File `Coffee.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Coffee.out':
+(rerunfilecheck)             Before: E79302A0FBE388E0AC432B393A0C409E;3666
+(rerunfilecheck)             After:  25F4BD062BBEB726E48CBD98251FB298;3666.
+
+>>>>>>> dd0617b90bf7aab0ae94587f95b0dcf811b05889
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
@@ -3190,41 +3203,44 @@ PDF statistics:
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 =======
  36162 strings out of 493323
- 680866 string characters out of 3139068
+ 680868 string characters out of 3139068
  795249 words of memory out of 3000000
- 38914 multiletter control sequences out of 15000+200000
+ 38913 multiletter control sequences out of 15000+200000
  588828 words of font info for 84 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
  61i,16n,94p,10512b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
-thex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/dutchcal/DutchCalReg.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/d
-oublestroke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb>
-Output written on Coffee.pdf (23 pages, 496627 bytes).
+pdfTeX warning (dest): name{section*.2} has been referenced but does not exis
+t, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
+/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
+/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
+ex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/dutchcal/DutchCalReg.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/dou
+blestroke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb>
+Output written on Coffee.pdf (23 pages, 496341 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
+ 410 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 >>>>>>> 2d187009e2c9f322dde9d23ec4ce270d3daf719f
 

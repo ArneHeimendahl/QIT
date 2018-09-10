@@ -10,7 +10,6 @@
 \begin{proof}
 	For the proof of $i,$ assume that $x$ and $y$ are linearly dependent. Since both, $x$ and $y$, are unit vectors, $\arccos(\sclr{x}{y}) = \arccos(1)=0$ if $x=y$ or $\arccos(\sclr{x}{y}) = \arccos(-1) = \pi$ if $x=-y$.
 	
-	
 	Conversely assume that $x$ and $y$ are linearly independent, i.\,e. $\operatorname{dim}(\spn\{x,y\})=2$. Now project $r$ orthogonally on the plane spanned by $x$ and $y$. This gives us a vector $s\in \spn\{x,y\}$ with $\sclr{x}{r} = \sclr{x}{s}$ and $\sclr{y}{r} = \sclr{y}{s}$. The unit vector $n\coloneqq s/\norm{s}$ is uniformly distributed on the \textcolor{red}{unit circle/disk} that occurs if we consider the intersection of the unit sphere and $\spn\{x,y\}$ by the $O(d)$-invariance of the probability distribution. \\
 	
 	\textcolor{red}{Noch naeher auf diese Gleichverteilung eingehen?}
@@ -103,7 +102,6 @@ Thus, for $v,w\in\mathbb{R}^n$
 	\begin{equation}
 		H= \bigoplus_{r=0}^\infty (\mathbb{R}^{m+n})^{\tensor 2k+1}.
 	\end{equation}
-	\textcolor{red}{Begruenden, dass H gross genug ist?}
 	
 	Define $\tilde{x}_i, \tilde{y}_j\in H$, $i=1,\dots,m,j=1,\dots,n$ componentwise:
 	\begin{align*}
@@ -157,7 +155,7 @@ Thus, for $v,w\in\mathbb{R}^n$
 		G=(Q\Lambda^{1/2})^\top(Q\Lambda^{1/2}).	
 	\]
 	$A\coloneqq Q\Lambda^{1/2}$ is a real $(m+n)\times (m+n)$ matrix and its columns are the vectors we were looking for.
-	\textcolor{red}{Muss man hier dann noch begruenden, dass die Vektoren immer noch Einheitsvektoren sind? Oder muss das der Fall sein, sonst hätte man ja nicht immer eine 1 auf der Diagonalen und folglich nicht die selbe Matrix?}
+	\textcolor{red}{Muss man hier dann noch begruenden, dass die Vektoren immer noch Einheitsvektoren sind?}
 \end{proof}
 \begin{dfn}
 	For $M\in\mathbb{R}^{m\times n}$ define the quadratic program \textcolor{red}{wieso quadratisch?}
