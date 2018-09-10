@@ -1,10 +1,10 @@
-\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{ksjlad\IeC {\"u}ys}}\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
+\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{ksjlad\IeC {\"u}ys}}
 \headcommand {\slideentry {1}{1}{1}{2/2}{ksjlad\IeC {\"u}ys}{0}}
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\slideentry {1}{1}{2}{3/3}{ksjlad\IeC {\"u}ys}{0}}
@@ -81,10 +81,11 @@
 \headcommand {\beamer@framepages {39}{39}}
 \headcommand {\slideentry {1}{1}{38}{40/40}{ksjlad\IeC {\"u}ys}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\sectionentry {2}{Local and quantum correlation matrices}{41}{Local and quantum correlation matrices}{0}}
 \headcommand {\beamer@sectionpages {2}{40}}
 \headcommand {\beamer@subsectionpages {2}{40}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{41}{Local correlation matrices }}\headcommand {\beamer@subsectionpages {41}{40}}
+\headcommand {\sectionentry {2}{Local and quantum correlation matrices}{41}{Local and quantum correlation matrices}{0}}
+\headcommand {\beamer@subsectionpages {41}{40}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{41}{Local correlation matrices }}
 \headcommand {\slideentry {2}{1}{1}{41/41}{Local correlation matrices }{0}}
 \headcommand {\beamer@framepages {41}{41}}
 \headcommand {\slideentry {2}{1}{2}{42/42}{Local correlation matrices }{0}}
@@ -97,7 +98,8 @@
 \headcommand {\beamer@framepages {53}{56}}
 \headcommand {\slideentry {2}{1}{6}{57/59}{Local correlation matrices }{0}}
 \headcommand {\beamer@framepages {57}{59}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{60}{Quantum correlation matrices}}\headcommand {\beamer@subsectionpages {41}{59}}
+\headcommand {\beamer@subsectionpages {41}{59}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{60}{Quantum correlation matrices}}
 \headcommand {\slideentry {2}{2}{1}{60/60}{Quantum correlation matrices}{0}}
 \headcommand {\beamer@framepages {60}{60}}
 \headcommand {\slideentry {2}{2}{2}{61/62}{Quantum correlation matrices}{0}}
@@ -116,7 +118,8 @@
 \headcommand {\beamer@framepages {83}{84}}
 \headcommand {\slideentry {2}{2}{9}{85/89}{Quantum correlation matrices}{0}}
 \headcommand {\beamer@framepages {85}{89}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{90}{The relations between quantum correlation and local correlation matrices}}\headcommand {\beamer@subsectionpages {60}{89}}
+\headcommand {\beamer@subsectionpages {60}{89}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{90}{The relations between quantum correlation and local correlation matrices}}
 \headcommand {\slideentry {2}{3}{1}{90/92}{The relations between quantum correlation and local correlation matrices}{0}}
 \headcommand {\beamer@framepages {90}{92}}
 \headcommand {\slideentry {2}{3}{2}{93/94}{The relations between quantum correlation and local correlation matrices}{0}}
@@ -125,8 +128,13 @@
 \headcommand {\beamer@framepages {95}{100}}
 \headcommand {\slideentry {2}{3}{4}{101/107}{The relations between quantum correlation and local correlation matrices}{0}}
 \headcommand {\beamer@framepages {101}{107}}
-\headcommand {\beamer@partpages {1}{107}}
-\headcommand {\beamer@subsectionpages {90}{107}}
 \headcommand {\beamer@sectionpages {41}{107}}
-\headcommand {\beamer@documentpages {107}}
-\headcommand {\def \inserttotalframenumber {58}}
+\headcommand {\beamer@subsectionpages {90}{107}}
+\headcommand {\sectionentry {3}{Grothendieck Ineqaulity}{108}{Grothendieck Ineqaulity}{0}}
+\headcommand {\slideentry {3}{0}{1}{108/113}{}{0}}
+\headcommand {\beamer@framepages {108}{113}}
+\headcommand {\beamer@partpages {1}{113}}
+\headcommand {\beamer@subsectionpages {108}{113}}
+\headcommand {\beamer@sectionpages {108}{113}}
+\headcommand {\beamer@documentpages {113}}
+\headcommand {\gdef \inserttotalframenumber {59}}
