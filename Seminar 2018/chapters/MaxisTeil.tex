@@ -158,7 +158,7 @@ Thus, for $v,w\in\mathbb{R}^n$
 	\textcolor{red}{Muss man hier dann noch begruenden, dass die Vektoren immer noch Einheitsvektoren sind?}
 \end{proof}
 \begin{dfn}
-	For $M\in\mathbb{R}^{m\times n}$ define the quadratic program \textcolor{red}{wieso quadratisch?}
+	For $M\in\mathbb{R}^{m\times n}$ define the quadratic program
 	\begin{align}
 		\norm{M}_{\infty\to 1} &= \max \left\{ \sum_{i=1}^m \sum_{j=1}^n M_{ij} \xi_i \eta_j : \xi_i^2=1, i=1,\dots,m, \eta_j^2=1, j =1,\dots,n \right\} \\
 		&=\max\left\{\trace{\xi^\top M \eta}: \xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n\right\}.
@@ -207,7 +207,7 @@ Thus, for $v,w\in\mathbb{R}^n$
 		&\overset{\textcolor{white}{\eqref*{eq:krivines_trick}}}{=}\sum_{i=1}^m\sum_{j=1}^n M_{ij}\beta \sclr{x_i}{y_j} \\
 		&\overset{\eqref{eq:krivines_trick}}{=}\beta \operatorname{sdp}_{\infty\to 1}(M),
 	\end{align*}
-	where $\beta = \frac{2\ln(1+\sqrt(2)}{\pi}$, thus $K_G\leq \beta^{-1}$.
+	where $\beta = \frac{2\ln(1+\sqrt{2)}}{\pi}$, thus $K_G\leq \beta^{-1}$.
 \end{proof}
 
 \begin{theo}[Grothendieck-Tsirelson]
@@ -233,7 +233,7 @@ Thus, for $v,w\in\mathbb{R}^n$
 	Finally, the equivalence between (2) and (1) ...
 \end{proof}
 \begin{theo}[Tsirelson]
-	(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,y_1,\dots,y_n\in S^r$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$ \textcolor{red}{(sollten das hier $X_i$ und $Y_j$ aus dem Buch sein?)}, such that for every $i,j\in\{1,\dots,n\}$, we have
+	(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^r$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$ \textcolor{red}{(sollten das hier $X_i$ und $Y_j$ aus dem Buch sein?)}, such that for every $i,j\in\{1,\dots,n\}$, we have
 	\begin{equation}
 		\dl{\psi} F_i\tensor G_j \dr{\psi} = \sclr{x_i}{y_j}.
 	\end{equation}
@@ -310,9 +310,8 @@ Thus, for $v,w\in\mathbb{R}^n$
 	
 	We now consider the expansion of $\trace{F_iG_j^\top}/d$. Let $\{\dr{1},\dots,\dr{d}\}\subseteq \mathbb{C}^d$ be an orthonormal basis for $\mathbb{C}^d$. Let
 	\begin{equation}
-		\dr{\psi} = \frac{1}{\sqrt{d}} \sum_{s=1}^d \dr{s} \tensor \dr{s},
-	\end{equation}
-	be the maximally entangled state. 
+		\dr{\psi} = \frac{1}{\sqrt{d}} \sum_{s=1}^d \dr{s} \tensor \dr{s}.
+	\end{equation} 
 	
 	We have
 	\begin{align*}
@@ -322,9 +321,57 @@ Thus, for $v,w\in\mathbb{R}^n$
 		&= \sclr{x_i}{y_j}.
 	\end{align*}
 	
-%	(Easy direction) Note that since $\dr{\psi}$ hat norm 1 and the observables $F_i$ and $G_j$ are unitary operators, $F_i\tensor I \dr{\psi}$ and $I\tensor G_j\dr{\psi}$ are unit vectors in $\mathbb{C}^{d^2}$. Additionally, note that since $F_i$ and $G_j$ are Hermitian, we have that the inner product
-%	\[
-%			
-%	\]
+	\textcolor{red}{Hier verstehe ich den letzten Schritt nicht ganz}
+	
+	(Easy direction) Note that since $\dr{\psi}$ has norm 1 and the observables $F_i$ and $G_j$ are unitary operators, thus $F_i\tensor I$ and $I\tensor G_j$ are unitary operators which preserve inner products between vectors, $F_i\tensor I \dr{\psi}$ and $I\tensor G_j\dr{\psi}$ are unit vectors in $\mathbb{C}^{d^2}$. Additionally, note that since $F_i$ and $G_j$ are Hermitian, we have that the inner product
+	\begin{align*}
+		\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}} &= (F_i\tensor I \dr{\psi})^\ast(I\tensor G_j \dr{\psi}) 
+		= (\underbrace{\dr{\psi}^\ast}_{=\dl{\psi}}\underbrace{F_i^\ast}_{=F_i}\tensor I^\ast)(I\tensor G_j \dr{\psi}) \\
+		&= \dl{\psi}(F_i\tensor I)(I \tensor G_j) \dr{\psi}	%= \dl{\psi}(F_i I)\tensor (I G_j) \dr{\psi} \\
+		= \dl{\psi} F_i\tensor G_j \dr{\psi}
+	\end{align*}
+	is a real number \textcolor{red}{by the spectral theorem}.
+	
+	Thus,
+	\begin{align*}
+		&\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}}\\
+		 &\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})+i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})+i\Imag(I\tensor G_j \dr{\psi})} \\
+		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}\\
+		&\qquad\qquad+\sclr{\Real(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+%		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}-i^2\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
+%		&\qquad\qquad +i\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-i\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+		&\qquad= \underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}}_{=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})}\\
+		&\qquad\qquad +i[\underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}}_{=\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})}] \\
+		&\qquad=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})},
+	\end{align*}
+	where the last equality follows since $\dl{\psi} F_i\tensor G_j \dr{\psi}\in\mathbb{R}$, hence $\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})=0$.\\
+	
+	Alternative:
+	
+	Thus,
+	\begin{align*}
+		\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}} &=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})\\
+		&=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}.
+	\end{align*}
+	
+	Define $x_i,y_j \in S^{2d^2}$ by
+	\begin{align}
+		x_i &= (\Real(F_i\tensor I \dr{\psi}), \Imag(F_i\tensor I \dr{\psi}))\\
+		y_j &= (\Real(I\tensor G_j \dr{\psi}), \Imag(I\tensor G_j \dr{\psi})).
+	\end{align}
+	\textcolor{red}{Dimension runter-projezieren?}
+	
+	Then, we have
+	\begin{align*}
+		\sclr{x_i}{y_j} &= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+ \sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
+		&= \Real(\dl{\psi} F_i\tensor G_j \dr{\psi}) \\
+		&= \dl{\psi} F_i\tensor G_j \dr{\psi},
+	\end{align*}
+	as desired.
 \end{proof}
+
+\begin{align*}
+	\dl{\psi} F_i\tensor G_j \dr{\psi} &= \trace{\underbrace{\dr{\psi}\dl{\psi}}_{\eqqcolon\rho}F_i\tensor G_j} \\
+	&=\trace{\rho(F_i\tensor G_j)}
+\end{align*}
 \newpage
