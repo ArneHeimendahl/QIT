@@ -86,6 +86,8 @@ for all $ v,v_1,v_2 \in V, \, w,w_1,w_2 \in W, \, \lambda \in k $.
 If $ V = W $, we call $ \beta $ {\itshape symmetric} if $ \beta(v,w) = \beta(w,v) $, {\itshape positive semidefinite} if 
 $ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive semidefinite and $ \beta(v,v)= 0 $ implies that $ v = 0 $. 
 If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product}.
+Note that if $ H $ is a positive semidefinite operator then $ \beta(v,w) = v^TH\bar{w} $ defines an positive semidefinite bilinear form and an inner product if $ H $ is positive definite. 
+Conversely, each positive semidefinite bilinear form $ \beta $ can be written as $ \beta(v,w) = v^TH\bar{w} $ for an Hermitian operator $ H $.
 As before, we will denote the right hand side of equation \ref{EqQC} by $ M $.
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
 	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ \{X_1,\hdots X_m\}\subset  B^H(\mathcal{C}), \, \{Y_1,\hdots Y_n\}\subset B^H(\mathcal{H}) $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
