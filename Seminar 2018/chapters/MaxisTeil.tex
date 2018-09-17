@@ -1,4 +1,4 @@
-\textcolor{red}{Ueberleitung}
+In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this section we will prove the fact that $\QC_{m,n}\subset K\LC_{m,n}$, which itself isn't surprising, since both sets are convex. However we can find a universal $K$ independent of $m$ and $n$. In particular, we can show, that $K$ is the Grothendieck constant. 
 
 \begin{lemma}[Grothendieck's identity]\label{lem:G_id}
 	Let $x,y\in\mathbb{R}^d$ be unit vectors. Let $r\in\mathbb{R}^d$ be a random unit vector chosen from $O(d)$-invariant probability distribution on the unit sphere. Then
@@ -158,7 +158,7 @@ Thus, for $v,w\in\mathbb{R}^n$
 	\textcolor{red}{Muss man hier dann noch begruenden, dass die Vektoren immer noch Einheitsvektoren sind?}
 \end{proof}
 \begin{dfn}
-	For $M\in\mathbb{R}^{m\times n}$ define the quadratic program \textcolor{red}{wieso quadratisch?}
+	For $M\in\mathbb{R}^{m\times n}$ define the quadratic program
 	\begin{align}
 		\norm{M}_{\infty\to 1} &= \max \left\{ \sum_{i=1}^m \sum_{j=1}^n M_{ij} \xi_i \eta_j : \xi_i^2=1, i=1,\dots,m, \eta_j^2=1, j =1,\dots,n \right\} \\
 		&=\max\left\{\trace{\xi^\top M \eta}: \xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n\right\}.
@@ -184,8 +184,9 @@ Thus, for $v,w\in\mathbb{R}^n$
 	\end{equation}
 \end{theo}
 \begin{proof}
-	\textcolor{red}{wieso again? wo wurde das vorher schon einmal gemacht?}
-	Again: approximation algorithm with randomized rounding
+%	\textcolor{red}{wieso again? wo wurde das vorher schon einmal gemacht?}
+%	Again: 
+	approximation algorithm with randomized rounding
 	
 	\begin{algorithm}[H]
 		\SetAlgoLined
@@ -206,7 +207,7 @@ Thus, for $v,w\in\mathbb{R}^n$
 		&\overset{\textcolor{white}{\eqref*{eq:krivines_trick}}}{=}\sum_{i=1}^m\sum_{j=1}^n M_{ij}\beta \sclr{x_i}{y_j} \\
 		&\overset{\eqref{eq:krivines_trick}}{=}\beta \operatorname{sdp}_{\infty\to 1}(M),
 	\end{align*}
-	where $\beta = \frac{2\ln(1+\sqrt(2)}{\pi}$, thus $K_G\leq \beta^{-1}$.
+	where $\beta = \frac{2\ln(1+\sqrt{2)}}{\pi}$, thus $K_G\leq \beta^{-1}$.
 \end{proof}
 
 \begin{theo}[Grothendieck-Tsirelson]
@@ -231,4 +232,146 @@ Thus, for $v,w\in\mathbb{R}^n$
 	\textcolor{red}{Dann brauchen wir hier noch Argumente aus Exercise 11.3.}
 	Finally, the equivalence between (2) and (1) ...
 \end{proof}
+\begin{theo}[Tsirelson]
+	(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^r$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$ \textcolor{red}{(sollten das hier $X_i$ und $Y_j$ aus dem Buch sein?)}, such that for every $i,j\in\{1,\dots,n\}$, we have
+	\begin{equation}
+		\dl{\psi} F_i\tensor G_j \dr{\psi} = \sclr{x_i}{y_j}.
+	\end{equation}
+	Moreover, $d\leq 2^{\lceil r/2 \rceil}$.
+	
+	(Easy direction) Conversely, for all positive integers $n,d,$ state $\dr{\psi}\in \mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$, there exist a positive integer $r\coloneqq r(d)$ and $x_1,\dots,x_n,y_1,\dots,y_n\in S^r$ such that for every $i,j\in\{1,\dots,n\}$, we have
+	\begin{equation}
+		\sclr{x_i}{y_j} = \dl{\psi}F_i\tensor G_j \dr{\psi}.
+	\end{equation}
+	Moreover, $r\leq 2d^2$.
+\end{theo}
+\begin{proof}
+	We start by proving the hard direction. 
+	
+	Reminder: Pauli matrices
+	
+	Define for each $l=1,\dots,\lceil r/2\rceil$, the \emph{$d$-by-$d$ Clifford matrices},
+	\begin{align}
+		S_{2l+1} &= Z^{\tensor (l-1)} \tensor X \tensor I^{\tensor(\lceil r/2\rceil - l)},\\
+		S_{2l} &= Z^{\tensor (l-1)} \tensor Y \tensor I^{\tensor(\lceil r/2\rceil - l)}.
+	\end{align}
+	We will prove, that just as the Pauli matrices the Clifford matrices square to the identity matrix (of size $d$-by-$d$) and pair-wise anti-commute. 
+
+	Let $l\in\{1,\dots,\lceil r/2\rceil\}$. Then
+	\begin{align*}
+		(S_{2l+1})^2 &= (Z^{\tensor (l-1)} \tensor P_l \tensor I^{\tensor(\lceil r/2\rceil - l)}) (Z^{\tensor (l-1)} \tensor P_l \tensor I^{\tensor(\lceil r/2\rceil - l)}) \\
+		&= (Z^2)^{\tensor (l-1)} \tensor (P_l^2) \tensor I^{\tensor (\lceil r/2 \rceil -l)} \\
+		&= I^{\tensor \lceil r/2 \rceil},
+	\end{align*}
+	by identity $iii,$ of the tensor product and the properties of the Pauli matrices. The same applies for $S_{2l}$. Thus $d\leq 2^{\lceil r/2 \rceil}$.
+	
+	Furthermore, let $k,l\in\{1,\dots, \lceil r/2 \rceil\}$, $S_k\in\{S_{2k+1},S_{2k}\}$, $S_l\in\{S_{2l+1},S_{2l}\}$ and corresponding $P_k,P_l\in\{X,Y\}$. W.\,l.\,o.\,g. let $k<l$, then
+	\begin{align*}
+		S_{k}S_{l} &= (Z^{\tensor (k-1)} \tensor P_k \tensor I^{\tensor(\lceil r/2\rceil - k)})(Z^{\tensor (l-1)} \tensor P_l \tensor I^{\tensor(\lceil r/2\rceil - l)})\\
+		&=(Z^2)^{\tensor (k-1)} \tensor (P_k Z) \tensor (I Z)^{\tensor (l-k-1)} \tensor (I P_l) \tensor I^{\tensor \lceil r/2\rceil -l} \\
+		&= I^{\tensor (k-1)} \tensor (P_k Z) \tensor Z^{\tensor (l-k-1)} \tensor P_l \tensor I^{\tensor \lceil r/2\rceil -l}\\
+		&= I^{\tensor (k-1)} \tensor (- Z P_k) \tensor Z^{\tensor (l-k-1)} \tensor P_l \tensor I^{\tensor \lceil r/2\rceil -l} \\
+		&= - S_lS_k,
+	\end{align*}
+	since $P_k$ is a Pauli matrix.
+	
+	Additionally, for every $k\neq l$, we have $\trace{S_kS_l}=d$, if $k=l$, and $\trace{S_kS_l}=0$, if $k\neq l$, since $\trace{A\tensor B} = \trace{A}\trace{B}$ and at least $\trace{ZX}=\trace{ZY}=0$.
+	
+	Define $F_1,\dots,F_n,G_1,\dots,G_n\in\mathbb{C}^{d\times d}$ by
+	\begin{align}
+		F_i&=\sum_{k=1}^r (x_i)_k S_k,\\
+		G_j&=\sum_{k=1}^r (y_j)_k S_k^\top.
+	\end{align}
+	
+	We will start by proving that the matrices $F_1,\dots,F_n,G_1,\dots,G_n$ are $\{-1,1\}$-observables.
+	For this reason it is sufficient to show that $F_i^2=G_j^2=I$ for each $i,j\in\{1,\dots,n\}$, as this implies that the matrices have eigenvalues in $\{-1,1\}$. To this end, consider the expansion of $F_i^2$,
+	\begin{align*}
+		F_i^2 &= \sum_{k,l=1}^r (x_i)_k(x_i)_l S_k S_l \\
+		&= \sum_{k=l} (x_i)_k(x_i)_l \underbrace{S_k S_l}_{=I} + \underbrace{\sum_{k<l} (x_i)_k(x_i)_l S_k S_l}_{=\sum_{k>l} (x_i)_l(x_i)_k S_l S_k} + \sum_{k>l} (x_i)_k(x_i)_l S_k S_l \\
+		&= \underbrace{\sclr{x_i}{x_i}}_{=1} + \sum_{k>l} (x_i)_k(x_i)_l \underbrace{(S_k S_l+S_l S_k)}_{=0}\\
+		&= I, 
+	\end{align*}
+	since $x_i$ is a unit vector and the Clifford matrices pair-wise anti-commute.
+	Of course, the same argument works for $G_j$.
+	
+	We will continue with proving that for every $i,j\in\{1,\dots,n\}$, we have $\trace{F_iG_j^\top}/d=\sclr{x_i}{y_j}$.
+	
+	Fix $i,j\in\{1,\dots,n\}$. As before, consider the expansion of the product $F_iG_j^\top$,
+	\begin{equation}
+		F_iG_j^\top = \sum_{k,l=1}^r (x_i)_k(y_j)_lS_kS_l.
+	\end{equation}
+	Then,
+	\begin{align*}
+		\trace{F_iG_j^\top} &= \trace{\sum_{k,l=1}^r (x_i)_k(y_j)_lS_kS_l} 
+		= \sum_{k,l=1}^r (x_i)_k(y_j)_l \underbrace{\trace{S_kS_l}}_{=0,\text{ if } k\neq l}
+		= \sum_{k} (x_i)_k(y_j)_k \underbrace{\trace{S_k^2}}_{=d}\\
+		&= d \sclr{x_i}{y_j} 
+	\end{align*}
+	
+	We now consider the expansion of $\trace{F_iG_j^\top}/d$. Let $\{\dr{1},\dots,\dr{d}\}\subseteq \mathbb{C}^d$ be an orthonormal basis for $\mathbb{C}^d$. Let
+	\begin{equation}
+		\dr{\psi} = \frac{1}{\sqrt{d}} \sum_{s=1}^d \dr{s} \tensor \dr{s}.
+	\end{equation} 
+	
+	We have
+	\begin{align*}
+		\dl{\psi} F_i\tensor G_j \dr{\psi} &= \frac{1}{d} \sum_{s,t=1}^d \dl{s}\tensor\dl{s} F_i\tensor G_j \dr{t}\tensor \dr{t} \\
+		&= \frac{1}{d} \sum_{s,t=1}^d \dl{s} F_i \dr{t} \dl{s} G_j \dr{t} \\
+		&= \frac{1}{d} \trace{F_iG_j^\top}\\
+		&= \sclr{x_i}{y_j}.
+	\end{align*}
+	
+	\textcolor{red}{Hier verstehe ich den letzten Schritt nicht ganz}
+	
+	(Easy direction) Note that since $\dr{\psi}$ has norm 1 and the observables $F_i$ and $G_j$ are unitary operators, thus $F_i\tensor I$ and $I\tensor G_j$ are unitary operators which preserve inner products between vectors, $F_i\tensor I \dr{\psi}$ and $I\tensor G_j\dr{\psi}$ are unit vectors in $\mathbb{C}^{d^2}$. Additionally, note that since $F_i$ and $G_j$ are Hermitian, we have that the inner product
+	\begin{align*}
+		\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}} &= (F_i\tensor I \dr{\psi})^\ast(I\tensor G_j \dr{\psi}) 
+		= (\underbrace{\dr{\psi}^\ast}_{=\dl{\psi}}\underbrace{F_i^\ast}_{=F_i}\tensor I^\ast)(I\tensor G_j \dr{\psi}) \\
+		&= \dl{\psi}(F_i\tensor I)(I \tensor G_j) \dr{\psi}	%= \dl{\psi}(F_i I)\tensor (I G_j) \dr{\psi} \\
+		= \dl{\psi} F_i\tensor G_j \dr{\psi}
+	\end{align*}
+	is a real number \textcolor{red}{by the spectral theorem}.
+	
+	Thus,
+	\begin{align*}
+		&\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}}\\
+		 &\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})+i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})+i\Imag(I\tensor G_j \dr{\psi})} \\
+		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}\\
+		&\qquad\qquad+\sclr{\Real(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+%		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}-i^2\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
+%		&\qquad\qquad +i\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-i\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+		&\qquad= \underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}}_{=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})}\\
+		&\qquad\qquad +i[\underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}}_{=\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})}] \\
+		&\qquad=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})},
+	\end{align*}
+	where the last equality follows since $\dl{\psi} F_i\tensor G_j \dr{\psi}\in\mathbb{R}$, hence $\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})=0$.\\
+	
+	Alternative:
+	
+	Thus,
+	\begin{align*}
+		\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}} &=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})\\
+		&=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}.
+	\end{align*}
+	
+	Define $x_i,y_j \in S^{2d^2}$ by
+	\begin{align}
+		x_i &= (\Real(F_i\tensor I \dr{\psi}), \Imag(F_i\tensor I \dr{\psi}))\\
+		y_j &= (\Real(I\tensor G_j \dr{\psi}), \Imag(I\tensor G_j \dr{\psi})).
+	\end{align}
+	\textcolor{red}{Dimension runter-projezieren?}
+	
+	Then, we have
+	\begin{align*}
+		\sclr{x_i}{y_j} &= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+ \sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
+		&= \Real(\dl{\psi} F_i\tensor G_j \dr{\psi}) \\
+		&= \dl{\psi} F_i\tensor G_j \dr{\psi},
+	\end{align*}
+	as desired.
+\end{proof}
+
+\begin{align*}
+	\dl{\psi} F_i\tensor G_j \dr{\psi} &= \trace{\underbrace{\dr{\psi}\dl{\psi}}_{\eqqcolon\rho}F_i\tensor G_j} \\
+	&=\trace{\rho(F_i\tensor G_j)}
+\end{align*}
 \newpage
