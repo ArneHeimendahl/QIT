@@ -102,7 +102,7 @@
 
 \begin{frame}
 	\begin{definition}
-		Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state \textbf{Introduce a symbol zo define operators form one space to another} $ \rho \in D(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
+		Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state on $\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
 		\begin{align*}\label{QCaij}
 		a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
 		\end{align*}
@@ -110,6 +110,7 @@
 	\pause
 	\begin{itemize}
 		\item Set of all quantum correlation matrices denoted by $ \QC_{m,n} $
+		\pause
 	\end{itemize}
 	\begin{lemma}
 		\begin{align*}
@@ -124,7 +125,6 @@
 		\item<1-> $ a_{ij} = \trace{\rho X_i \otimes Y_j} $, sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $
 		\item<2-> Define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
 		$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
-		\item<3-> perhaps verification of at least some of these properties 
 		\item<4-> Obtain an inner product space $ U := B^{sa}(\mathcal{H}) / \ker \beta$ equipped with the inner product 
 		\begin{align*}
 			\tilde{\beta}([S],[T]) = \beta(S,T).
@@ -147,12 +147,7 @@
 			(this can be shown by using a {\itshape Schmidt-decomposition} of $ \rho $ and using $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $)
 			\item<3-> Project the $ y_j $'s orthogonally onto $ \textup{span} \{ x_1,...,x_m \} $  (wlog $ m \le n $)
 			\item<4-> $ \pi(y_j) $ the projection of $ y_j $ then $ \tilde{\beta}(x_i,\pi(y_j)) = \tilde{\beta}(x_i,y_j) $
-			\item<5-> Let $ \{a_1,...,a_r\} $ be an orthonormal basis of $ \textup{span} \{ x_1,...,x_m \} $ with respect to $ \beta $ and 
-			$ x_i = \sum_{k=1}^{r}\alpha_k^{(i)}a_k$ and $  \pi(y_j) = \sum_{k=1}^r \gamma_k^{(j)} a_k$ for $ \alpha^{(i)}, \gamma^{(j)} \in \mathbb{R}^r $
-			\item<6-> Then $
-			a_{ij}= \tilde{\beta}(x_i,y_j)= \tilde{\beta}(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \tilde{\beta}(a_k,a_l) 
-			= \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}, \gamma^{(j)} \rangle. $
-			\item<7-> $ \modul{\alpha^{(i)}}, \modul{\gamma^{(j)}} \le 1  $ due to $ \tilde{\beta}(x_i), \tilde{\beta}(y_j) \le 1 $
+			\item<5-> The vectors have still not the right dimension but again, we can project them onto vectors in $ \mathbb{R}^m $
 		\end{itemize}
 		
 	\end{proof}
@@ -287,8 +282,8 @@
 		1 & -1
 		\end{pmatrix}  \}.
 		\end{align*}
-		\pause
-		\begin{block}{Claim}
+		\item<3->
+		W can also write it as in intersections of halfspaces: 
 			\begin{equation}\label{facetsLC}
 			\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{AM} \le 1 \textup{ for all } M \in \mathcal{K} \},
 			\end{equation}
@@ -298,51 +293,49 @@
 			\end{pmatrix}), \sigma(\begin{pmatrix}
 			1 & 0 \\
 			0 & 0
-			\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id} (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.
-		\end{block}
-	\end{itemize}
+			\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id}, (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.
+		\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\begin{itemize}
-		\begin{block}{Claim}
-			\begin{equation}\label{facetsLC}
-			\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{AM} \le 1 \textup{ for all } M \in \mathcal{K} \},
-			\end{equation}
-			where $ \mathcal{K}  = \{ \frac{1}{2}\sigma(\begin{pmatrix}
-			-1 & 1 \\
-			1 & 1
-			\end{pmatrix}), \sigma(\begin{pmatrix}
-			1 & 0 \\
-			0 & 0
-			\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id} (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.
-		\end{block}
-		\item<2-> $ \LC_{2,2} $ affinely isomorphic to the cross polytope scaled by $ 2 $, i.e. $ \LC_{2,2} \cong 2CP_4 := := \textup{conv} \{  \pm e_i \, | \, i = 1,\hdots,4 \}$
-		\item<3-> $ (CP_n)^o = [-1,1]^n $
-		\item<4-> Both points implies that the face lattice of $ \LC_{2,2} $ is isomorphic to the opposite lattice of $ [-1,1]^4 $
-		\item<5-> $ \LC_{2,2} $ has as many facets as $ [-1,1]^4 $ vertices, hence $ 2^4 $
-		\item<6-> Equation \ref{facetsLC} is a non-redundant hyperplane description of $ \LC_{2,2} $, hence all linear constraints define facets.
-	\end{itemize}
-\end{frame}
+
 \begin{frame}
 	\begin{itemize}
 		\item<1-> We will show that the inclusion is strict by showing that both sets yield different values if we maximize in a certain direction
 		\item<2-> Let $M = \begin{pmatrix}
 		1 & 1 \\ 1 & -1 
 		\end{pmatrix} $
+		\item <3-> {\footnotesize  $
+			\LC_{2,2} = \{ A \in \mathbb{R}^{2 \times 2} \, | \, -1 \le  \trace{AM} \le 1 \textup{ for all } M \in \mathcal{K} \},
+			$
+			where $ \mathcal{K}  = \{ \frac{1}{2}\sigma(\begin{pmatrix}
+			-1 & 1 \\
+			1 & 1
+			\end{pmatrix}), \sigma(\begin{pmatrix}
+			1 & 0 \\
+			0 & 0
+			\end{pmatrix}) \, | \,  \sigma \in \{ \textup{id}, (1 \, \, 2), (1 \, \, 3), (1 \, \, 4) \} \} $.}
 		\item<3-> $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $
-		\item <4->$ A \in \QC_{2,2} $ we obtain, by Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
-		\begin{align*}
-		\trace{(AM)}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
-		&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
-		&\le \modul{x_1+x_2} + \modul{x_1-x_2}.
-		\end{align*} 
-		\item<5-> $(\modul{x_1+x_2} + \modul{x_1-x_2})^2 \le  4(\modul{x_1}^2+\modul{x_2}^2) $
-		\item<6-> $\trace{(AM)} \le \modul{x_1+x_2} + \modul{x_1-x_2} \le 2\sqrt{\modul{x_1}^2+\modul{x_2}^2} \le 2 \sqrt{2}. $
-		\item<7-> Bound is achieved by  $ A = \frac{1}{\sqrt{2}}\begin{pmatrix}
-		1 & 1 \\ 1 & 1 
-		\end{pmatrix} $, induced by the vectors $ x_1 = x_2 = \frac{1}{\sqrt{2}}(1,1) $ and $ y_1 = y_2 =(1,0) $
+			 
+		
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item<1-> {\footnotesize $ \max \{  \trace{(AM)}\, | \, A \in \LC_{2,2} \} = 2 $ }
+	\item<2-> Recall $ QC_{2,2} = \{ \langle x_i,y_j \rangle \, | \, x_1,x_2,y_1,y_2 \in \mathbb{R}^2, \, \modul{x_i},\modul{y_j} le 1 \} $
+	\item <4->$ A \in \QC_{2,2} $ we obtain, by Cauchy-Schwarz and $ \modul{y_i}\le 1 $,
+	\begin{align*}
+	\trace{(AM)}&= \langle x_1,y_1 \rangle + \langle x_1,y_2 \rangle + \langle x_2,y_1 \rangle - \langle x_2,y_2 \rangle   \\
+	&= \langle x_1+x_2,y_1 \rangle + \langle x_1-x_2,y_2 \rangle  \le \modul{x_1+x_2}\modul{y_1} + \modul{x_1-x_2}\modul{y_2}  \\
+	&\le \modul{x_1+x_2} + \modul{x_1-x_2}.
+	\end{align*} 
+	\item<5-> $(\modul{x_1+x_2} + \modul{x_1-x_2})^2 \le  4(\modul{x_1}^2+\modul{x_2}^2) $
+	\item<6-> $\trace{(AM)} \le \modul{x_1+x_2} + \modul{x_1-x_2} \le 2\sqrt{\modul{x_1}^2+\modul{x_2}^2} \le 2 \sqrt{2}. $
+	\item<7-> Bound is achieved by  $ A = \frac{1}{\sqrt{2}}\begin{pmatrix}
+	1 & 1 \\ 1 & 1 
+	\end{pmatrix} $, induced by the vectors $ x_1 = x_2 = \frac{1}{\sqrt{2}}(1,1) $ and $ y_1 = y_2 =(1,0) $
+\end{itemize}
 \end{frame}
 
 
