@@ -7,9 +7,9 @@
 
 \begin{frame}{Let's get on the same page}
  \begin{itemize}
-  \item \largetext{We should know what a \textit{state} is}
-  \item \largetext{We should know what the \textit{tensor product} does}
-  \item \largetext{We should be familiar with the \textit{Dirac notation}}
+  \item \large{We should know what a \textit{state} is}
+  \item \large{We should know what the \textit{tensor product} does}
+  \item \large{We should be familiar with the \textit{Dirac notation}}
  \end{itemize}
 \end{frame}
 
@@ -111,7 +111,7 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 \end{frame}
 
 \begin{frame}{Nonlocal games}
-    \includegraphics[scale=0.8]{Unknown.png}
+    \includegraphics[scale=0.5]{Untitled.png}
 \end{frame}
 
 \begin{frame}{Mathematically speaking}
@@ -128,7 +128,7 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 \begin{frame}{Classical strategies}
     \begin{itemize}
         \item All players know $\pi$ and $V$ and the information they received but not what the other players received
-        \item They are allowed to agree on a strategy beforehand \pause but must not communicate once the game started
+        \item They are allowed to agree on a strategy beforehand but must not communicate once the game started
         \item A deterministic strategy is a map $a : \mathcal{S} \rightarrow \mathcal{A}$ for Alice and $b : \mathcal{T} \rightarrow \mathcal{B}$ for Bob
         The winning probability then is:
     \end{itemize}
