@@ -2,8 +2,8 @@
 \begin{document}
 
 		\author{Maxi Brandstetter, Felix Kirschner, Arne Heimendahl}
-		\title{}
-		\subtitle{}
+		\title{Ungleichungen und ähnlich verwirrende Konzepte}
+		\subtitle{Coffee}
 		\institute[]{University of Cologne}
 			\date{\today}
 		\begin{frame}
@@ -13,5 +13,7 @@
 	\input{ChapersPresentation/tryone.tex}	
 	
 	\input{ChapersPresentation/ArnePres.tex}
+	
+	\input{ChapersPresentation/MaxiPres.tex}
 	
 \end{document}

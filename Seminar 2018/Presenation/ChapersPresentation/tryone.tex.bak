@@ -159,12 +159,6 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 \end{equation*}  
 \end{frame}
 
-\begin{frame}{}
-\begin{itemize}
-    \item Since states are convex combinations of pure states and the trace function is linear we only need to consider pure entangled states
-    
-\end{itemize}
-\end{frame}
 
 \begin{frame}{Two player XOR games}
 \begin{itemize}
