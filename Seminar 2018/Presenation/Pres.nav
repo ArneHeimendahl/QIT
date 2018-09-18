@@ -1,4 +1,3 @@
-\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
@@ -87,53 +86,53 @@
 \headcommand {\beamer@subsectionentry {0}{2}{1}{41}{Local correlation matrices }}\headcommand {\beamer@subsectionpages {41}{40}}
 \headcommand {\slideentry {2}{1}{1}{41/41}{Local correlation matrices }{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {2}{1}{2}{42/42}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {2}{1}{3}{43/46}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {43}{46}}
-\headcommand {\slideentry {2}{1}{4}{47/52}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {47}{52}}
-\headcommand {\slideentry {2}{1}{5}{53/56}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {53}{56}}
-\headcommand {\slideentry {2}{1}{6}{57/59}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {57}{59}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{60}{Quantum correlation matrices}}\headcommand {\beamer@subsectionpages {41}{59}}
-\headcommand {\slideentry {2}{2}{1}{60/60}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {2}{2}{2}{61/62}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {61}{62}}
-\headcommand {\slideentry {2}{2}{3}{63/67}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {63}{67}}
-\headcommand {\slideentry {2}{2}{4}{68/74}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {68}{74}}
-\headcommand {\slideentry {2}{2}{5}{75/77}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {75}{77}}
-\headcommand {\slideentry {2}{2}{6}{78/78}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {78}{78}}
-\headcommand {\slideentry {2}{2}{7}{79/82}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {79}{82}}
-\headcommand {\slideentry {2}{2}{8}{83/84}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {83}{84}}
-\headcommand {\slideentry {2}{2}{9}{85/89}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {85}{89}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{90}{The relations between quantum correlation and local correlation matrices}}\headcommand {\beamer@subsectionpages {60}{89}}
-\headcommand {\slideentry {2}{3}{1}{90/92}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {90}{92}}
-\headcommand {\slideentry {2}{3}{2}{93/94}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {93}{94}}
-\headcommand {\slideentry {2}{3}{3}{95/100}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {95}{100}}
-\headcommand {\slideentry {2}{3}{4}{101/107}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {101}{107}}
-\headcommand {\sectionentry {3}{Grothendieck Ineqaulity}{108}{Grothendieck Ineqaulity}{0}}
-\headcommand {\beamer@sectionpages {41}{107}}
-\headcommand {\beamer@subsectionpages {90}{107}}
-\headcommand {\slideentry {3}{0}{1}{108/113}{}{0}}
-\headcommand {\beamer@framepages {108}{113}}
-\headcommand {\slideentry {3}{0}{2}{114/114}{}{0}}
-\headcommand {\beamer@framepages {114}{114}}
-\headcommand {\beamer@partpages {1}{114}}
-\headcommand {\beamer@subsectionpages {108}{114}}
-\headcommand {\beamer@sectionpages {108}{114}}
-\headcommand {\beamer@documentpages {114}}
+\headcommand {\slideentry {2}{1}{2}{42/46}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {42}{46}}
+\headcommand {\slideentry {2}{1}{3}{47/50}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {47}{50}}
+\headcommand {\slideentry {2}{1}{4}{51/56}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {51}{56}}
+\headcommand {\slideentry {2}{1}{5}{57/60}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {57}{60}}
+\headcommand {\slideentry {2}{1}{6}{61/63}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {61}{63}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{64}{Quantum correlation matrices}}\headcommand {\beamer@subsectionpages {41}{63}}
+\headcommand {\slideentry {2}{2}{1}{64/67}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {64}{67}}
+\headcommand {\slideentry {2}{2}{2}{68/70}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {68}{70}}
+\headcommand {\slideentry {2}{2}{3}{71/75}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {71}{75}}
+\headcommand {\slideentry {2}{2}{4}{76/80}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {76}{80}}
+\headcommand {\slideentry {2}{2}{5}{81/83}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {81}{83}}
+\headcommand {\slideentry {2}{2}{6}{84/84}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {84}{84}}
+\headcommand {\slideentry {2}{2}{7}{85/88}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {85}{88}}
+\headcommand {\slideentry {2}{2}{8}{89/90}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {89}{90}}
+\headcommand {\slideentry {2}{2}{9}{91/95}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {91}{95}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{96}{The relations between quantum correlation and local correlation matrices}}\headcommand {\beamer@subsectionpages {64}{95}}
+\headcommand {\slideentry {2}{3}{1}{96/98}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {96}{98}}
+\headcommand {\slideentry {2}{3}{2}{99/101}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {99}{101}}
+\headcommand {\slideentry {2}{3}{3}{102/104}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {102}{104}}
+\headcommand {\slideentry {2}{3}{4}{105/111}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {105}{111}}
+\headcommand {\sectionentry {3}{Grothendieck Ineqaulity}{112}{Grothendieck Ineqaulity}{0}}
+\headcommand {\beamer@sectionpages {41}{111}}
+\headcommand {\beamer@subsectionpages {96}{111}}
+\headcommand {\slideentry {3}{0}{1}{112/117}{}{0}}
+\headcommand {\beamer@framepages {112}{117}}
+\headcommand {\slideentry {3}{0}{2}{118/118}{}{0}}
+\headcommand {\beamer@framepages {118}{118}}
+\headcommand {\beamer@partpages {1}{118}}
+\headcommand {\beamer@subsectionpages {112}{118}}
+\headcommand {\beamer@sectionpages {112}{118}}
+\headcommand {\beamer@documentpages {118}}
 \headcommand {\def \inserttotalframenumber {60}}
