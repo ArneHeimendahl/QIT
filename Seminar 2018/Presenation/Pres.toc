@@ -3,6 +3,6 @@
 \beamer@subsectionintoc {1}{1}{ksjlad\IeC {\"u}ys}{2}{0}{1}
 \beamer@sectionintoc {2}{Local and quantum correlation matrices}{41}{0}{2}
 \beamer@subsectionintoc {2}{1}{Local correlation matrices }{41}{0}{2}
-\beamer@subsectionintoc {2}{2}{Quantum correlation matrices}{60}{0}{2}
-\beamer@subsectionintoc {2}{3}{The relations between quantum correlation and local correlation matrices}{89}{0}{2}
-\beamer@sectionintoc {3}{Grothendieck Ineqaulity}{105}{0}{3}
+\beamer@subsectionintoc {2}{2}{Quantum correlation matrices}{64}{0}{2}
+\beamer@subsectionintoc {2}{3}{The relations between quantum correlation and local correlation matrices}{96}{0}{2}
+\beamer@sectionintoc {3}{Grothendieck Ineqaulity}{112}{0}{3}

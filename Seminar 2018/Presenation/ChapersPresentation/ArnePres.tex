@@ -3,8 +3,16 @@
 \begin{frame}{Outline}
 \tableofcontents[currentsection]
 \end{frame}
-\begin{frame}
-	Nice slide to draw the connection between the games an LC 
+
+\begin{frame}[label = LCMot]{Local correlation matrices}
+	\begin{itemize}
+		\item <1-> Deterministic strategies of Alice and Bob correspond to vectors $ \xi \in \{ -1,1 \}^\mathcal{S} $, respectively $ \eta \in \{ -1,1 \}^\mathcal{T} $
+		\item <2-> Their common answer is the product $ \xi_i \eta_j $
+		\item <3-> Instead of deterministic strategies they can also answer according to the probability distribution of random variables $ X_i, Y_j $
+		\item <4-> Their common answer is $ \mathbb{E}[X_iY_j] $
+		\item <5->This information can be encoded in an $ \mathcal{S} \times \mathcal{T} $ matrix 
+		\hyperlink{QCMot<4>}{\beamerreturnbutton{Motivation Quantum}}
+	\end{itemize} 
 \end{frame}
 
 \begin{frame}
@@ -44,7 +52,7 @@
 				\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
 		\end{align*}
 			for $ \beta \in [0,1] $
-		\item<5-> Define a Bernoulli random variable $ \alpha $ such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $
+		\item<5-> Define a Bernoulli random variable $ \alpha $ (which is independent form $ X_i^{(k)},Y_j^{(k)} $) such that $ \mathbb{P}(\alpha = 0) = \beta $, $ \mathbb{P}(\alpha = 1) = 1 - \beta$ and set $ X_i = X_i^{(\alpha)}, Y_j = Y_j^{(\alpha)} $
 		\item<6-> Then 
 			\begin{align*}
 			\mathbb{E}[X_iY_j] &= \mathbb{E}[X_i^{(\alpha)}Y_j^{(\alpha)}  \mathds{1}_{ \{\alpha = 0\}}] + \mathbb{E}[X_i^{(\alpha)}Y_j^{(1)}]\mathds{1}_{\{\alpha = 1\}}] \\
@@ -86,7 +94,7 @@
 			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  \\
 			&= \big (\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}]\big )\xi_i\eta_j
 			\end{align*}
-			\item<3-> $ \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}] = 1 $
+			\item<3-> Due to $ \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}] = 1 $
 			the matrix $ (a_{ij}) $ is a convex combination of $ \xi \eta^T $, $ \xi \in \{-1,1\}^m, \eta \in \{-1,1 \}^n $
 		\end{itemize}
 	\end{proof}
@@ -96,8 +104,15 @@
 
 \subsection{Quantum correlation matrices}
 
-\begin{frame}
-	Some nice frame to connect QCs to the games 
+\begin{frame}[label = QCMot]{Quantum correlation matrices}
+	\begin{itemize}
+		\item<1-> Alice and Bob share a common state $ \rho $ and get inputs $ i \in \mathcal{S}, \, j \in \mathcal{T} $ 
+		\item<2-> They perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $
+		\item <3-> The probability that their response is $ (\xi,\eta) $ for inputs $ (i,j) $ is given by 
+		$ a_{ij} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $
+		\item<4-> Again we can encode this information in a matrix
+	\end{itemize}
+	\hyperlink{LCMot}{\beamerbutton{Motivation Locality}}
 \end{frame}
 
 \begin{frame}
@@ -221,7 +236,7 @@
 			\item<3-> $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $ (the same holds for $ Y_j $)
 			\item<4-> Let $ \ket{\phi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\phi}\bra{\rho} $. Note that we can write $ \rho $ as
 			\begin{align*}
-			\rho = \ket{\phi}\bra{\phi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
+			\rho = \ket{\phi}\bra{\phi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} =  \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
 			\end{align*}
 		\end{itemize}
 	\end{block}
@@ -236,7 +251,8 @@
 			\end{align*}}
 			\item<2-> Then 
 			\begin{align*}
-			\trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )} = \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
+			\trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )}   \\
+			&= \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
 			&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x_i,y_j \rangle.
 			\end{align*}
 		\end{itemize}
@@ -255,7 +271,7 @@
 \end{frame}
 \subsection{The relations between quantum correlation and local correlation matrices}
 
-\begin{frame}
+\begin{frame}{The relations between quantum correlation and local correlation matrices}
 	\begin{itemize}
 		\item<1-> $ \LC_{m,n} \subset \QC_{m,n} $
 		\item<2-> Set $ x_i = \xi_i \ket{0}$ and $ y_j = \eta_j\ket{0} $ it immediately follows  $ \xi_i\eta_j = \langle x_i, y_j \rangle $. Hence, $ \xi\eta^T \in \QC_{m,n} $ (rest follows with the convexity of $ \QC_{m,n} $)
@@ -266,6 +282,7 @@
 \begin{frame}
 	\begin{itemize}
 		\item<1-> Let us consider the case $ n=m=2 $.
+		\item<2-> {\footnotesize Recall $ \LC_{2,2} = \{ \xi \eta^T \, | \, \xi \in \{ -1,1 \}^2, \, \eta \in \{ -1,1 \}^2 \} $}
 		\item <2-> It holds 
 		\begin{align*}
 		\LC_{2,2}= \textup{conv} \{ \pm \begin{pmatrix}

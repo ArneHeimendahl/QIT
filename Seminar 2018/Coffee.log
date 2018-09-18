@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  17 SEP 2018 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.18)  18 SEP 2018 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2253,7 +2253,7 @@ ype1/public/lm/lmsy6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 /lm/lmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/s
 ymbols/msam10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on Coffee.pdf (26 pages, 464475 bytes).
+Output written on Coffee.pdf (26 pages, 464459 bytes).
 PDF statistics:
  446 PDF objects out of 1000 (max. 8388607)
  367 compressed objects within 4 object streams
