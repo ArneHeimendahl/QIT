@@ -434,11 +434,12 @@ Thus,
 \begin{frame}
 The bias is $\frac{1}{\sqrt{2}}$! \pause
 \begin{block}{Note}
-$\beta^*(G) \frac{1}{2}+ \gamma -(1-\frac{1}{2}-\gamma) = 2\gamma = \frac{1}{\sqrt{2}}  \rightarrow \gamma = \frac{1}{2\sqrt{2}}$
+$\frac{1}{\sqrt{2}}  = \beta^*(G) = \underbrace{\frac{1}{2}+ \gamma}_{\text{winning probability}} -(1-\frac{1}{2}-\gamma) = 2\gamma \Rightarrow \gamma = \frac{1}{2\sqrt{2}}$
 \end{block} \pause
+\vspace{2cm}
 The winning probability follows directly
 \begin{equation*}
-\frac{1}{2}+ \frac{1}{2}\cdot \frac{1}{\sqrt{2}} = \cos(\pi/8 ) \approx 0.85\dots = \frac{1}{4} \cdot \frac{4}{\sqrt{2}} = \frac{1}{\sqrt{2}}
+\frac{1}{2}+ \frac{1}{2}\cdot \frac{1}{\sqrt{2}} \approx 0.85\dots 
 \end{equation*}
     
 \end{frame}
