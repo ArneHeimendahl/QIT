@@ -86,64 +86,69 @@ Physical quantities can be measured. But what is a measurement mathematically? \
 
 \begin{frame}{Entanglement}
 \begin{itemize}
-    \item We will only consider pure states meaning states that they have rank $1$ and therefore can be written as $\rho = \vert \psi \rangle \langle \psi \vert$
-    \item A state is called product state if it can be written as $\vert \psi \rangle = \vert \psi_1 \rangle \vert \psi_2 \rangle \dots \vert \psi_N \rangle$
-    \item When a vector $\vert \psi \rangle$ is referred to as a state we mean the matrix $\vert \psi \rangle \langle \psi \vert$
+    \item We will only consider pure states, i.e. states that they have rank $1$ and therefore can be written as $\rho = \vert \psi \rangle \langle \psi \vert$ \pause
+    \item We do that because mixed states do not give an advantage over pure states \pause
+    \item A state is called product state if it can be written as $\vert \psi \rangle = \vert \psi_1 \rangle \vert \psi_2 \rangle \dots \vert \psi_N \rangle$ \pause
+    \item When a vector $\vert \psi \rangle$ is referred to as a state we mean the matrix $\vert \psi \rangle \langle \psi \vert$ \pause
     \item A state that is not a product state is called entangled
 \end{itemize}
+ \end{frame}   
+
+
+\begin{frame}{Example}
     
-\end{frame}
-
-\begin{frame}{Example}
     \begin{itemize}
-        \item Let $\vert \psi \rangle = \vert \psi_A \rangle \vert \psi_B \rangle$ be a system and give $\vert \psi_A \rangle$ to Alice and $\vert \psi_B \rangle$ to Bob
-        \item Let them perform measurements $\{ G^b \}_{b \in \mathcal{B}}$ and $\{F^a \}_{a \in \mathcal{A}}$ on their respective quantum systems
-        \item What is the  probability of Alice getting measurement outcome $\chi_A = a$ and Bob getting $\chi_B = b$?
+        \item Let $\vert \psi \rangle = \vert \psi_A \rangle \vert \psi_B \rangle$ be a system and give $\vert \psi_A \rangle$ to Alice and $\vert \psi_B \rangle$ to Bob \pause
+        \item Let them perform measurements $\{ G^b \}_{b \in \mathcal{B}}$ and $\{F^a \}_{a \in \mathcal{A}}$ on their respective quantum systems \pause
+        \item What is the  probability of Alice getting measurement outcome $\chi_A = a$ and Bob getting $\chi_B = b$? \pause
     \end{itemize}
-\end{frame}
 
-\begin{frame}{Example}
-\begin{flalign*}
+	\begin{block}{Calculation}
+		\begin{flalign*}
 \text{Tr}(\vert \psi \rangle \langle \psi \vert F^a \otimes G^b ) & = \langle \psi \vert F^a \otimes G^b \vert \psi \rangle \\
 & = (\langle \psi_A \vert \otimes \langle \psi_B \vert) (F^a \otimes G^b )(\vert \psi_A \rangle  \otimes \vert \psi_B \rangle )\\
 & = ((\langle \psi_A \vert F^a)\otimes (\langle \psi_B \vert  G^b))( \vert \psi_A \rangle \otimes \vert \psi_B \rangle) \\
 & = \langle \psi_A \vert F^a \vert \psi_A \rangle \otimes  \langle \psi_B \vert G^b \vert \psi_B \rangle \\
 &= \langle \psi_A \vert F^a \vert \psi_A \rangle  \langle \psi_B \vert G^b \vert \psi_B \rangle
-\end{flalign*}
+		\end{flalign*}
+	\end{block}
 This is equal to the product of the probabilities of Alice measuring $a$ and Bob measuring $b$, i.e. the outcome do not correlate.
 \end{frame}
-
 
 \subsection{Nonlocal games}
 \begin{frame}{Nonlocal games}
     \begin{itemize}
-        \item Three participants: Alice, Bob and a referee
-        \item Referee doles out a question $s$ to Alice and a question $t$ to Bob
-        \item Alice and Bob are assumed to be located anywhere in the universe respectively 
-        \item Alice and Bob must not communicate
-        \item Alice sends answer $a$ Bob sends answer $b$ back to the referee, who then decides whether both win or both lose
+        \item Three participants: Alice, Bob and a referee \pause
+        \item Referee sends a question $s$ to Alice and a question $t$ to Bob \pause
+        \item Alice and Bob are assumed to be located anywhere in the universe respectively \pause
+        \item Alice and Bob must not communicate once the game has started \pause
+        \item Alice sends answer $a$ and Bob sends answer $b$ back to the referee, who then decides whether both win or both lose
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Nonlocal games}
-    \includegraphics[scale=0.5]{Untitled.png}
-\end{frame}
+
 
 \begin{frame}{Mathematically speaking}
 \begin{itemize}
-    \item Four finite sets $\mathcal{A}, \mathcal{B}, \mathcal{S}, \mathcal{T}$
-    \item probability distribution $\pi$ over $\mathcal{S} \times \mathcal{T}$ \\ $\pi : \mathcal{S} \times \mathcal{T} \rightarrow [0,1]$
-    \item The referee sends with probability $\pi (s,t)$ $s$ to Alice and $t$ to Bob
-    \item They answer with an element $a \in \mathcal{A}$ and $b \in \mathcal{B}$ respectively
-    \item A map $V : \mathcal{S} \times \mathcal{T} \times \mathcal{A} \times \mathcal{B} \rightarrow \{ 0, 1 \}$
+    \item Four finite sets $\mathcal{A}, \mathcal{B}, \mathcal{S}, \mathcal{T}$ \pause
+    \item probability distribution $\pi$ over $\mathcal{S} \times \mathcal{T}$ \\ $\pi : \mathcal{S} \times \mathcal{T} \rightarrow [0,1]$ \pause
+    \item The referee sends with probability $\pi (s,t)$ $s$ to Alice and $t$ to Bob \pause
+    \item They answer with an element $a \in \mathcal{A}$ and $b \in \mathcal{B}$ respectively \pause
+    \item A map $V : \mathcal{S} \times \mathcal{T} \times \mathcal{A} \times \mathcal{B} \rightarrow \{ 0, 1 \}$ \pause
     \item They win if $V(s,t,a,b)=1$ and lose otherwise
 \end{itemize}
+\begin{center}
+
+\includegraphics[scale=0.3]{Untitled.png}
+
+\end{center}
 \end{frame}
+
 
 \begin{frame}{Classical strategies}
     \begin{itemize}
-        \item All players know $\pi$ and $V$ and the information they received but not what the other players received
-        \item They are allowed to agree on a strategy beforehand but must not communicate once the game started
+        \item All players know $\pi$ and $V$ and the information they received but not what the other players received \pause
+        \item They are allowed to agree on a strategy beforehand but must not communicate once the game started \pause
         \item A deterministic strategy is a map $a : \mathcal{S} \rightarrow \mathcal{A}$ for Alice and $b : \mathcal{T} \rightarrow \mathcal{B}$ for Bob
         The winning probability then is:
     \end{itemize}
@@ -154,9 +159,9 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 
 \begin{frame}{Quantum case}
 \begin{itemize}
-    \item Suppose Alice and Bob have a subsystem $X_A, X_B$ of a quantum system $X$ which is in state $\rho$, i.e. Alice and Bob share state $\rho$
-    \item If the state is entangled measurements can give correlated measurement outcomes
-    \item Alice and Bob may gain information by performing measurements
+    \item Suppose Alice and Bob both have a subsystem $X_A, X_B$ of a quantum system $X$ which is in state $\rho$, i.e. Alice and Bob share state $\rho$ \pause
+    \item If the state is entangled measurements might give correlated measurement outcomes \pause
+    \item Alice and Bob may gain information by performing measurements \pause
     \item Answering according to measurement outcomes could increase winning probability 
 \end{itemize}
 \end{frame}
