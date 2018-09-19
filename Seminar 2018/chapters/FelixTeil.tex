@@ -101,7 +101,7 @@ $\oplus$ & 0 & 1 \\
 \end{center}
 
 For a probability distribution $\pi$ and a boolean function $f$, $\mathcal{G}= (\pi, f)$ defines an XOR game.\\ \\
-\textbf{Bias and violation ratio.} Alice and Bob can always win an XOR with probability $\frac{1}{2}$ by flipping an unbiased coin. Interesting would be how much this can actually be increased. We define the classical bias of an XOR game to be the difference of the probability of winning and losing for an optimal classical strategy and denote it by $\beta(G)$. The bias of entangled strategies is calculated in the same way and thus is twice the amount by which the maximal winning probability is greater then $\frac{1}{2}$, since $\frac{1}{2}+\gamma - (1 - \frac{1}{2} + \gamma) = 2 \gamma$, $\gamma$ being the amount exceeding $\frac{1}{2}$. We denote the bias of entangled strategies by $\beta^*(G)$. The violation ratio is given by $\frac{\beta^*(G)}{\beta(G)}$.\\ \\
+\textbf{Bias and violation ratio.} Alice and Bob can always win an XOR with probability $\frac{1}{2}$ by flipping an unbiased coin. Interesting would be how much this can actually be increased. We define the classical bias of an XOR game to be the difference of the probability of winning and losing for an optimal classical strategy and denote it by $\beta(G)$. The bias of entangled strategies is calculated in the same way and thus is twice the amount by which the maximal winning probability is greater then $\frac{1}{2}$, since $\frac{1}{2}+\gamma - (1 - \frac{1}{2} - \gamma) = 2 \gamma$, $\gamma$ being the amount exceeding $\frac{1}{2}$. We denote the bias of entangled strategies by $\beta^*(G)$. The violation ratio is given by $\frac{\beta^*(G)}{\beta(G)}$.\\ \\
 
 \textbf{Signs and observables.} To make things a little easier regarding calculations we will use the $\{ -1 , 1 \} $-basis rather than the $\{ 0,1 \}$-basis for boolean valued objects. If we have an XOR game $(\pi, f )$ and any two classical strategies $a : \mathcal{S} \rightarrow \{0,1\}$ and $b: \mathcal{B} \rightarrow
  \{ 0,1 \}$ the bias is given by the probability under $\pi$ that $a(s) \oplus b(t) = f(s,t)$ minus the probability under $\pi$ that $a(s) \oplus b(t) \ne f(s,t)$. 
@@ -115,7 +115,7 @@ We define the sign matrix $\Sigma_{st} = (-1)^{f(s,t)}$ and functions $\chi(s) =
 \end{equation}
 Since in an XOR game the outcomes are $\{ 0, 1 \} $-valued the measurements Alice and Bob have are $\{ F_s^0, F_s^1 \}$ and $\{ G_t^0, G_t^1 \}$. If we consider an entangled strategy with a pure state $\vert \psi \rangle$ and have projective measurements the probability of Alice and Bob answering with $a,b$ upon receiving $s,t$ respectively is $\langle \psi \vert F_s^a \otimes G_t^b \vert \psi \rangle$. We can calculate the expected value: 
 \begin{flalign*}
-(1)\cdot \mathbb{P}\left[ a = b \right] + (-1) \cdot \mathbb{P} \left[ a \ne b \right] & = \langle \psi \vert F_s^0 \otimes G_t^0 \vert \psi \rangle + \langle \psi \vert F_s^1 \otimes G_t^1 \vert \psi \rangle - \langle \psi \vert F_s^1 \otimes G_t^0 \vert \psi \rangle - \langle \psi \vert F_s^0 \otimes G_t^1 \vert \psi \rangle \\
+(1)\cdot \mathbb{P}\left[ a = b \right] + (-1) \cdot \mathbb{P} \left[ a \ne b \right] & = \langle \psi \vert F_s^0 \otimes G_t^0 \vert \psi \rangle + \langle \psi \vert F_s^1 \otimes G_t^1 \vert \psi \rangle  \\ &  - \langle \psi \vert F_s^1 \otimes G_t^0 \vert \psi \rangle - \langle \psi \vert F_s^0 \otimes G_t^1 \vert \psi \rangle \\
 &= \langle \psi \vert (F_s^0 - F_s^1) \otimes (G_t^0 - G_t^1) \vert \psi \rangle
 \end{flalign*}
 

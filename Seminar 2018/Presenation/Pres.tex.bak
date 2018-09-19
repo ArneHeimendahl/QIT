@@ -2,8 +2,8 @@
 \begin{document}
 
 		\author{Maxi Brandstetter, Felix Kirschner, Arne Heimendahl}
-		\title{}
-		\subtitle{}
+		\title{Nonlocal games and the Grothendieck-Tsirelson inequality}
+		\subtitle{Introduction to quantum information theory}
 		\institute[]{University of Cologne}
 			\date{\today}
 		\begin{frame}
@@ -13,5 +13,7 @@
 	\input{ChapersPresentation/tryone.tex}	
 	
 	\input{ChapersPresentation/ArnePres.tex}
+	
+	\input{ChapersPresentation/MaxiPres.tex}
 	
 \end{document}
