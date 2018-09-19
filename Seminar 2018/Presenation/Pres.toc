@@ -1,9 +1,6 @@
-\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{ksjlad\IeC {\"u}ys}{2}{0}{1}
-\beamer@sectionintoc {2}{Local and quantum correlation matrices}{41}{0}{2}
-\beamer@subsectionintoc {2}{1}{Local correlation matrices }{41}{0}{2}
-\beamer@subsectionintoc {2}{2}{Quantum correlation matrices}{60}{0}{2}
-\beamer@subsectionintoc {2}{3}{The relations between quantum correlation and local correlation matrices}{90}{0}{2}
-\beamer@sectionintoc {3}{Grothendieck Ineqaulity}{108}{0}{3}
+\beamer@sectionintoc {1}{Grothendieck-Tsirelson Theorem}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation: The Grothendieck-Tsirelson Theorem}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Grothendieck's Inequality}{6}{0}{1}
+\beamer@subsectionintoc {1}{3}{Tsirelson's Theorem}{31}{0}{1}
+\beamer@subsectionintoc {1}{4}{Gorthendieck-Tsirelson Theorem}{34}{0}{1}

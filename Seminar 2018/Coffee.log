@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  14 SEP 2018 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  19 SEP 2018 08:11
 entering extended mode
 **./Coffee.tex
 (Coffee.tex
@@ -1934,12 +1934,9 @@ libraryintersections.code.tex"
 librarydecorations.pathreplacing.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
 ecorations.pathreplacing.code.tex"))
-\c@theo=\count311
-\c@kor=\count312
-\c@prop=\count313
-\c@conj=\count314
-\c@rmk=\count315
-\c@ex=\count316
+\c@conj=\count311
+\c@rmk=\count312
+\c@ex=\count313
 ) (Coffee.aux)
 \openout1 = `Coffee.aux'.
 
@@ -1998,16 +1995,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count317
+\scratchcounter=\count314
 \scratchdimen=\dimen300
 \scratchbox=\box68
-\nofMPsegments=\count318
-\nofMParguments=\count319
+\nofMPsegments=\count315
+\nofMParguments=\count316
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count320
+\MPscratchCnt=\count317
 \MPscratchDim=\dimen301
-\MPnumerator=\count321
-\makeMPintoPDFobject=\count322
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
 \everyMPtoPDFconversion=\toks48
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -2075,7 +2072,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count323
+\c@section@level=\count320
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -2169,58 +2166,60 @@ Overfull \hbox (7.66248pt too wide) in paragraph at lines 204--204
  []
 
 [14] [15]) (chapters/MaxisTeil.tex
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-[16] <chapters/fig_unit_circle.pdf, id=219, 149.20341pt x 161.75331pt>
+[16] <chapters/fig_unit_circle.pdf, id=234, 149.20341pt x 161.75331pt>
 File: chapters/fig_unit_circle.pdf Graphic file (type pdf)
 
 <use chapters/fig_unit_circle.pdf>
-Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 26.
+Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 27.
 (pdftex.def)             Requested size: 157.74979pt x 171.03561pt.
  [17 <./chapters/fig_unit_circle.pdf>]
-[18] [19] [20]
-Overfull \hbox (7.23071pt too wide) in paragraph at lines 236--237
-[][]\OT1/lmr/bx/n/10.95 Theorem 3 \OT1/lmr/m/n/10.95 (Tsirelson)\OT1/lmr/bx/n/1
-0.95 . []\OT1/lmr/m/it/10.95 (Hard di-rec-tion) For all pos-i-tive in-te-gers $
-\OML/lmm/m/it/10.95 n; r$ \OT1/lmr/m/it/10.95 and any $\OML/lmm/m/it/10.95 x[];
- [] ; x[];$
- []
-
-[21]
-Overfull \hbox (15.29933pt too wide) in paragraph at lines 286--288
+[18] [19] [20] [21]
+Overfull \hbox (15.29933pt too wide) in paragraph at lines 265--267
 []\OT1/lmr/m/n/10.95 We will start by prov-ing that the ma-tri-ces $\OML/lmm/m/
 it/10.95 F[]; [] ; F[]; G[]; [] ; G[]$ \OT1/lmr/m/n/10.95 are $\OMS/lmsy/m/n/10
 .95 f \OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 1\OMS/lmsy/m
 /n/10.95 g$\OT1/lmr/m/n/10.95 -observables.
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+
+Underfull \vbox (badness 2351) has occurred while \output is active []
+
+ [22]
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
 
-Overfull \hbox (15.91129pt too wide) in paragraph at lines 355--355
+Overfull \hbox (15.91129pt too wide) in paragraph at lines 332--332
 [] 
  []
 
-[23] [24]) (chapters/Appendix.tex
+[23] [24] <chapters/fig_QC&LC.pdf, id=350, 220.01598pt x 163.0632pt>
+File: chapters/fig_QC&LC.pdf Graphic file (type pdf)
+
+<use chapters/fig_QC&LC.pdf>
+Package pdftex.def Info: chapters/fig_QC&LC.pdf used on input line 420.
+(pdftex.def)             Requested size: 220.01543pt x 163.06279pt.
+ [25 <./chapters/fig_QC&LC.pdf>])
+(chapters/Appendix.tex
 Overfull \hbox (4.13339pt too wide) in paragraph at lines 27--29
 []\OT1/lmr/m/n/10.95 We are also able to an-a-lyze the struc-ture of $\OML/lmm/
 m/it/10.95 U$ \OT1/lmr/m/n/10.95 with-out big ef-fort. Let $\OMS/lmsy/m/n/10.95
  f\OML/lmm/m/it/10.95 v[]; [] ; v[]; [] v[]\OMS/lmsy/m/n/10.95 g$
  []
 
-) (Coffee.bbl) [25]
+) (Coffee.bbl) [26]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (Coffee.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `Coffee.out' has not changed.
-(rerunfilecheck)             Checksum: 25F4BD062BBEB726E48CBD98251FB298;3666.
+(rerunfilecheck)             Checksum: 4AF4456CAA1F172A2E99C090E8DDD687;4298.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2230,13 +2229,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36181 strings out of 493323
- 681037 string characters out of 3139068
- 793328 words of memory out of 3000000
- 38919 multiletter control sequences out of 15000+200000
+ 36187 strings out of 493323
+ 681308 string characters out of 3139068
+ 793434 words of memory out of 3000000
+ 38918 multiletter control sequences out of 15000+200000
  588828 words of font info for 84 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,17n,94p,10512b,518s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,17n,94p,10512b,510s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -2244,27 +2243,28 @@ thex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmsc.enc}<C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/dutchcal/DutchCalReg.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/d
-oublestroke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/symbols/msbm10.pfb>
-Output written on Coffee.pdf (26 pages, 514912 bytes).
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/doublestr
+oke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm
+/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb>
+Output written on Coffee.pdf (27 pages, 535310 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
- 102 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 478 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -105,7 +105,7 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
 {.5em}% ⟨Space after theorem head⟩
 {}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
 \theoremstyle{mytheorem}
-\newtheorem{theo}{Theorem}
+\newtheorem{theo}[subsubsection]{Theorem}
 
 \newtheoremstyle{mylemma}% ⟨name⟩
 {12pt}% ⟨Space above⟩
@@ -129,7 +129,7 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
 {.5em}% ⟨Space after theorem head⟩
 {}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
 \theoremstyle{mytheorem}
-\newtheorem{kor}{Corollary}
+\newtheorem{kor}[subsubsection]{Corollary}
 
 \newtheoremstyle{prop}% ⟨name⟩
 {12pt}% ⟨Space above⟩
@@ -141,7 +141,7 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
 {.5em}% ⟨Space after theorem head⟩
 {}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
 \theoremstyle{mytheorem}
-\newtheorem{prop}{Proposition}
+\newtheorem{prop}[subsubsection]{Proposition}
 
 \newtheoremstyle{conj}% ⟨name⟩
 {12pt}% ⟨Space above⟩
@@ -235,7 +235,7 @@ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
 \newcommand{\Haml}{ {\hat{H}} }
 \newcommand{\modul}[1]{{\left|{#1}\right|}}
 \newcommand{\norm}[1]{\ensuremath{ \Vert {#1} \Vert}}
-\newcommand{\trace}[1]{\ensuremath{\text{Tr} \, {#1} }}
+\newcommand{\trace}[1]{\ensuremath{\textup{Tr} \, {#1} }}
 \newcommand{\QC}{\ensuremath{\textup{QC}}}
 \newcommand{\LC}{\ensuremath{\textup{LC}}}
 \newcommand{\sclr}[2]{\ensuremath{\langle{#1},{#2}\rangle}}

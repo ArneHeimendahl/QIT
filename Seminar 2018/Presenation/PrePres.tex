@@ -15,7 +15,7 @@
 
 \usepackage{mathtools}
 
-
+\usepackage{algorithm2e}
 
 
 %fuer Identitaet 
@@ -32,16 +32,20 @@
 %\newcommand{\el}{ {\scriptstyle{\in}}\; }
 
 
+\newcommand{\el}{ {\scriptstyle{\in}}\; }
+\newcommand{\sumel}{ {\scriptscriptstyle{\in}} }
 \newcommand{\Hilb}{ {\mathcal{H}} }
 \newcommand{\dualHilb}{ {\mathcal{H}^*} }
 \newcommand{\Haml}{ {\hat{H}} }
 \newcommand{\modul}[1]{{\left|{#1}\right|}}
 \newcommand{\norm}[1]{\ensuremath{ \Vert {#1} \Vert}}
-\newcommand{\trace}[1]{\ensuremath{\text{Tr} \, {#1} }}
+\newcommand{\trace}[1]{\ensuremath{\textup{Tr} \, {#1} }}
 \newcommand{\QC}{\ensuremath{\textup{QC}}}
 \newcommand{\LC}{\ensuremath{\textup{LC}}}
 \newcommand{\sclr}[2]{\ensuremath{\langle{#1},{#2}\rangle}}
 \newcommand{\tensor}{\ensuremath{\otimes}}
+\newcommand{\dl}[1]{\ensuremath{\langle {#1} \vert}}
+\newcommand{\dr}[1]{\ensuremath{\vert {#1} \rangle}}
 
 
 \makeatletter
@@ -52,9 +56,84 @@
   {\usebeamertemplate{proof end}}
 \makeatother
 
+\newtheoremstyle{mytheorem}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{theo}[subsubsection]{Theorem}
+
+%\newtheoremstyle{mylemma}% ⟨name⟩
+%{12pt}% ⟨Space above⟩
+%{12pt}% ⟨Space below⟩
+%{\itshape}% ⟨Body font⟩
+%{}% ⟨Indent amount⟩
+%{\bf}% ⟨Theorem head font⟩
+%{.}% ⟨Punctuation after theorem head⟩
+%{.5em}% ⟨Space after theorem head⟩
+%{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+%\theoremstyle{mytheorem}
+%\newtheorem{lemma}[subsubsection]{Lemma}
+
+\newtheoremstyle{kor}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{kor}[subsubsection]{Corollary}
+
+\newtheoremstyle{prop}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{prop}[subsubsection]{Proposition}
+
+\newtheoremstyle{conj}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{12pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mytheorem}
+\newtheorem{conj}{Conjecture}
+
+\newtheoremstyle{mydef}% ⟨name⟩
+{12pt}% ⟨Space above⟩
+{16pt}% ⟨Space below⟩
+{}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+\theoremstyle{mydef}
+\newtheorem{dfn}[subsubsection]{Definition}
+
 \DeclareMathOperator*{\esssup}{ess\,sup} % essentiellen Supremums
 \DeclareMathOperator{\spn}{span} % Span
 \DeclareMathOperator{\supp}{supp} % Träger
 \DeclareMathOperator{\proj}{proj} % Träger
 \DeclareMathOperator{\tr}{Tr} 
 \DeclareMathOperator{\sgn}{sign}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\arcsinh}{arcsinh}

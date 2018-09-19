@@ -1,4 +1,10 @@
-\beamer@slide {QCaij}{61}
-\beamer@slide {facetsLC}{93}
-\beamer@slide {facetsLC}{95}
-\beamer@slide {lem:G_id}{108}
+\beamer@slide {eq:G_ineq}{5}
+\beamer@slide {lem:G_id}{7}
+\beamer@slide {lem:krivines_trick}{15}
+\beamer@slide {eq:krivines_trick}{15}
+\beamer@slide {eq:orthonormtensor}{16}
+\beamer@slide {eq:kth_tensor}{16}
+\beamer@slide {theo:G_ineq}{29}
+\beamer@slide {theo:Tsirelson}{32}
+\beamer@slide {eq:G_ineq}{35}
+\beamer@slide {fig:QCLC}{36}
