@@ -8,10 +8,21 @@
 \begin{frame}{Let's get on the same page}
  \begin{itemize}
   \item \large{We should know what a \textit{state} is} \pause
-  \item i.e. a psd matrix $\rho$ that satisfies Tr$(\rho)=1$ \pause 
-  \item \large{We should know what the \textit{tensor product} does} \paus
-  \item 
-  \item \large{We should be familiar with the \textit{Dirac notation}} \pause
+	\begin{itemize}  	
+  	\item i.e. a psd matrix $\rho$ that satisfies Tr$(\rho)=1$ \pause 
+	\end{itemize}
+ \item \large{We should know what the \textit{tensor product} does} \pause
+	\begin{itemize}
+		   \item We use the Kronecker product  $A \otimes B = \begin{pmatrix}
+a_{11}B & \dots & a_{1n}B \\
+\vdots && \vdots \\
+a_{n1}B & \dots & a_{nn}B
+\end{pmatrix}$
+	\end{itemize}  
+   \item \large{We should be familiar with the \textit{Dirac notation}} \pause
+	\begin{itemize}	 
+  	\item $\vert \psi \rangle$ is a vector in $\mathbb{C}^n$ and $\langle \psi \vert$ is its conjugate transpose
+ \end{itemize}
  \end{itemize}
 
 \begin{block}{Quantum systems}
@@ -25,19 +36,26 @@
 \end{frame}
 
 \begin{frame}{Measurements}
+Physical quantities can be measured. But what is a measurement mathematically? \pause
 \begin{itemize}
-    \item A measurement can be performed on a system $X$ that is in state $\rho$
-    \item Let $\mathcal{A}$ be a finite set of outcomes of the measurement
-    \item The measurement itself is defined by a set of psd matrices $\{ F^a \}_{a\in \mathcal{A}} \subseteq \mathbb{C}^{n \times n}$ that sum up to the identity matrix, i.e. $\sum_{a \in \mathcal{A}} F^a = I$
-    \item A projective measurement is defined by psd matrices that satisfy $F^aF^b = \delta_{ab}F^a \text{ } \forall a,b \in \mathcal{A}$
-    \item The outcome of a measurement is a random variable $\chi$ with probability distribution: $\mathbb{P}[ \chi = a ] = \text{Tr}(\rho F^a)$
+    \item A measurement can be performed on a system $X$ that is in state $\rho$ \pause
+    \item We want the set of outcomes to finite. Let $\mathcal{A}$ be this set \pause
+    \item The outcome of a measurement is supposed to be a random variable $\chi$ that takes values in $\mathcal{A}$ with a certain probability \pause
+    \item This can be achieved:
 \end{itemize}
+\begin{definition}{Measurement}
+\begin{itemize}    
+     \item We define a measurement by a set of psd matrices $\{ F^a \}_{a\in \mathcal{A}} \subseteq \mathbb{C}^{n \times n}$ that sum up to the identity matrix, i.e. $\sum_{a \in \mathcal{A}} F^a = I$
+    \item The outcome of a measurement is a random variable $\chi$ with probability distribution: $\mathbb{P}[ \chi = a ] = \text{Tr}(\rho F^a)$
+     \item A projective measurement is defined by psd matrices that satisfy $F^aF^b = \delta_{ab}F^a \text{ } \forall a,b \in \mathcal{A}$
+\end{itemize}
+\end{definition}
 \end{frame}    
     
 \begin{frame}
 \begin{itemize}   
-    \item To define an expected value we define outcomes in $\mathcal{A}$ as real numbers
-    \item $\mathbb{E} [\chi ] = \sum_{a \in \mathcal{A}} a \text{Tr} ( \rho F^a ) =  \text{Tr} ( \rho ( \sum_{a \in \mathcal{A}} a F^a))$
+    \item To define an expected value we define outcomes in $\mathcal{A}$ as real numbers \pause
+    \item $\mathbb{E} [\chi ] = \sum_{a \in \mathcal{A}} a \text{Tr} ( \rho F^a ) =  \text{Tr} ( \rho ( \sum_{a \in \mathcal{A}} a F^a))$ \pause
     \item $\sum_{a \in \mathcal{A}} aF^a$ is called observable
     \item A simple case we will use later are $\{ -1, 1 \}$-valued observables
     \item if we consider projective measurements we have
