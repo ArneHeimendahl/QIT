@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \beamer@slide {eq:G_ineq}{5}
 \beamer@slide {lem:G_id}{7}
 \beamer@slide {lem:krivines_trick}{15}
@@ -8,3 +9,19 @@
 \beamer@slide {theo:Tsirelson}{32}
 \beamer@slide {eq:G_ineq}{35}
 \beamer@slide {fig:QCLC}{36}
+=======
+\beamer@slide {LCMot<1>}{71}
+\beamer@slide {LCMot}{71}
+\beamer@slide {LCMot<2>}{72}
+\beamer@slide {LCMot<3>}{73}
+\beamer@slide {LCMot<4>}{74}
+\beamer@slide {LCMot<5>}{75}
+\beamer@slide {QCMot<1>}{93}
+\beamer@slide {QCMot}{93}
+\beamer@slide {QCMot<2>}{94}
+\beamer@slide {QCMot<3>}{95}
+\beamer@slide {QCMot<4>}{96}
+\beamer@slide {QCaij}{97}
+\beamer@slide {facetsLC}{128}
+\beamer@slide {lem:G_id}{141}
+>>>>>>> ac05c60d0ba30f2023ee82519620be93c90563de
