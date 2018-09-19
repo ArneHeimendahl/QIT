@@ -1,5 +1,5 @@
 \section{Introduction}
-\subsection{ksjladüys}
+\subsection{Basics}
 \begin{frame}{Outline}
 \tableofcontents[currentsection]
 \end{frame}
@@ -7,43 +7,57 @@
 
 \begin{frame}{Let's get on the same page}
  \begin{itemize}
-  \item \largetext{We should know what a \textit{state} is}
-  \item \largetext{We should know what the \textit{tensor product} does}
-  \item \largetext{We should be familiar with the \textit{Dirac notation}}
+  \item \large{We should know what a \textit{state} is} \pause
+	\begin{itemize}  	
+  	\item i.e. a psd matrix $\rho$ that satisfies Tr$(\rho)=1$ \pause 
+	\end{itemize}
+ \item \large{We should know what the \textit{tensor product} does} \pause
+	\begin{itemize}
+		   \item We use the Kronecker product  $A \otimes B = \begin{pmatrix}
+a_{11}B & \dots & a_{1n}B \\
+\vdots && \vdots \\
+a_{n1}B & \dots & a_{nn}B
+\end{pmatrix}$
+	\end{itemize}  
+   \item \large{We should be familiar with the \textit{Dirac notation}} \pause
+	\begin{itemize}	 
+  	\item $\vert \psi \rangle$ is a vector in $\mathbb{C}^n$ and $\langle \psi \vert$ is its conjugate transpose
  \end{itemize}
-\end{frame}
+ \end{itemize}
 
-\begin{frame}{Quantum systems}
-\begin{itemize}
-\item A quantum system is a portion of the whole universe. For example a set electrons. 
-\item A quantum system $X$ is associated with a copy of $\mathbb{C}^k$ 
-\item It may consist of subsystems $X_1, \dots , X_N$ each of which is associated with a copy of $\mathbb{C}^{n_i}$. In this case $k = n_1 \dots n_N$
-\end{itemize}
-\end{frame}
+\begin{block}{Quantum systems}
+	\begin{itemize}
+		\item A quantum system is a portion of the whole universe. For example a set electrons. 
+		\item A quantum system $X$ is associated with a copy of $\mathbb{C}^k$ 
+		\item It may consist of subsystems $X_1, \dots , X_N$ each of which is associated with a copy of $\mathbb{C}^{n_i}$. In this case $k = n_1 \dots n_N$
+	\end{itemize}
+\end{block}
 
-\begin{frame}{Measurements}
-\begin{itemize}
-    \item A measurement can be performed on a system $X$ that is in state $\rho$
-    \item Let $\mathcal{A}$ be a finite set of outcomes of the measurement
-    \item The measurement itself is defined by a set of psd matrices $\{ F^a \}_{a\in \mathcal{A}} \subseteq \mathbb{C}^{n \times n}$ that sum up to the identity matrix, i.e. $\sum_{a \in \mathcal{A}} F^a = I$
-\end{itemize}
 \end{frame}
 
 \begin{frame}{Measurements}
+Physical quantities can be measured. But what is a measurement mathematically? \pause
 \begin{itemize}
-    \item A projective measurement is defined by psd matrices that satisfy $F^aF^b = \delta_{ab}F^a \text{ } \forall a,b \in \mathcal{A}$
+    \item A measurement can be performed on a system $X$ that is in state $\rho$ \pause
+    \item We want the set of outcomes to finite. Let $\mathcal{A}$ be this set \pause
+    \item The outcome of a measurement is supposed to be a random variable $\chi$ that takes values in $\mathcal{A}$ with a certain probability \pause
+    \item This can be achieved:
+\end{itemize}
+\begin{definition}{Measurement}
+\begin{itemize}    
+     \item We define a measurement by a set of psd matrices $\{ F^a \}_{a\in \mathcal{A}} \subseteq \mathbb{C}^{n \times n}$ that sum up to the identity matrix, i.e. $\sum_{a \in \mathcal{A}} F^a = I$
     \item The outcome of a measurement is a random variable $\chi$ with probability distribution: $\mathbb{P}[ \chi = a ] = \text{Tr}(\rho F^a)$
-    \item To define an expected value we define outcomes in $\mathcal{A}$ as real numbers
+     \item A projective measurement is defined by psd matrices that satisfy $F^aF^b = \delta_{ab}F^a \text{ } \forall a,b \in \mathcal{A}$
 \end{itemize}
+\end{definition}
+\end{frame}    
     
-\end{frame}
-
-
-\begin{frame}{Measurements}
-\begin{itemize}
-    \item $\mathbb{E} [\chi ] = \sum_{a \in \mathcal{A}} a \text{Tr} ( \rho F^a ) =  \text{Tr} ( \rho ( \sum_{a \in \mathcal{A}} a F^a))$
-    \item $\sum_{a \in \mathcal{A}} aF^a$ is called observable
-    \item A simple case we will use later are $\{ -1, 1 \}$-valued observables
+\begin{frame}
+\begin{itemize}   
+    \item To define an expected value we define outcomes in $\mathcal{A}$ as real numbers \pause
+    \item $\mathbb{E} [\chi ] \overset{def}{=} \sum_{a \in \mathcal{A}} a \text{Tr} ( \rho F^a ) \overset{lin}{=}  \text{Tr} ( \rho ( \sum_{a \in \mathcal{A}} a F^a))$ \pause
+    \item $\sum_{a \in \mathcal{A}} aF^a$ is called observable \pause
+    \item A simple case we will use later are $\{ -1, 1 \}$-valued observables \pause
     \item if we consider projective measurements we have
 \end{itemize}
     \begin{equation*}
@@ -57,78 +71,84 @@
 
 \begin{frame}{Doling out subsystems}
 \begin{itemize}
-    \item Consider a system $X$ consisting of subsystems $X_1, \dots X_N$ which we distribute among $N$ parties, which may be located anywhere in the universe
-    \item The parties \textit{share} the state $X$ is in
-    \item Every party may perform a measurement on their subsystem $X_i$, i.e. there are $N$ sets of psd matrices $\{F^{a_1} \}_{a_1 \in \mathcal{A}_1} \in \mathbb{C}^{n_1 \times n_1}, \dots , \{F^{a_N} \}_{a_N \in \mathcal{A}_N} \in \mathbb{C}^{n_N \times n_N} $
+    \item Consider a system $X$ consisting of subsystems $X_1, \dots X_N$ which we distribute among $N$ parties, which may be located anywhere in the universe \pause
+    \item The parties \textit{share} the state $X$ is in \pause
+    \item Every party may perform a measurement on their subsystem $X_i$, i.e. there are $N$ sets of psd matrices $\{F^{a_1} \}_{a_1 \in \mathcal{A}_1} \in \mathbb{C}^{n_1 \times n_1}, \dots , \{F^{a_N} \}_{a_N \in \mathcal{A}_N} \in \mathbb{C}^{n_N \times n_N} $ \pause
 \end{itemize}
     
-\end{frame}
-
-\begin{frame}{}
+\begin{block}{}
     The joint probability distribution of the $N$ measurement outcomes $\chi_1 , \dots , \chi_N$ is 
 \begin{equation*}
 \mathbb{P}\left[ \chi_1 = a_1, \chi_2 = a_2, \dots , \chi_N = a_N \right] = \text{Tr}(\rho F_1^{a_1} \otimes \dots \otimes F_N^{a_N}) 
 \end{equation*}
+\end{block}
 \end{frame}
 
 \begin{frame}{Entanglement}
 \begin{itemize}
-    \item We will only consider pure states meaning states that they have rank $1$ and therefore can be written as $\rho = \vert \psi \rangle \langle \psi \vert$
-    \item A state is called product state if it can be written as $\vert \psi \rangle = \vert \psi_1 \rangle \vert \psi_2 \rangle \dots \vert \psi_N \rangle$
-    \item When a vector $\vert \psi \rangle$ is referred to as a state we mean the matrix $\vert \psi \rangle \langle \psi \vert$
+    \item We will only consider pure states, i.e. states that they have rank $1$ and therefore can be written as $\rho = \vert \psi \rangle \langle \psi \vert$ \pause
+    \item We do that because mixed states do not give an advantage over pure states \pause
+    \item A state is called product state if it can be written as $\vert \psi \rangle = \vert \psi_1 \rangle \vert \psi_2 \rangle \dots \vert \psi_N \rangle$ \pause
+    \item When a vector $\vert \psi \rangle$ is referred to as a state we mean the matrix $\vert \psi \rangle \langle \psi \vert$ \pause
     \item A state that is not a product state is called entangled
 \end{itemize}
+ \end{frame}   
+
+
+\begin{frame}{Example}
     
-\end{frame}
-
-\begin{frame}{Example}
     \begin{itemize}
-        \item Let $\vert \psi \rangle = \vert \psi_A \rangle \vert \psi_B \rangle$ be a system and give $\vert \psi_A \rangle$ to Alice and $\vert \psi_B \rangle$ to Bob
-        \item Let them perform measurements $\{ G^b \}_{b \in \mathcal{B}}$ and $\{F^a \}_{a \in \mathcal{A}}$ on their respective quantum systems
-        \item What is the  probability of Alice getting measurement outcome $\chi_A = a$ and Bob getting $\chi_B = b$?
+        \item Let $\vert \psi \rangle = \vert \psi_A \rangle \vert \psi_B \rangle$ be a system and give $\vert \psi_A \rangle$ to Alice and $\vert \psi_B \rangle$ to Bob \pause
+        \item Let them perform measurements $\{ G^b \}_{b \in \mathcal{B}}$ and $\{F^a \}_{a \in \mathcal{A}}$ on their respective quantum systems \pause
+        \item What is the  probability of Alice getting measurement outcome $\chi_A = a$ and Bob getting $\chi_B = b$? \pause
     \end{itemize}
-\end{frame}
 
-\begin{frame}{Example}
-\begin{flalign*}
+	\begin{block}{Calculation}
+		\begin{flalign*}
 \text{Tr}(\vert \psi \rangle \langle \psi \vert F^a \otimes G^b ) & = \langle \psi \vert F^a \otimes G^b \vert \psi \rangle \\
 & = (\langle \psi_A \vert \otimes \langle \psi_B \vert) (F^a \otimes G^b )(\vert \psi_A \rangle  \otimes \vert \psi_B \rangle )\\
 & = ((\langle \psi_A \vert F^a)\otimes (\langle \psi_B \vert  G^b))( \vert \psi_A \rangle \otimes \vert \psi_B \rangle) \\
 & = \langle \psi_A \vert F^a \vert \psi_A \rangle \otimes  \langle \psi_B \vert G^b \vert \psi_B \rangle \\
 &= \langle \psi_A \vert F^a \vert \psi_A \rangle  \langle \psi_B \vert G^b \vert \psi_B \rangle
-\end{flalign*}
+		\end{flalign*}
+	\end{block}
 This is equal to the product of the probabilities of Alice measuring $a$ and Bob measuring $b$, i.e. the outcome do not correlate.
 \end{frame}
 
+\subsection{Nonlocal games}
 \begin{frame}{Nonlocal games}
     \begin{itemize}
-        \item Three participants: Alice, Bob and a referee
-        \item Referee doles out a question $s$ to Alice and a question $t$ to Bob
-        \item Alice and Bob are assumed to be located anywhere in the universe respectively 
-        \item Alice and Bob must not communicate
-        \item Alice sends answer $a$ Bob sends answer $b$ back to the referee, who then decides whether both win or both lose
+        \item Three participants: Alice, Bob and a referee \pause
+        \item Referee sends a question $s$ to Alice and a question $t$ to Bob \pause
+        \item Alice and Bob are assumed to be located anywhere in the universe respectively \pause
+        \item Alice and Bob must not communicate once the game has started \pause
+        \item Alice sends answer $a$ and Bob sends answer $b$ back to the referee, who then decides whether both win or both lose
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Nonlocal games}
-    \includegraphics[scale=0.8]{Unknown.png}
-\end{frame}
+
 
 \begin{frame}{Mathematically speaking}
 \begin{itemize}
-    \item Four finite sets $\mathcal{A}, \mathcal{B}, \mathcal{S}, \mathcal{T}$
-    \item probability distribution $\pi$ over $\mathcal{S} \times \mathcal{T}$ \\ $\pi : \mathcal{S} \times \mathcal{T} \rightarrow [0,1]$
-    \item The referee sends with probability $\pi (s,t)$ $s$ to Alice and $t$ to Bob
-    \item They answer with an element $a \in \mathcal{A}$ and $b \in \mathcal{B}$ respectively
-    \item A map $V : \mathcal{S} \times \mathcal{T} \times \mathcal{A} \times \mathcal{B} \rightarrow \{ 0, 1 \}$
+    \item Four finite sets $\mathcal{A}, \mathcal{B}, \mathcal{S}, \mathcal{T}$ \pause
+    \item probability distribution $\pi$ over $\mathcal{S} \times \mathcal{T}$ \\ $\pi : \mathcal{S} \times \mathcal{T} \rightarrow [0,1]$ \pause
+    \item The referee sends with probability $\pi (s,t)$ $s$ to Alice and $t$ to Bob \pause
+    \item They answer with an element $a \in \mathcal{A}$ and $b \in \mathcal{B}$ respectively \pause
+    \item A map $V : \mathcal{S} \times \mathcal{T} \times \mathcal{A} \times \mathcal{B} \rightarrow \{ 0, 1 \}$ \pause
     \item They win if $V(s,t,a,b)=1$ and lose otherwise
 \end{itemize}
+\begin{center}
+
+\includegraphics[scale=0.3]{Untitled.png}
+
+\end{center}
 \end{frame}
+
 
 \begin{frame}{Classical strategies}
     \begin{itemize}
-        \item All players know $\pi$ and $V$ and the information they received but not what the other players received
-        \item They are allowed to agree on a strategy beforehand \pause but must not communicate once the game started
+        \item All players know $\pi$ and $V$ and the information they received but not what the other players received \pause
+        \item They are allowed to agree on a strategy beforehand but must not communicate once the game started 
         \item A deterministic strategy is a map $a : \mathcal{S} \rightarrow \mathcal{A}$ for Alice and $b : \mathcal{T} \rightarrow \mathcal{B}$ for Bob
         The winning probability then is:
     \end{itemize}
@@ -159,13 +179,7 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 \end{equation*}  
 \end{frame}
 
-\begin{frame}{}
-\begin{itemize}
-    \item Since states are convex combinations of pure states and the trace function is linear we only need to consider pure entangled states
-    
-\end{itemize}
-\end{frame}
-
+\subsection{A special case of nonlocal games}
 \begin{frame}{Two player XOR games}
 \begin{itemize}
     \item Let the sets $\mathcal{A}$ and $\mathcal{B}$ be $\{0,1\}$, so Alice and Bob both answer either with $1$ or $0$
@@ -189,6 +203,7 @@ $\oplus$ & 0 & 1 \\
     \item The classical bias of an XOR game $G$ is defined as the difference of the probabilities of winning and losing for an optimal strategy and denoted by $\beta(G)$
     \item The bias $\beta^*(G)$of entangled strategies is calculated the same way 
     \item It is twice the amount by which the maximal winning probability exceeds $\frac{1}{2}$
+    \item Since $\frac{1}{2}+ \gamma -(1-\frac{1}{2}-\gamma) = 2\gamma$
     \item The violation ratio is defined as $\frac{\beta^*(G)}{\beta(G)}$
 \end{itemize}
     
@@ -262,6 +277,7 @@ When using entangled strategies the winning probability might increase indefinit
     
 \end{frame}
 
+\subsection{A specific example}
 \begin{frame}{The CHSH game}
 \begin{itemize}
     \item The CHSH game (Clauser, Horner, Shimony, Holt) is a two player XOR game with $\mathcal{A} = \mathcal{B} = \mathcal{S} = \mathcal{T} = \{0,1\}$ and $\pi$ being the uniform distribution
