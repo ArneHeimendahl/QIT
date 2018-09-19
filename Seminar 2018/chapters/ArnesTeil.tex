@@ -70,7 +70,7 @@ $ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode thes
 With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. In the following, we will proof a similar result for $ \QC_{m,n} $ that is: 
 \begin{lemma}\label{LemQC}
 	\begin{align}\label{EqQC}
-		\QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le 1 \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
+		\QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le i \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
 	\end{align}
 	where $ \langle \cdot , \cdot \rangle $ denotes the standard scalar product. 
 \end{lemma}
@@ -179,7 +179,7 @@ U_iU_{n+j} =  (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_Z^j \prod
 Since $ U_iU_i^* = U_iU_i =  I$ they are also unitary. 
 Moreover, taking the product of two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
 \begin{align*}
-XY = \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le \le 2n}\xi_i\eta_j U_i U_j &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le \le 2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le \le 2n}U_iU_j \\
+XY = \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le  2n}\xi_i\eta_j U_i U_j &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le  2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le  2n}U_iU_j \\
 &=\sum_{i = 1}^{2n} \xi_i \eta_i I \\
 &= \langle \xi, \eta \rangle I.
 \end{align*}
@@ -187,7 +187,7 @@ So, if we set $ Y = X $ we get the desired result by taking the subspace $ \text
 
 \end{proof}
 
-Let us proceed with the other inclusion of lemma \ref{LemQC}.
+We will use this in order to proceed with the other inclusion of lemma \ref{LemQC}.
 
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
 Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
