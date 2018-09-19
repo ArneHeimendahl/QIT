@@ -149,11 +149,11 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
     \begin{itemize}
         \item All players know $\pi$ and $V$ and the information they received but not what the other players received \pause
         \item They are allowed to agree on a strategy beforehand but must not communicate once the game started \pause
-        \item A deterministic strategy is a map $a : \mathcal{S} \rightarrow \mathcal{A}$ for Alice and $b : \mathcal{T} \rightarrow \mathcal{B}$ for Bob
-        The winning probability then is:
+        \item A deterministic strategy is a map $a : \mathcal{S} \rightarrow \mathcal{A}$ for Alice and $b : \mathcal{T} \rightarrow \mathcal{B}$ for Bob \pause
+        \item The winning probability then is:
     \end{itemize}
     \begin{equation*}
-        \mathbb{E}_{s,t \sim \pi} \left[ V(a(s),b(t),s,t) \right]
+        \mathbb{E}_{(s,t) \sim \pi} \left[ V(a(s),b(t),s,t) \right]
 \end{equation*}
 \end{frame}
 
@@ -169,21 +169,21 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 
 \begin{frame}{Mathematically speaking}
 \begin{itemize}
-    \item A quantum system $X$ consisting of two $n$-dimensional subsystems $X_A, X_B$ in some entangled state $\rho$
-    \item Alice performs a measurement $\{ F_s^a \}_{a\in \mathcal{A}}\subseteq \mathbb{C}^{n \times n}$ on her subsystem $X_A$ and Bob performs a measurement $\{ G_t^b\}_{b \in \mathcal{B}} \subseteq \mathbb{C}^{n \times n}$ on his subsystem $X_B$
-    \item They send their measurement outcome as their answer to the referee
+    \item Given a quantum system $X$ consisting of two $n$-dimensional subsystems $X_A, X_B$ in some entangled state $\rho$ \pause
+    \item Alice performs a measurement $\{ F_s^a \}_{a\in \mathcal{A}}\subseteq \mathbb{C}^{n \times n}$ on her subsystem $X_A$ and Bob performs a measurement $\{ G_t^b\}_{b \in \mathcal{B}} \subseteq \mathbb{C}^{n \times n}$ on his subsystem $X_B$ \pause
+    \item They send their measurement outcome as their answer to the referee \pause
     \item Their winning probability is:
 \end{itemize}
 \begin{equation*}
-\mathbb{E}_{s,t \sim \pi} \left[ \sum_{a \in \mathcal{A}} \sum_{b \in \mathcal{B}} \text{Tr}(\rho F_s^a \otimes G_t^b) V(a,b,s,t) \right]
+\mathbb{E}_{(s,t) \sim \pi} \left[ \sum_{a \in \mathcal{A}} \sum_{b \in \mathcal{B}} \text{Tr}(\rho F_s^a \otimes G_t^b) V(a,b,s,t) \right]
 \end{equation*}  
 \end{frame}
 
 \subsection{A special case of nonlocal games}
 \begin{frame}{Two player XOR games}
 \begin{itemize}
-    \item Let the sets $\mathcal{A}$ and $\mathcal{B}$ be $\{0,1\}$, so Alice and Bob both answer either with $1$ or $0$
-    \item The predicate $V$ is defined as $V(a,b,s,t) = [ a\oplus b = f(s,t)]$, where $f: \mathcal{S} \times \mathcal{T} \rightarrow \{0,1\}$
+    \item Let the sets $\mathcal{A}$ and $\mathcal{B}$ be $\{0,1\}$, so Alice and Bob both answer either with $1$ or $0$ \pause
+    \item The predicate $V$ is defined as $V(a,b,s,t) = [ a\oplus b = f(s,t)]$, where $f: \mathcal{S} \times \mathcal{T} \rightarrow \{0,1\}$ \pause
     \item A truth table for $a \oplus b$ looks like this
 \end{itemize}
     \begin{center}
@@ -199,20 +199,19 @@ $\oplus$ & 0 & 1 \\
 
 \begin{frame}{Bias and violation ratio}
 \begin{itemize}
-    \item Alice and Bob can always win with probability $\frac{1}{2}$ by flipping an unbiased coin
-    \item The classical bias of an XOR game $G$ is defined as the difference of the probabilities of winning and losing for an optimal strategy and denoted by $\beta(G)$
-    \item The bias $\beta^*(G)$of entangled strategies is calculated the same way 
-    \item It is twice the amount by which the maximal winning probability exceeds $\frac{1}{2}$
-    \item Since $\frac{1}{2}+ \gamma -(1-\frac{1}{2}-\gamma) = 2\gamma$
+    \item Alice and Bob can always win this game with probability $\frac{1}{2}$ by flipping an unbiased coin \pause
+    \item The classical bias of an XOR game $G$ is defined as the difference of the probabilities of winning and losing for an \underline{optimal strategy} and denoted by $\beta(G)$ \pause
+    \item The bias $\beta^*(G)$of entangled strategies is calculated the same way \pause
+    \item It is twice the amount by which the maximal winning probability exceeds $\frac{1}{2}$ \pause
+    \item Since $\frac{1}{2}+ \gamma -(1-\frac{1}{2}-\gamma) = 2\gamma$ \pause
     \item The violation ratio is defined as $\frac{\beta^*(G)}{\beta(G)}$
-\end{itemize}
-    
+\end{itemize}    
 \end{frame}
 
 \begin{frame}{Signs and observables}
 \begin{itemize}
-    \item It is convenient to use the $\{-1,1\}$-basis instead of the $\{0,1\}$-basis for boolean valued objects.
-    \item Let $a : \mathcal{S} \rightarrow \{ 0,1 \} \text{ and } b: \mathcal{T} \rightarrow \{ 0,1\}$ be classical strategies and $\pi$ the probability distribution the referee uses to pick $s,t$
+    \item It is convenient to use the $\{-1,1\}$-basis instead of the $\{0,1\}$-basis for boolean valued objects \pause
+    \item Let $a : \mathcal{S} \rightarrow \{ 0,1 \} \text{ and } b: \mathcal{T} \rightarrow \{ 0,1\}$ be classical strategies and $\pi$ the probability distribution the referee uses to pick $s,t$ \pause
     \item The bias is given by the probability under $\pi$ that $a(s) \oplus b(t) = f(s,t)$ minus the probability under $\pi$ that $a(s) \oplus b(t) \ne f(s,t)$
 \end{itemize}
     
