@@ -200,8 +200,8 @@ $\oplus$ & 0 & 1 \\
 \begin{frame}{Bias and violation ratio}
 \begin{itemize}
     \item Alice and Bob can always win this game with probability $\frac{1}{2}$ by flipping an unbiased coin \pause
-    \item The classical bias of an XOR game $G$ is defined as the difference of the probabilities of winning and losing for an \underline{optimal strategy} and denoted by $\beta(G)$ \pause
-    \item The bias $\beta^*(G)$of entangled strategies is calculated the same way \pause
+    \item The classical bias of an XOR game $G$ is defined as the difference of the probabilities of winning and losing for an \underline{optimal classical strategy} and denoted by $\beta(G)$ \pause
+    \item The bias $\beta^*(G)$ of entangled strategies is calculated the same way \pause
     \item It is twice the amount by which the maximal winning probability exceeds $\frac{1}{2}$ \pause
     \item Since $\frac{1}{2}+ \gamma -(1-\frac{1}{2}-\gamma) = 2\gamma$ \pause
     \item The violation ratio is defined as $\frac{\beta^*(G)}{\beta(G)}$
@@ -222,20 +222,24 @@ This means the bias can be written as:
 \begin{flalign*}
  \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{[a(s) \oplus b(t) = f(s,t)]} \right] & = \\ = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s) \oplus b(t) + f(s,t)} \right] =\\
  = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s)}(-1)^{b(t)}(-1)^{f(s,t)} \right]
-  \end{flalign*}    
-And we can define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $\chi(s) = (-1)^{a(s)}$ and $\psi(t) = (-1)^{b(t)}$. So the bias is
+  \end{flalign*}    \pause
+Define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $\chi(s) = (-1)^{a(s)}$ and $\psi(t) = (-1)^{b(t)}$
+The expected value becomes
 \begin{equation*}
 \mathbb{E}_{ ( s , t ) \sim \pi} \left[ \chi (s) \psi (t) \Sigma_{st} \right]
 \end{equation*}
 \end{frame}
 
 \begin{frame}{}
+\begin{block}{Recap}
 \begin{itemize}
     \item The outcomes in an XOR game are $\{ 0,1 \}$
     \item Alice and Bob have measurements $\{ F_s^0, F_s^1 \}$ and $\{ G_t^0, G_t^1 \}$ and share an entangled state
     \item The probability of Alice and Bob answering with $a,b$ upon receiving $s,t$ respectively is $\langle \psi \vert F_s^a \otimes G_t^b \vert \psi \rangle$
-    \item Lets calculate the expected value of $(-1)^{a \oplus b}$
-\end{itemize}
+    \end{itemize}
+\end{block} \pause
+
+Lets calculate the expected value of $(-1)^{a \oplus b}$ \pause
 \begin{flalign*}
 (1)\cdot \mathbb{P}\left[ a = b \right] + (-1) \cdot \mathbb{P} \left[ a \ne b \right]  = \\ = \langle \psi \vert F_s^0 \otimes G_t^0 \vert \psi \rangle + \langle \psi \vert F_s^1 \otimes G_t^1 \vert \psi \rangle \\ - \langle \psi \vert F_s^1 \otimes G_t^0 \vert \psi \rangle - \langle \psi \vert F_s^0 \otimes G_t^1 \vert \psi \rangle \\
 = \langle \psi \vert (F_s^0 - F_s^1) \otimes (G_t^0 - G_t^1) \vert \psi \rangle
@@ -244,17 +248,17 @@ And we can define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $
 
 \begin{frame}
 \begin{itemize}
-    \item Define $\{-1,1\}$-observables $F_s = F_s^0-F_s^1$ and $G_t=G_t^0-G_t^1$ with the property that its difference squared is the identity matrix
+    \item Define $\{-1,1\}$-observables $F_s = F_s^0-F_s^1$ and $G_t=G_t^0-G_t^1$ with the property that its difference squared is the identity matrix \pause
     \item Using this strategy the bias becomes
 \end{itemize}
+\vspace{1cm}
 \begin{equation*}
 \mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \Sigma_{s,t} \right]
 \end{equation*}
-\end{frame}
 
-\begin{frame}{More generally speaking}
 \begin{itemize}
-    \item For any XOR game the bias is defined as the difference of the probabilities of winning and loosing \item Which is, if considering the $\{ -1, 1 \}$ basis, the expected value
+    \item For any XOR game the bias is defined as the difference of the probabilities of winning and loosing \pause
+    \item Which is, if considering the $\{ -1, 1 \}$ basis, the expected value above \pause
     \item We are looking to maximize this quantity
 \end{itemize}
     
