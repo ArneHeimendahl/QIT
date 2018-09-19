@@ -23,7 +23,7 @@ a_{n1}B & \dots & a_{nn}B
 	\begin{itemize}	 
   	\item $\vert \psi \rangle$ is a vector in $\mathbb{C}^n$ and $\langle \psi \vert$ is its conjugate transpose
  \end{itemize}
- \end{itemize}
+ \end{itemize}\pause
 
 \begin{block}{Quantum systems}
 	\begin{itemize}
@@ -148,20 +148,20 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 \begin{frame}{Classical strategies}
     \begin{itemize}
         \item All players know $\pi$ and $V$ and the information they received but not what the other players received \pause
-        \item They are allowed to agree on a strategy beforehand but must not communicate once the game started 
-        \item A deterministic strategy is a map $a : \mathcal{S} \rightarrow \mathcal{A}$ for Alice and $b : \mathcal{T} \rightarrow \mathcal{B}$ for Bob
-        The winning probability then is:
+        \item They are allowed to agree on a strategy beforehand but must not communicate once the game started \pause
+        \item A deterministic strategy is a map $a : \mathcal{S} \rightarrow \mathcal{A}$ for Alice and $b : \mathcal{T} \rightarrow \mathcal{B}$ for Bob \pause
+        \item The winning probability then is:
     \end{itemize}
     \begin{equation*}
-        \mathbb{E}_{s,t \sim \pi} \left[ V(a(s),b(t),s,t) \right]
+        \mathbb{E}_{(s,t) \sim \pi} \left[ V(a(s),b(t),s,t) \right]
 \end{equation*}
 \end{frame}
 
 \begin{frame}{Quantum case}
 \begin{itemize}
-    \item Suppose Alice and Bob have a subsystem $X_A, X_B$ of a quantum system $X$ which is in state $\rho$, i.e. Alice and Bob share state $\rho$
-    \item If the state is entangled measurements can give correlated measurement outcomes
-    \item Alice and Bob may gain information by performing measurements
+    \item Suppose Alice and Bob both have a subsystem $X_A, X_B$ of a quantum system $X$ which is in state $\rho$, i.e. Alice and Bob share state $\rho$ \pause
+    \item If the state is entangled measurements might give correlated measurement outcomes \pause
+    \item Alice and Bob may gain information by performing measurements \pause
     \item Answering according to measurement outcomes could increase winning probability 
 \end{itemize}
 \end{frame}
@@ -169,21 +169,21 @@ This is equal to the product of the probabilities of Alice measuring $a$ and Bob
 
 \begin{frame}{Mathematically speaking}
 \begin{itemize}
-    \item A quantum system $X$ consisting of two $n$-dimensional subsystems $X_A, X_B$ in some entangled state $\rho$
-    \item Alice performs a measurement $\{ F_s^a \}_{a\in \mathcal{A}}\subseteq \mathbb{C}^{n \times n}$ on her subsystem $X_A$ and Bob performs a measurement $\{ G_t^b\}_{b \in \mathcal{B}} \subseteq \mathbb{C}^{n \times n}$ on his subsystem $X_B$
-    \item They send their measurement outcome as their answer to the referee
+    \item Given a quantum system $X$ consisting of two $n$-dimensional subsystems $X_A, X_B$ in some entangled state $\rho$ \pause
+    \item Alice performs a measurement $\{ F_s^a \}_{a\in \mathcal{A}}\subseteq \mathbb{C}^{n \times n}$ on her subsystem $X_A$ and Bob performs a measurement $\{ G_t^b\}_{b \in \mathcal{B}} \subseteq \mathbb{C}^{n \times n}$ on his subsystem $X_B$ \pause
+    \item They send their measurement outcome as their answer to the referee \pause
     \item Their winning probability is:
 \end{itemize}
 \begin{equation*}
-\mathbb{E}_{s,t \sim \pi} \left[ \sum_{a \in \mathcal{A}} \sum_{b \in \mathcal{B}} \text{Tr}(\rho F_s^a \otimes G_t^b) V(a,b,s,t) \right]
+\mathbb{E}_{(s,t) \sim \pi} \left[ \sum_{a \in \mathcal{A}} \sum_{b \in \mathcal{B}} \text{Tr}(\rho F_s^a \otimes G_t^b) V(a,b,s,t) \right]
 \end{equation*}  
 \end{frame}
 
 \subsection{A special case of nonlocal games}
 \begin{frame}{Two player XOR games}
 \begin{itemize}
-    \item Let the sets $\mathcal{A}$ and $\mathcal{B}$ be $\{0,1\}$, so Alice and Bob both answer either with $1$ or $0$
-    \item The predicate $V$ is defined as $V(a,b,s,t) = [ a\oplus b = f(s,t)]$, where $f: \mathcal{S} \times \mathcal{T} \rightarrow \{0,1\}$
+    \item Let the sets $\mathcal{A}$ and $\mathcal{B}$ be $\{0,1\}$, so Alice and Bob both answer either with $1$ or $0$ \pause
+    \item The predicate $V$ is defined as $V(a,b,s,t) = [ a\oplus b = f(s,t)]$, where $f: \mathcal{S} \times \mathcal{T} \rightarrow \{0,1\}$ \pause
     \item A truth table for $a \oplus b$ looks like this
 \end{itemize}
     \begin{center}
@@ -199,20 +199,19 @@ $\oplus$ & 0 & 1 \\
 
 \begin{frame}{Bias and violation ratio}
 \begin{itemize}
-    \item Alice and Bob can always win with probability $\frac{1}{2}$ by flipping an unbiased coin
-    \item The classical bias of an XOR game $G$ is defined as the difference of the probabilities of winning and losing for an optimal strategy and denoted by $\beta(G)$
-    \item The bias $\beta^*(G)$of entangled strategies is calculated the same way 
-    \item It is twice the amount by which the maximal winning probability exceeds $\frac{1}{2}$
-    \item Since $\frac{1}{2}+ \gamma -(1-\frac{1}{2}-\gamma) = 2\gamma$
+    \item Alice and Bob can always win this game with probability $\frac{1}{2}$ by flipping an unbiased coin \pause
+    \item The classical bias of an XOR game $G$ is defined as the difference of the probabilities of winning and losing for an \underline{optimal classical strategy} and denoted by $\beta(G)$ \pause
+    \item The bias $\beta^*(G)$ of entangled strategies is calculated the same way \pause
+    \item It is twice the amount by which the maximal winning probability exceeds $\frac{1}{2}$ \pause
+    \item Since $\frac{1}{2}+ \gamma -(1-\frac{1}{2}-\gamma) = 2\gamma$ \pause
     \item The violation ratio is defined as $\frac{\beta^*(G)}{\beta(G)}$
-\end{itemize}
-    
+\end{itemize}    
 \end{frame}
 
 \begin{frame}{Signs and observables}
 \begin{itemize}
-    \item It is convenient to use the $\{-1,1\}$-basis instead of the $\{0,1\}$-basis for boolean valued objects.
-    \item Let $a : \mathcal{S} \rightarrow \{ 0,1 \} \text{ and } b: \mathcal{T} \rightarrow \{ 0,1\}$ be classical strategies and $\pi$ the probability distribution the referee uses to pick $s,t$
+    \item It is convenient to use the $\{-1,1\}$-basis instead of the $\{0,1\}$-basis for boolean valued objects \pause
+    \item Let $a : \mathcal{S} \rightarrow \{ 0,1 \} \text{ and } b: \mathcal{T} \rightarrow \{ 0,1\}$ be classical strategies and $\pi$ the probability distribution the referee uses to pick $s,t$ \pause
     \item The bias is given by the probability under $\pi$ that $a(s) \oplus b(t) = f(s,t)$ minus the probability under $\pi$ that $a(s) \oplus b(t) \ne f(s,t)$
 \end{itemize}
     
@@ -223,20 +222,24 @@ This means the bias can be written as:
 \begin{flalign*}
  \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{[a(s) \oplus b(t) = f(s,t)]} \right] & = \\ = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s) \oplus b(t) + f(s,t)} \right] =\\
  = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s)}(-1)^{b(t)}(-1)^{f(s,t)} \right]
-  \end{flalign*}    
-And we can define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $\chi(s) = (-1)^{a(s)}$ and $\psi(t) = (-1)^{b(t)}$. So the bias is
+  \end{flalign*}    \pause
+Define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $\chi(s) = (-1)^{a(s)}$ and $\psi(t) = (-1)^{b(t)}$
+The expected value becomes
 \begin{equation*}
 \mathbb{E}_{ ( s , t ) \sim \pi} \left[ \chi (s) \psi (t) \Sigma_{st} \right]
 \end{equation*}
 \end{frame}
 
 \begin{frame}{}
+\begin{block}{Recap}
 \begin{itemize}
     \item The outcomes in an XOR game are $\{ 0,1 \}$
     \item Alice and Bob have measurements $\{ F_s^0, F_s^1 \}$ and $\{ G_t^0, G_t^1 \}$ and share an entangled state
     \item The probability of Alice and Bob answering with $a,b$ upon receiving $s,t$ respectively is $\langle \psi \vert F_s^a \otimes G_t^b \vert \psi \rangle$
-    \item Lets calculate the expected value of $(-1)^{a \oplus b}$
-\end{itemize}
+    \end{itemize}
+\end{block} \pause
+
+Lets calculate the expected value of $(-1)^{a \oplus b}$ \pause
 \begin{flalign*}
 (1)\cdot \mathbb{P}\left[ a = b \right] + (-1) \cdot \mathbb{P} \left[ a \ne b \right]  = \\ = \langle \psi \vert F_s^0 \otimes G_t^0 \vert \psi \rangle + \langle \psi \vert F_s^1 \otimes G_t^1 \vert \psi \rangle \\ - \langle \psi \vert F_s^1 \otimes G_t^0 \vert \psi \rangle - \langle \psi \vert F_s^0 \otimes G_t^1 \vert \psi \rangle \\
 = \langle \psi \vert (F_s^0 - F_s^1) \otimes (G_t^0 - G_t^1) \vert \psi \rangle
@@ -245,17 +248,17 @@ And we can define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $
 
 \begin{frame}
 \begin{itemize}
-    \item Define $\{-1,1\}$-observables $F_s = F_s^0-F_s^1$ and $G_t=G_t^0-G_t^1$ with the property that its difference squared is the identity matrix
+    \item Define $\{-1,1\}$-observables $F_s = F_s^0-F_s^1$ and $G_t=G_t^0-G_t^1$ with the property that its difference squared is the identity matrix \pause
     \item Using this strategy the bias becomes
 \end{itemize}
+\vspace{1cm}
 \begin{equation*}
 \mathbb{E}_{(s,t) \sim \pi} \left[ \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \Sigma_{s,t} \right]
 \end{equation*}
-\end{frame}
 
-\begin{frame}{More generally speaking}
 \begin{itemize}
-    \item For any XOR game the bias is defined as the difference of the probabilities of winning and loosing \item Which is, if considering the $\{ -1, 1 \}$ basis, the expected value
+    \item For any XOR game the bias is defined as the difference of the probabilities of winning and loosing \pause
+    \item Which is, if considering the $\{ -1, 1 \}$ basis, the expected value above \pause
     \item We are looking to maximize this quantity
 \end{itemize}
     
@@ -264,7 +267,7 @@ And we can define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $
 \begin{frame}{Classical strategies}
     When using classical strategies this is 
     \begin{flalign*}
-\max \lbrace \mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{st} \chi (s) \psi (t) \right] : \chi : \mathcal{S} \rightarrow \{ -1, 1 \}, \\ \psi : \mathcal{T} \rightarrow \{-1, 1 \} \rbrace
+\max \lbrace \mathbb{E}_{(s,t) \sim \pi} \left[ \chi (s) \psi (t)\Sigma_{st}  \right] : \chi : \mathcal{S} \rightarrow \{ -1, 1 \}, \\ \psi : \mathcal{T} \rightarrow \{-1, 1 \} \rbrace
 \end{flalign*} 
 
 \end{frame}
@@ -272,9 +275,9 @@ And we can define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $
 \begin{frame}{Entangled strategies}
 When using entangled strategies the winning probability might increase indefinitely with the dimensions, so we use the $\sup_{n \in \mathbb{N}}$
 \begin{flalign*}
-\sup_{n \in \mathbb{N}} \lbrace \mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{st} \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] : \vert \psi \rangle \in \mathbb{C}^{n} \otimes \mathbb{C}^{n} ,\\ F_s, G_t \in O(\mathbb{C}^n) \rbrace
+\sup_{n \in \mathbb{N}} \lbrace \mathbb{E}_{(s,t) \sim \pi} \left[  \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \Sigma_{st}  \right] : \vert \psi \rangle \in \mathbb{C}^{n} \otimes \mathbb{C}^{n} ,\\ F_s, G_t \in \mathcal{W} (\mathbb{C}^n) \rbrace
 \end{flalign*}
-    
+with $\mathcal{W}$ being the set of all $\{ -1, 1 \}$-observables in  $\mathbb{C}^{n \times n}$.
 \end{frame}
 
 \subsection{A specific example}
@@ -284,9 +287,7 @@ When using entangled strategies the winning probability might increase indefinit
     \item  $f(s,t)= s \land t$, i.e. $f(1,1)=1$ and $f(0,0)=f(0,1)=f(1,0)=0$
     \item Alice and Bob can win $\frac{3}{4}$ of the games by using deterministic strategies $(0,0), (1,0) \text{ or } (0,1)$
 \end{itemize}
-\end{frame}
-
-\begin{frame}{Quantum strategy}
+\begin{block}{Quantum strategy}
 \begin{itemize}
     \item Let Alice and Bob share an EPR state
     \item Define 
@@ -305,126 +306,140 @@ i & 0
     \item For Alice define the observable for question $0$ by $F_0=X$ and for question $1$ by $F_1=Y$
     \item Bobs observables are going to be $G_0 = (X-Y)/ \sqrt{2}$ for question $0$ and $G_1 = (X+Y)/\sqrt{2}$ for question $1$
 \end{itemize}
+\end{block}
 \end{frame}
 
-\begin{frame}{}
-    The following auxiliary calculations will be helpful later: 
-\begin{flalign*}
-\langle \text{EPR} \vert X \otimes X \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
-1 & 0 & 0 &1
-\end{pmatrix} \begin{pmatrix}
-0 & 0 & 0 & 1 \\
-0 & 0 & 1 & 0 \\
-0& 1 & 0 & 0 \\
-1 & 0 & 0 & 0
-\end{pmatrix} \begin{pmatrix}
-1 \\ 0 \\ 0 \\ 1
-\end{pmatrix}\\
-& = \frac{1}{2} \begin{pmatrix}
-1 &0&0&1
-\end{pmatrix} \begin{pmatrix}
-1 \\ 0 \\ 0 \\1
-\end{pmatrix} = \frac{2}{2} = 1\\
-\end{flalign*}
-\end{frame}
+%\begin{frame}{}
+%    The following auxiliary calculations will be helpful later: 
+%\begin{flalign*}
+%\langle \text{EPR} \vert X \otimes X \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
+%1 & 0 & 0 &1
+%\end{pmatrix} \begin{pmatrix}
+%0 & 0 & 0 & 1 \\
+%0 & 0 & 1 & 0 \\
+%0& 1 & 0 & 0 \\
+%1 & 0 & 0 & 0
+%\end{pmatrix} \begin{pmatrix}
+%1 \\ 0 \\ 0 \\ 1
+%\end{pmatrix}\\
+%& = \frac{1}{2} \begin{pmatrix}
+%1 &0&0&1
+%\end{pmatrix} \begin{pmatrix}
+%1 \\ 0 \\ 0 \\1
+%\end{pmatrix} = \frac{2}{2} = 1\\
+%\end{flalign*}
+%
+%    \begin{flalign*}
+%\langle \text{EPR} \vert Y \otimes Y \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
+%1 & 0 & 0 &1
+%\end{pmatrix} \begin{pmatrix}
+%0 & 0 & 0 & -1 \\
+%0 & 0 & 1 & 0 \\
+%0& 1 & 0 & 0 \\
+%-1 & 0 & 0 & 0
+%\end{pmatrix} \begin{pmatrix}
+%1 \\ 0 \\ 0 \\ 1
+%\end{pmatrix}\\
+%& = \frac{1}{2} \begin{pmatrix}
+%-1 &0&0&-1
+%\end{pmatrix} \begin{pmatrix}
+%1 \\ 0 \\ 0 \\1
+%\end{pmatrix} = -1\\
+%\end{flalign*}
+%
+%\end{frame}
+%
+%\begin{frame}{}
+%\begin{flalign*}
+%\langle \text{EPR} \vert X \otimes Y \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
+%1 & 0 & 0 &1
+%\end{pmatrix} \begin{pmatrix}
+%0 & 0 & 0 & -i \\
+%0 & 0 & i & 0 \\
+%0& -i & 0 & 0 \\
+%i & 0 & 0 & 0
+%\end{pmatrix} \begin{pmatrix}
+%1 \\ 0 \\ 0 \\ 1
+%\end{pmatrix}\\
+%& = \frac{1}{2} \begin{pmatrix}
+%i &0&0&-i
+%\end{pmatrix} \begin{pmatrix}
+%1 \\ 0 \\ 0 \\1
+%\end{pmatrix} = 0\\
+%\langle \text{EPR} \vert Y \otimes X \vert \text{EPR} \rangle & = 0
+%\end{flalign*}
+%\end{frame}
+%
+%\begin{frame}{}
+%    Lets calculate the expected values of the sign $a \oplus b$: 
+%\begin{flalign*}
+%   \langle \text{EPR} \vert F_0 \otimes G_0 \vert \text{EPR} \rangle = \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}(X-Y) \vert \text{EPR} \rangle  \\
+%= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle - \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+% = \frac{1}{\sqrt{2}} - 0 = \frac{1}{\sqrt{2}}\\
+%\end{flalign*}
+%
+%   \begin{flalign*}
+%  \langle \text{EPR} \vert F_1 \otimes G_1 \vert \text{EPR} \rangle = \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}(X+Y) \vert \text{EPR} \rangle \\
+%= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle + \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+% = 0 - \frac{1}{\sqrt{2}} = - \frac{1}{\sqrt{2}}\\
+%\end{flalign*} 
+%\end{frame}
+%
+%\begin{frame}{}
+%\begin{flalign*}
+% \langle \text{EPR} \vert F_0 \otimes G_1 \vert \text{EPR} \rangle = \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}(X+Y) \vert \text{EPR} \rangle  \\
+%= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle + \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+% = \frac{1}{\sqrt{2}} + 0 = \frac{1}{\sqrt{2}}\\
+%\end{flalign*}
+%
+%    \begin{flalign*}
+% \langle \text{EPR} \vert F_1 \otimes G_0 \vert \text{EPR} \rangle = \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}(X-Y) \vert \text{EPR} \rangle  \\
+%= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle - \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
+% = 0 - (-\frac{1}{\sqrt{2}}) =  \frac{1}{\sqrt{2}}
+%\end{flalign*}
+%
+%\end{frame}
+%
+%\begin{frame}{}
+%    Thus, we have
+%\begin{equation*}
+%\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \begin{cases} \frac{1}{\sqrt{2}} , (0,0), (1,0), (0,1) \\ -\frac{1}{\sqrt{2}} , (1.1) \end{cases}
+%\end{equation*}
+%which is equivalent to 
+%\begin{equation*}
+%\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \frac{(-1)^{s \land t}}{\sqrt{2}} , s,t \in \{ 0,1 \}
+%\end{equation*}
+%\end{frame}
 
 \begin{frame}{}
-    \begin{flalign*}
-\langle \text{EPR} \vert Y \otimes Y \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
-1 & 0 & 0 &1
-\end{pmatrix} \begin{pmatrix}
-0 & 0 & 0 & -1 \\
-0 & 0 & 1 & 0 \\
-0& 1 & 0 & 0 \\
--1 & 0 & 0 & 0
-\end{pmatrix} \begin{pmatrix}
-1 \\ 0 \\ 0 \\ 1
-\end{pmatrix}\\
-& = \frac{1}{2} \begin{pmatrix}
--1 &0&0&-1
-\end{pmatrix} \begin{pmatrix}
-1 \\ 0 \\ 0 \\1
-\end{pmatrix} = -1\\
-\end{flalign*}
-
-\end{frame}
-
-\begin{frame}{}
-\begin{flalign*}
-\langle \text{EPR} \vert X \otimes Y \vert \text{EPR} \rangle & = \frac{1}{2} \begin{pmatrix}
-1 & 0 & 0 &1
-\end{pmatrix} \begin{pmatrix}
-0 & 0 & 0 & -i \\
-0 & 0 & i & 0 \\
-0& -i & 0 & 0 \\
-i & 0 & 0 & 0
-\end{pmatrix} \begin{pmatrix}
-1 \\ 0 \\ 0 \\ 1
-\end{pmatrix}\\
-& = \frac{1}{2} \begin{pmatrix}
-i &0&0&-i
-\end{pmatrix} \begin{pmatrix}
-1 \\ 0 \\ 0 \\1
-\end{pmatrix} = 0\\
-\langle \text{EPR} \vert Y \otimes X \vert \text{EPR} \rangle & = 0
-\end{flalign*}
-\end{frame}
-
-\begin{frame}{}
-    Lets calculate the expected values of the sign $a \oplus b$: 
-\begin{flalign*}
-   \langle \text{EPR} \vert F_0 \otimes G_0 \vert \text{EPR} \rangle = \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}(X-Y) \vert \text{EPR} \rangle  \\
-= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle - \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
- = \frac{1}{\sqrt{2}} - 0 = \frac{1}{\sqrt{2}}\\
-\end{flalign*}
-\end{frame}
-
-\begin{frame}{}
-   \begin{flalign*}
-  \langle \text{EPR} \vert F_1 \otimes G_1 \vert \text{EPR} \rangle = \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}(X+Y) \vert \text{EPR} \rangle \\
-= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle + \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
- = 0 - \frac{1}{\sqrt{2}} = - \frac{1}{\sqrt{2}}\\
-\end{flalign*} 
-\end{frame}
-
-\begin{frame}{}
-\begin{flalign*}
- \langle \text{EPR} \vert F_0 \otimes G_1 \vert \text{EPR} \rangle = \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}(X+Y) \vert \text{EPR} \rangle  \\
-= \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle + \langle \text{EPR} \vert X \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
- = \frac{1}{\sqrt{2}} + 0 = \frac{1}{\sqrt{2}}\\
-\end{flalign*}
-\end{frame}
-
-\begin{frame}{}
-    \begin{flalign*}
- \langle \text{EPR} \vert F_1 \otimes G_0 \vert \text{EPR} \rangle = \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}(X-Y) \vert \text{EPR} \rangle  \\
-= \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}X \vert \text{EPR} \rangle - \langle \text{EPR} \vert Y \otimes \frac{1}{\sqrt{2}}Y \vert \text{EPR} \rangle \\
- = 0 - (-\frac{1}{\sqrt{2}}) =  \frac{1}{\sqrt{2}}
-\end{flalign*}
-
-\end{frame}
-
-\begin{frame}{}
-    Thus, we have
+The bias of the entangled strategy equals
+\begin{equation*}
+\mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{s,t} \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right]  = \frac{1}{4} \sum_{s,t = 0}^1 (-1)^{s \land t} \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle
+\end{equation*} \pause
+Straight forward calculation shows
 \begin{equation*}
 \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \begin{cases} \frac{1}{\sqrt{2}} , (0,0), (1,0), (0,1) \\ -\frac{1}{\sqrt{2}} , (1.1) \end{cases}
-\end{equation*}
+\end{equation*}\pause
 which is equivalent to 
 \begin{equation*}
 \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \frac{(-1)^{s \land t}}{\sqrt{2}} , s,t \in \{ 0,1 \}
+\end{equation*}\pause
+Thus,
+\begin{equation*}
+\frac{1}{4}\left( (-1)^{0 \land 0}\frac{1}{\sqrt{2}}+(-1)^{1 \land 0}\frac{1}{\sqrt{2}}+(-1)^{0 \land 1}\frac{1}{\sqrt{2}}+(-1)^{1 \land 1}(-\frac{1}{\sqrt{2}}) \right) = \frac{1}{4}\frac{4}{\sqrt{2}}
 \end{equation*}
-
 \end{frame}
 
-\begin{frame}{}
-The bias of the entangled strategy equals 
-\begin{flalign*}
-\mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{s,t} \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right]  = \\ =  \frac{1}{4} \sum_{s,t = 0}^1 (-1)^{s \land t} \langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle \\
-= \frac{1}{4} \cdot \frac{4}{\sqrt{2}} = \frac{1}{\sqrt{2}}
-\end{flalign*}
-The bias is $\frac{1}{\sqrt{2}}$ from which follows that the winning probability is by definition: 
+
+\begin{frame}
+The bias is $\frac{1}{\sqrt{2}}$! \pause
+\begin{block}{Note}
+$\frac{1}{\sqrt{2}}  = \beta^*(G) = \underbrace{\frac{1}{2}+ \gamma}_{\text{winning probability}} -(1-\frac{1}{2}-\gamma) = 2\gamma \Rightarrow \gamma = \frac{1}{2\sqrt{2}}$
+\end{block} \pause
+\vspace{2cm}
+The winning probability follows directly
 \begin{equation*}
-\frac{1}{2}+ \frac{1}{2}\cdot \frac{1}{\sqrt{2}} = \cos(\pi/8 ) \approx 0.85\dots 
+\frac{1}{2}+ \frac{1}{2}\cdot \frac{1}{\sqrt{2}} \approx 0.85\dots 
 \end{equation*}
     
 \end{frame}
