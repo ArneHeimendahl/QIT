@@ -1,4 +1,4 @@
-In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this section we will prove the fact that $\QC_{m,n}\subset K\LC_{m,n}$, which itself isn't surprising, since both sets are convex. However we can find a universal $K$ independent of $m$ and $n$. In particular, we can show, that $K$ is the Grothendieck constant. 
+In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this section we will prove the fact that $\QC_{m,n}\subset K\LC_{m,n}$ for some universal constant $K$ independent of $m$ and $n$. In particular, we can show that the smallest constant $K$ so that the above inclusion holds true the Grothendieck constant $K_G\leq \pi/2\ln(1+\sqrt{2})$ is. 
 
 \subsection{Grothendieck's Inequality}
 	\begin{lemma}[Grothendieck's identity]\label{lem:G_id}
@@ -11,13 +11,7 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 	\begin{proof}
 		For the proof of $i,$ assume that $x$ and $y$ are linearly dependent. Since both, $x$ and $y$, are unit vectors, $\arccos(\sclr{x}{y}) = \arccos(1)=0$ if $x=y$ or $\arccos(\sclr{x}{y}) = \arccos(-1) = \pi$ if $x=-y$.
 		
-		Conversely assume that $x$ and $y$ are linearly independent, i.\,e. $\operatorname{dim}(\spn\{x,y\})=2$. Now project $r$ orthogonally on the plane spanned by $x$ and $y$. This gives us a vector $s\in \spn\{x,y\}$ with $\sclr{x}{r} = \sclr{x}{s}$ and $\sclr{y}{r} = \sclr{y}{s}$. The unit vector $n\coloneqq s/\norm{s}$ is uniformly distributed on the \textcolor{red}{unit circle/disk} that occurs if we consider the intersection of the unit sphere and $\spn\{x,y\}$ by the $O(d)$-invariance of the probability distribution. \\
-		
-		\textcolor{red}{Noch naeher auf diese Gleichverteilung eingehen?}
-		
-		\begin{align*}
-			\mathbb{P}[\sgn(\sclr{x}{r})\neq\sgn(\sclr{y}{r})]= \mathbb{P}[\sgn(\sclr{x}{n})\neq\sgn(\sclr{y}{n})] 
-		\end{align*} 
+		Conversely assume that $x$ and $y$ are linearly independent, i.\,e. $\operatorname{dim}(\spn\{x,y\})=2$. Now project $r$ orthogonally on the plane spanned by $x$ and $y$. This gives us a vector $s\in \spn\{x,y\}$ with $\sclr{x}{r} = \sclr{x}{s}$ and $\sclr{y}{r} = \sclr{y}{s}$. The unit vector $n\coloneqq s/\modul{s}$ is uniformly distributed on the \textcolor{red}{unit circle/disk} that occurs if we consider the intersection of the unit sphere and $\spn\{x,y\}$ by the $O(d)$-invariance of the probability distribution. \\
 		
 		\noindent\begin{minipage}{\textwidth}	
 			If $n$ lies on the segment of the unit circle induced by the green part, the angle between $x$ and $n$ as well as between $y$ and $n$ is smaller than $\pi/2$, hence $\sclr{x}{n}$ and $\sclr{y}{n}$ are positive. 
@@ -50,7 +44,7 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 	\end{proof}
 	
 	\begin{lemma}[Krivine's trick]\label{lem:krivines_trick}
-		Let $x_1,\dots,x_m,y_1,\dots,y_n\in S^{m+n-1}$ be given. Furthermore, let $r\in\mathbb{R}^d$ be a random unit vector chosen form the $O(d)$-invariant probability distribution on the unit sphere. Then there are $x_1^\prime,\dots,x_m^\prime, y_1^\prime,\dots,y_n^\prime\in S^{m+n-1}$ so that
+		Let $x_1,\dots,x_m,y_1,\dots,y_n\in S^{m+n-1}$ be given. Furthermore, let $r\in S^{n+m-1}$ be a random unit vector chosen form the $O(n+m-1)$-invariant probability distribution on the unit sphere. Then there are $x_1^\prime,\dots,x_m^\prime, y_1^\prime,\dots,y_n^\prime\in S^{m+n-1}$ so that
 		\begin{equation}
 			\mathbb{E}[\sgn(\sclr{x_i^\prime}{r})\sgn(\sclr{y_j^\prime}{r})] = \beta \sclr{x_i}{y_j},
 			\label{eq:krivines_trick}
@@ -58,7 +52,7 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 		with $\beta = \frac{2}{\pi} \ln (1+\sqrt{2}).$
 	\end{lemma}
 	
-	\noindent For the proof of \ref{lem:krivines_trick} we need to use the $k$-th tensor product of $\mathbb{R}^n$. The $\mathbb{R}^n$ is an $n$-dimensional Euclidean space with inner product \sclr{\cdot}{\cdot} and orthonormal basis $e_1,\dots,e_n$. The \emph{$k$-th tensor product of $\mathbb{R}^n$} is denoted by $(\mathbb{R}^n)^{\tensor k}$ and it is a Euclidean  vector space of dimension $n^k$ with orthonormal basis $e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k}$, $i_j\in\{1,\dots,n\}$. In particular
+	\noindent For the proof of \ref{lem:krivines_trick} we need to use the $k$-th tensor product of $\mathbb{R}^n$. The $\mathbb{R}^n$ is an $n$-dimensional Euclidean space with inner product \sclr{\cdot}{\cdot} and orthonormal basis $e_1,\dots,e_n$. The \emph{$k$-th tensor product of $\mathbb{R}^n$} is denoted by $(\mathbb{R}^n)^{\tensor k}$ and it is a Euclidean  vector space of dimension $n^k$ with orthonormal basis $e_{i_1}\tensor e_{i_2} \tensor \cdots \tensor e_{i_k}$, $i_l\in\{1,\dots,n\}$. In particular
 	\begin{align}
 		\sclr{e_{i_1}\tensor \cdots \tensor e_{i_k}}{e_{j_1}\tensor \cdots \tensor e_{j_k}}
 		&= \prod_{l=1}^k \sclr{e_{i_l}}{e_{j_l}}\nonumber\\
@@ -115,7 +109,7 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 			&\overset{\textcolor{white}{\eqref*{eq:kth_tensor}}}{=} E^{-1}(\beta \sclr{x_i}{y_j}).
 		\end{align*}
 		
-		Hence, $\beta$ is defined by the condition that the vectors $\tilde{x}_i,\dots,\tilde{x}_m,\tilde{y}_1,\dots,\tilde{y}_n$ are unit vectors, that is
+		Hence, $\beta$ is defined by the condition that the vectors $\tilde{x}_1,\dots,\tilde{x}_m,\tilde{y}_1,\dots,\tilde{y}_n$ are unit vectors, that is
 		\[
 			1 = \sclr{\tilde{x}_i}{\tilde{x}_i} = \sclr{\tilde{y}_j}{\tilde{y}_j}
 			%= \sum_{k=0}^\infty \modul{g_{2k+1}} \beta^{2k+1} 
@@ -123,7 +117,7 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 		\]
 		Consequently
 		\[
-			\beta = \frac{2}{\pi} \arcsinh(1) = \frac{2}{\pi}\ln(1+\sqrt(2)),	
+			\beta = \frac{2}{\pi} \arcsinh(1) = \frac{2}{\pi}\ln(1+\sqrt{2}),	
 		\]
 		since $\arcsinh (t) = \ln(t+\sqrt{t^2+1})$.
 	
@@ -144,7 +138,7 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 			v^\top G v = \sum_{i,j} v_i G_{ij} v_j 
 			= \sum_{i,j} v_i \sclr{z_i}{z_j} v_j 
 			= \sclr{\sum_i v_i z_i}{\sum_j v_j z_j} 
-			= \norm{\sum_i v_i z_i} > 0
+			> 0
 		\end{align*}
 		for some $v\in\mathbb{R}^{m+n}$, $v\neq 0$. Hence, $G$ is positive definite and symmetric, thus, $G$ can be diagonalized by an orthogonal matrix. This means that there is a decomposition $G=Q\Lambda Q^\top$ with $Q$ a real orthogonal matrix with columns that are the eigenvectors of $G$ and $\Lambda$ a real and diagonal matrix having the eigenvalues of $G$ on the diagonal. Since the eigenvalues of a positive definite matrix are positive, $\Lambda=\Lambda^{1/2}\Lambda^{1/2}$. Thus,
 		\[
@@ -169,8 +163,8 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 			\operatorname{sdp}_{\infty\to 1} (M) = \max 
 			&\sum_{i=1}^m\sum_{j=1}^n M_{ij} \sclr{x_i}{y_j}\\
 			&x_i,y_j\in\mathbb{R}^{m+n}\\
-			&\norm{x_i}=1, i=1,\dots,m\\
-			&\norm{y_j}=1, j=1,\dots,n
+			&\modul{x_i}=1, i=1,\dots,m\\
+			&\modul{y_j}=1, j=1,\dots,n
 		\end{align*}
 	\end{dfn}
 	\begin{theo}[Grothendieck's inequality] \label{theo:G_ineq}
@@ -192,13 +186,13 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 			\item[1.] Solve $\operatorname{sdp}_{\infty\to 1} (M)$. Let $x_1,\dots,x_m,y_1,\dots,y_n\in S^{m+n-1}$ be the optimal unit vectors
 			\item[2.] Apply Krivine's trick (Lemma \ref{lem:krivines_trick}) and use vectors $x_i,y_j$ to create new unit vectors $x_1^\prime,\dots,x_m^\prime, y_1^\prime,\dots,y_n^\prime\in S^{m+n-1}$.
 			\item[3.] Choose $r\in S^{m+n-1}$ randomly
-			\item[4.] Round: $u_i = \sgn(\sclr{x_i^\prime}{r})$\\
-						\textcolor{white}{Round: }$v_j = \sgn(\sclr{y_j^\prime}{r})$
+			\item[4.] Round: $\xi_i = \sgn(\sclr{x_i^\prime}{r})$\\
+						\textcolor{white}{Round: }$\eta_j = \sgn(\sclr{y_j^\prime}{r})$
 		\end{itemize}
 		
 		\noindent Expected quality of the outcome:
 		\begin{align*}
-			\norm{M}_{\infty\to 1} &\geq \mathbb{E}\left[\sum_{i=1}^m\sum_{j=1}^n M_{ij}u_iv_j\right]\\
+			\norm{M}_{\infty\to 1} &\geq \mathbb{E}\left[\sum_{i=1}^m\sum_{j=1}^n M_{ij}\xi_i\eta_j\right]\\
 			&\overset{\textcolor{white}{\eqref*{eq:krivines_trick}}}{=} \sum_{i=1}^m\sum_{j=1}^n M_{ij} \mathbb{E}[\sgn(\sclr{x_i^\prime}{r}) \sgn(\sclr{y_j^\prime}{r})] \\
 			&\overset{\textcolor{white}{\eqref*{eq:krivines_trick}}}{=}\sum_{i=1}^m\sum_{j=1}^n M_{ij}\beta \sclr{x_i}{y_j} \\
 			&\overset{\eqref{eq:krivines_trick}}{=}\beta \operatorname{sdp}_{\infty\to 1}(M),
@@ -208,13 +202,13 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 
 \subsection{Tsirelson's Theorem}
 	\begin{theo}[Tsirelson] \label{theo:Tsirelson}
-		(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^r$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$, such that for every $i,j\in\{1,\dots,n\}$, we have
+		(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^{r-1}$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in \mathbb{C}^{d\times d}$, such that for every $i,j\in\{1,\dots,n\}$, we have
 		\begin{equation}
 			\dl{\psi} F_i\tensor G_j \dr{\psi} = \sclr{x_i}{y_j}.
 		\end{equation}
 		Moreover, $d\leq 2^{\lceil r/2 \rceil}$.
 		
-		(Easy direction) Conversely, for all positive integers $n,d,$ state $\dr{\psi}\in \mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$, there exist a positive integer $r\coloneqq r(d)$ and $x_1,\dots,x_n,y_1,\dots,y_n\in S^r$ such that for every $i,j\in\{1,\dots,n\}$, we have
+		(Easy direction) Conversely, for all positive integers $n,d,$ state $\dr{\psi}\in \mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in \mathbb{C}^{d\times d}$, there exist a positive integer $r\coloneqq r(d)$ and $x_1,\dots,x_n,y_1,\dots,y_n\in S^{r-1}$ such that for every $i,j\in\{1,\dots,n\}$, we have
 		\begin{equation}
 			\sclr{x_i}{y_j} = \dl{\psi}F_i\tensor G_j \dr{\psi}.
 		\end{equation}
@@ -304,30 +298,30 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 			= \dl{\psi} F_i\tensor G_j \dr{\psi}
 		\end{align*}
 		is a real number \textcolor{red}{by the spectral theorem}.
-		
+%		
+%		Thus,
+%		\begin{align*}
+%			&\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}}\\
+%			 &\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})+i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})+i\Imag(I\tensor G_j \dr{\psi})} \\
+%			&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}\\
+%			&\qquad\qquad+\sclr{\Real(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+%	%		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}-i^2\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
+%	%		&\qquad\qquad +i\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-i\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+%			&\qquad= \underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}}_{=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})}\\
+%			&\qquad\qquad +i[\underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}}_{=\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})}] \\
+%			&\qquad=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})},
+%		\end{align*}
+%		where the last equality follows since $\dl{\psi} F_i\tensor G_j \dr{\psi}\in\mathbb{R}$, hence $\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})=0$.\\
+%		
+%		Alternative:
+%		
 		Thus,
 		\begin{align*}
-			&\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}}\\
-			 &\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})+i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})+i\Imag(I\tensor G_j \dr{\psi})} \\
-			&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}\\
-			&\qquad\qquad+\sclr{\Real(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
-	%		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}-i^2\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
-	%		&\qquad\qquad +i\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-i\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
-			&\qquad= \underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}}_{=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})}\\
-			&\qquad\qquad +i[\underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}}_{=\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})}] \\
-			&\qquad=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})},
-		\end{align*}
-		where the last equality follows since $\dl{\psi} F_i\tensor G_j \dr{\psi}\in\mathbb{R}$, hence $\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})=0$.\\
-		
-		Alternative:
-		
-		Thus,
-		\begin{align*}
-			\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}} &=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})\\
+			\dl{\psi} F_i\tensor G_j \dr{\psi} &=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})\\
 			&=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}.
 		\end{align*}
 		
-		Define $x_i,y_j \in S^{2d^2}$ by
+		\noindent Define $x_i,y_j \in S^{2d^2}$ by
 		\begin{align}
 			x_i = \begin{pmatrix}
 				\Real(F_i\tensor I \dr{\psi}) \\
@@ -340,7 +334,7 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 		\end{align}
 		thus $r\leq 2d^2$.
 		
-		Then, we have
+		Then, 
 		\begin{align*}
 			\sclr{x_i}{y_j} &= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+ \sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
 			&= \Real(\dl{\psi} F_i\tensor G_j \dr{\psi}) \\
@@ -349,16 +343,19 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 		as desired.
 	\end{proof}
 	
-	This result can be considered similarly to the result of Lemma \ref{LemQC} with the difference that $(F_i)_{1\leq i \leq n}$ and $(G_j)_{1\leq i \leq n}$ are $\{-1,1\}$-observables in contrast to $(X_i)_{1\leq i \leq m}$ and $(Y_j)_{1\leq i \leq n}$ self-adjoint with $\norm{X_i}_\infty,\norm{Y_j}_\infty\leq 1$ and $x_i$ and $y_j$ are unit vectors. In fact, the following equality holds true:
+	Since 
+	\begin{align}
+		\dl{\psi} F_i\tensor G_j \dr{\psi} &= \trace{\underbrace{\dr{\psi}\dl{\psi}}_{\eqqcolon\rho}F_i\tensor G_j} ,
+	\end{align}
+	where $\rho$ is a pure state, this result can be considered similarly to the result of Lemma \ref{LemQC} (in fact it is a direct consequence) with the difference that $(F_i)_{1\leq i \leq n}$ and $(G_j)_{1\leq i \leq n}$ are $\{-1,1\}$-observables in contrast to $(X_i)_{1\leq i \leq m}$ and $(Y_j)_{1\leq i \leq n}$ self-adjoint with $\norm{X_i}_\infty,\norm{Y_j}_\infty\leq 1$, $x_i$ and $y_j$ are unit vectors and $\rho$ is pure. But in fact, the following equality holds true:
 	\begin{equation}
-		\QC_{m,n} = \{(\sclr{x_i}{y_j})_{1\leq i\leq m, 1\leq j \leq n} \,| \, x_i,y_j \in \mathbb{R}^{\min\{m,n\}}, \norm{x_i}=1, \norm{y_j}=1\}
+		\QC_{m,n} = \{(\sclr{x_i}{y_j})_{1\leq i\leq m, 1\leq j \leq n} \,| \, x_i,y_j \in \mathbb{R}^{\min\{m,n\}}, \modul{x_i}=1, \modul{y_j}=1\}
 	\end{equation}
-	\textcolor{red}{Oder ist hier ein Unterschied zwischen einer Menge von Vektoren, wenn die Vektoren unterschiedlich sind, aber das Skalarprodukt gleich ist? Wird da unterschieden?}
 	
-	Consider $(x_i)_{1\leq i \leq m},(y_j)_{1\leq j \leq n}$ with $\norm{x_i},\norm{y_j} \leq 1$. If we can find unit vectors $u,v\in\{x_i\,| \, 1\leq i \leq m\}^\perp \cap \{y_j\,| \, 1\leq j \leq n\}^\perp$ such that $u\perp v$, we can define unit vectors
+	Consider $(x_i)_{1\leq i \leq m},(y_j)_{1\leq j \leq n}$ with $\modul{x_i},\modul{y_j} \leq 1$. If we can find unit vectors $u,v\in\{x_i\,| \, 1\leq i \leq m\}^\perp \cap \{y_j\,| \, 1\leq j \leq n\}^\perp$ such that $u\perp v$, we can define unit vectors
 	\begin{align*}
-		x_i^\prime = x_i + \sqrt{1-\norm{x_i}^2}u\\
-		y_j^\prime = y_j + \sqrt{1-\norm{x_i}^2}v\\  
+		x_i^\prime = x_i + \sqrt{1-\modul{x_i}^2}u\\
+		y_j^\prime = y_j + \sqrt{1-\modul{x_i}^2}v\\  
 	\end{align*}
 	with
 	\[
@@ -367,27 +364,23 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 	
 	%If we can not find such vectors $u$ and $v$ it may be the case, that either  $(x_i)_{1\leq i \leq m}$ or $(y_j)_{1\leq j \leq n}$ are a orthonormal basis of $\mathbb{R}^{\min\{m,n}}$.
 	
-	If we can not find such vectors $u$ and $v$ we can increase the dimension of the vectors $x_i^\prime,y_j^\prime$ we are looking for as follows: Find $(\min\{m,n\}+2)$-dimensional unitary vectors $u,v\in\left\{\begin{pmatrix} x_i \\ 0 \\ 0 \end{pmatrix} \,\bigg| \, 1\leq i \leq m\right\}^\perp \cap \left\{\begin{pmatrix} y_j \\ 0 \\ 0 \end{pmatrix}\,\bigg| \, 1\leq j \leq n\right\}^\perp$ such that $u\perp v$ (by adding these two ...) and define 
+	If we can not find such vectors $u$ and $v$ we can increase the dimension of the vectors $x_i^\prime,y_j^\prime$ we are looking for as follows: Find $(\min\{m,n\}+2)$-dimensional unitary vectors $u,v\in\left\{\begin{pmatrix} x_i \\ 0 \\ 0 \end{pmatrix} \,\bigg| \, 1\leq i \leq m\right\}^\perp \cap \left\{\begin{pmatrix} y_j \\ 0 \\ 0 \end{pmatrix}\,\bigg| \, 1\leq j \leq n\right\}^\perp$ such that $u\perp v$ (by adding these two dimensions we ensure that we can find $u$ and $v$ also if for example $(x_i)_{1\leq i \leq m}$ or $(y_j)_{1\leq j \leq n}$ form a basis of the $\mathbb{R}^{\min\{m,n\}}$) and define 
 	\begin{align*}
 		x_i^\prime = \begin{pmatrix}
-			x_i \\ \sqrt{1-\norm{x_i}^2}u
+			x_i \\ \sqrt{1-\modul{x_i}^2}u
 		\end{pmatrix},\qquad
 		y_j^\prime = \begin{pmatrix}
-			y_j \\ \sqrt{1-\norm{y_j}^2}v
+			y_j \\ \sqrt{1-\modul{y_j}^2}v
 		\end{pmatrix}.
 	\end{align*}
 	Then,
 	\begin{align*}
 		\sclr{x_i^\prime}{y_j^\prime} = \sclr{x_i}{y_j}
 	\end{align*}
-	and $\norm{x_i^\prime},\norm{y_j^\prime}=1$.
-	To obtain the right dimension we may a posteriori project the vectors $(x_i^\prime)_{1\leq i \leq m},(y_j)_{1\leq j \leq n}$ onto $\spn\{x_i : 1\leq i \leq n\}$ or $\spn\{x_j : 1\leq j \leq m\}$ according to whether $m\leq n$ or $m > n$.
+	and $\modul{x_i^\prime},\modul{y_j^\prime}=1$.
+	To obtain the right dimension we may a posteriori project the vectors $(x_i^\prime)_{1\leq i \leq m},(y_j)_{1\leq j \leq n}$ onto $\spn\{x_i : 1\leq i \leq n\}$ or $\spn\{y_j : 1\leq j \leq m\}$ according to whether $m\leq n$ or $m > n$.
 	
-	With this alternative description of $\QC_{m,n}$ we can additionally follow that we can also choose $X_i$ and $Y_j$ to be $\{-1,1\}$-observables. \textcolor{red}{Aber gilt fuer diese observables auch dass die Supremumsnorm kleiner gleich 1 ist?}
-	\begin{align*}
-		\dl{\psi} F_i\tensor G_j \dr{\psi} &= \trace{\underbrace{\dr{\psi}\dl{\psi}}_{\eqqcolon\rho}F_i\tensor G_j} \\
-		&=\trace{\rho(F_i\tensor G_j)}
-	\end{align*}
+	\textcolor{red}{Thus we can follow/With this alternative description of $\QC_{m,n}$ we can additionally follow} that we can choose $X_i$ and $Y_j$ to be $\{-1,1\}$-observables and $\rho$ to be a pure state and still generate a quantum correlation matrix by setting $a_{ij} = \trace{\rho(X_i\tensor Y_j)}$.
 
 \subsection{Grothendieck-Tsirelson}
 
@@ -418,5 +411,10 @@ In the last section we have seen that $\QC_{m,n}\subset \LC_{m,n}$. In this sect
 		\end{figure}
 		
 		For the implication of (2) by (1) consider figure \ref{fig:QCLC}. Since $\QC\subset K\LC$ maximizing over the elements in $K\LC$ will result in a better outcome than maximizing over the elements in $\QC$ in the direction of $M$.
+		The direction from (1) to (2) we will prove by contraposition. Assume that there is a quantum correlation matrix $A\in\QC_{m,n}$ such that $A\notin K\LC_{m,n}$. By the hyperplane separation theorem we can separate $A$ from $K\LC_{m,n}$ by a linear functional since $\LC_{m,n}$ is convex. That is, we can find a matrix $M\in\mathbb{R}^{m\times n}$ and a real number $c$ such that 
+		\begin{equation*}
+			\trace{MA^\top} \geq c \text{ and } \trace{M(\xi\eta^\top)^\top}\leq c
+		\end{equation*}
+		for all $\xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n$.
 	\end{proof}
 \newpage
