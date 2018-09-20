@@ -202,13 +202,13 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 
 \subsection{Tsirelson's Theorem}
 	\begin{theo}[Tsirelson] \label{theo:Tsirelson}
-		(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^{r-1}$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$, such that for every $i,j\in\{1,\dots,n\}$, we have
+		(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^{r-1}$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in \mathbb{C}^{d\times d}$, such that for every $i,j\in\{1,\dots,n\}$, we have
 		\begin{equation}
 			\dl{\psi} F_i\tensor G_j \dr{\psi} = \sclr{x_i}{y_j}.
 		\end{equation}
 		Moreover, $d\leq 2^{\lceil r/2 \rceil}$.
 		
-		(Easy direction) Conversely, for all positive integers $n,d,$ state $\dr{\psi}\in \mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$, there exist a positive integer $r\coloneqq r(d)$ and $x_1,\dots,x_n,y_1,\dots,y_n\in S^{r-1}$ such that for every $i,j\in\{1,\dots,n\}$, we have
+		(Easy direction) Conversely, for all positive integers $n,d,$ state $\dr{\psi}\in \mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in \mathbb{C}^{d\times d}$, there exist a positive integer $r\coloneqq r(d)$ and $x_1,\dots,x_n,y_1,\dots,y_n\in S^{r-1}$ such that for every $i,j\in\{1,\dots,n\}$, we have
 		\begin{equation}
 			\sclr{x_i}{y_j} = \dl{\psi}F_i\tensor G_j \dr{\psi}.
 		\end{equation}
@@ -298,30 +298,30 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 			= \dl{\psi} F_i\tensor G_j \dr{\psi}
 		\end{align*}
 		is a real number \textcolor{red}{by the spectral theorem}.
-		
+%		
+%		Thus,
+%		\begin{align*}
+%			&\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}}\\
+%			 &\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})+i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})+i\Imag(I\tensor G_j \dr{\psi})} \\
+%			&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}\\
+%			&\qquad\qquad+\sclr{\Real(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+%	%		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}-i^2\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
+%	%		&\qquad\qquad +i\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-i\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
+%			&\qquad= \underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}}_{=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})}\\
+%			&\qquad\qquad +i[\underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}}_{=\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})}] \\
+%			&\qquad=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})},
+%		\end{align*}
+%		where the last equality follows since $\dl{\psi} F_i\tensor G_j \dr{\psi}\in\mathbb{R}$, hence $\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})=0$.\\
+%		
+%		Alternative:
+%		
 		Thus,
 		\begin{align*}
-			&\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}}\\
-			 &\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})+i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})+i\Imag(I\tensor G_j \dr{\psi})} \\
-			&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}\\
-			&\qquad\qquad+\sclr{\Real(F_i\tensor I \dr{\psi})}{i\Imag(I\tensor G_j \dr{\psi})}+\sclr{i\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
-	%		&\qquad= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}-i^2\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
-	%		&\qquad\qquad +i\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-i\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}\\
-			&\qquad= \underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}}_{=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})}\\
-			&\qquad\qquad +i[\underbrace{\sclr{\Real(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}-\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}}_{=\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})}] \\
-			&\qquad=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})},
-		\end{align*}
-		where the last equality follows since $\dl{\psi} F_i\tensor G_j \dr{\psi}\in\mathbb{R}$, hence $\Imag(\dl{\psi} F_i\tensor G_j \dr{\psi})=0$.\\
-		
-		Alternative:
-		
-		Thus,
-		\begin{align*}
-			\sclr{F_i\tensor I \dr{\psi}}{I\tensor G_j \dr{\psi}} &=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})\\
+			\dl{\psi} F_i\tensor G_j \dr{\psi} &=\Real(\dl{\psi} F_i\tensor G_j \dr{\psi})\\
 			&=\sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+\sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}.
 		\end{align*}
 		
-		Define $x_i,y_j \in S^{2d^2}$ by
+		\noindent Define $x_i,y_j \in S^{2d^2}$ by
 		\begin{align}
 			x_i = \begin{pmatrix}
 				\Real(F_i\tensor I \dr{\psi}) \\
@@ -334,7 +334,7 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 		\end{align}
 		thus $r\leq 2d^2$.
 		
-		Then, we have
+		Then, 
 		\begin{align*}
 			\sclr{x_i}{y_j} &= \sclr{\Real(F_i\tensor I \dr{\psi})}{\Real(I\tensor G_j \dr{\psi})}+ \sclr{\Imag(F_i\tensor I \dr{\psi})}{\Imag(I\tensor G_j \dr{\psi})}\\
 			&= \Real(\dl{\psi} F_i\tensor G_j \dr{\psi}) \\
@@ -343,11 +343,14 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 		as desired.
 	\end{proof}
 	
-	This result can be considered similarly to the result of Lemma \ref{LemQC} with the difference that $(F_i)_{1\leq i \leq n}$ and $(G_j)_{1\leq i \leq n}$ are $\{-1,1\}$-observables in contrast to $(X_i)_{1\leq i \leq m}$ and $(Y_j)_{1\leq i \leq n}$ self-adjoint with $\norm{X_i}_\infty,\norm{Y_j}_\infty\leq 1$ and $x_i$ and $y_j$ are unit vectors. In fact, the following equality holds true:
+	Since 
+	\begin{align}
+		\dl{\psi} F_i\tensor G_j \dr{\psi} &= \trace{\underbrace{\dr{\psi}\dl{\psi}}_{\eqqcolon\rho}F_i\tensor G_j} ,
+	\end{align}
+	where $\rho$ is a pure state, this result can be considered similarly to the result of Lemma \ref{LemQC} (in fact it is a direct consequence) with the difference that $(F_i)_{1\leq i \leq n}$ and $(G_j)_{1\leq i \leq n}$ are $\{-1,1\}$-observables in contrast to $(X_i)_{1\leq i \leq m}$ and $(Y_j)_{1\leq i \leq n}$ self-adjoint with $\norm{X_i}_\infty,\norm{Y_j}_\infty\leq 1$, $x_i$ and $y_j$ are unit vectors and $\rho$ is pure. But in fact, the following equality holds true:
 	\begin{equation}
 		\QC_{m,n} = \{(\sclr{x_i}{y_j})_{1\leq i\leq m, 1\leq j \leq n} \,| \, x_i,y_j \in \mathbb{R}^{\min\{m,n\}}, \modul{x_i}=1, \modul{y_j}=1\}
 	\end{equation}
-	\textcolor{red}{Oder ist hier ein Unterschied zwischen einer Menge von Vektoren, wenn die Vektoren unterschiedlich sind, aber das Skalarprodukt gleich ist? Wird da unterschieden?}
 	
 	Consider $(x_i)_{1\leq i \leq m},(y_j)_{1\leq j \leq n}$ with $\modul{x_i},\modul{y_j} \leq 1$. If we can find unit vectors $u,v\in\{x_i\,| \, 1\leq i \leq m\}^\perp \cap \{y_j\,| \, 1\leq j \leq n\}^\perp$ such that $u\perp v$, we can define unit vectors
 	\begin{align*}
@@ -361,7 +364,7 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 	
 	%If we can not find such vectors $u$ and $v$ it may be the case, that either  $(x_i)_{1\leq i \leq m}$ or $(y_j)_{1\leq j \leq n}$ are a orthonormal basis of $\mathbb{R}^{\min\{m,n}}$.
 	
-	If we can not find such vectors $u$ and $v$ we can increase the dimension of the vectors $x_i^\prime,y_j^\prime$ we are looking for as follows: Find $(\min\{m,n\}+2)$-dimensional unitary vectors $u,v\in\left\{\begin{pmatrix} x_i \\ 0 \\ 0 \end{pmatrix} \,\bigg| \, 1\leq i \leq m\right\}^\perp \cap \left\{\begin{pmatrix} y_j \\ 0 \\ 0 \end{pmatrix}\,\bigg| \, 1\leq j \leq n\right\}^\perp$ such that $u\perp v$ (by adding these two ...) and define 
+	If we can not find such vectors $u$ and $v$ we can increase the dimension of the vectors $x_i^\prime,y_j^\prime$ we are looking for as follows: Find $(\min\{m,n\}+2)$-dimensional unitary vectors $u,v\in\left\{\begin{pmatrix} x_i \\ 0 \\ 0 \end{pmatrix} \,\bigg| \, 1\leq i \leq m\right\}^\perp \cap \left\{\begin{pmatrix} y_j \\ 0 \\ 0 \end{pmatrix}\,\bigg| \, 1\leq j \leq n\right\}^\perp$ such that $u\perp v$ (by adding these two dimensions we ensure that we can find $u$ and $v$ also if for example $(x_i)_{1\leq i \leq m}$ or $(y_j)_{1\leq j \leq n}$ form a basis of the $\mathbb{R}^{\min\{m,n\}}$) and define 
 	\begin{align*}
 		x_i^\prime = \begin{pmatrix}
 			x_i \\ \sqrt{1-\modul{x_i}^2}u
@@ -375,13 +378,9 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 		\sclr{x_i^\prime}{y_j^\prime} = \sclr{x_i}{y_j}
 	\end{align*}
 	and $\modul{x_i^\prime},\modul{y_j^\prime}=1$.
-	To obtain the right dimension we may a posteriori project the vectors $(x_i^\prime)_{1\leq i \leq m},(y_j)_{1\leq j \leq n}$ onto $\spn\{x_i : 1\leq i \leq n\}$ or $\spn\{x_j : 1\leq j \leq m\}$ according to whether $m\leq n$ or $m > n$.
+	To obtain the right dimension we may a posteriori project the vectors $(x_i^\prime)_{1\leq i \leq m},(y_j)_{1\leq j \leq n}$ onto $\spn\{x_i : 1\leq i \leq n\}$ or $\spn\{y_j : 1\leq j \leq m\}$ according to whether $m\leq n$ or $m > n$.
 	
-	With this alternative description of $\QC_{m,n}$ we can additionally follow that we can also choose $X_i$ and $Y_j$ to be $\{-1,1\}$-observables. \textcolor{red}{Aber gilt fuer diese observables auch dass die Supremumsnorm kleiner gleich 1 ist?}
-	\begin{align*}
-		\dl{\psi} F_i\tensor G_j \dr{\psi} &= \trace{\underbrace{\dr{\psi}\dl{\psi}}_{\eqqcolon\rho}F_i\tensor G_j} \\
-		&=\trace{\rho(F_i\tensor G_j)}
-	\end{align*}
+	\textcolor{red}{Thus we can follow/With this alternative description of $\QC_{m,n}$ we can additionally follow} that we can choose $X_i$ and $Y_j$ to be $\{-1,1\}$-observables and $\rho$ to be a pure state and still generate a quantum correlation matrix by setting $a_{ij} = \trace{\rho(X_i\tensor Y_j)}$.
 
 \subsection{Grothendieck-Tsirelson}
 

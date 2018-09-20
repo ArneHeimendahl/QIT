@@ -18,7 +18,7 @@ a_{11}B & \dots & a_{1n}B \\
 \vdots && \vdots \\
 a_{n1}B & \dots & a_{nn}B
 \end{pmatrix}$
-	\end{itemize}  
+	\end{itemize}  \pause
    \item \large{We should be familiar with the \textit{Dirac notation}} \pause
 	\begin{itemize}	 
   	\item $\vert \psi \rangle$ is a vector in $\mathbb{C}^n$ and $\langle \psi \vert$ is its conjugate transpose
@@ -39,7 +39,7 @@ a_{n1}B & \dots & a_{nn}B
 Physical quantities can be measured. But what is a measurement mathematically? \pause
 \begin{itemize}
     \item A measurement can be performed on a system $X$ that is in state $\rho$ \pause
-    \item We want the set of outcomes to finite. Let $\mathcal{A}$ be this set \pause
+    \item We want the set of outcomes to be finite. Let $\mathcal{A}$ be this set \pause
     \item The outcome of a measurement is supposed to be a random variable $\chi$ that takes values in $\mathcal{A}$ with a certain probability \pause
     \item This can be achieved:
 \end{itemize}
@@ -112,11 +112,12 @@ Physical quantities can be measured. But what is a measurement mathematically? \
 &= \langle \psi_A \vert F^a \vert \psi_A \rangle  \langle \psi_B \vert G^b \vert \psi_B \rangle
 		\end{flalign*}
 	\end{block}
-This is equal to the product of the probabilities of Alice measuring $a$ and Bob measuring $b$, i.e. the outcome do not correlate.
+This is equal to the product of the probabilities of Alice measuring $a$ and Bob measuring $b$, i.e. the outcomes do not correlate.
 \end{frame}
 
 \subsection{Nonlocal games}
 \begin{frame}{Nonlocal games}
+\pause
     \begin{itemize}
         \item Three participants: Alice, Bob and a referee \pause
         \item Referee sends a question $s$ to Alice and a question $t$ to Bob \pause
@@ -223,7 +224,7 @@ This means the bias can be written as:
  \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{[a(s) \oplus b(t) = f(s,t)]} \right] & = \\ = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s) \oplus b(t) + f(s,t)} \right] =\\
  = \mathbb{E}_{(s,t) \sim \pi} \left[ (-1)^{a(s)}(-1)^{b(t)}(-1)^{f(s,t)} \right]
   \end{flalign*}    \pause
-Define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $\chi(s) = (-1)^{a(s)}$ and $\psi(t) = (-1)^{b(t)}$
+Define the sign matrix $\Sigma_{s,t} = (-1)^{f(s,t)}$ and functions $\chi(s) = (-1)^{a(s)}$ and $\psi(t) = (-1)^{b(t)}$. \\
 The expected value becomes
 \begin{equation*}
 \mathbb{E}_{ ( s , t ) \sim \pi} \left[ \chi (s) \psi (t) \Sigma_{st} \right]
@@ -233,7 +234,7 @@ The expected value becomes
 \begin{frame}{}
 \begin{block}{Recap}
 \begin{itemize}
-    \item The outcomes in an XOR game are $\{ 0,1 \}$
+    \item The measurement outcomes in an XOR game are $\{ 0,1 \}$
     \item Alice and Bob have measurements $\{ F_s^0, F_s^1 \}$ and $\{ G_t^0, G_t^1 \}$ and share an entangled state
     \item The probability of Alice and Bob answering with $a,b$ upon receiving $s,t$ respectively is $\langle \psi \vert F_s^a \otimes G_t^b \vert \psi \rangle$
     \end{itemize}
@@ -248,7 +249,7 @@ Lets calculate the expected value of $(-1)^{a \oplus b}$ \pause
 
 \begin{frame}
 \begin{itemize}
-    \item Define $\{-1,1\}$-observables $F_s = F_s^0-F_s^1$ and $G_t=G_t^0-G_t^1$ with the property that its difference squared is the identity matrix \pause
+    \item Define $\{-1,1\}$-observables $F_s = F_s^0-F_s^1$ and $G_t=G_t^0-G_t^1$ with the property that their square is the identity matrix \pause
     \item Using this strategy the bias becomes
 \end{itemize}
 \vspace{1cm}
@@ -285,7 +286,7 @@ with $\mathcal{W}$ being the set of all $\{ -1, 1 \}$-observables in  $\mathbb{C
 \begin{itemize}
     \item The CHSH game (Clauser, Horner, Shimony, Holt) is a two player XOR game with $\mathcal{A} = \mathcal{B} = \mathcal{S} = \mathcal{T} = \{0,1\}$ and $\pi$ being the uniform distribution
     \item  $f(s,t)= s \land t$, i.e. $f(1,1)=1$ and $f(0,0)=f(0,1)=f(1,0)=0$
-    \item Alice and Bob can win $\frac{3}{4}$ of the games by using deterministic strategies $(0,0), (1,0) \text{ or } (0,1)$
+    \item Alice and Bob can win $\frac{3}{4}$ of the games by using deterministic strategies $(1,0) \text{ or } (0,1)$
 \end{itemize}
 \begin{block}{Quantum strategy}
 \begin{itemize}
@@ -418,7 +419,7 @@ The bias of the entangled strategy equals
 \end{equation*} \pause
 Straight forward calculation shows
 \begin{equation*}
-\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \begin{cases} \frac{1}{\sqrt{2}} , (0,0), (1,0), (0,1) \\ -\frac{1}{\sqrt{2}} , (1.1) \end{cases}
+\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \begin{cases} \frac{1}{\sqrt{2}} , (0,0), (1,0), (0,1) \\ -\frac{1}{\sqrt{2}} , (1,1) \end{cases}
 \end{equation*}\pause
 which is equivalent to 
 \begin{equation*}
