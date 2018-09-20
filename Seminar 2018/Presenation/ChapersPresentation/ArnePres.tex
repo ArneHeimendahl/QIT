@@ -89,10 +89,9 @@
 			\item<1-> Using the same decomposition for $ Y $ we obtain 
 			\begin{align*}
 			a_{ij} = \mathbb{E}[X_iY_j] &= \mathbb{E} \big [ \big (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i \big  ) \big (\sum_{\eta \in \{-1,1\}^n}\lambda_{\eta}^{(Y)}\eta_j \big ) \big ]   \\
-			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  \\
-			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}]\xi_i\eta_j
+			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  
 			\end{align*}
-			\item<2-> Due to $ \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}] = 1 $
+			\item<2-> Due to $\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}  \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] = 1 $
 			the matrix $ (a_{ij}) $ is a convex combination of $ \xi \eta^T $, $ \xi \in \{-1,1\}^m, \eta \in \{-1,1 \}^n $
 		\end{itemize}
 	\end{proof}
