@@ -1,4 +1,3 @@
-\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
@@ -60,96 +59,98 @@
 \headcommand {\beamer@subsectionentry {0}{2}{1}{88}{Local correlation matrices }}\headcommand {\beamer@subsectionpages {88}{87}}
 \headcommand {\slideentry {2}{1}{1}{88/88}{Local correlation matrices }{0}}
 \headcommand {\beamer@framepages {88}{88}}
-\headcommand {\slideentry {2}{1}{2}{89/93}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {89}{93}}
-\headcommand {\slideentry {2}{1}{3}{94/97}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {94}{97}}
-\headcommand {\slideentry {2}{1}{4}{98/103}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {98}{103}}
-\headcommand {\slideentry {2}{1}{5}{104/107}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {104}{107}}
-\headcommand {\slideentry {2}{1}{6}{108/109}{Local correlation matrices }{0}}
-\headcommand {\beamer@framepages {108}{109}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{110}{Quantum correlation matrices}}\headcommand {\beamer@subsectionpages {88}{109}}
-\headcommand {\slideentry {2}{2}{1}{110/113}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {110}{113}}
-\headcommand {\slideentry {2}{2}{2}{114/116}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {114}{116}}
-\headcommand {\slideentry {2}{2}{3}{117/120}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {117}{120}}
-\headcommand {\slideentry {2}{2}{4}{121/124}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {121}{124}}
-\headcommand {\slideentry {2}{2}{5}{125/127}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {125}{127}}
-\headcommand {\slideentry {2}{2}{6}{128/128}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {128}{128}}
-\headcommand {\slideentry {2}{2}{7}{129/132}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {129}{132}}
-\headcommand {\slideentry {2}{2}{8}{133/133}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {133}{133}}
-\headcommand {\slideentry {2}{2}{9}{134/138}{Quantum correlation matrices}{0}}
-\headcommand {\beamer@framepages {134}{138}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{139}{The relations between quantum correlation and local correlation matrices}}\headcommand {\beamer@subsectionpages {110}{138}}
-\headcommand {\slideentry {2}{3}{1}{139/141}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {139}{141}}
-\headcommand {\slideentry {2}{3}{2}{142/144}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {142}{144}}
-\headcommand {\slideentry {2}{3}{3}{145/147}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {145}{147}}
-\headcommand {\slideentry {2}{3}{4}{148/154}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {148}{154}}
-\headcommand {\slideentry {2}{3}{5}{155/155}{The relations between quantum correlation and local correlation matrices}{0}}
-\headcommand {\beamer@framepages {155}{155}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{156}{Motivation: The Grothendieck-Tsirelson Theorem}}\headcommand {\beamer@subsectionpages {139}{155}}
-\headcommand {\slideentry {2}{4}{1}{156/156}{Motivation: The Grothendieck-Tsirelson Theorem}{0}}
+\headcommand {\slideentry {2}{1}{2}{89/92}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {89}{92}}
+\headcommand {\slideentry {2}{1}{3}{93/96}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {93}{96}}
+\headcommand {\slideentry {2}{1}{4}{97/102}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {97}{102}}
+\headcommand {\slideentry {2}{1}{5}{103/106}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {103}{106}}
+\headcommand {\slideentry {2}{1}{6}{107/108}{Local correlation matrices }{0}}
+\headcommand {\beamer@framepages {107}{108}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{109}{Quantum correlation matrices}}\headcommand {\beamer@subsectionpages {88}{108}}
+\headcommand {\slideentry {2}{2}{1}{109/111}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {109}{111}}
+\headcommand {\slideentry {2}{2}{2}{112/114}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {112}{114}}
+\headcommand {\slideentry {2}{2}{3}{115/118}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {115}{118}}
+\headcommand {\slideentry {2}{2}{4}{119/122}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {119}{122}}
+\headcommand {\slideentry {2}{2}{5}{123/125}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {123}{125}}
+\headcommand {\slideentry {2}{2}{6}{126/128}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {126}{128}}
+\headcommand {\slideentry {2}{2}{7}{129/129}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {129}{129}}
+\headcommand {\slideentry {2}{2}{8}{130/133}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {130}{133}}
+\headcommand {\slideentry {2}{2}{9}{134/134}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {134}{134}}
+\headcommand {\slideentry {2}{2}{10}{135/139}{Quantum correlation matrices}{0}}
+\headcommand {\beamer@framepages {135}{139}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{140}{The relations between quantum correlation and local correlation matrices}}\headcommand {\beamer@subsectionpages {109}{139}}
+\headcommand {\slideentry {2}{3}{1}{140/142}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {140}{142}}
+\headcommand {\slideentry {2}{3}{2}{143/145}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {143}{145}}
+\headcommand {\slideentry {2}{3}{3}{146/148}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {146}{148}}
+\headcommand {\slideentry {2}{3}{4}{149/155}{The relations between quantum correlation and local correlation matrices}{0}}
+\headcommand {\beamer@framepages {149}{155}}
+\headcommand {\slideentry {2}{3}{5}{156/156}{The relations between quantum correlation and local correlation matrices}{0}}
 \headcommand {\beamer@framepages {156}{156}}
-\headcommand {\slideentry {2}{4}{2}{157/157}{Motivation: The Grothendieck-Tsirelson Theorem}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{157}{Motivation: The Grothendieck-Tsirelson Theorem}}\headcommand {\beamer@subsectionpages {140}{156}}
+\headcommand {\slideentry {2}{4}{1}{157/157}{Motivation: The Grothendieck-Tsirelson Theorem}{0}}
 \headcommand {\beamer@framepages {157}{157}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{158}{Grothendieck's Inequality}}\headcommand {\beamer@subsectionpages {156}{157}}
-\headcommand {\slideentry {2}{5}{1}{158/158}{Grothendieck's Inequality}{0}}
+\headcommand {\slideentry {2}{4}{2}{158/158}{Motivation: The Grothendieck-Tsirelson Theorem}{0}}
 \headcommand {\beamer@framepages {158}{158}}
-\headcommand {\slideentry {2}{5}{2}{159/164}{Grothendieck's Inequality}{0}}
-\headcommand {\beamer@framepages {159}{164}}
-\headcommand {\slideentry {2}{5}{3}{165/165}{Grothendieck's Inequality}{0}}
-\headcommand {\beamer@framepages {165}{165}}
-\headcommand {\slideentry {2}{5}{4}{166/166}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{159}{Grothendieck's Inequality}}\headcommand {\beamer@subsectionpages {157}{158}}
+\headcommand {\slideentry {2}{5}{1}{159/159}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@framepages {159}{159}}
+\headcommand {\slideentry {2}{5}{2}{160/165}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@framepages {160}{165}}
+\headcommand {\slideentry {2}{5}{3}{166/166}{Grothendieck's Inequality}{0}}
 \headcommand {\beamer@framepages {166}{166}}
-\headcommand {\slideentry {2}{5}{5}{167/167}{Grothendieck's Inequality}{0}}
+\headcommand {\slideentry {2}{5}{4}{167/167}{Grothendieck's Inequality}{0}}
 \headcommand {\beamer@framepages {167}{167}}
-\headcommand {\slideentry {2}{5}{6}{168/168}{Grothendieck's Inequality}{0}}
+\headcommand {\slideentry {2}{5}{5}{168/168}{Grothendieck's Inequality}{0}}
 \headcommand {\beamer@framepages {168}{168}}
-\headcommand {\slideentry {2}{5}{7}{169/171}{Grothendieck's Inequality}{0}}
-\headcommand {\beamer@framepages {169}{171}}
-\headcommand {\slideentry {2}{5}{8}{172/174}{Grothendieck's Inequality}{0}}
-\headcommand {\beamer@framepages {172}{174}}
-\headcommand {\slideentry {2}{5}{9}{175/177}{Grothendieck's Inequality}{0}}
-\headcommand {\beamer@framepages {175}{177}}
-\headcommand {\slideentry {2}{5}{10}{178/179}{Grothendieck's Inequality}{0}}
-\headcommand {\beamer@framepages {178}{179}}
-\headcommand {\slideentry {2}{5}{11}{180/180}{Grothendieck's Inequality}{0}}
-\headcommand {\beamer@framepages {180}{180}}
-\headcommand {\slideentry {2}{5}{12}{181/181}{Grothendieck's Inequality}{0}}
+\headcommand {\slideentry {2}{5}{6}{169/169}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@framepages {169}{169}}
+\headcommand {\slideentry {2}{5}{7}{170/172}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@framepages {170}{172}}
+\headcommand {\slideentry {2}{5}{8}{173/175}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@framepages {173}{175}}
+\headcommand {\slideentry {2}{5}{9}{176/178}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@framepages {176}{178}}
+\headcommand {\slideentry {2}{5}{10}{179/180}{Grothendieck's Inequality}{0}}
+\headcommand {\beamer@framepages {179}{180}}
+\headcommand {\slideentry {2}{5}{11}{181/181}{Grothendieck's Inequality}{0}}
 \headcommand {\beamer@framepages {181}{181}}
-\headcommand {\slideentry {2}{5}{13}{182/182}{Grothendieck's Inequality}{0}}
+\headcommand {\slideentry {2}{5}{12}{182/182}{Grothendieck's Inequality}{0}}
 \headcommand {\beamer@framepages {182}{182}}
-\headcommand {\beamer@subsectionentry {0}{2}{6}{183}{Tsirelson's Theorem}}\headcommand {\beamer@subsectionpages {158}{182}}
-\headcommand {\slideentry {2}{6}{1}{183/183}{Tsirelson's Theorem}{0}}
+\headcommand {\slideentry {2}{5}{13}{183/183}{Grothendieck's Inequality}{0}}
 \headcommand {\beamer@framepages {183}{183}}
-\headcommand {\slideentry {2}{6}{2}{184/184}{Tsirelson's Theorem}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{6}{184}{Tsirelson's Theorem}}\headcommand {\beamer@subsectionpages {159}{183}}
+\headcommand {\slideentry {2}{6}{1}{184/184}{Tsirelson's Theorem}{0}}
 \headcommand {\beamer@framepages {184}{184}}
-\headcommand {\slideentry {2}{6}{3}{185/185}{Tsirelson's Theorem}{0}}
+\headcommand {\slideentry {2}{6}{2}{185/185}{Tsirelson's Theorem}{0}}
 \headcommand {\beamer@framepages {185}{185}}
-\headcommand {\slideentry {2}{6}{4}{186/186}{Tsirelson's Theorem}{0}}
+\headcommand {\slideentry {2}{6}{3}{186/186}{Tsirelson's Theorem}{0}}
 \headcommand {\beamer@framepages {186}{186}}
-\headcommand {\beamer@subsectionentry {0}{2}{7}{187}{Gorthendieck-Tsirelson Theorem}}\headcommand {\beamer@subsectionpages {183}{186}}
-\headcommand {\slideentry {2}{7}{1}{187/187}{Gorthendieck-Tsirelson Theorem}{0}}
+\headcommand {\slideentry {2}{6}{4}{187/187}{Tsirelson's Theorem}{0}}
 \headcommand {\beamer@framepages {187}{187}}
-\headcommand {\slideentry {2}{7}{2}{188/188}{Gorthendieck-Tsirelson Theorem}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{7}{188}{Gorthendieck-Tsirelson Theorem}}\headcommand {\beamer@subsectionpages {184}{187}}
+\headcommand {\slideentry {2}{7}{1}{188/188}{Gorthendieck-Tsirelson Theorem}{0}}
 \headcommand {\beamer@framepages {188}{188}}
-\headcommand {\slideentry {2}{7}{3}{189/189}{Gorthendieck-Tsirelson Theorem}{0}}
+\headcommand {\slideentry {2}{7}{2}{189/189}{Gorthendieck-Tsirelson Theorem}{0}}
 \headcommand {\beamer@framepages {189}{189}}
-\headcommand {\beamer@partpages {1}{189}}
-\headcommand {\beamer@subsectionpages {187}{189}}
-\headcommand {\beamer@sectionpages {88}{189}}
-\headcommand {\beamer@documentpages {189}}
-\headcommand {\def \inserttotalframenumber {66}}
+\headcommand {\slideentry {2}{7}{3}{190/190}{Gorthendieck-Tsirelson Theorem}{0}}
+\headcommand {\beamer@framepages {190}{190}}
+\headcommand {\beamer@partpages {1}{190}}
+\headcommand {\beamer@subsectionpages {188}{190}}
+\headcommand {\beamer@sectionpages {88}{190}}
+\headcommand {\beamer@documentpages {190}}
+\headcommand {\def \inserttotalframenumber {67}}
