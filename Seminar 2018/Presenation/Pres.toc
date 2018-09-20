@@ -1,9 +1,15 @@
+\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
-\beamer@sectionintoc {1}{Local and quantum correlation matrices}{2}{0}{1}
-\beamer@subsectionintoc {1}{1}{Local correlation matrices }{2}{0}{1}
-\beamer@subsectionintoc {1}{2}{Quantum correlation matrices}{24}{0}{1}
-\beamer@subsectionintoc {1}{3}{The relations between quantum correlation and local correlation matrices}{53}{0}{1}
-\beamer@subsectionintoc {1}{4}{Motivation: The Grothendieck-Tsirelson Theorem}{70}{0}{1}
-\beamer@subsectionintoc {1}{5}{Grothendieck's Inequality}{72}{0}{1}
-\beamer@subsectionintoc {1}{6}{Tsirelson's Theorem}{97}{0}{1}
-\beamer@subsectionintoc {1}{7}{Gorthendieck-Tsirelson Theorem}{101}{0}{1}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Basics}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Nonlocal games}{33}{0}{1}
+\beamer@subsectionintoc {1}{3}{A special case of nonlocal games}{57}{0}{1}
+\beamer@subsectionintoc {1}{4}{A specific example}{80}{0}{1}
+\beamer@sectionintoc {2}{Local and quantum correlation matrices}{88}{0}{2}
+\beamer@subsectionintoc {2}{1}{Local correlation matrices }{88}{0}{2}
+\beamer@subsectionintoc {2}{2}{Quantum correlation matrices}{110}{0}{2}
+\beamer@subsectionintoc {2}{3}{The relations between quantum correlation and local correlation matrices}{139}{0}{2}
+\beamer@subsectionintoc {2}{4}{Motivation: The Grothendieck-Tsirelson Theorem}{156}{0}{2}
+\beamer@subsectionintoc {2}{5}{Grothendieck's Inequality}{158}{0}{2}
+\beamer@subsectionintoc {2}{6}{Tsirelson's Theorem}{183}{0}{2}
+\beamer@subsectionintoc {2}{7}{Gorthendieck-Tsirelson Theorem}{187}{0}{2}
