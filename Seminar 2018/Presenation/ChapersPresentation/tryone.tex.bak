@@ -286,7 +286,7 @@ with $\mathcal{W}$ being the set of all $\{ -1, 1 \}$-observables in  $\mathbb{C
 \begin{itemize}
     \item The CHSH game (Clauser, Horner, Shimony, Holt) is a two player XOR game with $\mathcal{A} = \mathcal{B} = \mathcal{S} = \mathcal{T} = \{0,1\}$ and $\pi$ being the uniform distribution
     \item  $f(s,t)= s \land t$, i.e. $f(1,1)=1$ and $f(0,0)=f(0,1)=f(1,0)=0$
-    \item Alice and Bob can win $\frac{3}{4}$ of the games by using deterministic strategies $(0,0), (1,0) \text{ or } (0,1)$
+    \item Alice and Bob can win $\frac{3}{4}$ of the games by using deterministic strategies $(1,0) \text{ or } (0,1)$
 \end{itemize}
 \begin{block}{Quantum strategy}
 \begin{itemize}
@@ -419,7 +419,7 @@ The bias of the entangled strategy equals
 \end{equation*} \pause
 Straight forward calculation shows
 \begin{equation*}
-\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \begin{cases} \frac{1}{\sqrt{2}} , (0,0), (1,0), (0,1) \\ -\frac{1}{\sqrt{2}} , (1.1) \end{cases}
+\langle \text{EPR} \vert F_s \otimes G_t \vert \text{EPR} \rangle = \begin{cases} \frac{1}{\sqrt{2}} , (0,0), (1,0), (0,1) \\ -\frac{1}{\sqrt{2}} , (1,1) \end{cases}
 \end{equation*}\pause
 which is equivalent to 
 \begin{equation*}
