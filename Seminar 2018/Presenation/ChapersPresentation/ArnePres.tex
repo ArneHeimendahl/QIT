@@ -89,10 +89,9 @@
 			\item<1-> Using the same decomposition for $ Y $ we obtain 
 			\begin{align*}
 			a_{ij} = \mathbb{E}[X_iY_j] &= \mathbb{E} \big [ \big (\sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i \big  ) \big (\sum_{\eta \in \{-1,1\}^n}\lambda_{\eta}^{(Y)}\eta_j \big ) \big ]   \\
-			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  \\
-			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}]\xi_i\eta_j
+			&= \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n} \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] \xi_i \eta_j  
 			\end{align*}
-			\item<2-> Due to $ \sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}\mathbb{E} [\lambda_{\xi}^{(X)} ]\mathbb{E}[\lambda_{\eta}^{(Y)}] = 1 $
+			\item<2-> Due to $\sum_{\xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n}  \mathbb{E}\big [\lambda_{\xi}^{(X)}\lambda_{\eta}^{(Y)} \big ] = 1 $
 			the matrix $ (a_{ij}) $ is a convex combination of $ \xi \eta^T $, $ \xi \in \{-1,1\}^m, \eta \in \{-1,1 \}^n $
 		\end{itemize}
 	\end{proof}
@@ -105,9 +104,9 @@
 \begin{frame}[label = QCMot]{Quantum correlation matrices}
 	\begin{itemize}
 		\item<1-> Alice and Bob share a common state $ \rho $ and get inputs $ i \in \mathcal{S}, \, j \in \mathcal{T} $ 
-		\item<2-> They perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $
+		\item<2-> They perform measurements $ \{ F_i^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_j^{\eta} \}_{\eta = \pm 1} $
 		\item <3-> The probability that their response is $ (\xi,\eta) $ for inputs $ (i,j) $ is given by 
-		$ a_{ij} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $
+		$ a_{ij} = \trace{(\rho F_i^\xi \otimes G_j^\eta )} $
 		\item<4-> Again we can encode this information in a matrix
 	\end{itemize}
 	\hyperlink{LCMot}{\beamerbutton{Motivation Locality}}
@@ -135,16 +134,16 @@
 \begin{frame}
 \begin{block}{$ \QC_{m,n} \subset \{ (\langle x_i,y_j \rangle)_{1 \le i \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
 	\begin{itemize}
-		\item<1-> $ a_{ij} = \trace{(\rho X_i \otimes Y_j)} $, state $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \ge m}, \, (Y_j)_{1 \ge n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $
+		\item<1-> $ a_{ij} = \trace{(\rho X_i \otimes Y_j)} $, state $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ (X_i)_{1 \le i \le  m}, \, (Y_j)_{1 \le i\le n} $ on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $
 		\item<2-> Define a positive semidefinite symmetric bilinear form on the space of Hermitian operators on $ \mathcal{H} $ by 
-		$ \beta: \mathcal{H} \times \mathcal{H} \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
+		$ \beta: B^{(sa)}(\mathcal{H}) \times B^{(sa)}(\mathcal{H}) \to \mathbb{R} $ where $ \beta(S,T) =\textup{Re}( \trace{\rho ST}) $.
 		\item<3-> Obtain an inner product space $ U := B^{sa}(\mathcal{H}) / \ker \beta$ equipped with the inner product 
 		\begin{align*}
 			\tilde{\beta}([S],[T]) = \beta(S,T).
 		\end{align*}
 		\item<4-> Identify $ X_i \otimes I,I \otimes Y_j $ with vectors $ x_i,y_j $ in $ U $, then 
 		\begin{align*}
-			\tilde{\beta}(x_i,y_j) = \beta(X_i,Y_j) = Re \trace{(\rho X_i \otimes Y_j)} = a_{ij}
+			\tilde{\beta}(x_i,y_j) = \beta(X_i \otimes I,I \otimes Y_j) = \textup{Re} \trace{(\rho X_i \otimes Y_j)} = a_{ij}
 		\end{align*}
 	\end{itemize}
 \end{block}
@@ -218,7 +217,7 @@
 				\item For $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
 				\begin{align*}
 				XY &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le \ 2n}\xi_i\eta_j U_i U_j   \\
-				&= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le \le 2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le  2n}U_iU_j =\sum_{i = 1}^{2n} \xi_i \eta_i I \\
+				&= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le  2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le  2n}U_iU_j =\sum_{i = 1}^{2n} \xi_i \eta_i I \\
 				&= \langle \xi, \eta \rangle I.
 				\end{align*}
 				\item The result follows by setting $ Y = X^{*} $.
