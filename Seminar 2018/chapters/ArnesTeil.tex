@@ -86,7 +86,8 @@ $ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive s
 If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product}.
 Note that if $ H $ is a positive semidefinite operator then $ \beta(v,w) = v^TH\bar{w} $ defines an positive semidefinite bilinear form and an inner product if $ H $ is positive definite. 
 Conversely, each positive semidefinite bilinear form $ \beta $ can be written as $ \beta(v,w) = v^TH\bar{w} $ for an Hermitian operator $ H $.
-As before, we will denote the right hand side of equation \ref{EqQC} by $ M $.
+
+\noindent As before, we will denote the right hand side of equation \ref{EqQC} by $ M $.
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
 	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ \{X_1,\hdots X_m\}\subset  B^H(\mathcal{C}), \, \{Y_1,\hdots Y_n\}\subset B^H(\mathcal{H}) $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
 	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
@@ -154,7 +155,7 @@ Moreover we define the $ 2^n \times 2^n $ Hermitian matrix
 \sigma_A^i = I^{\otimes (i-1)} \otimes A \otimes I^{\otimes (n-i)}
 \end{align*}
 for $ A \in \{ X,Y,Z \}$ and where $ I $ is the $ 2 \times 2 $ identity matrix. The Hermitian property follows directly from the observation $ (M \otimes N)^* = M^* \otimes N^* $.
-Note that $ \sigma_A^i $ and $ \sigma_{A^{\prime}}^j $ anti-commute if $ i = j $ and $ A = A^{\prime} $ and commute otherwise. We use these operators in order to define 
+Note that $ \sigma_A^i $ and $ \sigma_{A^{\prime}}^j $ anti-commute if $ i = j $ and $ A \neq A^{\prime} $ and commute otherwise. We use these operators in order to define 
 \begin{align*}
 U_i = \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k, \\
 U_{i+n} = \sigma_Z^i \prod_{k = i+1}^n \sigma_Y^k
@@ -175,24 +176,33 @@ U_iU_{n+j} =  (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_Z^j \prod
 &= - ( \sigma_Z^j \prod_{k = j+1}^{n}\sigma_Y^k)(\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)  \\
 &= -U_{n+j}U_i.
 \end{align*}
-Since $ U_iU_i^* = U_iU_i =  I$ they are also unitary. 
-Moreover, taking the product of two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ we can calculate 
-\begin{align*}
-XY = \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i,j \le  2n}\xi_i\eta_j U_i U_j &= \sum_{i = 1}^{2n} \xi_i \eta_i I + \sum_{1 \le i < j \le  2n}\xi_i\eta_jU_iU_j - \sum_{1 \le i < j \le  2n}U_iU_j \\
-&=\sum_{i = 1}^{2n} \xi_i \eta_i I \\
-&= \langle \xi, \eta \rangle I.
+Moreover, the $ U_i $'s are unitary since 
+\begin{align*} 
+U_iU_i^* =U_iU_i=  ( \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)( \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k)= \sigma_X^i\sigma_X^i \prod_{k = i+1} \sigma_Y^k \sigma_Y^k = I^{\otimes n}.
 \end{align*}
-So, if we set $ Y = X $ we get the desired result by taking the subspace $ \textup{span} \{ U_i \, | \, i = 1,\hdots,2n \} $
+The same holds analogously for $ U_{n+i} $.
+Now, if we consider a linear combination $ X = \sum_{i = 1}^{2n}\xi_i U_i$, we can calculate 
+\begin{align*}
+XX^* &= XX = \sum_{i = 1}^{2n} \xi_i^2 I + \sum_{1 \le i\neq j \le  2n}\xi_i\xi_j U_i U_j   \\
+&= \sum_{i = 1}^{2n} \xi_i^2 I + \sum_{1 \le i < j \le  2n}\xi_i\xi_jU_iU_j - \sum_{1 \le i < j \le  2n}\xi_i\xi_jU_iU_j \\
+&=\sum_{i = 1}^{2n} \xi_i^2 I \\
+&= \modul{\xi}^2 I.
+\end{align*}
+So, $ X $ is a multiple of a unitary matrix and eventually, we get the desired result by taking the subspace $ \textup{span} \{ U_i \, | \, i = 1,\hdots,2n \} $.
 
 \end{proof}
-
+As a byproduct, if we take two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i U_i$, $ Y = \sum_{i = 1}^{2n} = \eta_iU_i $ and consider the trace of the product we get
+\begin{align}\label{traceUi}
+	\trace{(XY)} &= \sum_{i = 1}^{2n} \xi_i \eta_i  \trace{I} + \sum_{1 \le i \neq j \le \ 2n}\xi_i\eta_j \trace{(U_i U_j)}  = \sum_{i= 1}^{2n}\xi_i \eta_j 2^n = 2^n \cdot \langle \xi, \eta \rangle,
+\end{align}
+where we used that the product $ U_iU_j $ is traceless for $ i \neq j $.
 We will use this in order to proceed with the other inclusion of lemma \ref{LemQC}.
 
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
 Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
 $ \modul{x_i},$$ \modul{y_j} \le 1 $. 
 Using the notation of the previous proposition's proof we set $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_k $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_k $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
-Then, by the proof of the previous proposition $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y $ since $ Y_j^TY_j^T =   \modul{y_j}^2I = \modul{y_j}I^T = (Y_j^TY_j^T)^T = Y_jY_j  $.
+Then, by equation \ref{traceUi} it follows that $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y $ since $ Y_j^TY_j^T =   \modul{y_j}^2I = \modul{y_j}I^T = (Y_j^TY_j^T)^T = Y_jY_j  $.
 Let $ \ket{\psi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{ii} $ and $ \rho = \ket{\psi}\bra{\psi} $. Note that we can write $ \rho $ as
 \begin{align*}
 \rho = \ket{\psi}\bra{\psi} = \frac{1}{d}\sum_{1 \le k,l \le d}\ket{kk}\bra{ll} = \frac{1}{d} \sum_{1 \le k,l \le d}\ket{k}\bra{l} \otimes \ket{k}\bra{l}
@@ -201,11 +211,11 @@ where $  (\ket{k}\bra{l})_{kl} = 1 $ and $ (\ket{k}\bra{l})_{ij} = 0 $ for all $
 Calculating
 \begin{align*}
 \trace{(\rho X_i \otimes Y_j)} &=\frac{1}{d} \sum_{1 \le k,l \le d} \trace{ \big (\ket{k}\bra{l}X_i \otimes \ket{k}\bra{l}Y_j \big )} = \frac{1}{d} \sum_{1 \le k,l \le d} \trace{\big (\ket{k}\bra{l}X_i \big )} \trace{\big (\ket{k}\bra{l}Y_j \big )} \\
-&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x_i,y_j \rangle.
+&=  \frac{1}{d} \trace{X_iY_j^T} = \langle x_i,y_j \rangle
 \end{align*}
 shows the desired inclusion. 
 \end{proof}
-\noindent We can easily see that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
+\noindent The previous lemma easily enables us to show that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
 For $ \lambda \in [0,1] $ we define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) $ and due to  $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $ they are unit vectors. Moreover, $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$. If we proceed in the same fashion as in the proof of lemma \ref{LemQC} we obtain vectors 
 $ \alpha^{(i)},\gamma^{(j)} $ that satisfy $= \langle \alpha^{(i)},\gamma^{(j)} \rangle = \langle \tilde{x} _i, \tilde{y}_j\rangle $ and have dimension smaller or equal to $ \min \{m,n\} $.
 
