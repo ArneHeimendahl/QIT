@@ -17,7 +17,7 @@ As we will see in the sequel, the set of $ m \times n $ correlation matrices is 
 \end{lemma}
 What does the lemma tell us in addition to a simples description? It states that the matrices encoding all possible strategies are the convex hull of the matrices defined by deterministic ones. We can interpret this as follows: no matter which probabilistic strategy Alice and Bob play there will be a deterministic strategy that is at least as good as theirs. 
 \begin{proof}
-	Let us denote the right hand side of \ref{EqLC} by $ M $ and let $ \xi\eta^T \in M $ with $ \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n $. Clearly $ \xi_i, \eta_j \in \{-1,1\} $ define constant $ \mathbb{R} $-valued random variables satisfying $ \vert \xi_i \vert, \, \vert \eta_j \vert \le 1 $. Hence, it suffices to show that $ \LC_{m,n} $ is convex since it contains the vertices of $ M $. Therefore, consider two classical correlation matrices $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $ which are defined on a common probability space such that $ \modul{X_i^{(k)}},\modul{Y_j^{(k)}} \le 1 $ We have to show that there exists random variables $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
+	Let us denote the right hand side of \ref{EqLC} by $ M $ and let $ \xi\eta^T \in M $ with $ \xi \in \{-1,1\}^m, \eta \in \{-1,1\}^n $. Clearly $ \xi_i, \eta_j \in \{-1,1\} $ define constant $ \mathbb{R} $-valued random variables satisfying $ \vert \xi_i \vert, \, \vert \eta_j \vert \le 1 $. Hence, it suffices to show that $ \LC_{m,n} $ is convex since it contains the vertices of $ M $. Therefore, consider two classical correlation matrices $ a_{ij}^{(k)} = \mathbb{E}[X_i^{(k)}Y_{j}^{(k)}] $ for $ k \in \{0,1\} $ which are defined on a common probability space such that $ \modul{X_i^{(k)}},\modul{Y_j^{(k)}} \le 1 $. We have to show that there exists random variables $ (X_i),(Y_j) $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely such that
 	\begin{align*}
 		\beta a_{ij}^{(0)}+ (1-\beta)a_{ij}^{(1)} = \mathbb{E}[X_iY_j]
 	\end{align*}
@@ -34,13 +34,14 @@ What does the lemma tell us in addition to a simples description? It states that
 	
 	
 	For the other inclusion, let $ (a_{ij}) \in \LC_{m,n} $, i.e. $ a_{ij} = \mathbb{E}[X_iY_j] $ for $ \mathbb{R} $-valued random variables $ (X_i),(Y_j) $, defined on a common probability space $ \Omega $ with $ \modul{X_i},\modul{Y_j} \le 1 $ almost surely. 
-	We will use the characterization of the $ d-$dimensional cube by its vertices, that is $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$ (this can be proved by induction). 
-	If we define the random variables $ X= (X_1,\hdots,X_m) $ and $ Y= (Y_1,\hdots,Y_n) $ they satisfy $ X \in [-1,1]^m, \, Y \in [-1,1]^n $ almost surely. Using the characterization of the hypercube we can define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ such that 
+	We will use the characterization of the $ d-$dimensional cube by its vertices, that is $ [-1,1]^d = \textup{conv} \{\xi \, | \, \xi \in \{-1,1 \}^d \}$.
+	 
+	\noindent If we define the random variables $ X= (X_1,\hdots,X_m) $ and $ Y= (Y_1,\hdots,Y_n) $ they satisfy $ X \in [-1,1]^m, \, Y \in [-1,1]^n $ almost surely. Using the characterization of the hypercube we can define random variables $ \lambda_{\xi}^{(X)}: \Omega^m \to [0,1] $ such that 
 	\begin{align*}
 		X(\omega) = \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega)\xi
 	\end{align*} 
 	almost surely 
-	and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $ for all $ \omega \in \Omega $. We can deduce that 
+	and $ \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}(\omega) = 1  $ for all $ \omega \in \Omega $. Hence, it holds that 
 	$X_i =  \sum_{\xi \in \{-1,1\}^m}\lambda_{\xi}^{(X)}\xi_i $ almost surely.
 	If we proceed analogously for $ Y $ we obtain
 	\begin{align*}
@@ -55,7 +56,7 @@ What does the lemma tell us in addition to a simples description? It states that
 However, we will do it later on for $ n=m=2 $ and compare it to the set of quantum correlation matrices. 
 
 \subsection{Quantum correlation matrices}
-Before we introduce the quantum correlation matrices we will shortly go back to the framework of nonlocal games. As before, Alice and Bob share a state $ \rho $ and get inputs $ s \in \mathcal{S}, t \in \mathcal{T} $ and perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $.
+Before we introduce the quantum correlation matrices we will shortly review the framework of nonlocal games. As before, Alice and Bob share a state $ \rho $ and get inputs $ s \in \mathcal{S}, t \in \mathcal{T} $ and perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $.
 As we have seen before the probability that their response is $ (\xi,\eta) $ for inputs $ (s,t) $ is given by 
 $ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode these information in a matrix $ A=(a_{st}) $. This motivates the following (slightly more general) definition. 
 \begin{dfn}
@@ -65,15 +66,15 @@ $ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode thes
 	\end{align}
 \end{dfn}
 \noindent We will write $ \QC_{m,n} $ for the set of all $ m \times n $ quantum correlation matrices.
-With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. In the following, we will proof a similar result for $ \QC_{m,n} $ that is: 
+With regard to quantum information theory it is interesting to analyze the geometry of $ \LC_{m,n} $ and $ \QC_{m,n} $. In the following, we will proof a similar result for $ \QC_{m,n} $, that is: 
 \begin{lemma}\label{LemQC}
 	\begin{align}\label{EqQC}
 		\QC_{m,n} = \{ (\langle x_i,y_j \rangle)_{1 \le i \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \},
 	\end{align}
 	where $ \langle \cdot , \cdot \rangle $ denotes the standard scalar product. 
 \end{lemma}
-\noindent For the first inclusion we review the definition of an inner product. The basic idea is to define an inner product via the  right hand sight of \ref{QCaij}.
-Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ that is linear in both variables, that is 
+\noindent For the first inclusion we shortly repeat the definition of an inner product. The basic idea of the proof is to define an inner product via the  right hand sight of \ref{QCaij}.
+Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ which is linear in both variables, that is 
 \begin{enumerate}
 	\item [i)] $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
 	\item  [ii)]$\beta(\lambda v,w)= \lambda \beta(v,w) $
@@ -109,14 +110,15 @@ Conversely, each positive semidefinite bilinear form $ \beta $ can be written as
 	
 	\noindent Now, the crucial point is to notice that $ a_{ij} =\trace{(\rho X_i Y_j)}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that these operators coincide with unit vectors with respect to $  \beta  $ we have to show
 	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,\hdots,X_m \} $, $ Y \in \{Y_1,\hdots,Y_n \} $. 
-	Therefore, let $ d = d_1d_2 $ and let $ \rho $ be a pure state, that is $ \rho = \vert \psi \rangle \langle \psi \vert $ for $ \vert \psi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. If we can show the desired property for pure sates we can immediately conclude that it holds for general states since each state is a convex combination of pure states. 
+	Therefore, let $ d = d_1d_2 $ and let $ \rho $ be a pure state, that is $ \rho = \vert \psi \rangle \langle \psi \vert $ for $ \vert \psi \rangle = \sum_{i}^{d}\lambda_i \ket{\xi_i} \otimes \ket{\eta_i} $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. If we can show the desired property for pure sates we can immediately conclude that it holds for general states since each state is a convex combination of pure states. 
 	Writing $ \rho $ in this form we get 
 	\begin{align*}
-	\beta(X \otimes I, X \otimes I) &= \textup{Re} \trace{(\rho X^2 \otimes I)}=  \sum_{i=1}^d \lambda_i^2 \trace{\big ((\ket{\xi_i} \bra{\xi_i} \otimes \ket{\eta_i}\bra{\eta_i})(X^2 \otimes I)\big ) } \\
-	&= \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})} =  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
+	&\beta(X \otimes I, X \otimes I) = \textup{Re} \trace{(\rho X^2 \otimes I)}=  \sum_{1 \le i,j \le d} \lambda_i\lambda_j \trace{\big ((\ket{\xi_i} \bra{\xi_j} \otimes \ket{\eta_i}\bra{\eta_j})(X^2 \otimes I)\big ) } \\
+	&= \sum_{i\le i,j \le d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})}  +  \sum_{1 \le i \neq j \le \ d}\lambda_i\lambda_j \trace{(\ket{\xi_i}\bra{\xi_j}X^2)}\trace{(\ket{\eta_i}\bra{\eta_j})}   \\
+	&=  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
 	\end{align*}
-	In order to get the desired result we have to show that $ \trace{(\ket{\xi_i} \bra{\xi_i}X^2)} = \trace{(X^2\ket{\xi_i} \bra{\xi_i})} \le 1 $. 
-	Note that $1 \ge \norm{X}_{\infty} := \sup_{\modul{y}\le 1} \modul{Xy} $ implies that $ \modul{X^2\ket{\xi_i}} \le 1 $. So the problem can be reduced to $ \vert \trace{uv^*}\vert^2 \le 1 $ for complex vectors $ u,v $ with $ \modul{u},\, \modul{v} \le 1 $. But this holds since due to the Cauchy-Schwarz inequality 
+	 We have to show that $ \trace{(\ket{\xi_i} \bra{\xi_i}X^2)} = \trace{(X^2\ket{\xi_i} \bra{\xi_i})} \le 1 $. 
+	Note that $1 \ge \norm{X}_{\infty} := \sup_{\modul{y}\le 1} \modul{Xy} $ implies that $ \modul{X^2\ket{\xi_i}} \le 1 $. So, the problem can be reduced to $ \vert \trace{uv^*}\vert^2 \le 1 $ for complex vectors $ u,v $ with $ \modul{u},\, \modul{v} \le 1 $. But this holds since due to the Cauchy-Schwarz inequality 
 	$ \vert\trace{uv^*}\vert^2 = \vert\sum u_i \bar{v_i}\vert^2 \le \modul{u}^2\modul{v}^2 \le 1 $.
 	\noindent If we now identify the operators $ X_i \otimes I $ and $  I \otimes Y_j$ with vectors
 	$ (x_i) $ and $ (y_j) $ we have found vectors that almost satisfy the desired properties but they do not have the right dimension and we do not consider the standard scalar product yet. Without loss of generality let $ m \le n $. To obtain the required dimension we will project $ (y_j) $ orthogonally onto $ \textup{span}\{ x_1,\hdots,x_m \} $.
@@ -150,7 +152,7 @@ X = \begin{pmatrix}
 \end{align*}
 together with the $ 2 \times 2 $ identity matrix .
 They are all trace zero unitary Hermitian matrices and anti-commute pair wisely. 
-Moreover we define the $ 2^n \times 2^n $ Hermitian matrix 
+Moreover, we define the $ 2^n \times 2^n $ Hermitian matrix 
 \begin{align*}
 \sigma_A^i = I^{\otimes (i-1)} \otimes A \otimes I^{\otimes (n-i)}
 \end{align*}
@@ -199,7 +201,7 @@ where we used that the product $ U_iU_j $ is traceless for $ i \neq j $.
 We will use this in order to proceed with the other inclusion of lemma \ref{LemQC}.
 
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
-Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
+Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be families of vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
 $ \modul{x_i},$$ \modul{y_j} \le 1 $. 
 Using the notation of the previous proposition's proof we set $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_k $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_k $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
 Then, by equation \ref{traceUi} it follows that $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y $ since $ Y_j^TY_j^T =   \modul{y_j}^2I = \modul{y_j}I^T = (Y_j^TY_j^T)^T = Y_jY_j  $.
