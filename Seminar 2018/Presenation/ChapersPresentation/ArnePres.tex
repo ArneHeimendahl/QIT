@@ -192,7 +192,7 @@
 		\end{align*}
 	\end{itemize}
 \end{frame}
-\begin{frame}
+\begin{frame}[label=Tsirelson2]
 	\begin{itemize}
 		\item<1->{\footnotesize $
 		X = \begin{pmatrix}
@@ -241,7 +241,7 @@
 \begin{frame}
 	\begin{block}{$ \QC_{m,n} \supset \{ (\langle x_i,y_j \rangle)_{1 \le i \le m, 1 \le j \le n} \,| \, x_i,y_j \in \mathbb{R}^{ \min \{m,n \} }, \vert x_i  \vert \le 1, \vert y_j \vert \le 1  \} $}
 		\begin{itemize}
-			\item<1->  Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} \subset \mathbb{R}^{\min \{ m,n \}}$ such that $ \modul{x_i},$$ \modul{y_j} \le 1 $. 
+			\item<1->  Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} \subset \mathbb{R}^{\min \{ m,n \}}$ such that $ \modul{x_i},$ $ \modul{y_j} \le 1 $. 
 			\item<2->  Let $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_i $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_i $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $.
 			\item<3-> $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $ (the same holds for $ Y_j $)
 			\item<4-> Let $ \ket{\psi} = \frac{1}{\sqrt{d}}\sum_{i= 1}^{d}\ket{i}\otimes \ket{i} $ and $ \rho = \ket{\psi}\bra{\psi} $. Note that we can write $ \rho $ as
@@ -267,6 +267,7 @@
 			\end{align*}
 		\end{itemize}
 	\end{proof}
+	\hyperlink{Tsirelsonproof}{\beamerbutton{Tsirelson's Theorem}}
 \end{frame}
 
 
