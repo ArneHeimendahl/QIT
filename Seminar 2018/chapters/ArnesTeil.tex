@@ -109,11 +109,12 @@ Conversely, each positive semidefinite bilinear form $ \beta $ can be written as
 	
 	\noindent Now, the crucial point is to notice that $ a_{ij} =\trace{(\rho X_i Y_j)}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that these operators coincide with unit vectors with respect to $  \beta  $ we have to show
 	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,\hdots,X_m \} $, $ Y \in \{Y_1,\hdots,Y_n \} $. 
-	Therefore, let $ d = d_1d_2 $ and let $ \rho $ be a pure state, that is $ \rho = \vert \psi \rangle \langle \psi \vert $ for $ \vert \psi \rangle = \sum_{i}^{d}\lambda_i \xi_i \otimes \eta_i $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. If we can show the desired property for pure sates we can immediately conclude that it holds for general states since each state is a convex combination of pure states. 
+	Therefore, let $ d = d_1d_2 $ and let $ \rho $ be a pure state, that is $ \rho = \vert \psi \rangle \langle \psi \vert $ for $ \vert \psi \rangle = \sum_{i}^{d}\lambda_i \ket{\xi_i} \otimes \ket{\eta_i} $, where $ \{ \xi_1,\hdots,\xi_d \} \subset \mathbb{C}^{d_1}$ and $ \{  \eta_1,\hdots,\eta_d\} \subset \mathbb{C}^{d_2}$ are orthonormal sets, i.e. $ \braket{\xi_i \vert \xi_j}, \braket{\eta_i \vert \eta_j} = 0 $ for $ i \neq j $, and $ \sum_{i=1}^d \lambda_i^2 = 1 $. This decomposition is called {\itshape Schmidt decomposition} and a consequence of the singular value decomposition. If we can show the desired property for pure sates we can immediately conclude that it holds for general states since each state is a convex combination of pure states. 
 	Writing $ \rho $ in this form we get 
 	\begin{align*}
-	\beta(X \otimes I, X \otimes I) &= \textup{Re} \trace{(\rho X^2 \otimes I)}=  \sum_{i=1}^d \lambda_i^2 \trace{\big ((\ket{\xi_i} \bra{\xi_i} \otimes \ket{\eta_i}\bra{\eta_i})(X^2 \otimes I)\big ) } \\
-	&= \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})} =  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
+	&\beta(X \otimes I, X \otimes I) = \textup{Re} \trace{(\rho X^2 \otimes I)}=  \sum_{1 \le i,j \le d} \lambda_i\lambda_j \trace{\big ((\ket{\xi_i} \bra{\xi_j} \otimes \ket{\eta_i}\bra{\eta_j})(X^2 \otimes I)\big ) } \\
+	&= \sum_{i\le i,j \le d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}\trace{(\ket{\eta_i}\bra{\eta_i})}  +  \sum_{1 \le i \neq j \le \ d}\lambda_i\lambda_j \trace{(\ket{\xi_i}\bra{\xi_j}X^2)}\trace{(\ket{\eta_i}\bra{\eta_j})}   \\
+	&=  \sum_{i=1}^{d}\lambda_i^2 \trace{(\ket{\xi_i} \bra{\xi_i}X^2)}.
 	\end{align*}
 	In order to get the desired result we have to show that $ \trace{(\ket{\xi_i} \bra{\xi_i}X^2)} = \trace{(X^2\ket{\xi_i} \bra{\xi_i})} \le 1 $. 
 	Note that $1 \ge \norm{X}_{\infty} := \sup_{\modul{y}\le 1} \modul{Xy} $ implies that $ \modul{X^2\ket{\xi_i}} \le 1 $. So the problem can be reduced to $ \vert \trace{uv^*}\vert^2 \le 1 $ for complex vectors $ u,v $ with $ \modul{u},\, \modul{v} \le 1 $. But this holds since due to the Cauchy-Schwarz inequality 
@@ -199,7 +200,7 @@ where we used that the product $ U_iU_j $ is traceless for $ i \neq j $.
 We will use this in order to proceed with the other inclusion of lemma \ref{LemQC}.
 
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
-Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
+Let $ (x_i)_{1 \le i \le m}, \, (y_j)_{1 \le j \le n} $ be families of vectors in $\mathbb{R}^{\min \{ m,n \}}$ that satisfy 
 $ \modul{x_i},$$ \modul{y_j} \le 1 $. 
 Using the notation of the previous proposition's proof we set $ X_i = \sum_{k=1}^{\min \{m,n\}} x_i(k)U_k $ and $ Y_j^{T } = \sum_{k=1}^{\min \{m,n\}}y_j(k)U_k $ where the $ U_k $'s are $ d \times d $ matrices with $  d = 2^{\lceil \min \{m,n\}/2 \rceil} $
 Then, by equation \ref{traceUi} it follows that $ \trace{(X_iY_j^T)} = d\cdot \langle x_i, y_j \rangle  $ and $ \norm{X_i}_{\infty} \le 1 $ since $ X_iX_i^* = \modul{x_i}^2I $ and $ \modul{x_i}^2 \le 1  $. The same holds for $ Y $ since $ Y_j^TY_j^T =   \modul{y_j}^2I = \modul{y_j}I^T = (Y_j^TY_j^T)^T = Y_jY_j  $.
