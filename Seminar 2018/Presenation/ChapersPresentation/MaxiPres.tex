@@ -35,15 +35,15 @@
 		\end{lemma}
 		\begin{pbmr}
 			\begin{itemize}
-				\item<1-> If $x$ and $y$ are linearly dependent, then
+				\item<2-> If $x$ and $y$ are linearly dependent, then
 					\begin{itemize}
-						\item<2-> if $x=y$:~~\, $\arccos(\sclr{x}{y})=\arccos(1) = 0$.
-						\item<3-> if $x=-y$: $\arccos(\sclr{x}{y})=\arccos(-1) = \pi$.
+						\item<3-> if $x=y$:~~\, $\arccos(\sclr{x}{y})=\arccos(1) = 0$.
+						\item<4-> if $x=-y$: $\arccos(\sclr{x}{y})=\arccos(-1) = \pi$.
 					\end{itemize}
-				\item<4-> If $x$ and $y$ are linearly independent, then 
+				\item<5-> If $x$ and $y$ are linearly independent, then 
 					\begin{itemize}
-						\item<5-> project $r$ orthogonally on $\spn\{x,y\}$ which gives us a vector $s$ with $\sclr{x}{r} = \sclr{x}{s}$ and $\sclr{y}{r} = \sclr{y}{s}$,
-						\item<6-> the normalized vector $n\coloneqq s/\modul{s}$ is uniformly distributed on the intersection of the unit sphere and $\spn\{x,y\}$ by the $O(d)$-invariance of the probability distribution.
+						\item<6-> project $r$ orthogonally on $\spn\{x,y\}$ which gives us a vector $s$ with $\sclr{x}{r} = \sclr{x}{s}$ and $\sclr{y}{r} = \sclr{y}{s}$,
+						\item<7-> the normalized vector $n\coloneqq s/\modul{s}$ is uniformly distributed on the intersection of the unit sphere and $\spn\{x,y\}$ by the $O(d)$-invariance of the probability distribution.
 	%					\item<7-> $\mathbb{P}[\sgn(\sclr{x}{r})\neq\sgn(\sclr{y}{r})]= \mathbb{P}[\sgn(\sclr{x}{n})\neq\sgn(\sclr{y}{n})]$, where $n\coloneqq s/\modul{s}$ by the $O(d)$-invariance of the probability distribution
 					\end{itemize}
 			\end{itemize}
@@ -238,7 +238,7 @@
 				&=\sum_{i=1}^m\sum_{j=1}^n M_{ij}\beta \sclr{x_i}{y_j} \\
 				&=\beta \operatorname{sdp}_{\infty\to 1}(M),
 			\end{align*}
-			where the last equality follows by Krivine's trick with $\beta = \frac{2\ln(1+\sqrt{2)}}{\pi}$, thus $K\leq \beta^{-1}$.
+			where the second last equality follows by Krivine's trick with $\beta = \frac{2\ln(1+\sqrt{2)}}{\pi}$, thus $K\leq \beta^{-1}$.
 		\end{pbmr}
 	\end{frame}
 
