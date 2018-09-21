@@ -3,7 +3,8 @@
 \beamer@subsectionintoc {1}{1}{Local correlation matrices }{2}{0}{1}
 \beamer@subsectionintoc {1}{2}{Quantum correlation matrices}{23}{0}{1}
 \beamer@subsectionintoc {1}{3}{The relations between quantum correlation and local correlation matrices}{54}{0}{1}
-\beamer@subsectionintoc {1}{4}{Motivation: The Grothendieck-Tsirelson Theorem}{71}{0}{1}
-\beamer@subsectionintoc {1}{5}{Grothendieck's Inequality}{73}{0}{1}
-\beamer@subsectionintoc {1}{6}{Tsirelson's Theorem}{99}{0}{1}
-\beamer@subsectionintoc {1}{7}{Gorthendieck-Tsirelson Theorem}{103}{0}{1}
+\beamer@sectionintoc {2}{Grothendieck-Tsirelson Theorem}{70}{0}{2}
+\beamer@subsectionintoc {2}{1}{Motivation: The Grothendieck-Tsirelson Theorem}{71}{0}{2}
+\beamer@subsectionintoc {2}{2}{Grothendieck's Inequality}{73}{0}{2}
+\beamer@subsectionintoc {2}{3}{Tsirelson's Theorem}{98}{0}{2}
+\beamer@subsectionintoc {2}{4}{Gorthendieck-Tsirelson Theorem}{106}{0}{2}
