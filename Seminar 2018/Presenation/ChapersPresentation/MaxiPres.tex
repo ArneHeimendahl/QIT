@@ -247,13 +247,13 @@
 
 	\begin{frame}
 		\begin{theo}[Tsirelson] \label{theo:Tsirelson}
-			(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^{r-1}$, there exists a positive integer $d\coloneqq d(r)$, a state $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$, such that for every $i,j\in\{1,\dots,n\}$, we have
+			(Hard direction) For all positive integers $n, r$ and any $x_1,\dots,x_n,$ $y_1,\dots,y_n\in S^{r-1}$, there exists a positive integer $d\coloneqq d(r)$, a unit vector $\dr{\psi}\in\mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in \mathbb{C}^{d\times d}$, such that for every $i,j\in\{1,\dots,n\}$, we have
 			\begin{equation}
 				\dl{\psi} F_i\tensor G_j \dr{\psi} = \sclr{x_i}{y_j}.
 			\end{equation}
 			Moreover, $d\leq 2^{\lceil r/2 \rceil}$.
 			
-			(Easy direction) Conversely, for all positive integers $n,d,$ state $\dr{\psi}\in \mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in O(\mathbb{C}^d)$, there exist a positive integer $r\coloneqq r(d)$ and $x_1,\dots,x_n,y_1,\dots,y_n\in S^{r-1}$ such that for every $i,j\in\{1,\dots,n\}$, we have
+			(Easy direction) Conversely, for all positive integers $n,d,$ unit vectors $\dr{\psi}\in \mathbb{C}^d\tensor\mathbb{C}^d$ and $\{-1,1\}$-observables $F_1,\dots,F_n,G_1,\dots,G_n\in \mathbb{C}^{d\times d}$, there exist a positive integer $r\coloneqq r(d)$ and $x_1,\dots,x_n,y_1,\dots,y_n\in S^{r-1}$ such that for every $i,j\in\{1,\dots,n\}$, we have
 			\begin{equation}
 				\sclr{x_i}{y_j} = \dl{\psi}F_i\tensor G_j \dr{\psi}.
 			\end{equation}
@@ -262,7 +262,7 @@
 	\end{frame}
 	\begin{frame}
 		\begin{proof}
-			For the hard direction look at the second part of the proof of $\QC_{m,n} = \{(\sclr{x_i}{y_j})_{1\leq i\leq m, 1\leq j \leq n} \,| \, x_i,y_j \in \mathbb{R}^{\min\{m,n\}}, \modul{x_i}\leq 1, \modul{y_j}\leq 1\}$ (\hyperlink{QCMot<4>}{\beamerreturnbutton{Lemma}}).
+			For the hard direction look at the second part of the proof of $\QC_{m,n} = \{(\sclr{x_i}{y_j})_{1\leq i\leq m, 1\leq j \leq n} \,| \, x_i,y_j \in \mathbb{R}^{\min\{m,n\}}, \modul{x_i}\leq 1, \modul{y_j}\leq 1\}$ (\hyperlink{Tsirelson}{\beamerreturnbutton{Lemma}}).
 			
 			Due to the additional \textcolor{red}{restriction/assumption} that $F_i$ and $G_j$ are $\{-1,1\}$-observables the other direction gets easier.
 			
