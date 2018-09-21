@@ -10,10 +10,10 @@
 \contentsline {section}{\tocsection {}{4}{Local and Quantum correlation matrices}}{10}{section.4}
 \contentsline {subsection}{\tocsubsection {}{4.1}{Local Correlation matrices}}{10}{subsection.4.1}
 \contentsline {subsection}{\tocsubsection {}{4.2}{Quantum correlation matrices}}{11}{subsection.4.2}
-\contentsline {subsection}{\tocsubsection {}{4.3}{The relations between quantum correlation and local correlation matrices}}{16}{subsection.4.3}
+\contentsline {subsection}{\tocsubsection {}{4.3}{The relations between quantum correlation and local correlation matrices}}{15}{subsection.4.3}
 \contentsline {section}{\tocsection {}{5}{Grothendieck-Tsirelson Theorem}}{17}{section.5}
 \contentsline {subsection}{\tocsubsection {}{5.1}{Grothendieck's Inequality}}{17}{subsection.5.1}
-\contentsline {subsection}{\tocsubsection {}{5.2}{Tsirelson's Theorem}}{22}{subsection.5.2}
+\contentsline {subsection}{\tocsubsection {}{5.2}{Tsirelson's Theorem}}{21}{subsection.5.2}
 \contentsline {subsection}{\tocsubsection {}{5.3}{Grothendieck-Tsirelson}}{25}{subsection.5.3}
-\contentsline {section}{\tocsection {}{}{Appendix}}{27}{section*.4}
-\contentsline {subsection}{\tocsubsection {}{5.4}{How to derive an inner product from a symmetric positive semidefinite bilinear form}}{27}{subsection.5.4}
+\contentsline {section}{\tocsection {}{}{Appendix}}{26}{section*.4}
+\contentsline {subsection}{\tocsubsection {}{5.4}{How to derive an inner product from a symmetric positive semidefinite bilinear form}}{26}{subsection.5.4}
