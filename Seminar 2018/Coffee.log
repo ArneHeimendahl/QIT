@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  21 SEP 2018 07:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  21 SEP 2018 07:37
 entering extended mode
 **./Coffee.tex
 (Coffee.tex
@@ -2147,40 +2147,51 @@ Underfull \vbox (badness 2197) has occurred while \output is active []
  [10]
 [11]
 
-LaTeX Warning: Reference `Appendix' on page 12 undefined on input line 107.
+LaTeX Warning: Reference `Appendix' on page 12 undefined on input line 108.
 
 [12]
-Overfull \hbox (4.4314pt too wide) in paragraph at lines 116--127
+Overfull \hbox (4.4314pt too wide) in paragraph at lines 117--128
 \OT1/lmr/m/n/10.95 In or-der to get the de-sired re-sult we have to show that $
 [] [] = [] [] \OMS/lmsy/m/n/10.95 
  []
 
-[13]
-Overfull \hbox (23.04022pt too wide) in paragraph at lines 192--197
+[13] [14]
+Overfull \hbox (23.04022pt too wide) in paragraph at lines 202--207
 []\OT1/lmr/m/n/10.95 Let $(\OML/lmm/m/it/10.95 x[]\OT1/lmr/m/n/10.95 )[]\OML/lm
 m/m/it/10.95 ;  \OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 y[]\OT1/lmr/m/n/10.95 )
 []$ be vec-tors in $\U/msb/m/n/10.95 R[]$ \OT1/lmr/m/n/10.95 that sat-isfy $[]\
 OML/lmm/m/it/10.95 ;$$[] \OMS/lmsy/m/n/10.95 
  []
 
-[14]
-Overfull \hbox (7.66248pt too wide) in paragraph at lines 205--205
+
+Overfull \hbox (7.66248pt too wide) in paragraph at lines 215--215
 [] 
  []
 
-[15]) [16] (chapters/MaxisTeil.tex
+
+Overfull \hbox (8.99115pt too wide) in paragraph at lines 218--221
+\OT1/lmr/m/n/10.95 The pre-vi-ous lemma eas-ily en-ables us to show that $[][]$
+ is con-vex. Con-sider $(\OML/lmm/m/it/10.95 a[]\OT1/lmr/m/n/10.95 )\OML/lmm/m/
+it/10.95 ; \OT1/lmr/m/n/10.95 ([]) \OMS/lmsy/m/n/10.95 2
+ []
+
+[15]
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+ [16])
+(chapters/MaxisTeil.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-<chapters/fig_unit_circle.pdf, id=233, 149.20341pt x 161.75331pt>
+<chapters/fig_unit_circle.pdf, id=235, 149.20341pt x 161.75331pt>
 File: chapters/fig_unit_circle.pdf Graphic file (type pdf)
 
 <use chapters/fig_unit_circle.pdf>
 Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 21.
 (pdftex.def)             Requested size: 157.74979pt x 171.03561pt.
- [17 <./chapters/fig_unit_circle.pdf>]
-[18] [19] [20] [21]
+ [17] [18 <./chapters/fig_unit_circle.pdf>]
+[19] [20] [21]
 Overfull \hbox (15.29933pt too wide) in paragraph at lines 266--268
 []\OT1/lmr/m/n/10.95 We will start by prov-ing that the ma-tri-ces $\OML/lmm/m/
 it/10.95 F[]; [] ; F[]; G[]; [] ; G[]$ \OT1/lmr/m/n/10.95 are $\OMS/lmsy/m/n/10
@@ -2188,11 +2199,7 @@ it/10.95 F[]; [] ; F[]; G[]; [] ; G[]$ \OT1/lmr/m/n/10.95 are $\OMS/lmsy/m/n/10
 /n/10.95 g$\OT1/lmr/m/n/10.95 -observables.
  []
 
-
-Underfull \vbox (badness 1077) has occurred while \output is active []
-
- [22]
-[23]
+[22] [23]
 Overfull \hbox (40.16528pt too wide) in paragraph at lines 361--363
 \OT1/lmr/m/n/10.95 are $\OMS/lmsy/m/n/10.95 f \OT1/lmr/m/n/10.95 1\OML/lmm/m/it
 /10.95 ; \OT1/lmr/m/n/10.95 1\OMS/lmsy/m/n/10.95 g$\OT1/lmr/m/n/10.95 -observab
@@ -2207,15 +2214,14 @@ File: chapters/fig_QC&LC.pdf Graphic file (type pdf)
 <use chapters/fig_QC&LC.pdf>
 Package pdftex.def Info: chapters/fig_QC&LC.pdf used on input line 424.
 (pdftex.def)             Requested size: 220.01543pt x 163.06279pt.
- [25 <./chapters/fig_QC&LC.pdf>])
-(chapters/Appendix.tex
+ [25]) (chapters/Appendix.tex
 Overfull \hbox (4.13339pt too wide) in paragraph at lines 27--29
 []\OT1/lmr/m/n/10.95 We are also able to an-a-lyze the struc-ture of $\OML/lmm/
 m/it/10.95 U$ \OT1/lmr/m/n/10.95 with-out big ef-fort. Let $\OMS/lmsy/m/n/10.95
  f\OML/lmm/m/it/10.95 v[]; [] ; v[]; [] v[]\OMS/lmsy/m/n/10.95 g$
  []
 
-) (Coffee.bbl) [26]
+) (Coffee.bbl) [26 <./chapters/fig_QC&LC.pdf>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
  (Coffee.aux)
@@ -2232,13 +2238,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36189 strings out of 493323
- 681334 string characters out of 3139068
- 794437 words of memory out of 3000000
- 38918 multiletter control sequences out of 15000+200000
+ 36191 strings out of 493323
+ 681356 string characters out of 3139068
+ 794494 words of memory out of 3000000
+ 38919 multiletter control sequences out of 15000+200000
  588828 words of font info for 84 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,17n,94p,10512b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,17n,94p,10512b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -2265,9 +2271,9 @@ m Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on Coffee.pdf (27 pages, 536147 bytes).
+Output written on Coffee.pdf (27 pages, 537240 bytes).
 PDF statistics:
- 482 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
  175 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \beamer@slide {LCMot<1>}{3}
 \beamer@slide {LCMot}{3}
 \beamer@slide {LCMot<2>}{4}
@@ -23,3 +24,28 @@
 \beamer@slide {theo:Tsirelson}{99}
 \beamer@slide {eq:G_ineq}{103}
 \beamer@slide {fig:QCLC}{104}
+=======
+\beamer@slide {LCMot<1>}{89}
+\beamer@slide {LCMot}{89}
+\beamer@slide {LCMot<2>}{90}
+\beamer@slide {LCMot<3>}{91}
+\beamer@slide {LCMot<4>}{92}
+\beamer@slide {QCMot<1>}{109}
+\beamer@slide {QCMot}{109}
+\beamer@slide {QCMot<2>}{110}
+\beamer@slide {QCMot<3>}{111}
+\beamer@slide {QCaij}{112}
+\beamer@slide {facetsLC}{143}
+\beamer@slide {eq:G_ineq}{158}
+\beamer@slide {lem:G_id}{160}
+\beamer@slide {lem:krivines_trick}{168}
+\beamer@slide {eq:krivines_trick}{168}
+\beamer@slide {eq:orthonormtensor}{169}
+\beamer@slide {eq:kth_tensor}{169}
+\beamer@slide {lem:krivines_trick}{170}
+\beamer@slide {eq:krivines_trick}{170}
+\beamer@slide {theo:G_ineq}{182}
+\beamer@slide {theo:Tsirelson}{185}
+\beamer@slide {eq:G_ineq}{189}
+\beamer@slide {fig:QCLC}{190}
+>>>>>>> cd0fd19b7a314b1cfa609d436be313bd88c9a675
