@@ -73,22 +73,8 @@ With regard to quantum information theory it is interesting to analyze the geome
 	\end{align}
 	where $ \langle \cdot , \cdot \rangle $ denotes the standard scalar product. 
 \end{lemma}
-\noindent For the first inclusion we shortly repeat the definition of an inner product. The basic idea of the proof is to define an inner product via the  right hand sight of \ref{QCaij}.
-Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ which is linear in both variables, that is 
-\begin{enumerate}
-	\item [i)] $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
-	\item  [ii)]$\beta(\lambda v,w)= \lambda \beta(v,w) $
-	\item [iii)]$ \beta(v,w_1+w_2) = \beta(v,w_1)+ \beta(v,w_2) $
-	\item [iv)]$ \beta(v,\lambda w) = \lambda\beta(v,w) $
-\end{enumerate}
-for all $ v,v_1,v_2 \in V, \, w,w_1,w_2 \in W, \, \lambda \in k $. 
-If $ V = W $, we call $ \beta $ {\itshape symmetric} if $ \beta(v,w) = \beta(w,v) $, {\itshape positive semidefinite} if 
-$ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive semidefinite and $ \beta(v,v)= 0 $ implies that $ v = 0 $. 
-If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product}.
-Note that if $ H $ is a positive semidefinite operator then $ \beta(v,w) = v^TH\bar{w} $ defines an positive semidefinite bilinear form and an inner product if $ H $ is positive definite. 
-Conversely, each positive semidefinite bilinear form $ \beta $ can be written as $ \beta(v,w) = v^TH\bar{w} $ for an Hermitian operator $ H $.
-
-\noindent As before, we will denote the right hand side of equation \ref{EqQC} by $ M $.
+\noindent The basic idea of the proof is to define an inner product via the right hand sight of \ref{QCaij}.
+As before, we will denote the right hand side of equation \ref{EqQC} by $ M $. 
 \begin{proof}[Proof of $ \QC_{m,n} \subset M $]
 	Let $ (a_{ij}) \in \QC_{m,n} $. Then there is a sate $ \rho $ on a Hilbert space $ \mathcal{H} = \mathbb{C}^{d_1} \otimes\mathbb{C}^{d_2} $ and Hermitian operators $ \{X_1,\hdots X_m\}\subset  B^H(\mathcal{C}), \, \{Y_1,\hdots Y_n\}\subset B^H(\mathcal{H}) $ satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $ such that 
 	$ a_{ij} = \trace{\rho X_i \otimes Y_j} $.
@@ -106,7 +92,7 @@ Conversely, each positive semidefinite bilinear form $ \beta $ can be written as
 		 &=\textup{Re} \trace{(\rho^* T^*S^*)} = \textup{Re} \trace{(\rho T S)} = \beta(T,S).
 	\end{align*}
 	Moreover, since $ S^*S $ is a positive semidefinite operator for all complex operators $ S $ and $  \rho $ is positive semidefinite we obtain $ \beta(S,S) = \textup{Re}\trace{(\rho SS)} = \textup{Re} \trace{(\rho S^*S)} \ge 0 $, so $ \beta $ is positive semidefinite. 
-	Following the steps in appendix \ref{Appendix} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space $ B^H(\mathcal{H})/ \ker{\beta} $. 
+	Following the steps in appendix \ref{App1} we can factorize the kernel and transform $ \beta $ to an inner product on the vector space $ B^H(\mathcal{H})/ \ker{\beta} $. 
 	
 	\noindent Now, the crucial point is to notice that $ a_{ij} =\trace{(\rho X_i Y_j)}=  \beta(X_i \otimes I,I \otimes Y_j) $. In order to show that these operators coincide with unit vectors with respect to $  \beta  $ we have to show
 	$ \beta(X \otimes I, X \otimes I), \beta(I \otimes Y, I \otimes Y) \le 1$ for all $ X \in \{X_1,\hdots,X_m \} $, $ Y \in \{Y_1,\hdots,Y_n \} $. 
@@ -130,7 +116,7 @@ Conversely, each positive semidefinite bilinear form $ \beta $ can be written as
 	\begin{align*}
 	a_{ij}= \beta(x,y)= \beta(x,\pi(y)) = \sum_{1 \le k,l \le r} \alpha_k^{(i)} \gamma_l^{(j)} \beta(a_k,a_l) = \sum_{k=1}^{r}\alpha_k^{(i)}\gamma_k^{(j)} = \langle \alpha^{(i)}, \gamma^{(j)} \rangle.
 	\end{align*}
-	Moreover, since $ \vert\alpha^{(i)} \vert= \modul{x_i} \le 1$ and $\vert \gamma^{(j)}\vert=  \modul{y_j}= \modul{\pi(y_j)} \le 1 $ the vectors $ (\alpha^{(i)}) $ and$ (\gamma^{(j)}) $ have all the properties of the right hand side of \ref{EqQC}.
+	Moreover, since $ \vert\alpha^{(i)} \vert= \modul{x_i} \le 1$ and $\vert \gamma^{(j)}\vert=  \modul{y_j}= \modul{\pi(y_j)} \le 1 $ the vectors $ (\alpha^{(i)})_{1 \le i \le m} $ and$ (\gamma^{(j)})_{1 \le j \le n} $ have all properties of the right hand side of \ref{EqQC}.
 	Additionally, we also proved that we can demand an even lower dimension for the vectors in \ref{EqQC}, that is  
 	$ \min \big \{ \dim( \textup{span} \{ (x_i)_{1 \le i \le m} \}),\, \dim(\textup{span} \{ (y_j)_{1 le j \le n} \} )\big \} $.
 \end{proof}
@@ -162,7 +148,7 @@ Note that $ \sigma_A^i $ and $ \sigma_{A^{\prime}}^j $ anti-commute if $ i = j $
 U_i = \sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k, \\
 U_{i+n} = \sigma_Z^i \prod_{k = i+1}^n \sigma_Y^k
 \end{align*}
-for $ i = 1,\hdots,n $. Note that these operators are also traceless Hermitian matrices and anti-commute for $ i \neq j $:    
+for $ i = 1,\hdots,n $. Note that these operators are also trace zero Hermitian matrices and anti-commute for $ i \neq j $:    
 for $ 1 \le i < j  \le n$ we have 
 \begin{align*}
 U_iU_j = (\sigma_X^i \prod_{k = i+1}^{n}\sigma_Y^k) \cdot( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) &= \sigma_X^i \sigma_Y^{i+1} \cdots \sigma_Y^j ( \sigma_X^j \prod_{k = j+1}^{n}\sigma_Y^k) \sigma_Y^{j+1} \cdots \sigma_Y^n \\
@@ -197,7 +183,7 @@ As a byproduct, if we take two linear combinations $ X = \sum_{i = 1}^{2n}\xi_i 
 \begin{align}\label{traceUi}
 	\trace{(XY)} &= \sum_{i = 1}^{2n} \xi_i \eta_i  \trace{I} + \sum_{1 \le i \neq j \le \ 2n}\xi_i\eta_j \trace{(U_i U_j)}  = \sum_{i= 1}^{2n}\xi_i \eta_j 2^n = 2^n \cdot \langle \xi, \eta \rangle,
 \end{align}
-where we used that the product $ U_iU_j $ is traceless for $ i \neq j $.
+where we used that the product $ U_iU_j $ has trace zero for $ i \neq j $.
 We will use this in order to proceed with the other inclusion of lemma \ref{LemQC}.
 
 \begin{proof}[Proof of $ \LC_{m,n} \supset M $]
@@ -218,7 +204,7 @@ Calculating
 shows the desired inclusion. 
 \end{proof}
 \noindent The previous lemma easily enables us to show that $ \QC_{m,n} $ is convex. Consider $ (a_{ij}), (\bar{a}_{ij}) \in \QC_{m,n} $ with $ a_{ij} = \langle x_i, y_j \rangle $ and $ \bar{a}_{ij} = \langle \bar{x}_i, \bar{y}_j \rangle $ for $ x_{i},y_j, \bar{x}_i,\bar{y}_j \in \mathbb{R}^{\min \{m,n\}} $ such that $ \modul{x_i},\modul{y_j}, \modul{\bar{x}_i}, \modul{\bar{y}_j} \le 1 $.
-For $ \lambda \in [0,1] $ we define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) $ and due to  $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $ they are unit vectors. Moreover, $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$. If we proceed in the same fashion as in the proof of lemma \ref{LemQC} we obtain vectors 
+For $ \lambda \in [0,1] $ we define vectors $\tilde{x}_i:= (\sqrt{\lambda}x_i,\sqrt{1-\lambda}\bar{x_i}), \, \tilde{y}_j:= (\sqrt{\lambda}y_j, \sqrt{1-\lambda}\bar{y}_j) \in \mathbb{R}^{2\cdot \min \{m,n\} } $. They satisfy $ \modul{\tilde{x}_i} \le \lambda \modul{(x_i,0)} + (1-\lambda)\modul{(0,\bar{x}_i)} \le 1 $. Moreover, $ \langle \tilde{x}_i, \tilde{y}_j \rangle = \lambda \langle x_i,y_j \rangle + (1-\lambda) \langle \tilde{x_i},\tilde{y}_j \rangle$. If we proceed in the same fashion as in the proof of lemma \ref{LemQC} we obtain vectors 
 $ \alpha^{(i)},\gamma^{(j)} $ that satisfy $= \langle \alpha^{(i)},\gamma^{(j)} \rangle = \langle \tilde{x} _i, \tilde{y}_j\rangle $ and have dimension smaller or equal to $ \min \{m,n\} $.
 
 
@@ -309,4 +295,4 @@ Thus, we just have to find a matrix that satisfies this bound. A possible choice
 1 & 1 \\ 1 & 1 
 \end{pmatrix} $ yielding the value $ \trace{(AM)} = 2 \sqrt{2} $.
 So as we have seen, the inclusion $ \LC_{m,n} \subset \QC_{m,n} $ is strict in general. Elements in $ \QC_{m,n} \setminus \LC_{m,n} $ are called {\itshape non-local}.
-Generally, linear functionals $ f$ mapping an $ m \times n $ to a real number that satisfy $ f(A) \le 1 $ for all $ A \in \LC_{m,n} $ are called {\itshape Bell correlation inequalities}. In the case of $ f(A) > 1 $ for some $ A \in \QC_{m,n} $ we talk about {\itshape quantum violations}. 
+Generally, linear functionals $ f$ mapping an $ m \times n $ matrix to a real number and satisfying $ f(A) \le 1 $ for all $ A \in \LC_{m,n} $ are called {\itshape Bell correlation inequalities}. In the case of $ f(A) > 1 $ for some $ A \in \QC_{m,n} $ we talk about {\itshape Bell violations}. 

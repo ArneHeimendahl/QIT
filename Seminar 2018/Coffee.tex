@@ -1,12 +1,14 @@
 \input{Pre.tex} %----- put in Preamble
 
 
-\title{Seminar paper \\ {Nonlocal games and the Grothendieck-Tsirelson inequality}
+\title{Seminar paper \\ Nonlocal games and the Grothendieck-Tsirelson inequality}
 \author{Maxi Brandstetter, Arne Heimendahl, Felix Kirschner}
 
 \begin{document}
 \pagenumbering{roman}	
 
+%adjust equation numberung 
+\numberwithin{equation}{section}
 
 
 \begin{abstract}
@@ -23,9 +25,9 @@ Dieses Paper ist eine Ausarbeitung unseres Vortrags im Seminar "Introduction to 
 
 
 
-\section{Einleitung}
+%\section{Einleitung}    %%Einleitung erstmal raus 
 	\vspace{8pt}
-	\input{chapters/Einleitung.tex}
+%	\input{chapters/Einleitung.tex}
 
 
 %---------------------------------------------------------------------------
@@ -50,11 +52,25 @@ Dieses Paper ist eine Ausarbeitung unseres Vortrags im Seminar "Introduction to 
 \section{Grothendieck-Tsirelson Theorem} %\label{sec_conicapproach}
 	\input{chapters/MaxisTeil.tex}
  
-\section*{Appendix}
+ 
+\appendix
+
 	\input{chapters/Appendix.tex}	
 
 
 %\bibliography{literature}						  % Literature
 %\bibliographystyle{plain}
+\newpage 
+\begin{thebibliography}{999}
+	
+	% Das Literaturverzeichnis wird mit diesem Befehl in das Inhaltsverzeichnis eingebunden
+	\addcontentsline{toc}{section}{Bibliography}
+	
+	\bibitem[Au]{Au} G. Aubrun; S. J. Szarek. {\em Alice and Bob Meet Banach: The Interface of Asympototic Geometry Analysis and Quantum Information Theory.} Graduate Studies in Mathematics, American Mathematical Society, 2017.
+	\bibitem[Br]{Br}J. Bri\"{e}t. {\em Grothendieck Inequalities, Nonlocal Games and Optimization.} Institute for Logic, Language and Computation, Amsterdam, 2011.
+	
+	
+	
+\end{thebibliography}
 	
 \end{document}
