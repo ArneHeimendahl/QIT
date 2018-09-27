@@ -1,12 +1,21 @@
-Dinge, die definiert werden sollten. 
+\section{Bilinear forms and inner products}
+\subsection{Basic definitions}
+
+Let $ V $ and $ W $ be two vector spaces and $ k  $ a field. A {\itshape bilinear form} is a map $ \beta: \, V \times W \to k $ which is linear in both variables, that is 
 \begin{enumerate}
-	\item norms
-	\item Notation, operators of norms 
-	\item  perhaps what a state is 
+	\item [i)] $\beta(v_1+v_2,w) = \beta(v_1,w) + \beta(v_2,w)  $
+	\item  [ii)]$\beta(\lambda v,w)= \lambda \beta(v,w) $
+	\item [iii)]$ \beta(v,w_1+w_2) = \beta(v,w_1)+ \beta(v,w_2) $
+	\item [iv)]$ \beta(v,\lambda w) = \lambda\beta(v,w) $
 \end{enumerate}
+for all $ v,v_1,v_2 \in V, \, w,w_1,w_2 \in W, \, \lambda \in k $. 
+If $ V = W $, we call $ \beta $ {\itshape symmetric} if $ \beta(v,w) = \beta(w,v) $, {\itshape positive semidefinite} if 
+$ \beta(v,v) \ge 0 $ and {\itshape positive definite} if $ \beta $ is positive semidefinite and $ \beta(v,v)= 0 $ implies that $ v = 0 $. 
+If $ \beta: \, V \times V \to k $ is a symmetric positive definite bilinear form it is called an {\itshape inner product}.
+Note that if $ H $ is a positive semidefinite operator then $ \beta(v,w) = v^TH\bar{w} $ defines an positive semidefinite bilinear form and an inner product if $ H $ is positive definite. 
+Conversely, each positive semidefinite bilinear form $ \beta $ can be written as $ \beta(v,w) = v^TH\bar{w} $ for an Hermitian operator $ H $.
 
-
-\subsection{How to derive an inner product from a symmetric positive semidefinite bilinear form}
+\subsection{How to derive an inner product from a symmetric positive semidefinite bilinear form}\label{App1}
 Suppose we have a $ k- $vector space $ V $ equipped with symmetric positive semidefinite bilinear form $ \beta: \, V \times V \to k $. We want to derive a vector space $ U $ that is equipped with an inner product which is induced by $ \beta $. The idea is to to consider the quotient space $ U:=V/\ker\beta $ where $ \ker \beta = \{ v \in V \, | \, \beta(v,w)= 0 \text{ for all } w \in V \} $. Note that the Cauchy-Schwartz inequality $ \beta(v,w)^2 \le \beta(v,v)\beta(w,w) $ implies that 
 $ \ker \beta = \{ v \in V \, | \, \beta(v,v)= 0 \} $.
 We define $ \tilde{\beta}:  \, U \times U \to k $ by $ \tilde{\beta}([v],[w]) = \beta(v,w) $ where $ [v] = v + \ker\beta, \,$$[w]=w+\ker\beta$.

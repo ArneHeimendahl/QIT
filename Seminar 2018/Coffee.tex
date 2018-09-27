@@ -1,16 +1,18 @@
 \input{Pre.tex} %----- put in Preamble
 
 
-\title{Seminar paper \\ Ungleichungen und ähnlich verwirrende Konzepte}
+\title{Seminar paper \\ Nonlocal games and the Grothendieck-Tsirelson inequality}
 \author{Maxi Brandstetter, Arne Heimendahl, Felix Kirschner}
 
 \begin{document}
 \pagenumbering{roman}	
 
+%adjust equation numberung 
+\numberwithin{equation}{section}
 
 
 \begin{abstract}
-Dieses Paper ist eine Ausarbeitung unseres Vortrags im Seminar "Introduction to Quantum Information and Quantum Computing", das zwischen dem 19.9. und 21.9.2018 in Köln stattgefunden hat. Es wird eine kleine Einführung in die mathematischen Methoden gegeben, mit denen die Welt der Quantenfunktion beschrieben werden kann, woraufhin wir "Nonlocal Games" einführen, die Brücke zur (semidefiniten) Optimierung schlagen und hoffentlich noch genug Zeit für die Grothendieck Ungleichungen haben. Die Grothendieck Ungleichungen finden erstaunlicherweise in einer Vielzahl an mathematischen Teilgebieten Verwendung.
+This paper is an elaboration and review of nonlocal games and the Grothendieck-Tsirelson inequality, our topic for the seminar \emph{Introduction to quantum information theory and quantum computing}, which took place on the 20th and 21st of September 2018 at the University of Cologne. We introduce some of the mathematical groundwork that helps us describe the quantum mechanical world. We define nonlocal games, which are mathematical concepts that enable us to explore the difference of classical and quantum mechanics. An example is given, that highlights the phenomenon of entanglement, which gives correlated measurement outcomes, where these are not expected. The mathematical structures underlying nonlocal games are discussed in detail and again it is shown that the quantum mechanical world provides more powerful tools than the of classical mechanics. Last but not least, we come across one of the many instances where the celebrated Grothendieck inequality comes in handy. The beautiful proof of the Grothendieck inequality by Krivine is given and the Grothendieck-Tsirelson theorem is elaborated. 
 \end{abstract}
 
 
@@ -23,9 +25,9 @@ Dieses Paper ist eine Ausarbeitung unseres Vortrags im Seminar "Introduction to 
 
 
 
-\section{Einleitung}
+%\section{Einleitung}    %%Einleitung erstmal raus 
 	\vspace{8pt}
-	\input{chapters/Einleitung.tex}
+%	\input{chapters/Einleitung.tex}
 
 
 %---------------------------------------------------------------------------
@@ -38,23 +40,38 @@ Dieses Paper ist eine Ausarbeitung unseres Vortrags im Seminar "Introduction to 
 
 
 \newpage
-\section{Quantum Grundlagen} %\label{sec_coloringgame}
+\section{Introduction} 
 	\vspace{8pt}
 	\input{chapters/FelixTeil.tex}
 
 
-\section{Local and Quantum correlation matrices} %\label{sec_mathreform}
+\section{Local and Quantum correlation matrices} 
 	\vspace{8pt}
 
 	\input{chapters/ArnesTeil.tex}
-\section{Grothendieck-Tsirelson Theorem} %\label{sec_conicapproach}
+\section{Grothendieck-Tsirelson Theorem} 
 	\input{chapters/MaxisTeil.tex}
  
-\section*{Appendix}
+ 
+\appendix
+
 	\input{chapters/Appendix.tex}	
 
 
-\bibliography{literature}						  % Literature
-\bibliographystyle{plain}
+%\bibliography{literature}						  % Literature
+%\bibliographystyle{plain}
+\newpage 
+\begin{thebibliography}{999}
+	
+	% Das Literaturverzeichnis wird mit diesem Befehl in das Inhaltsverzeichnis eingebunden
+	%\addcontentsline{toc}{section}{Bibliography}
+	
+	\bibitem[Au]{Au} G. Aubrun; S. J. Szarek. {\em Alice and Bob Meet Banach: The Interface of Asympototic Geometry Analysis and Quantum Information Theory.} Graduate Studies in Mathematics, American Mathematical Society, 2017.
+	\bibitem[Br]{Br}J. Bri\"{e}t. {\em Grothendieck Inequalities, Nonlocal Games and Optimization.} Institute for Logic, Language and Computation, Amsterdam, 2011.
+	\bibitem[KNP]{KNP} F. Kirschner; Simon Nietz; Fabian Portner. {\em Seminar Paper Quantum Chromatic Number of a Graph.} University of Cologne, 2017.
+	
+	
+	
+\end{thebibliography}
 	
 \end{document}
