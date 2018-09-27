@@ -64,7 +64,7 @@ This paper is an elaboration and review of nonlocal games and the Grothendieck-T
 \begin{thebibliography}{999}
 	
 	% Das Literaturverzeichnis wird mit diesem Befehl in das Inhaltsverzeichnis eingebunden
-	\addcontentsline{toc}{section}{Bibliography}
+	%\addcontentsline{toc}{section}{Bibliography}
 	
 	\bibitem[Au]{Au} G. Aubrun; S. J. Szarek. {\em Alice and Bob Meet Banach: The Interface of Asympototic Geometry Analysis and Quantum Information Theory.} Graduate Studies in Mathematics, American Mathematical Society, 2017.
 	\bibitem[Br]{Br}J. Bri\"{e}t. {\em Grothendieck Inequalities, Nonlocal Games and Optimization.} Institute for Logic, Language and Computation, Amsterdam, 2011.
