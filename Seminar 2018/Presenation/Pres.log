@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  21 SEP 2018 08:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  21 SEP 2018 10:02
 entering extended mode
 **./Pres.tex
 (Pres.tex
@@ -1345,154 +1345,269 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 4.
 
 
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+Package hyperref Warning: Option `pdfauthor' has already been used,
+(hyperref)                setting the option has no effect on input line 6.
 
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(ChapersPresentation/ArnePres.tex (Pres.toc)
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[2
+(ChapersPresentation/tryone.tex (Pres.toc) [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 16.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 16.
+line 36.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\sansmathaccent\ot1mathkerncmss.fd"
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-LaTeX Font Info:    Try loading font information for U+dutchcal on input line 1
-6.
+[3
+
+] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+] [9
+
+]
+LaTeX Font Info:    Try loading font information for U+dutchcal on input line 5
+3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\dutchcal\udutchcal.fd"
 File: udutchcal.fd 2011/06/16 Fontinst v1.933 font definitions for U/dutchcal.
 )
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 10.0pt on input line 16.
+(Font)              scaled to size 10.0pt on input line 53.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 7.0pt on input line 16.
+(Font)              scaled to size 7.0pt on input line 53.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 5.0pt on input line 16.
+(Font)              scaled to size 5.0pt on input line 53.
+ [10
 
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[3
+] [11
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[12
 
+] [13
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [14
 
-[4
+] [15
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [16
 
+] [17
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [18
 
-[5
+] [19
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [20
 
+] [21
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [22
 
-[6
+] [23
+
+] [24
+
+] [25
+
+] [26
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[27
 
+] [28
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [29
 
-[7
+] [30
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [31
 
+] [32
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [33
 
-[8
+] [34
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [35
 
+] [36
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [37
 
-[9
+] [38
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+<Untitled.png, id=1137, 630.355pt x 389.455pt>
+File: Untitled.png Graphic file (type png)
+ <use Untitled.png>
+Package pdftex.def Info: Untitled.png used on input line 146.
+(pdftex.def)             Requested size: 189.10796pt x 116.83739pt.
+ [39
 
+ <./Untitled.png>]
+File: Untitled.png Graphic file (type png)
+ <use Untitled.png>
+Package pdftex.def Info: Untitled.png used on input line 146.
+(pdftex.def)             Requested size: 189.10796pt x 116.83739pt.
+ [40
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+]
+File: Untitled.png Graphic file (type png)
+ <use Untitled.png>
+Package pdftex.def Info: Untitled.png used on input line 146.
+(pdftex.def)             Requested size: 189.10796pt x 116.83739pt.
+ [41
 
-[10
+]
+File: Untitled.png Graphic file (type png)
+ <use Untitled.png>
+Package pdftex.def Info: Untitled.png used on input line 146.
+(pdftex.def)             Requested size: 189.10796pt x 116.83739pt.
+
+[42
+
+]
+File: Untitled.png Graphic file (type png)
+ <use Untitled.png>
+Package pdftex.def Info: Untitled.png used on input line 146.
+(pdftex.def)             Requested size: 189.10796pt x 116.83739pt.
+ [43
+
+]
+File: Untitled.png Graphic file (type png)
+ <use Untitled.png>
+Package pdftex.def Info: Untitled.png used on input line 146.
+(pdftex.def)             Requested size: 189.10796pt x 116.83739pt.
+ [44
+
+] [45
+
+] [46
+
+] [47
+
+] [48
+
+]
+[49
+
+] [50
+
+] [51
+
+] [52
+
+] [53
+
+] [54
+
+] [55
+
+] [56
+
+] [57
+
+] [58
+
+] [59
+
+] [60
+
+] [61
+
+] [62
+
+] [63
+
+]
+[64
+
+] [65
+
+] [66
+
+] [67
+
+] [68
+
+] [69
+
+] [70
+
+] [71
+
+] [72
+
+] [73
+
+] [74
+
+] [75
+
+] [76
+
+] [77
+
+] [78
+
+]
+[79
+
+] [80
+
+] [81
+
+] [82
+
+] [83
+
+] [84
+
+] [85
+
+] [86
+
+] [87
+
+]) (ChapersPresentation/ArnePres.tex (Pres.toc) [88
+
+] [89
+
+] [90
+
+] [91
+
+] [92
+
+] [93
+
+] [94
+
+] [95
+
+] [96
 
 ]
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
@@ -1502,906 +1617,183 @@ LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
 (Font)              scaled to size 6.0pt on input line 61.
 LaTeX Font Info:    Try loading font information for U+dsrom on input line 61.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsrom.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\doublestroke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+) [97
 
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[11
+] [98
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[99
 
+] [100
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [101
 
-[12
+] [102
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [103
 
+] [104
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [105
 
-[13
+] [106
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [107
 
+] [108
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [109
 
-[14
+] [110
+
+] [111
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[112
 
+] [113
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [114
 
-[15
+] [115
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [116
 
+] [117
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [118
 
-[16
+] [119
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [120
 
+] [121
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [122
 
-[17
+] [123
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[124
 
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[18
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[19
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[20
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[21
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[22
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[23
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[24
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[25
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[26
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[27
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[28
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[29
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[30
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[31
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[32
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[33
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[34
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[35
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[36
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[37
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[38
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[39
+] [125
 
 ]
 Overfull \vbox (3.31361pt too high) detected at line 223
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[40
+[126
 
 ]
 Overfull \vbox (3.31361pt too high) detected at line 223
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[41
+[127
 
 ]
 Overfull \vbox (3.31361pt too high) detected at line 223
  []
 
+[128
 
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [129
 
+] [130
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [131
 
-[42
+] [132
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [133
 
+] [134
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [135
 
-[43
+] [136
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [137
 
+] [138
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[44
+] [139
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[140
 
+] [141
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [142
 
-[45
+] [143
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [144
 
+] [145
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [146
 
-[46
+] [147
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [148
 
+] [149
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [150
 
-[47
+] [151
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[152
 
+] [153
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [154
 
-[48
+] [155
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[49
+]) (ChapersPresentation/MaxiPres.tex (Pres.toc) [156
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+(Pres.toc) [157
 
+] [158
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[50
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[51
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[52
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[53
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[54
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[55
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[56
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[57
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[58
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[59
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[60
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[61
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[62
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[63
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[64
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[65
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[66
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[67
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[68
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[69
-
-]) (ChapersPresentation/MaxiPres.tex (Pres.toc)
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[70
-
-] (Pres.toc)
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[71
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[72
-
-] (Pres.toc)
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[73
+] (Pres.toc) [159
 
 ]
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
 (Font)              scaled to size 9.0pt on input line 53.
+ [160
 
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [161
 
+] [162
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [163
 
-[74
+] [164
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[75
+] [165
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[76
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[77
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[78
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[79
-
-]
-<ChapersPresentation/fig_unit_circle.pdf, id=2241, 149.20341pt x 161.75331pt>
+<ChapersPresentation/fig_unit_circle.pdf, id=4550, 149.20341pt x 161.75331pt>
 File: ChapersPresentation/fig_unit_circle.pdf Graphic file (type pdf)
 
 <use ChapersPresentation/fig_unit_circle.pdf>
 Package pdftex.def Info: ChapersPresentation/fig_unit_circle.pdf used on input 
 line 68.
 (pdftex.def)             Requested size: 130.79776pt x 141.81268pt.
+ [166
 
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+ <./ChapersPresentation/fig_unit_circle.pdf>] [167
 
+] [168
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[80
-
- <./ChapersPresentation/fig_unit_circle.pdf>]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[81
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[82
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[83
+] [169
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{lem:krivines
 _trick}) has been already used, duplicate ignored
@@ -2417,324 +1809,85 @@ l.135 	\end{frame}
 Overfull \vbox (11.34325pt too high) detected at line 135
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[84
+[170
 
 ]
 Overfull \vbox (11.34325pt too high) detected at line 135
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[85
+[171
 
 ]
 Overfull \vbox (11.34325pt too high) detected at line 135
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[86
+[172
 
 ]
 Overfull \vbox (21.52759pt too high) detected at line 156
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[87
+[173
 
 ]
 Overfull \vbox (21.52759pt too high) detected at line 156
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[88
+[174
 
 ]
 Overfull \vbox (21.52759pt too high) detected at line 156
  []
 
+[175
 
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [176
 
+] [177
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [178
 
-[89
+] [179
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [180
 
+] [181
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [182
 
-[90
+] [183
+
+] (Pres.toc) [184
+
+] [185
 
 ]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+[186
 
+] [187
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [188
 
-[91
+] [189
 
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
+] [190
 
+] [191
 
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[92
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[93
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[94
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[95
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[96
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[97
-
-] (Pres.toc)
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[98
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[99
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[100
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[101
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[102
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[103
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[104
-
-]
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[105
-
-] (Pres.toc)
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[106
+] (Pres.toc) [192
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{eq:G_ineq}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.356 	\end{frame}
-                  
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[107
+                   [193
 
 ]
 
-LaTeX Warning: Reference `LemQC' on page 108 undefined on input line 368.
+LaTeX Warning: Reference `LemQC' on page 194 undefined on input line 368.
 
-<ChapersPresentation/fig_QC&LC.pdf, id=3023, 220.01598pt x 163.0632pt>
+<ChapersPresentation/fig_QC&LC.pdf, id=5343, 220.01598pt x 163.0632pt>
 File: ChapersPresentation/fig_QC&LC.pdf Graphic file (type pdf)
 
 <use ChapersPresentation/fig_QC&LC.pdf>
@@ -2745,17 +1898,7 @@ Package pdftex.def Info: ChapersPresentation/fig_QC&LC.pdf used on input line 3
 Overfull \vbox (65.40204pt too high) detected at line 368
  []
 
-
-Overfull \hbox (21.17374pt too wide) has occurred while \output is active
- [][]  
- []
-
-
-Overfull \hbox (33.43542pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[108
+[194
 
  <./ChapersPresentation/fig_QC&LC.pdf>])
 \tf@nav=\write6
@@ -2767,13 +1910,13 @@ Overfull \hbox (33.43542pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `Pres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 19.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 19.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 21.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 21.
  (Pres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 19.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 19.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 21.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 21.
 Package rerunfilecheck Info: File `Pres.out' has not changed.
-(rerunfilecheck)             Checksum: 60B13EFED1AF0BDECF749C5F4E98B3E8;744.
+(rerunfilecheck)             Checksum: F2C290FF932318EC865ED9D74178D6FA;1076.
 
 
 LaTeX Warning: There were undefined references.
@@ -2783,11 +1926,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20592 strings out of 493323
- 378061 string characters out of 3139068
- 488336 words of memory out of 3000000
- 23339 multiletter control sequences out of 15000+200000
- 29258 words of font info for 89 fonts, out of 3000000 for 9000
+ 20844 strings out of 493323
+ 380728 string characters out of 3139068
+ 490726 words of memory out of 3000000
+ 23406 multiletter control sequences out of 15000+200000
+ 30083 words of font info for 90 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,21n,66p,816b,903s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{LemQC} has been referenced but does not exist, re
@@ -2801,44 +1944,48 @@ eplaced by a fixed one
 
  <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecs
 x1000.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ecss0900.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
-ppen\ec\dpi600\ecss0600.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\jknappen\ec\dpi600\ecss0800.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fo
-nts\pk\ljfour\jknappen\ec\dpi600\ecsi1000.pk> <C:\Users\Maxi\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\Users\Maxi\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0500.pk> <C:\Users\Maxi\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0700.pk> <C:\Us
-ers\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.p
+pi600\ecss0800.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecsi1000.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\jknappen\ec\dpi600\ecss0600.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fo
+nts\pk\ljfour\jknappen\ec\dpi600\ecss0900.pk> <C:\Users\Maxi\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1200.pk> <C:\Users\Maxi\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\Users\Maxi\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0500.pk> <C:\Us
+ers\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0700.p
 k> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-css1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/dutchcal/DutchCalReg
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmssi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmssi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/doublestroke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/symbols/msam5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on Pres.pdf (108 pages, 1177072 bytes).
+css1000.pk> <C:\Users\Maxi\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecss1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/dutchcal/Du
+tchCalReg.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmssi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/doublestroke/dsrom10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/symbols/msam5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/symbols/msbm7.pfb>
+Output written on Pres.pdf (194 pages, 1824600 bytes).
 PDF statistics:
- 3548 PDF objects out of 3580 (max. 8388607)
- 257 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5959 PDF objects out of 6186 (max. 8388607)
+ 434 named destinations out of 1000 (max. 500000)
+ 224 words of extra memory for PDF output out of 10000 (max. 10000000)
 
