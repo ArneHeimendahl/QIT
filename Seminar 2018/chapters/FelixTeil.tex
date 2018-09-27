@@ -88,7 +88,7 @@ But, of course, we are dealing with quantum mechanics here so we are interested 
 \end{equation}  
 The players want to maximize their winning probability. Since the trace function is linear and states are convex combinations of pure states, we only need to consider pure entangled states. 
 \subsection{Two player XOR games}
-An XOR game is a game where the set of answers $\mathcal{A}$ and $\mathcal{B}$ only consist of $\{ 0,1 \}$ and the predicate $V$ only depends on the exclusive-OR of the answers and the value function $f : \mathcal{S} \times \mathcal{T} \rightarrow \{ 0,1 \}$. In the following let the spare brackets denote the $0/1$ truth value of the statement in between them. Then we have $V(a,b,s,t) = \left[ a \oplus b = f(s,t) \right]$. 
+An XOR game is a nonlocal game where the set of answers $\mathcal{A}$ and $\mathcal{B}$ only consist of $\{ 0,1 \}$ and the predicate $V$ only depends on the exclusive-OR of the answers and the value function $f : \mathcal{S} \times \mathcal{T} \rightarrow \{ 0,1 \}$. In the following let the spare brackets denote the $0/1$ truth value of the statement in between them. Then we have $V(a,b,s,t) = \left[ a \oplus b = f(s,t) \right]$. 
 The exclusive OR returns $1$ if and only if one of the inputs is $1$. In a truth table: \\
 \begin{center}
 \begin{tabular}{l | c r }
@@ -128,7 +128,7 @@ So for any XOR game the bias is defined as the difference of the probabilities o
 \max \left\lbrace \mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{st} \chi (s) \psi (t) \right] : \chi : \mathcal{S} \rightarrow \{ -1, 1 \}, \psi : \mathcal{T} \rightarrow \{-1, 1 \} \right\rbrace
 \end{equation} 
 For entangled strategies we need to use the $\sup_{n \in \mathbb{N}}$ since the winning probability might increase indefinitely with the dimension of the quantum system. 
-The Bias of entangled strategies is 
+The bias of entangled strategies is 
 \begin{equation}
 \sup_{n \in \mathbb{N}} \left\lbrace \mathbb{E}_{(s,t) \sim \pi} \left[ \Sigma_{st} \langle \psi \vert F_s \otimes G_t \vert \psi \rangle \right] : \vert \psi \rangle \in \mathbb{C}^{n} \otimes \mathbb{C}^{n} , F_s, G_t \in O(\mathbb{C}^n) \right\rbrace
 \end{equation}
