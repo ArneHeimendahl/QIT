@@ -207,6 +207,10 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 		\end{align*}
 		where $\beta = \frac{2\ln(1+\sqrt{2)}}{\pi}$, thus $K\leq \beta^{-1}$.
 	\end{proof}
+	
+	\begin{rmk}
+		According to the current state of science $1.676\leq K_G \leq \beta^{-1} \approx 1.783$.
+	\end{rmk}
 
 \subsection{Tsirelson's Theorem}
 	In this section we will prove Tsirelson's Theorem in order to prove the Grothendieck-Tsirelson Theorem in the next section. The prove is based on \cite{B}, but it would be just as conceivable to use the proof of Proposition \ref{PauliProp}. 
@@ -413,13 +417,10 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 				\begin{equation}
 					\QC_{m,n} \subset K\LC_{m,n}.
 				\end{equation}
-			\item[(2)] For any $M\in\mathbb{R}^{m\times n}$ and for any $\rho,X_i,Y_j$ verifying the conditions of Definition %\textcolor{red}{
-			4.2.1
-			%}
-			 we have
+			\item[(2)] For any $M\in\mathbb{R}^{m\times n}$ and for any $\rho,X_i,Y_j$ verifying the conditions of Definition \ref{dfn:QC} we have
 				\begin{align}
 					\sum_{i,j} M_{ij} \trace{\rho(X_i\tensor Y_j)} &\leq K \max_{\xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n} \sum_{i,j} M_{ij}\xi_i\eta_j \\
-					\Leftrightarrow \hspace{2.5cm} \trace{MA^\top} &\leq \max_{\xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n} \trace{M(\xi\eta^\top)^\top}.
+					\Leftrightarrow \hspace{2.5cm} \trace{MA^\top} &\leq K \max_{\xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n} \trace{M(\xi\eta^\top)^\top}.
 				\end{align}
 				\item[(3)] For any $M\in\mathbb{R}^{m\times n}$ and for any (real) Hilbert space vectors $x_i,y_j$ with $\modul{x_i}\leq 1$, $\modul{y_j}\leq 1$ we have
 					\begin{equation}
@@ -438,12 +439,10 @@ In the last section we have seen that $\QC_{m,n}\subsetneq \LC_{m,n}$. In this s
 		For the implication of (2) by (1) consider figure \ref{fig:QCLC}. Since $\QC\subset K\LC$ maximizing over the elements in $K\LC$ will result in a better outcome than maximizing over the elements in $\QC$ in the direction of $M$.
 		The direction from (1) to (2) we will prove by contraposition. Assume that there is a quantum correlation matrix $A\in\QC_{m,n}$ such that $A\notin K\LC_{m,n}$. By the hyperplane separation theorem we can separate $A$ from $K\LC_{m,n}$ by a linear functional since $\LC_{m,n}$ is convex. That is, we can find a matrix $M\in\mathbb{R}^{m\times n}$ and a real number $c$ such that 
 		\begin{equation*}
-			\trace{MA^\top} \geq c \text{ and } \trace{M(\xi\eta^\top)^\top}\leq c
+			\trace{MA^\top} \geq c \text{ and } \trace{M(\xi\eta^\top)^\top} < c
 		\end{equation*}
 		for all $\xi\in\{-1,1\}^m,\eta\in\{-1,1\}^n$.
 	\end{proof}
 	
-	This result gives us that the ratio... is bounded from above by $K$.
-	
-	value von K reinbringen und damit auch begründen, dass das keine echte Teilemenge sein kann
+	This result gives us that the ratio of which an entangled strategy can exceed a classical strategy is bounded from above by $K$, such that an entangled strategy can not be arbitrary better than a classical strategy. 
 \newpage

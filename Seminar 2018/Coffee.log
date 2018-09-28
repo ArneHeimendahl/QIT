@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  28 SEP 2018 08:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.12.13)  28 SEP 2018 08:52
 entering extended mode
 **./Coffee.tex
 (Coffee.tex
@@ -2171,21 +2171,25 @@ File: chapters/fig_unit_circle.pdf Graphic file (type pdf)
 Package pdftex.def Info: chapters/fig_unit_circle.pdf used on input line 21.
 (pdftex.def)             Requested size: 157.74979pt x 171.03561pt.
  [16 <./chapters/fig_unit_circle.pdf>]
-[17] [18] [19] [20]
-Overfull \hbox (15.29933pt too wide) in paragraph at lines 272--274
+[17] [18] [19]
+
+LaTeX Warning: Citation `B' on page 20 undefined on input line 216.
+
+[20]
+Overfull \hbox (15.29933pt too wide) in paragraph at lines 278--280
 []\OT1/lmr/m/n/10.95 We will start by prov-ing that the ma-tri-ces $\OML/lmm/m/
 it/10.95 F[]; [] ; F[]; G[]; [] ; G[]$ \OT1/lmr/m/n/10.95 are $\OMS/lmsy/m/n/10
 .95 f \OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 1\OMS/lmsy/m
 /n/10.95 g$\OT1/lmr/m/n/10.95 -observables.
  []
 
-[21] [22] [23] <chapters/fig_QC&LC.pdf, id=365, 220.01598pt x 163.0632pt>
+[21] [22] [23] <chapters/fig_QC&LC.pdf, id=368, 220.01598pt x 163.0632pt>
 File: chapters/fig_QC&LC.pdf Graphic file (type pdf)
 
 <use chapters/fig_QC&LC.pdf>
-Package pdftex.def Info: chapters/fig_QC&LC.pdf used on input line 432.
+Package pdftex.def Info: chapters/fig_QC&LC.pdf used on input line 435.
 (pdftex.def)             Requested size: 220.01543pt x 163.06279pt.
- [24 <./chapters/fig_QC&LC.pdf>] [25])
+ [24] [25 <./chapters/fig_QC&LC.pdf>])
 (chapters/Appendix.tex
 Overfull \hbox (4.13339pt too wide) in paragraph at lines 36--38
 []\OT1/lmr/m/n/10.95 We are also able to an-a-lyze the struc-ture of $\OML/lmm/
@@ -2209,17 +2213,17 @@ Package rerunfilecheck Info: File `Coffee.out' has not changed.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36195 strings out of 493323
- 681382 string characters out of 3139068
- 793762 words of memory out of 3000000
- 38923 multiletter control sequences out of 15000+200000
+ 36197 strings out of 493323
+ 681404 string characters out of 3139068
+ 793836 words of memory out of 3000000
+ 38924 multiletter control sequences out of 15000+200000
  593423 words of font info for 87 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 61i,17n,94p,10512b,510s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,17n,94p,10512b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fon
 ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -2247,9 +2251,9 @@ fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Coffee.pdf (29 pages, 566845 bytes).
+Output written on Coffee.pdf (29 pages, 568118 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
+ 514 PDF objects out of 1000 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
  183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

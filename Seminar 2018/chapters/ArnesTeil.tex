@@ -59,7 +59,7 @@ However, we will do it later on for $ n=m=2 $ and compare it to the set of quant
 Before we introduce the quantum correlation matrices we will shortly review the framework of nonlocal games. As before, Alice and Bob share a state $ \rho $ and get inputs $ s \in \mathcal{S}, t \in \mathcal{T} $ and perform measurements $ \{ F_s^{\xi} \}_{\xi = \pm 1} $, respectively $ \{ G_t^{\eta} \}_{\eta = \pm 1} $.
 As we have seen before the probability that their response is $ (\xi,\eta) $ for inputs $ (s,t) $ is given by 
 $ a_{st} = \trace{(\rho F_s^\xi \otimes G_t^\eta )} $. Again, we can encode these information in a matrix $ A=(a_{st}) $. This motivates the following (slightly more general) definition. 
-\begin{dfn}
+\begin{dfn}\label{dfn:QC}
 	Let $ (X_i)_{1 \le i \le m } $ and $ (Y_j)_{1 \le j \le n} $ be self-adjoint operators on $ \mathbb{C}^{d_1} $, respectively $ \mathbb{C}^{d_2} $ for some positive integers $ d_1,d_2 $, satisfying $ \norm{X_i}_{\infty}, \norm{Y_j}_{\infty} \le 1 $. $ A = (a_{ij}) $ is called {\itshape quantum correlation matrix} if there exists a state $ \rho \in B^{psd}(\mathbb{C}^{d_1} \otimes \mathbb{C}^{d_2})$ such that 
 	\begin{align}\label{QCaij}
 	a_{ij} = \trace{\rho (X_i \otimes Y_j)}.
